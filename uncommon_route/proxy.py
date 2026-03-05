@@ -46,9 +46,32 @@ from uncommon_route.feedback import FeedbackCollector
 from uncommon_route.providers import ProvidersConfig, load_providers
 
 VERSION = "0.1.0"
-DEFAULT_UPSTREAM = os.environ.get("UNCOMMON_ROUTE_UPSTREAM", "https://api.commonstack.ai/v1")
+DEFAULT_UPSTREAM = os.environ.get("UNCOMMON_ROUTE_UPSTREAM", "")
 DEFAULT_PORT = int(os.environ.get("UNCOMMON_ROUTE_PORT", "8403"))
 VIRTUAL_MODEL = "uncommon-route/auto"
+
+_SETUP_GUIDE = """\
+No upstream API configured. UncommonRoute is a routing layer — it needs an upstream LLM API to forward requests to.
+
+Set one of the following:
+
+  # Option 1: Any OpenAI-compatible API
+  export UNCOMMON_ROUTE_UPSTREAM="https://api.openai.com/v1"
+  export UNCOMMON_ROUTE_API_KEY="sk-..."
+
+  # Option 2: OpenRouter (100+ models, single key)
+  export UNCOMMON_ROUTE_UPSTREAM="https://openrouter.ai/api/v1"
+  export UNCOMMON_ROUTE_API_KEY="sk-or-..."
+
+  # Option 3: Commonstack (multi-provider gateway)
+  export UNCOMMON_ROUTE_UPSTREAM="https://api.commonstack.ai/v1"
+  export UNCOMMON_ROUTE_API_KEY="csk-..."
+
+  # Option 4: Local (Ollama, vLLM, etc.)
+  export UNCOMMON_ROUTE_UPSTREAM="http://127.0.0.1:11434/v1"
+
+Then restart:  uncommon-route serve
+"""
 
 VIRTUAL_MODELS = [
     {"id": VIRTUAL_MODEL, "object": "model", "owned_by": "uncommon-route"},
@@ -402,6 +425,12 @@ def create_app(
         }, status_code=200 if result.ok else 404)
 
     async def handle_chat_completions(request: Request) -> Response:
+        if not upstream:
+            return JSONResponse(
+                {"error": {"message": _SETUP_GUIDE.strip(), "type": "configuration_error"}},
+                status_code=503,
+            )
+
         body = await request.json()
         model = (body.get("model") or "").strip().lower()
         is_streaming = body.get("stream", False)
@@ -530,14 +559,16 @@ def create_app(
             fwd_headers["content-type"] = "application/json"
         fwd_headers["user-agent"] = f"uncommon-route/{VERSION}"
 
-        # Auth: BYOK key takes priority, then request header, then COMMONSTACK_API_KEY env
+        # Auth: BYOK key > request header > UNCOMMON_ROUTE_API_KEY > COMMONSTACK_API_KEY (legacy)
         if provider_entry:
             fwd_headers["authorization"] = f"Bearer {provider_entry.api_key}"
         elif "authorization" not in fwd_headers:
-            cs_key = os.environ.get("COMMONSTACK_API_KEY", "")
-            if cs_key:
-                fwd_headers["authorization"] = f"Bearer {cs_key}"
-            # Strip provider prefix for direct API calls (e.g. "deepseek/deepseek-chat" → "deepseek-chat")
+            api_key = (
+                os.environ.get("UNCOMMON_ROUTE_API_KEY", "")
+                or os.environ.get("COMMONSTACK_API_KEY", "")
+            )
+            if api_key:
+                fwd_headers["authorization"] = f"Bearer {api_key}"
             raw_model = selected_model.split("/", 1)[-1] if "/" in selected_model else selected_model
             body["model"] = raw_model
 
@@ -664,7 +695,11 @@ def serve(
         route_stats=route_stats,
     )
     print(f"[UncommonRoute] Proxy listening on http://{host}:{port}")
-    print(f"[UncommonRoute] Upstream: {upstream}")
+    if upstream:
+        print(f"[UncommonRoute] Upstream: {upstream}")
+    else:
+        print(f"[UncommonRoute] WARNING: No upstream configured — requests will return 503")
+        print(f"[UncommonRoute] Set UNCOMMON_ROUTE_UPSTREAM and UNCOMMON_ROUTE_API_KEY to enable forwarding")
     print(f"[UncommonRoute] Virtual model: {VIRTUAL_MODEL}")
     print(f"[UncommonRoute] Session persistence: enabled")
     print(f"[UncommonRoute] Spend control: enabled")

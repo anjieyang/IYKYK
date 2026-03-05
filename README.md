@@ -38,32 +38,55 @@ Pure local — no external API calls for routing decisions.
 | [Session Management](#session-management) | Smart sessions, auto-escalation |
 | [Spend Control](#spend-control) | Per-request, hourly, daily limits |
 | [Models & Pricing](#models--pricing) | Supported models and costs |
-| [Configuration](#configuration) | Environment variables |
+| [Configuration](#configuration) | Upstream, env vars, BYOK |
 | [Benchmarks](#benchmarks) | Accuracy & latency results |
 
 ---
 
 ## Quick Start
 
-**One-line install:**
-
-```bash
-curl -fsSL https://anjieyang.github.io/uncommon-route/install | bash
-```
-
-**Or with pip:**
+**1. Install:**
 
 ```bash
 pip install uncommon-route
 ```
 
-**Or as an OpenClaw plugin:**
+**2. Configure upstream** (any OpenAI-compatible API):
+
+```bash
+# Pick one — or see .env.example for more options
+export UNCOMMON_ROUTE_UPSTREAM="https://api.openai.com/v1"
+export UNCOMMON_ROUTE_API_KEY="sk-..."
+```
+
+**3. Use it:**
+
+```bash
+# Local classification (no API key needed)
+uncommon-route route "what is 2+2"
+
+# Start the proxy (requires upstream)
+uncommon-route serve
+```
+
+<details>
+<summary>Alternative: one-line installer</summary>
+
+```bash
+curl -fsSL https://anjieyang.github.io/uncommon-route/install | bash
+```
+
+</details>
+
+<details>
+<summary>Alternative: OpenClaw plugin</summary>
 
 ```bash
 openclaw plugins install @anjieyang/uncommon-route
 openclaw gateway restart
-# Done — smart routing is automatic
 ```
+
+</details>
 
 ---
 
@@ -185,12 +208,16 @@ Input Prompt
 
 ## Routing Tiers
 
-| Tier | When | Default Model | Example |
-|---|---|---|---|
-| **SIMPLE** | Greetings, lookups, translations | moonshot/kimi-k2.5 | "what is 2+2" |
-| **MEDIUM** | Code tasks, explanations, summaries | moonshot/kimi-k2.5 | "explain quicksort" |
-| **COMPLEX** | Multi-requirement system design | google/gemini-3.1-pro | "design a distributed DB with these 5 requirements..." |
-| **REASONING** | Formal proofs, mathematical derivations | xai/grok-4-1-fast-reasoning | "prove sqrt(2) is irrational" |
+The router classifies each prompt and selects the **cheapest model that can handle it**. Default primary models are chosen for cost efficiency — all models (including OpenAI, Claude) are accessible through the upstream provider.
+
+| Tier | When | Default Primary | Fallback Chain | Example |
+|---|---|---|---|---|
+| **SIMPLE** | Greetings, lookups, translations | moonshot/kimi-k2.5 | gemini-2.5-flash-lite, deepseek-chat | "what is 2+2" |
+| **MEDIUM** | Code tasks, explanations, summaries | moonshot/kimi-k2.5 | deepseek-chat, gemini-2.5-flash-lite | "explain quicksort" |
+| **COMPLEX** | Multi-requirement system design | google/gemini-3.1-pro | gemini-2.5-pro, gpt-5.2, claude-sonnet-4.6 | "design a distributed DB with 5 requirements..." |
+| **REASONING** | Formal proofs, mathematical derivations | xai/grok-4-1-fast-reasoning | deepseek-reasoner, o4-mini, o3 | "prove sqrt(2) is irrational" |
+
+> **Note:** OpenAI and Claude models appear in COMPLEX/REASONING fallback chains. To make them the preferred choice across all tiers, use [BYOK provider configuration](#bring-your-own-key-byok).
 
 ---
 
@@ -253,10 +280,12 @@ Data persists at `~/.uncommon-route/spending.json`.
 
 ## Models & Pricing
 
-| Model | Input ($/1M) | Output ($/1M) | Tier |
+The router selects models by tier to minimize cost. Availability depends on your upstream provider — multi-provider gateways (OpenRouter, Commonstack) expose all of these; direct provider APIs expose only their own models.
+
+| Model | Input ($/1M) | Output ($/1M) | Role |
 |---|---|---|---|
 | nvidia/gpt-oss-120b | $0.00 | $0.00 | SIMPLE fallback |
-| google/gemini-2.5-flash-lite | $0.10 | $0.40 | SIMPLE fallback |
+| google/gemini-2.5-flash-lite | $0.10 | $0.40 | SIMPLE/MEDIUM fallback |
 | deepseek/deepseek-chat | $0.28 | $0.42 | MEDIUM fallback |
 | xai/grok-4-1-fast-reasoning | $0.20 | $0.50 | REASONING primary |
 | moonshot/kimi-k2.5 | $0.60 | $3.00 | SIMPLE/MEDIUM primary |
@@ -266,18 +295,57 @@ Data persists at `~/.uncommon-route/spending.json`.
 
 Baseline comparison: anthropic/claude-opus-4.6 at $5.00/$25.00 per 1M tokens.
 
+> **Why these defaults?** The primary models for SIMPLE/MEDIUM tiers (kimi-k2.5, gemini-flash-lite) are 5–37× cheaper than OpenAI/Claude per output token. For most prompts classified as simple or medium, these models produce equivalent results at a fraction of the cost. Complex prompts still route to frontier models (gemini-3.1-pro, with gpt-5.2 and claude-sonnet-4.6 in the fallback chain).
+
 ---
 
 ## Configuration
+
+### Upstream Provider
+
+UncommonRoute is a **routing layer only** — it does not host models. It forwards requests to an upstream OpenAI-compatible API that you configure.
+
+```bash
+# OpenAI direct
+export UNCOMMON_ROUTE_UPSTREAM="https://api.openai.com/v1"
+export UNCOMMON_ROUTE_API_KEY="sk-..."
+
+# OpenRouter (100+ models, single key)
+export UNCOMMON_ROUTE_UPSTREAM="https://openrouter.ai/api/v1"
+export UNCOMMON_ROUTE_API_KEY="sk-or-..."
+
+# Commonstack (multi-provider gateway)
+export UNCOMMON_ROUTE_UPSTREAM="https://api.commonstack.ai/v1"
+export UNCOMMON_ROUTE_API_KEY="csk-..."
+
+# Local (Ollama, vLLM, etc.) — no key needed
+export UNCOMMON_ROUTE_UPSTREAM="http://127.0.0.1:11434/v1"
+```
+
+> **Tip:** Multi-provider gateways like [OpenRouter](https://openrouter.ai) or [Commonstack](https://commonstack.ai) work well with UncommonRoute because they expose all models (OpenAI, Claude, Gemini, DeepSeek, etc.) behind a single API key — the router can select across providers without extra configuration.
 
 ### Environment Variables
 
 | Variable | Default | Description |
 |---|---|---|
-| `COMMONSTACK_API_KEY` | — | [Commonstack](https://commonstack.ai) API key (default upstream) |
-| `UNCOMMON_ROUTE_UPSTREAM` | `https://api.commonstack.ai/v1` | Upstream API URL |
+| `UNCOMMON_ROUTE_UPSTREAM` | — | Upstream OpenAI-compatible API URL (required for proxy) |
+| `UNCOMMON_ROUTE_API_KEY` | — | API key for the upstream provider |
 | `UNCOMMON_ROUTE_PORT` | `8403` | Proxy port |
 | `UNCOMMON_ROUTE_DISABLED` | `false` | Disable routing (passthrough) |
+
+### Bring Your Own Key (BYOK)
+
+If you have API keys for specific providers and want the router to **prefer those models**, register them with the BYOK system:
+
+```bash
+uncommon-route provider add openai sk-your-openai-key
+uncommon-route provider add anthropic sk-ant-your-key
+uncommon-route provider list
+```
+
+When a BYOK provider is registered, the router will prefer your keyed models whenever they appear in a tier's candidate list. For example, adding an OpenAI key means COMPLEX-tier prompts will prefer `openai/gpt-5.2` over the default `google/gemini-3.1-pro`.
+
+Provider config is stored at `~/.uncommon-route/providers.json`.
 
 ### OpenClaw Plugin Config
 
