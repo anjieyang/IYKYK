@@ -354,7 +354,7 @@ plugins:
   entries:
     "@anjieyang/uncommon-route":
       port: 8403
-      upstream: "https://api.commonstack.ai/v1"
+      upstream: "https://openrouter.ai/api/v1"  # or any OpenAI-compatible API
       spendLimits:
         hourly: 5.00
         daily: 20.00

@@ -18,7 +18,7 @@ import { setTimeout as sleep } from "node:timers/promises";
 
 const VERSION = "0.1.0";
 const DEFAULT_PORT = 8403;
-const DEFAULT_UPSTREAM = "https://api.commonstack.ai/v1";
+const DEFAULT_UPSTREAM = "";
 const HEALTH_TIMEOUT_MS = 15_000;
 const HEALTH_POLL_MS = 500;
 const PY_PACKAGE = "uncommon-route";
@@ -206,6 +206,11 @@ const plugin = {
     const port = cfg.port || Number(process.env.UNCOMMON_ROUTE_PORT) || DEFAULT_PORT;
     const upstream = cfg.upstream || process.env.UNCOMMON_ROUTE_UPSTREAM || DEFAULT_UPSTREAM;
     const baseUrl = `http://127.0.0.1:${port}/v1`;
+
+    if (!upstream) {
+      api.logger.warn("UncommonRoute: No upstream configured. Set UNCOMMON_ROUTE_UPSTREAM or configure 'upstream' in plugin config.");
+      api.logger.warn("  Example: UNCOMMON_ROUTE_UPSTREAM=https://openrouter.ai/api/v1 UNCOMMON_ROUTE_API_KEY=sk-or-...");
+    }
 
     // 1. Register provider immediately (sync, models available right away)
     api.registerProvider({
