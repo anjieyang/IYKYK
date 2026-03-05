@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openclaw.ai/schemas/plugin-security.json",
+  "version": "1.0",
+  "plugin": "@anjieyang/uncommon-route",
+  "permissions": {
+    "network": {
+      "outbound": ["localhost:8403"],
+      "reason": "Communicates with the local UncommonRoute proxy server"
+    },
+    "subprocess": {
+      "allowed": true,
+      "commands": ["python3", "uncommon-route"],
+      "reason": "Spawns the Python routing proxy as a managed subprocess"
+    },
+    "filesystem": {
+      "read": ["~/.uncommon-route/"],
+      "write": ["~/.uncommon-route/spending.json"],
+      "reason": "Persistent spend control storage"
+    }
+  },
+  "dataFlow": {
+    "promptsLeaveProcess": false,
+    "description": "Routing decisions are made locally (<1ms). Prompts are only forwarded to the configured upstream API after routing."
+  },
+  "securityNotes": [
+    "All routing logic runs locally — no external API calls for classification",
+    "Spend control data stored at ~/.uncommon-route/spending.json with 0600 permissions",
+    "The Python subprocess binds only to 127.0.0.1 (localhost)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "uncommon-route",
+  "name": "UncommonRoute",
+  "description": "SOTA smart LLM router — 98% accuracy, <1ms local routing, session persistence, spend control",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "port": {
+        "type": "number",
+        "description": "Proxy port for the Python routing server (default: 8403)"
+      },
+      "upstream": {
+        "type": "string",
+        "description": "Upstream OpenAI-compatible API base URL"
+      },
+      "pythonPath": {
+        "type": "string",
+        "description": "Path to Python executable (default: python3)"
+      },
+      "spendLimits": {
+        "type": "object",
+        "description": "Spending limits: { perRequest, hourly, daily, session }",
+        "properties": {
+          "perRequest": { "type": "number" },
+          "hourly": { "type": "number" },
+          "daily": { "type": "number" },
+          "session": { "type": "number" }
+        }
+      }
+    }
+  },
+  "uiHints": {
+    "port": {
+      "label": "Proxy Port",
+      "placeholder": "8403"
+    },
+    "upstream": {
+      "label": "Upstream API URL",
+      "placeholder": "https://openrouter.ai/api/v1"
+    },
+    "pythonPath": {
+      "label": "Python Path",
+      "placeholder": "python3"
+    }
+  }
+}

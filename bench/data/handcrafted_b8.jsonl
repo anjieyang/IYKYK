@@ -1,0 +1,505 @@
+{"prompt": "What is an FPS in video games?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many players in a standard basketball game?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does NPC stand for in gaming?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a respawn point?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the ELO rating system?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a hitbox in game development?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does RNG mean in gaming?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a save point?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What temperature to boil water at sea level?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many teaspoons in a tablespoon?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a roux?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does al dente mean?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the smoke point of olive oil?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a mirepoix?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many ounces in a cup?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is proofing in baking?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a major scale?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many beats in a 4/4 measure?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a chord progression?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does forte mean in music?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a half step?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the relative minor of C major?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a cadence?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does staccato mean?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a light-year?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many planets are in our solar system?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a nebula?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the asteroid belt?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a supernova?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the Kuiper belt?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a red dwarf?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the Oort cloud?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a phoneme?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a morpheme?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is syntax?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a digraph?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an allophone?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a cognate?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a loanword?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is pragmatics?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is tort law?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is habeas corpus?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is intellectual property?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a subpoena?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is due diligence?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a class action lawsuit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is arbitration?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a patent?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is hypertension?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the normal body temperature in Celsius?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an antibiotic?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a placebo?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a vaccine?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a stent?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is anesthesia?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a biopsy?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is crop rotation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is irrigation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a hybrid seed?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is hydroponics?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a cover crop?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is soil pH?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is GMO?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is precision agriculture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a bias cut?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a seam allowance?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a dart in sewing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a selvage?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is haute couture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a muslin in fashion?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a toile?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a grain line?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a load-bearing wall?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a cantilever?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a buttress?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a clerestory window?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a vault in architecture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a lintel?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is WAR in baseball?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is xG in soccer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is PER in basketball?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a triple-double?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a slugging percentage?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is QBR in football?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a bill of lading?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is lead time?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a SKU?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is just-in-time inventory?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a supply chain?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is EOQ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define polymorphism in programming", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a hash collision?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is tail recursion?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a closure?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is lazy evaluation?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Translate 'supply chain' to Spanish", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'recipe' in French?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Translate 'algorithm' to Russian", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'database' in Japanese?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Hello, how are you?", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Good morning", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "I'm writing a paper on supply chain management and I need to know the basic definition. Could you tell me what a supply chain is in one or two sentences?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "My doctor mentioned something called hypertension during my checkup. I forgot to ask what it means. Can you give me a brief definition?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "I've been playing video games for years but I still don't know what people mean when they say RNG. What does RNG stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "I'm learning to cook and the recipe says 'al dente'. I have no idea what that means. Can you explain in one sentence?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Someone at work mentioned EOQ in a meeting about inventory. I nodded along but have no clue. What is EOQ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a distributed system?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a neural network architecture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a microservices architecture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "什么是光年？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是音素？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是知识产权？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是供应链？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 RNG？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是大调音阶？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "光年とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "音素とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "知的財産とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "RNGとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "광년이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "음소란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "지적 재산권이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "RNG란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "ما هي السنة الضوئية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو الصوت اللغوي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هي الملكية الفكرية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Что такое световой год?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое фонема?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое интеллектуальная собственность?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "¿Qué es un año luz?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un fonema?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es la propiedad intelectual?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Was ist ein Lichtjahr?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein Phonem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist geistiges Eigentum?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce qu'une année-lumière ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un phonème ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce que la propriété intellectuelle ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "O que é um ano-luz?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um fonema?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é propriedade intelectual?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "प्रकाश वर्ष क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "ध्वन्यात्मक इकाई क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "बौद्धिक संपदा क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Işık yılı nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Fonem nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Fikri mülkiyet nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Năm ánh sáng là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Âm vị là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Sở hữu trí tuệ là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Co to jest rok świetlny?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest fonem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest własność intelektualna?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Write a Python script to parse a game save file in JSON format and extract player stats", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple matchmaking algorithm that pairs players by ELO rating within a tolerance", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how hitbox detection works in 2D platformer games", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "My game's physics feels floaty. How do I tune gravity and jump velocity for better feel?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Compare deterministic vs random loot systems in game design", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Review this game state serialization code for save/load bugs", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Write a Python script to scale a recipe from 4 servings to 12, handling fractional measurements", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain the Maillard reaction and why it matters for browning", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Extract all ingredients and their quantities from this recipe text", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Compare braising vs stewing: when to use each technique", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Summarize the key steps for making a proper French omelette", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Rewrite this recipe in metric units for a European audience", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Write a function that returns the notes in a major scale given a root note", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how voice leading works in four-part harmony", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare parallel and relative key modulations", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Create a chord progression generator that follows common jazz patterns", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Summarize the circle of fifths and its practical uses", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Classify these chord progressions by genre (pop, jazz, classical)", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Write a Python script to calculate the distance to a star given its parallax angle", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain why we see different phases of the Moon", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare refracting vs reflecting telescopes for amateur astronomy", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Summarize the lifecycle of a star from nebula to white dwarf", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write a pandas script to analyze exoplanet discovery data and find trends", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Explain the difference between phonetics and phonology", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Write a regex to extract all proper nouns from a text (simple heuristic)", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Compare agglutinative vs fusional language morphology", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Classify these words by their morphological structure (root, prefix, suffix)", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Summarize the key differences between SOV and SVO word order", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Explain the difference between civil and criminal law", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Extract all parties and their roles from this contract excerpt", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Summarize the key clauses in this NDA", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Compare trademark vs copyright protection", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Write documentation for a contract review checklist", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Explain the difference between type 1 and type 2 diabetes", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Classify these symptoms into likely organ systems (cardiovascular, respiratory, etc.)", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Summarize the contraindications for a common medication", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write a patient education document about hypertension management", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Compare MRI and CT scan for brain imaging", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Explain how drip irrigation reduces water waste compared to flood irrigation", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Write a Python script to calculate optimal planting density from field area and crop spacing", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Compare organic vs conventional farming yields with data", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Summarize the benefits of cover cropping for soil health", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Brainstorm 5 ways to reduce pesticide use while maintaining yield", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Explain how to calculate fabric yardage for a gathered skirt", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Extract all measurements from this pattern instruction", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Compare woven vs knit fabric properties for garment design", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Write a creative product description for a sustainable fashion line", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Summarize the key steps in pattern grading", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Explain how a flying buttress distributes load in Gothic architecture", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare load-bearing masonry vs steel frame construction", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Summarize the key principles of passive solar design", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write a specification document for a green roof installation", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Write a Python script to calculate a player's true shooting percentage from box score data", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how expected goals (xG) is calculated in soccer", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare WAR vs WARP for evaluating baseball players", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Analyze this game log dataset and identify performance trends", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Summarize the key metrics used in basketball analytics", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write a Python script to calculate reorder point given demand rate and lead time", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain the bullwhip effect in supply chains", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare centralized vs decentralized inventory management", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Our inventory levels are inconsistent across warehouses. How do I debug this?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Review this EOQ calculation for edge cases", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Summarize the trade-offs in choosing a 3PL provider", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write unit tests for this recipe scaling function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create integration tests for the matchmaking algorithm", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Find all TODO comments in this codebase and create tickets for each", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Brainstorm 5 ways to reduce supply chain disruption risk", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm 3 approaches to improve game matchmaking fairness", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "写一个 Python 脚本解析游戏存档 JSON 并提取玩家数据", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "解释梅拉德反应以及为什么它影响食物的褐变", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "写一个函数给定根音返回大调音阶的音符", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "解释为什么我们看到月球的不同相位", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释语音学和音系学的区别", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释民法与刑法的区别", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释 1 型和 2 型糖尿病的区别", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释滴灌如何比漫灌减少水资源浪费", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释供应链中的牛鞭效应", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "审查这个游戏状态序列化代码的存档/读档 bug", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "ゲームセーブファイルを解析してプレイヤーステータスを抽出するPythonスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "メイラード反応と褐変の関係を説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "根音から長調の音階の音符を返す関数を書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "月の満ち欠けが起こる理由を説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "音声学と音韻論の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "民法と刑法の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "1型と2型糖尿病の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "滴灌が漫灌に比べて水の無駄をどう減らすか説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "サプライチェーンの牛鞭効果を説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "게임 세이브 파일을 파싱하여 플레이어 스탯을 추출하는 Python 스크립트를 작성하세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "마이야르 반응과 갈변의 관계를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "근음이 주어지면 장조 음계의 음을 반환하는 함수를 작성하세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "달의 위상이 변하는 이유를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "음성학과 음운론의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "민법과 형법의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "1형과 2형 당뇨병의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "공급망의 채찍 효과를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "اشرح الفرق بين الصوتيات والصوتيات اللغوية", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "اشرح الفرق بين القانون المدني والجنائي", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "اشرح الفرق بين النوع 1 والنوع 2 من مرض السكري", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "اشرح تأثير السوط في سلاسل التوريد", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Объясни разницу между фонетикой и фонологией", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Объясни разницу между гражданским и уголовным правом", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Объясни разницу между диабетом 1 и 2 типа", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Объясни эффект хлыста в цепочках поставок", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Explica la diferencia entre fonética y fonología", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Explica la diferencia entre derecho civil y penal", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Explica la diferencia entre diabetes tipo 1 y tipo 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Explica el efecto látigo en las cadenas de suministro", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Erkläre den Unterschied zwischen Phonetik und Phonologie", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Erkläre den Unterschied zwischen Zivil- und Strafrecht", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Erkläre den Unterschied zwischen Typ-1- und Typ-2-Diabetes", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Erkläre den Peitscheneffekt in Lieferketten", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Explique la différence entre phonétique et phonologie", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Explique la différence entre droit civil et pénal", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Explique la différence entre diabète de type 1 et type 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Explique l'effet bullwhip dans les chaînes d'approvisionnement", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Explique a diferença entre fonética e fonologia", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Explique a diferença entre direito civil e penal", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Explique a diferença entre diabetes tipo 1 e tipo 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Explique o efeito chicote nas cadeias de suprimentos", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "ध्वनिविज्ञान और स्वनिमिकी में अंतर समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "नागरिक और आपराधिक कानून में अंतर समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "टाइप 1 और टाइप 2 मधुमेह में अंतर समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "आपूर्ति श्रृंखला में चाबुक प्रभाव समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "Fonetik ve fonoloji arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "Medeni hukuk ve ceza hukuku arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "Tip 1 ve Tip 2 diyabet arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "Tedarik zincirlerinde kırbaç etkisini açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "Giải thích sự khác biệt giữa ngữ âm học và âm vị học", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "Giải thích sự khác biệt giữa luật dân sự và hình sự", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "Giải thích sự khác biệt giữa tiểu đường type 1 và type 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "Giải thích hiệu ứng roi trong chuỗi cung ứng", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "Wyjaśnij różnicę między fonetyką a fonologią", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "Wyjaśnij różnicę między prawem cywilnym a karnym", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "Wyjaśnij różnicę między cukrzycą typu 1 i typu 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "Wyjaśnij efekt bata w łańcuchach dostaw", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "Rewrite this legal disclaimer in plain language for consumers", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Extract all medication names and dosages from this prescription", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Classify these game mechanics as PvE, PvP, or cooperative", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Rewrite this recipe for a gluten-free diet, suggesting substitutions", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Extract key financial terms from this supply contract", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Classify these architectural styles: Gothic, Baroque, Modernist", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Rewrite this medical note for a patient-friendly summary", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Extract all crop types and planting dates from this farm log", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Classify these music genres by typical chord progressions", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Rewrite this sports stat in layman's terms", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Write a Python script to validate chess move notation (e.g., e2-e4)", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a function to convert between Celsius and Fahrenheit for recipe scaling", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a script to parse baseball box score format and extract batting stats", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how crop rotation prevents soil depletion", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the difference between trademark and trade secret protection", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare drip irrigation vs sprinkler systems for water efficiency", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare common law vs civil law systems", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare refracting vs reflecting telescopes", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Explain how a cantilever bridge distributes load", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Write a Python script to calculate fabric yardage for a rectangular tablecloth", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Review this inventory reorder logic for race conditions", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Our recipe scaling produces wrong fractions. How do I debug the rounding?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Write unit tests for the chord progression generator", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write API documentation for the matchmaking endpoint", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Review this astronomy distance calculation for floating-point precision issues", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "The supply chain forecast is off by 20%. What should I check first?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Write integration tests for the recipe scaling service", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create a README for the sports analytics library", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Summarize the key provisions of GDPR for a tech startup", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the lifecycle of a massive star", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write a creative product tagline for an astronomy app", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Brainstorm 5 ways to reduce food waste in a restaurant supply chain", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm 3 approaches to balance a game's economy", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Parse the game config, update the ELO decay rate, and run the balance tests", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Find all hardcoded legal disclaimers and create a centralized config", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "写一个 Python 脚本验证国际象棋着法记谱", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "解释作物轮作如何防止土壤贫瘠", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "比较滴灌和喷灌系统的水效率", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "审查这个库存补货逻辑的竞态条件", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "总结 GDPR 对科技初创公司的关键条款", "expected_tier": "MEDIUM", "category": "summary", "lang": "zh"}
+{"prompt": "レシピのスケーリングで分数がおかしい。丸めのデバッグ方法は？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "和音進行ジェネレーターのユニットテストを書いてください", "expected_tier": "MEDIUM", "category": "testing", "lang": "ja"}
+{"prompt": "天文学の距離計算の浮動小数点精度をレビューしてください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "スポーツ分析ライブラリのREADMEを作成してください", "expected_tier": "MEDIUM", "category": "documentation", "lang": "ja"}
+{"prompt": "민법과 형법 체계를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "Design a multiplayer game backend with matchmaking, authoritative server, anti-cheat, replay system, and cross-region latency compensation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a game engine physics subsystem with rigid body dynamics, collision detection, constraint solving, and spatial partitioning.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a live-service game economy with virtual currency, marketplace, anti-fraud, and balance tuning pipeline.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement a networked game sync protocol with delta compression, interest management, and rollback netcode.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a recipe recommendation platform with dietary constraints, ingredient substitution, scaling, nutrition analysis, and meal planning.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a food safety compliance system with HACCP tracking, supplier audits, recall management, and regulatory reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a music production platform with DAW integration, plugin hosting, collaboration, version control, and export pipelines.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an automated music transcription pipeline with source separation, pitch detection, rhythm analysis, and notation generation.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design an astronomy data pipeline for telescope observations: ingestion, calibration, reduction, catalog generation, and archive.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Build an exoplanet detection pipeline with light curve analysis, transit fitting, false positive filtering, and classification.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design an NLP pipeline for low-resource languages: data collection, annotation, model training, evaluation, and deployment.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Plan a migration from rule-based to neural machine translation with A/B testing and quality monitoring.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Design a legal document management system with version control, redaction, access control, audit trails, and e-discovery support.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Perform a security audit of a contract management platform. Identify attack vectors, compliance gaps, and propose mitigations.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Design a clinical trial management system with patient enrollment, consent tracking, adverse event reporting, and regulatory submission.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a medical imaging pipeline with DICOM ingestion, anonymization, AI inference, and radiologist workflow integration.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a precision agriculture platform with sensor networks, satellite imagery, yield prediction, irrigation control, and supply chain integration.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a farm management system with crop planning, inventory, equipment tracking, labor scheduling, and compliance reporting.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Design an apparel supply chain platform with design-to-manufacturing workflow, size grading, material sourcing, and sustainability tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a fashion recommendation engine with style analysis, fit prediction, inventory optimization, and personalization.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a building information modeling (BIM) platform with 3D modeling, clash detection, quantity takeoff, and contractor coordination.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a smart building management system with HVAC optimization, occupancy sensing, energy analytics, and maintenance prediction.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Design a sports analytics platform with real-time data ingestion, play-by-play analysis, player tracking, and coaching dashboard.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a player valuation model with performance metrics, contract data, injury history, and market comparables.", "expected_tier": "COMPLEX", "category": "data-analysis", "lang": "en"}
+{"prompt": "Design a global supply chain visibility platform with real-time tracking, demand forecasting, risk scoring, and supplier collaboration.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Plan a migration from legacy ERP to modern SCM with data migration, integration, and phased rollout.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Design a supply chain security framework with supplier vetting, shipment verification, and tamper detection.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Optimize a multi-echelon inventory network: safety stock, reorder points, and transportation cost trade-offs.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "Implement a Raft consensus module with leader election, log replication, membership changes, and snapshotting.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a zero-trust API gateway with mTLS, OPA policies, rate limiting, and audit logging.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Build a CRDT-based collaborative editor with operational transforms and conflict resolution.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "设计一个多人游戏后端，包括匹配、权威服务器、反作弊、回放系统和跨区延迟补偿", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个食谱推荐平台，包括饮食限制、食材替代、份量调整、营养分析和膳食计划", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个临床实验管理系统，包括患者入组、知情同意、不良事件报告和监管提交", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个精准农业平台，包括传感器网络、卫星影像、产量预测、灌溉控制和供应链集成", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个全球供应链可视化平台，包括实时追踪、需求预测、风险评分和供应商协作", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "マルチプレイヤーゲームバックエンドを設計してください。マッチング、オーソリティティブサーバー、アンチチート、リプレイシステムを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "レシピ推薦プラットフォームを設計してください。食事制限、食材代替、スケーリング、栄養分析を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "臨床試験管理システムを設計してください。患者登録、同意追跡、有害事象報告を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "精密農業プラットフォームを設計してください。センサーネットワーク、衛星画像、収量予測、灌漑制御を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "グローバルサプライチェーン可視化プラットフォームを設計してください。リアルタイム追跡、需要予測、リスクスコアリングを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "멀티플레이어 게임 백엔드를 설계하세요. 매칭, 권위 서버, 반칙 방지, 리플레이 시스템을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "레시피 추천 플랫폼을 설계하세요. 식이 제한, 재료 대체, 스케일링, 영양 분석을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "임상 시험 관리 시스템을 설계하세요. 환자 등록, 동의 추적, 부작용 보고를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "정밀 농업 플랫폼을 설계하세요. 센서 네트워크, 위성 영상, 수확량 예측, 관개 제어를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "글로벌 공급망 가시성 플랫폼을 설계하세요. 실시간 추적, 수요 예측, 리스크 스코어링을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "صمم نظام خلفي لألعاب متعددة اللاعبين يشمل المطابقة والخادم الموثوق ومكافحة الغش ونظام إعادة التشغيل.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "صمم منصة توصية وصفات تشمل قيود النظام الغذائي واستبدال المكونات والتحجيم وتحليل التغذية.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "صمم نظام إدارة التجارب السريرية يشمل تسجيل المرضى وتتبع الموافقة والإبلاغ عن الأحداث الضارة.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "صمم منصة زراعة دقيقة تشمل شبكات الاستشعار والصور الفضائية والتنبؤ بالمحصول والتحكم في الري.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Projete um backend de jogo multiplayer com matchmaking, servidor autoritativo, anti-cheat e sistema de replay.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Projete uma plataforma de recomendação de receitas com restrições dietéticas, substituição de ingredientes e análise nutricional.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Projete um sistema de gerenciamento de ensaios clínicos com recrutamento, consentimento e relatórios de eventos adversos.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Projete uma plataforma de agricultura de precisão com sensores, imagens de satélite e previsão de produtividade.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Спроектируй бэкенд многопользовательской игры с матчмейкингом, авторитетным сервером, античитом и системой реплеев.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Спроектируй платформу рекомендаций рецептов с диетическими ограничениями, заменой ингредиентов и анализом питания.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Спроектируй систему управления клиническими испытаниями с набором пациентов, согласием и отчётами о побочных эффектах.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Спроектируй платформу точного земледелия с сенсорами, спутниковой съёмкой и прогнозом урожайности.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Diseña un backend de juego multijugador con emparejamiento, servidor autoritativo, anti-trampas y sistema de repetición.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Diseña una plataforma de recomendación de recetas con restricciones dietéticas, sustitución de ingredientes y análisis nutricional.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Diseña un sistema de gestión de ensayos clínicos con reclutamiento, consentimiento y reporte de eventos adversos.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Diseña una plataforma de agricultura de precisión con sensores, imágenes satelitales y predicción de rendimiento.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Entwerfe ein Multiplayer-Spiel-Backend mit Matchmaking, autoritativem Server, Anti-Cheat und Replay-System.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Entwerfe eine Rezeptempfehlungsplattform mit Diätbeschränkungen, Zutatenersatz und Nährwertanalyse.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Entwerfe ein klinisches Studienmanagementsystem mit Patientenanwerbung, Einwilligung und Nebenwirkungsberichterstattung.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Entwerfe eine Präzisionslandwirtschaftsplattform mit Sensornetzwerken, Satellitenbildern und Ertragsprognose.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Conçois un backend de jeu multijoueur avec matchmaking, serveur autoritaire, anti-triche et système de replay.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Conçois une plateforme de recommandation de recettes avec contraintes diététiques, substitution d'ingrédients et analyse nutritionnelle.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Conçois un système de gestion d'essais cliniques avec recrutement, consentement et signalement des événements indésirables.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Conçois une plateforme d'agriculture de précision avec capteurs, imagerie satellite et prédiction de rendement.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "मल्टीप्लेयर गेम बैकएंड डिज़ाइन करें जिसमें मैचमेकिंग, अथॉरिटेटिव सर्वर, एंटी-चीट और रिप्ले सिस्टम शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "Eşleştirme, yetkili sunucu, anti-cheat ve tekrar sistemi içeren çok oyunculu oyun arka ucu tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Thiết kế backend trò chơi nhiều người chơi với ghép cặp, máy chủ có thẩm quyền, chống gian lận và hệ thống phát lại.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "Zaprojektuj backend gry wieloosobowej z matchmakingiem, serwerem autorytatywnym, anti-cheatem i systemem powtórek.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Design a legal document workflow with version control, e-signature, audit trails, and compliance reporting.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Build a farm IoT platform with soil sensors, weather integration, irrigation automation, and yield prediction.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Design an automated music transcription pipeline with source separation, pitch detection, and notation export.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Optimize a supply chain simulation: reduce runtime from 2 hours to 15 minutes while preserving accuracy.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "Design a fashion e-commerce platform with virtual try-on, size recommendation, and inventory optimization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a clinical decision support system with symptom input, differential diagnosis, and evidence retrieval.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a sports betting risk management system with odds calculation, exposure limits, and fraud detection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Plan a migration from monolithic farm management software to microservices with zero downtime.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Design a building energy management system with sensor fusion, occupancy prediction, and HVAC optimization.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Perform a security audit of a healthcare data platform. Address HIPAA, encryption, and access control.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Design a linguistics corpus annotation platform with inter-annotator agreement, quality control, and export.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a recipe recommendation engine with dietary constraints, ingredient availability, and nutrition optimization.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a multi-warehouse inventory optimization system with demand forecasting and transportation routing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement a game server with authoritative physics, client prediction, lag compensation, and replay.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design an astronomy observatory scheduling system with telescope allocation, weather integration, and priority queuing.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "设计一个法律文档工作流，包括版本控制、电子签名、审计追踪和合规报告", "expected_tier": "COMPLEX", "category": "architecture", "lang": "zh"}
+{"prompt": "设计一个时尚电商平台，包括虚拟试穿、尺码推荐和库存优化", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个农场物联网平台，包括土壤传感器、天气整合、灌溉自动化和产量预测", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "zh"}
+{"prompt": "医療データプラットフォームのセキュリティ監査を実施してください。HIPAA、暗号化、アクセス制御を検討してください。", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "ja"}
+{"prompt": "다중 창고 재고 최적화 시스템을 설계하세요. 수요 예측과 운송 경로 최적화를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Prove that the sum of the first n positive integers equals n(n+1)/2 using mathematical induction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that sqrt(2) is irrational using proof by contradiction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that there are infinitely many prime numbers. Use Euclid's argument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that a tree with n vertices has exactly n-1 edges. Use induction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the rationals are countable using a diagonal argument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that every planar graph has a vertex of degree at most 5.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the formula for the sum of a geometric series. Prove convergence when |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the quadratic formula by completing the square. Show all steps.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the formula for the nth Fibonacci number using generating functions.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the expected value of a geometric random variable. Prove it equals 1/p.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the Stirling approximation for n! and prove the error bound.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that Dijkstra's algorithm finds shortest paths in graphs with non-negative weights. Use induction on distance.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that binary search runs in O(log n) time. State and prove the recurrence.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that merge sort is correct using induction on the merge operation.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the greedy algorithm for activity selection is optimal. Use the exchange argument.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that Huffman coding produces an optimal prefix code. Use the lemma about merging.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "In the ultimatum game, derive the subgame-perfect equilibrium. Prove why the responder accepts any positive offer.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that in a finite two-player zero-sum game, a Nash equilibrium always exists. Use the minimax theorem.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "In a second-price auction with n bidders, prove that truthful bidding is a dominant strategy.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Derive the mixed strategy Nash equilibrium for matching pennies. Show the indifference condition.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Three boxes: one has two gold coins, one has two silver, one has one of each. You pick a gold coin. Prove the probability the other is gold is 2/3.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that in the Monty Hall problem, switching gives 2/3 probability of winning. Use Bayes' theorem.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "N people have hats. Each sees others' hats. Prove that with perfect play, exactly N-1 guesses can be correct.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that the poisoned wine puzzle with 1000 bottles and 10 prisoners has a solution using binary encoding.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that (P → Q) ∧ (Q → R) ⊢ (P → R) using natural deduction.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that ¬(P ∧ Q) is logically equivalent to (¬P ∨ ¬Q) using truth tables and then semantic argument.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the resolution rule is sound: if C1 and C2 are satisfiable and resolve to C3, then C1 ∧ C2 → C3.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "用数学归纳法证明前 n 个正整数的和等于 n(n+1)/2。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "用反证法证明 sqrt(2) 是无理数。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导等比数列求和公式，证明当 |r| < 1 时收敛。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "证明 Dijkstra 算法在非负权图中找到最短路径。对距离使用归纳法。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "在蒙提霍尔问题中，证明换门获胜概率为 2/3。使用贝叶斯定理。", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "zh"}
+{"prompt": "数学的帰納法を用いて、最初のn個の正の整数の和がn(n+1)/2であることを証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "背理法を用いて√2が無理数であることを証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "等比級数の和の公式を導出してください。|r|<1のとき収束することを証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "ダイクストラ法が非負重みグラフで最短経路を見つけることを証明してください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "モンティ・ホール問題で、ドアを変えると勝つ確率が2/3であることを証明してください。", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "ja"}
+{"prompt": "수학적 귀납법을 사용하여 처음 n개의 양의 정수의 합이 n(n+1)/2임을 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "귀류법을 사용하여 √2가 무리수임을 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "등비급수의 합 공식을 유도하세요. |r|<1일 때 수렴함을 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "다익스트라 알고리즘이 비음수 가중치 그래프에서 최단 경로를 찾음을 증명하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "몬티 홀 문제에서 문을 바꾸면 이길 확률이 2/3임을 증명하세요.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "ko"}
+{"prompt": "أثبت أن مجموع أول n أعداد صحيحة موجبة يساوي n(n+1)/2 باستخدام الاستقراء الرياضي.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "أثبت أن الجذر التربيعي لـ 2 غير نسبي باستخدام البرهان بالتناقض.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "اشتق صيغة مجموع المتسلسلة الهندسية. أثبت التقارب عندما |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ar"}
+{"prompt": "Prove que a soma dos primeiros n inteiros positivos é n(n+1)/2 usando indução matemática.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "Prove que sqrt(2) é irracional usando prova por contradição.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "Derive a fórmula da soma da série geométrica. Prove convergência quando |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "pt"}
+{"prompt": "Докажи, что сумма первых n положительных целых равна n(n+1)/2, используя математическую индукцию.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Докажи, что sqrt(2) иррационален, используя доказательство от противного.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Выведи формулу суммы геометрической прогрессии. Докажи сходимость при |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "Demuestra que la suma de los primeros n enteros positivos es n(n+1)/2 usando inducción matemática.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Demuestra que sqrt(2) es irracional usando prueba por contradicción.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Deriva la fórmula de la suma de la serie geométrica. Demuestra convergencia cuando |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "es"}
+{"prompt": "Beweise, dass die Summe der ersten n positiven ganzen Zahlen n(n+1)/2 ist, mit vollständiger Induktion.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Beweise, dass sqrt(2) irrational ist, mit Widerspruchsbeweis.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Démontre que la somme des n premiers entiers positifs vaut n(n+1)/2 par récurrence.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "Démontre que sqrt(2) est irrationnel par l'absurde.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "गणितीय आगमन द्वारा सिद्ध करें कि पहले n धनात्मक पूर्णांकों का योग n(n+1)/2 है।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "Matematiksel tümevarım kullanarak ilk n pozitif tam sayının toplamının n(n+1)/2 olduğunu kanıtlayın.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "Chứng minh rằng tổng n số nguyên dương đầu tiên bằng n(n+1)/2 bằng quy nạp toán học.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "vi"}
+{"prompt": "Udowodnij, że suma pierwszych n liczb całkowitych dodatnich wynosi n(n+1)/2, używając indukcji matematycznej.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pl"}
+{"prompt": "Prove that the product of two consecutive integers is always even. Use direct proof.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that a graph is bipartite if and only if it contains no odd cycles.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the formula for the sum of an arithmetic series. Prove it using induction.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the binomial theorem (a+b)^n = sum C(n,k) a^k b^(n-k). Prove by induction.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that heap sort runs in O(n log n) in-place. Analyze the heapify and extract operations.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the greedy coin-changing algorithm is optimal for standard US denominations.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "In the 100 prisoners and light bulb puzzle, prove the optimal strategy succeeds with probability > 30%.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that in a knockout tournament with n teams, exactly n-1 games are played.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the closed form for the recurrence T(n) = 2T(n/2) + n. Prove it's O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that a binary heap with n elements has height floor(log2(n)).", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "用直接证明证明两个连续整数的乘积总是偶数。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导等差数列求和公式，用归纳法证明。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "证明堆排序在原位运行且为 O(n log n)。分析 heapify 和 extract 操作。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "連続する2つの整数の積は常に偶数であることを直接証明で示してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "等差数列の和の公式を導出し、帰納法で証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "연속된 두 정수의 곱은 항상 짝수임을 직접 증명으로 보이세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}

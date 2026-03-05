@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Router Comparison — UncommonRoute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0c0c0f;
+    --bg-card: #16161a;
+    --bg-card-hover: #1c1c22;
+    --border: #2a2a32;
+    --text: #e8e8ed;
+    --text-dim: #8a8a96;
+    --text-muted: #56565e;
+    --accent: #6366f1;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --amber: #f59e0b;
+    --purple: #a855f7;
+    --red: #ef4444;
+    --radius: 12px;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  header {
+    margin-bottom: 48px;
+  }
+
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+
+  header p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .input-area {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .input-area textarea {
+    width: 100%;
+    min-height: 88px;
+    padding: 16px 18px;
+    padding-right: 100px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .input-area textarea:focus {
+    border-color: var(--accent);
+  }
+
+  .input-area textarea::placeholder {
+    color: var(--text-muted);
+  }
+
+  .input-area button {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 20px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+
+  .input-area button:hover { opacity: 0.85; }
+  .input-area button:disabled { opacity: 0.4; cursor: default; }
+
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .results { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .card:hover {
+    background: var(--bg-card-hover);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-dim);
+  }
+
+  .card-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-dim);
+  }
+
+  .tier-display {
+    margin-bottom: 16px;
+  }
+
+  .tier-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .model-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 8px;
+    word-break: break-all;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  .stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .signals {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .signal-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.04);
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-muted);
+    font-size: 15px;
+    grid-column: 1 / -1;
+  }
+
+  .cost-bar {
+    margin-top: 32px;
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .cost-bar h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 16px;
+  }
+
+  .cost-bars-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .bar-name {
+    width: 130px;
+    font-size: 13px;
+    color: var(--text-dim);
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 24px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  .bar-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .examples {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .example-btn {
+    padding: 6px 14px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-dim);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .example-btn:hover {
+    border-color: var(--accent);
+    color: var(--text);
+    background: rgba(99, 102, 241, 0.08);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>UncommonRoute</h1>
+    <p>输入一个 prompt，对比三种策略的路由结果和成本</p>
+  </header>
+
+  <div class="input-area">
+    <textarea id="prompt" placeholder="输入你的 prompt...&#10;例: Design a distributed rate limiter with Redis, sharding, and failover"></textarea>
+    <button id="submit" onclick="compare()">Route</button>
+  </div>
+
+  <div class="examples" id="examples">
+    <button class="example-btn" onclick="fill('What is HTTP?')">What is HTTP?</button>
+    <button class="example-btn" onclick="fill('Write a Python function to sort a list')">Write sort function</button>
+    <button class="example-btn" onclick="fill('Explain how DNS resolution works')">Explain DNS</button>
+    <button class="example-btn" onclick="fill('Design a notification system with push, email, SMS, priority queues, and rate limiting')">System design</button>
+    <button class="example-btn" onclick="fill('Prove by induction that 1+2+...+n = n(n+1)/2')">Math proof</button>
+    <button class="example-btn" onclick="fill('什么是微服务？')">中文 QA</button>
+    <button class="example-btn" onclick="fill('Pythonでリストをソートする関数を書いてください')">Japanese code</button>
+    <button class="example-btn" onclick="fill('My API returns 500 errors. How do I debug?')">Debug help</button>
+  </div>
+
+  <div class="results" id="results">
+    <div class="empty-state">选择一个示例或输入你的 prompt</div>
+  </div>
+
+  <div class="cost-bar" id="cost-section" style="display:none">
+    <h3>每 1K 请求成本对比</h3>
+    <div class="cost-bars-row" id="cost-bars"></div>
+  </div>
+</div>
+
+<script>
+const TIER_COLORS = { SIMPLE: '#22c55e', MEDIUM: '#3b82f6', COMPLEX: '#f59e0b', REASONING: '#a855f7', ALWAYS: '#ef4444' };
+
+function fill(text) {
+  document.getElementById('prompt').value = text;
+  compare();
+}
+
+async function compare() {
+  const prompt = document.getElementById('prompt').value.trim();
+  if (!prompt) return;
+
+  document.getElementById('submit').disabled = true;
+  document.getElementById('submit').textContent = '...';
+
+  try {
+    document.getElementById('results').innerHTML = '<div class="empty-state">正在路由... (Claude API 需要 1-2 秒)</div>';
+    const res = await fetch('/api/compare', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt }),
+      signal: AbortSignal.timeout(15000),
+    });
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    document.getElementById('results').innerHTML = '<div class="empty-state">连接失败 — 确保后端运行在 localhost:3721</div>';
+  }
+
+  document.getElementById('submit').disabled = false;
+  document.getElementById('submit').textContent = 'Route';
+}
+
+function renderCard(label, badge, r) {
+  const color = TIER_COLORS[r.tier] || '#888';
+  const signals = (r.signals || []).map(s => `<span class="signal-tag">${s}</span>`).join('');
+
+  return `
+    <div class="card" style="border-top: 2px solid ${color}">
+      <div class="card-header">
+        <span class="card-title">${label}</span>
+        <span class="card-badge">${badge}</span>
+      </div>
+      <div class="tier-display">
+        <div class="tier-label" style="color:${color}">${r.tier}</div>
+        <div class="model-name">${r.model}</div>
+      </div>
+      <div class="stats">
+        <div>
+          <div class="stat-label">Confidence</div>
+          <div class="stat-value">${(r.confidence * 100).toFixed(1)}%</div>
+        </div>
+        <div>
+          <div class="stat-label">Cost / 1K req</div>
+          <div class="stat-value">$${r.cost_per_1k.toFixed(3)}</div>
+        </div>
+        <div>
+          <div class="stat-label">Latency</div>
+          <div class="stat-value">${r.latency_us > 0 ? Math.round(r.latency_us) + 'µs' : '—'}</div>
+        </div>
+        <div>
+          <div class="stat-label">Savings vs Opus</div>
+          <div class="stat-value" style="color:${r.cost_per_1k < 0.015 ? 'var(--green)' : 'var(--text)'}">${
+            r.tier === 'ALWAYS' ? '0%' : Math.round((1 - r.cost_per_1k / 0.015) * 100) + '%'
+          }</div>
+        </div>
+      </div>
+      ${signals ? '<div class="signals">' + signals + '</div>' : ''}
+    </div>`;
+}
+
+function render(data) {
+  const results = document.getElementById('results');
+  results.innerHTML = [
+    renderCard('UncommonRoute', 'v6 — learned', data.uncommon_route),
+    renderCard('ClawRouter', 'original', data.clawrouter),
+    renderCard('Claude Opus 4.6', 'API judge', data.claude_opus),
+  ].join('');
+
+  // Cost bars
+  const section = document.getElementById('cost-section');
+  section.style.display = 'block';
+  const maxCost = Math.max(data.uncommon_route.cost_per_1k, data.clawrouter.cost_per_1k, data.claude_opus.cost_per_1k, 0.001);
+
+  const bars = [
+    { name: 'UncommonRoute', cost: data.uncommon_route.cost_per_1k, color: TIER_COLORS[data.uncommon_route.tier] || '#6366f1' },
+    { name: 'ClawRouter', cost: data.clawrouter.cost_per_1k, color: TIER_COLORS[data.clawrouter.tier] || '#888' },
+    { name: 'Claude Opus 4.6', cost: data.claude_opus.cost_per_1k, color: TIER_COLORS[data.claude_opus.tier] || '#ef4444' },
+  ];
+
+  document.getElementById('cost-bars').innerHTML = bars.map(b => `
+    <div class="bar-item">
+      <span class="bar-name">${b.name}</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${Math.max(3, (b.cost / maxCost) * 100)}%;background:${b.color}">
+          <span class="bar-value">$${b.cost.toFixed(4)}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+document.getElementById('prompt').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); compare(); }
+});
+</script>
+</body>
+</html>

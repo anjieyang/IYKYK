@@ -1,0 +1,194 @@
+{"prompt": "What is photosynthesis?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the formula for water?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How far is the moon from Earth?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Newton's first law?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the atomic number of carbon?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the Pythagorean theorem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many chromosomes do humans have?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the pH of pure water?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "When did the Berlin Wall fall?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Who was the first person on the moon?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the longest river in the world?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Which country has the largest population?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "When was the Declaration of Independence signed?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the tallest mountain in the world?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What port does HTTP use?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the latest version of Python?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Who created JavaScript?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What year was Linux released?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the default port for PostgreSQL?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does CRUD stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the difference between GET and POST?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does YAML stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a 404 error?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is localhost?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the default port for SSH?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a primary key in a database?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does FIFO stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a boolean?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does IDE stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an IP address?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define idempotency", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a deadlock?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a race condition?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a mutex?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is sharding?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a webhook?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a CDN?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a lambda function?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Translate 'database' to Chinese", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'error' in Japanese?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Translate 'server' to Korean", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'algorithm' in Arabic?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "HTTP 默认端口是多少？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Python 是谁发明的？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是主键？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是递归？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "什么是死锁？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "什么是 CDN？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是容器？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Git 是什么？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 SSH？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是负载均衡？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "翻译：good night", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "翻译：thank you very much", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "Что такое рекурсия?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое REST API?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Какой порт использует HTTP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое контейнер?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Кто создал Python?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое кэш?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ru"}
+{"prompt": "¿Qué es una base de datos?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es recursión?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Cuál es el puerto predeterminado de HTTP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un contenedor Docker?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Was ist Rekursion?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein Container?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Welchen Port verwendet SSH?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce que la récursivité ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un conteneur Docker ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Quel port utilise SSH ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "再帰とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "キャッシュとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "SSHのデフォルトポートは？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "APIとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "재귀란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "캐시란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "SSH의 기본 포트는 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "O que é recursão?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um container Docker?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "ما هو الخادم؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هي قاعدة البيانات؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو التخزين المؤقت؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Write a Python generator that yields prime numbers", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a trie data structure in Python", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a function to merge two sorted linked lists", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a REST endpoint in FastAPI that accepts file uploads", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a JavaScript promise wrapper for setTimeout", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple pub/sub pattern in TypeScript", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Python script to parse command line arguments using argparse", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a Makefile for a C project with build, test, and clean targets", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a GitHub Actions workflow that runs tests on every push", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a rate limiter using the token bucket algorithm in Python", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Python async function to fetch multiple URLs concurrently", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a SQLAlchemy model for a blog with posts and comments", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a custom React hook for debouncing input", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple middleware for Express.js that logs request duration", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Rust function to read a CSV file and return a Vec of structs", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how database indexing works", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a load balancer distribute traffic?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain what CORS is and why it exists", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a CDN improve website performance?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the difference between authentication and authorization", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does connection pooling work in databases?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain what a race condition is with an example", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does Docker layer caching work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how WebSockets differ from HTTP polling", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does the Python GIL affect multithreading?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare Kafka and RabbitMQ for message queuing", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "What are the differences between OAuth2 and SAML?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare PostgreSQL and MySQL for a new project", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Horizontal scaling vs vertical scaling — when to use which?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare FastAPI with Django for building APIs", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Rewrite this function to use list comprehension instead of a loop", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Convert this class-based React component to a functional component with hooks", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Extract all email addresses from this text", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Identify the sentiment of each sentence in this paragraph", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Categorize these log entries by severity level", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Convert this YAML config to equivalent JSON", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "Generate a markdown table from this CSV data", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "写一个 Python 异步函数来并发请求多个 URL", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "用 Go 实现一个简单的 HTTP 代理", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "解释数据库索引是怎么工作的", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "CDN 是如何加速网站的？", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释什么是 CORS 以及它为什么存在", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "比较 Kafka 和 RabbitMQ 的优缺点", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "比较 FastAPI 和 Django 做 API 开发的区别", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "把这个 YAML 配置转成 JSON 格式", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "zh"}
+{"prompt": "从这段日志中提取所有 IP 地址", "expected_tier": "MEDIUM", "category": "extraction", "lang": "zh"}
+{"prompt": "把这段文字翻译成正式的学术论文风格", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "zh"}
+{"prompt": "Напиши асинхронную функцию на Python для загрузки нескольких URL", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ru"}
+{"prompt": "Объясни как работает индексирование в базах данных", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Сравни PostgreSQL и MySQL для нового проекта", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ru"}
+{"prompt": "Извлеки все email-адреса из этого текста", "expected_tier": "MEDIUM", "category": "extraction", "lang": "ru"}
+{"prompt": "データベースインデックスの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "KafkaとRabbitMQを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "Pythonで非同期のHTTPリクエストを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "데이터베이스 인덱싱이 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "Python으로 비동기 HTTP 요청을 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Erkläre wie Datenbankindexierung funktioniert", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Vergleiche PostgreSQL und MySQL", "expected_tier": "MEDIUM", "category": "comparison", "lang": "de"}
+{"prompt": "Schreibe ein Python-Skript zum Parsen von CSV-Dateien", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "de"}
+{"prompt": "Explique comment fonctionne l'indexation des bases de données", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Compare Kafka et RabbitMQ", "expected_tier": "MEDIUM", "category": "comparison", "lang": "fr"}
+{"prompt": "Explica cómo funciona la indexación en bases de datos", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Compara PostgreSQL y MySQL para un proyecto nuevo", "expected_tier": "MEDIUM", "category": "comparison", "lang": "es"}
+{"prompt": "Escribe una función en Go para leer un archivo CSV", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "es"}
+{"prompt": "Explique como funciona a indexação de banco de dados", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Escreva um script Python para processar argumentos de linha de comando", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pt"}
+{"prompt": "اكتب دالة Python غير متزامنة لجلب عدة URLs", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "اشرح كيف يعمل فهرسة قاعدة البيانات", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Design a distributed search engine with web crawling, indexing, ranking, caching, and real-time query suggestions.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a video streaming platform supporting live streaming, transcoding, adaptive bitrate, CDN integration, and DRM.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an e-commerce inventory system with real-time stock tracking, warehouse management, multi-channel sync, and demand forecasting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a social media feed with personalized ranking, real-time updates, pagination, content moderation, and spam detection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a distributed key-value store with consistent hashing, replication, conflict resolution, and membership protocol.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a compiler frontend for a simple language with lexer, parser, AST, type checker, and code generation.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a container runtime from scratch supporting namespaces, cgroups, overlay filesystem, and networking.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a full-text search engine with inverted index, TF-IDF scoring, fuzzy matching, and faceted search.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a database connection pool with health checking, automatic reconnection, query timeout, and connection leak detection.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a zero-trust security architecture for a microservices platform with mutual TLS, service mesh, RBAC, and audit logging.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Set up a multi-region active-active database deployment with conflict resolution, failover, and consistency guarantees.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Design a feature flag system supporting gradual rollouts, A/B testing, user targeting, and real-time updates without deploys.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a real-time data lake architecture with batch and stream ingestion, schema evolution, data quality checks, and cost optimization.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "设计一个分布式搜索引擎，包括网页爬取、索引构建、排名算法、缓存策略和实时搜索建议", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "构建一个完整的编译器前端，包括词法分析、语法分析、AST 构建、类型检查和代码生成", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "zh"}
+{"prompt": "设计一个零信任安全架构，包括 mTLS、服务网格、RBAC、审计日志和入侵检测", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "zh"}
+{"prompt": "Спроектируй платформу для видеостриминга с транскодированием, адаптивным битрейтом, CDN и защитой контента", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Построй распределённое хранилище ключ-значение с согласованным хешированием, репликацией и обнаружением конфликтов", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ru"}
+{"prompt": "分散キーバリューストアを構築してください。一貫性のあるハッシュ、レプリケーション、コンフリクト解決を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "실시간 데이터 파이프라인을 설계하세요. 배치/스트림 수집, 스키마 진화, 데이터 품질 검증을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "ko"}
+{"prompt": "Entwerfe ein verteiltes Key-Value-Store mit konsistentem Hashing, Replikation und Konfliktlösung.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "de"}
+{"prompt": "Diseña un sistema de búsqueda distribuido con rastreo web, indexación, ranking y sugerencias en tiempo real.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Prove that the set of rational numbers is countable. Use Cantor's diagonal argument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that a graph is bipartite if and only if it contains no odd-length cycles.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove the Cauchy-Schwarz inequality using the properties of inner products. Show every step.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the intersection of two subgroups is also a subgroup. Use the subgroup criterion.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that every bounded monotone sequence in R converges. Use the completeness axiom.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the formula for the sum of a geometric series and prove it by induction.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the time complexity of quicksort in the average case using indicator random variables.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the optimal solution to the 0-1 knapsack problem using dynamic programming. Prove correctness.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Three people have numbers on their foreheads. They can see others' numbers but not their own. Given that the sum is 144, and each sees at least one 48, prove all numbers are 48.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "100 prisoners and a lightbulb puzzle: prove that a counting strategy exists for the prisoners to determine when all have visited the room.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that in a two-player zero-sum game, the minimax strategy forms a Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "In Nim with piles of 3, 5, 7, determine the winning strategy for the first player. Prove using XOR.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "证明：有理数集是可数的。使用对角线论证法。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导等比数列求和公式，并用归纳法证明。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "证明：一个图是二部图当且仅当它不包含奇数长度的环。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "Докажи, что множество рациональных чисел счётно, используя диагональный аргумент Кантора.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Выведи формулу суммы геометрической прогрессии и докажи её по индукции.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "等比級数の和の公式を導出し、帰納法で証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "등비급수의 합 공식을 유도하고 귀납법으로 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "Beweise, dass die Menge der rationalen Zahlen abzählbar ist. Verwende Cantors Diagonalargument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Demuestra que el conjunto de los números racionales es contable usando el argumento diagonal de Cantor.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Démontre que l'ensemble des nombres rationnels est dénombrable en utilisant l'argument diagonal de Cantor.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}

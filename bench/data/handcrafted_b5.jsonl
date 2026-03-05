@@ -1,0 +1,103 @@
+{"prompt": "What is edge computing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a quantum bit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is MQTT?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a game engine?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is bioinformatics?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a digital twin?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is WebRTC?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a smart contract?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is federated learning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a zero-knowledge proof?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is reinforcement learning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a transformer model?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Kubernetes?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a distributed database?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a consensus algorithm?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is eventual consistency?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a load balancer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is infrastructure as code?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "什么是边缘计算？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是量子比特？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是联邦学习？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是智能合约？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "エッジコンピューティングとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "量子ビットとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "스마트 계약이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "연합 학습이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "ما هو الحوسبة الطرفية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو العقد الذكي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "O que é computação de borda?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "¿Qué es la computación en el borde?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Was ist Edge Computing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce que l'edge computing ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Что такое граничные вычисления?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "What is the current status?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en", "system_prompt": "You are monitoring a Kubernetes cluster with 50 microservices."}
+{"prompt": "Is the build passing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en", "system_prompt": "You are a CI/CD engineer managing a complex deployment pipeline."}
+{"prompt": "Explain how edge computing reduces latency compared to cloud computing", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does federated learning protect user privacy?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how a game physics engine handles collision detection", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does WebRTC establish a peer-to-peer connection?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how zero-knowledge proofs work at a high level", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a transformer model process text differently from an RNN?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how MQTT differs from HTTP for IoT devices", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does reinforcement learning differ from supervised learning?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain consistent hashing with a diagram", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Describe the Raft consensus protocol", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Walk me through a TCP three-way handshake", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain backpropagation intuitively", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Write a Python script to read sensor data from an MQTT broker", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a simple game loop in Python with pygame", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Solidity smart contract for a simple token", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple A* pathfinding algorithm in Python", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a WebSocket server in Go that broadcasts messages", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "解释联邦学习如何保护用户隐私", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释边缘计算相比云计算如何降低延迟", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "写一个 Python 脚本从 MQTT broker 读取传感器数据", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "比较强化学习和监督学习的区别", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "フェデレーテッドラーニングがどのようにプライバシーを保護するか説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "WebRTCがどのようにP2P接続を確立するか説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "연합 학습이 사용자 프라이버시를 어떻게 보호하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "엣지 컴퓨팅이 클라우드 컴퓨팅에 비해 지연을 어떻게 줄이는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "اشرح كيف يحمي التعلم الموحد خصوصية المستخدم", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Explique como o aprendizado federado protege a privacidade", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Объясни как федеративное обучение защищает приватность", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Erkläre wie Edge Computing die Latenz reduziert", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Explique comment le edge computing réduit la latence", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Explica cómo la computación en el borde reduce la latencia", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "What is X?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en", "system_prompt": "You are a machine learning engineer. Provide detailed technical explanations with code examples."}
+{"prompt": "Can you help?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en", "system_prompt": "You are debugging a complex distributed system. Analyze logs and suggest fixes."}
+{"prompt": "Explain什么是microserviceアーキテクチャ", "expected_tier": "MEDIUM", "category": "explanation", "lang": "mixed"}
+{"prompt": "Design an IoT fleet management platform with device provisioning, OTA firmware updates, telemetry ingestion, anomaly detection, and remote configuration.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a multiplayer game server with authoritative physics, client-side prediction, lag compensation, matchmaking, and anti-cheat.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a bioinformatics pipeline for whole-genome sequencing: read alignment, variant calling, annotation, quality control, and clinical reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a smart contract system for decentralized exchange with order matching, liquidity pools, slippage protection, and MEV prevention.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design an edge AI inference platform with model optimization, hardware-aware deployment, A/B testing, and federated model updates.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Implement a Raft consensus library with leader election, log replication, snapshotting, and dynamic membership changes", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a WebRTC SFU with room management, bandwidth estimation, simulcast, and recording", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "设计一个物联网设备管理平台，包括设备注册、固件升级、遥测数据采集、异常检测和远程配置", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "构建一个去中心化交易所的智能合约系统，包括订单匹配、流动性池、滑点保护和 MEV 防护", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "zh"}
+{"prompt": "IoTフリート管理プラットフォームを設計してください。デバイスプロビジョニング、OTAアップデート、テレメトリ、異常検知を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "IoT 디바이스 관리 플랫폼을 설계하세요. 디바이스 프로비저닝, OTA 업데이트, 텔레메트리 수집, 이상 탐지를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "صمم منصة إدارة أجهزة إنترنت الأشياء تشمل تسجيل الأجهزة وتحديث البرامج عن بعد وجمع البيانات واكتشاف الشذوذ.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Спроектируй платформу для управления IoT-устройствами с провизионированием, OTA-обновлениями, сбором телеметрии и обнаружением аномалий.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Projete uma plataforma de gerenciamento IoT com provisionamento, atualizações OTA, coleta de telemetria e detecção de anomalias.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Diseña una plataforma de gestión IoT con aprovisionamiento de dispositivos, actualizaciones OTA, recopilación de telemetría y detección de anomalías.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Entwerfe eine IoT-Geräteverwaltungsplattform mit Provisionierung, OTA-Updates, Telemetrieerfassung und Anomalieerkennung.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Conçois une plateforme de gestion IoT avec provisionnement, mises à jour OTA, collecte de télémétrie et détection d'anomalies.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Prove that the problem of determining whether a context-free grammar is ambiguous is undecidable. Use reduction from the Post correspondence problem.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the information-theoretic lower bound for lossless data compression (Shannon's source coding theorem). Prove step by step.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that the stable matching produced by the Gale-Shapley algorithm is optimal for the proposing side. Use contradiction.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "In a repeated prisoner's dilemma with discount factor δ, derive the minimum δ for which cooperation is sustainable in a subgame-perfect equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that the knapsack problem is NP-complete by reduction from subset sum. Show both directions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Why can't we solve the traveling salesman problem efficiently? Prove that TSP is NP-hard.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Explain why P ≠ NP is believed to be true. Give a formal argument using diagonalization.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "证明上下文无关文法的歧义性是不可判定的。使用 Post 对应问题的归约。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导 Shannon 信源编码定理的信息论下界。逐步证明。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "Gale-Shapleyアルゴリズムが提案側にとって最適であることを証明してください。背理法を用いてください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "게일-셰플리 알고리즘이 제안측에 최적임을 증명하세요. 귀류법을 사용하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "أثبت أن مسألة الحقيبة NP-complete عن طريق التخفيض من مسألة مجموع الجزئي.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Докажи, что задача о рюкзаке является NP-полной путём сведения от задачи о сумме подмножеств.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Prove que o problema da mochila é NP-completo por redução do problema da soma de subconjuntos.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "Demuestra que el problema de la mochila es NP-completo mediante reducción desde el problema de la suma de subconjuntos.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Beweise, dass das Rucksackproblem NP-vollständig ist durch Reduktion vom Teilsummenproblem.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Démontre que le problème du sac à dos est NP-complet par réduction du problème de la somme de sous-ensembles.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}

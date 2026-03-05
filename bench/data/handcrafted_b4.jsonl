@@ -1,0 +1,95 @@
+{"prompt": "What is machine learning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a neural network?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Kubernetes?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Docker?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a microservice?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is encryption?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an algorithm?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a graph database?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is CI/CD?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a container registry?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is WebAssembly?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is gRPC?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a service mesh?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is event sourcing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is CQRS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "机器学习是什么？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是微服务？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是加密？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "機械学習とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "暗号化とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "マイクロサービスとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "머신러닝이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "암호화란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "마이크로서비스란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "ما هو التعلم الآلي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو التشفير؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "O que é aprendizado de máquina?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é criptografia?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "¿Qué es el aprendizaje automático?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Was ist maschinelles Lernen?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce que l'apprentissage automatique ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Что такое машинное обучение?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое микросервис?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Explain how a message queue works and when to use one", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does rate limiting work in API design?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the concept of eventual consistency with a practical example", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a circuit breaker pattern work in microservices?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain what a dead letter queue is and when you need one", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does database sharding work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the difference between horizontal and vertical scaling", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does an API gateway work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain what a feature flag is and how it helps with deployments", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does blue-green deployment work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the difference between optimistic and pessimistic locking", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a bloom filter work and when would you use one?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain what idempotency means in API design", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does OAuth2 work at a high level?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the publish-subscribe pattern with an example", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare message queues and event streams", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "What are the differences between gRPC and REST?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare blue-green deployment with canary releases", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Differences between optimistic and pessimistic concurrency control", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare Redis and PostgreSQL for caching", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Event sourcing vs traditional CRUD — trade-offs?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare Terraform with Pulumi for infrastructure as code", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "解释消息队列是怎么工作的", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释什么是断路器模式", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "数据库分片是怎么工作的？", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释什么是幂等性", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释发布-订阅模式", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "比较水平扩展和垂直扩展", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "比较消息队列和事件流", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "メッセージキューの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "サーキットブレーカーパターンを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "水平スケーリングと垂直スケーリングの違いを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "메시지 큐가 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "서킷 브레이커 패턴을 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "수평 확장과 수직 확장의 차이를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "اشرح كيف تعمل قوائم الرسائل", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "اشرح الفرق بين التوسع الأفقي والعمودي", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Объясни как работает очередь сообщений", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Объясни что такое паттерн Circuit Breaker", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Сравни горизонтальное и вертикальное масштабирование", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ru"}
+{"prompt": "Explique como funciona uma fila de mensagens", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Compare escalabilidade horizontal e vertical", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pt"}
+{"prompt": "Explica cómo funciona una cola de mensajes", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Compara el despliegue blue-green con los canary releases", "expected_tier": "MEDIUM", "category": "comparison", "lang": "es"}
+{"prompt": "Erkläre wie eine Nachrichtenwarteschlange funktioniert", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Vergleiche horizontale und vertikale Skalierung", "expected_tier": "MEDIUM", "category": "comparison", "lang": "de"}
+{"prompt": "Explique comment fonctionne une file de messages", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Compare le déploiement blue-green avec les canary releases", "expected_tier": "MEDIUM", "category": "comparison", "lang": "fr"}
+{"prompt": "Design a real-time bidding system for online advertising with bid optimization, frequency capping, budget pacing, and click fraud detection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a multi-player game server with matchmaking, state synchronization, lag compensation, and anti-cheat detection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an observability platform with metrics collection, distributed tracing, log aggregation, alerting, and anomaly detection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a document collaboration system with real-time editing, commenting, version history, access control, and offline sync.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "设计一个在线广告实时竞价系统，包括出价优化、频次控制、预算分配和点击欺诈检测", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "マルチプレイヤーゲームサーバーを構築してください。マッチメイキング、状態同期、ラグ補償を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "멀티플레이어 게임 서버를 설계하세요. 매치메이킹, 상태 동기화, 지연 보상, 안티치트를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "صمم نظام مزايدة في الوقت الفعلي للإعلانات يشمل تحسين العروض وتحديد التكرار واكتشاف الاحتيال.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Prove that the language of palindromes is not context-free. Use the pumping lemma for context-free languages.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the amortized time complexity of dynamic array resizing. Show it's O(1) using the accounting method.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that any comparison-based algorithm to find the maximum of n elements requires at least n-1 comparisons.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "证明回文语言不是上下文无关语言，使用上下文无关语言的泵引理。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "回文言語が文脈自由言語でないことをポンプの補題を用いて証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "회문 언어가 문맥 자유 언어가 아님을 펌핑 보조정리를 사용하여 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}

@@ -1,0 +1,1077 @@
+{"prompt": "Implement a simple pub/sub pattern in TypeScript", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "재해 복구 전략을 설계하세요. RPO 1분 미만, 자동 페일오버, 데이터 일관성을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "ko"}
+{"prompt": "टाइप 1 और टाइप 2 मधुमेह में अंतर समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "귀류법을 사용하여 √2가 무리수임을 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Python으로 리트라이 데코레이터를 구현해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "回文言語が文脈自由言語でないことをポンプの補題を用いて証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "Review this graph algorithm for correctness and edge cases", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Create a React component that renders a todo list", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Design a last-mile delivery platform with route optimization, time windows, proof of delivery, and customer communication.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "नवीकरणीय ऊर्जा प्रबंधन प्लेटफॉर्म डिज़ाइन करें जिसमें सौर/पवन पूर्वानुमान, ग्रिड एकीकरण, बैटरी शेड्यूलिंग और कार्बन रिपोर्टिंग शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "Beweise, dass die Summe der ersten n positiven ganzen Zahlen n(n+1)/2 ist, mit vollständiger Induktion.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "2인 제로섬 게임의 내시 균형을 구하고 존재함을 증명하세요", "expected_tier": "REASONING", "category": "game-theory", "lang": "ko"}
+{"prompt": "인공지능이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "再生可能エネルギー管理プラットフォームを設計してください。太陽/風力予測、グリッド統合、バッテリースケジューリング、需要応答、カーボンレポートを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "راجع نمط معالجة الأخطاء هذا واقترح تحسينات", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "पवन टरबाइन SCADA डेटा में अंतराल है। कारण कैसे ट्रैस करें?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "hi"}
+{"prompt": "等差数列の和の公式を導出し、帰納法で証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "Derive the optimal policy for a simple MDP using value iteration.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "How does non-maximum suppression work in object detection?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Implementuj algorytm Kruskala dla MST", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pl"}
+{"prompt": "Summarize the main differences between HTTP/1.1 and HTTP/2", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Co to jest własność intelektualna?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Kruskalのアルゴリズムで最小全域木を実装してください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "What is bioinformatics?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "二人ゼロサムゲームのナッシュ均衡を求め、存在することを証明してください", "expected_tier": "REASONING", "category": "game-theory", "lang": "ja"}
+{"prompt": "RNG란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "What is the default port for SSH?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "नमस्ते", "expected_tier": "SIMPLE", "category": "greeting", "lang": "hi"}
+{"prompt": "Design a CI/CD pipeline for microservices with parallel builds, artifact signing, environment promotion, canary deployment, and rollback.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "How many days are in a leap year?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Co to jest SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "SLAM क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "FPGA nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Co to jest kubit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "صمم نظام تداول آلي يشمل استيعاب بيانات السوق، اختبار الاستراتيجيات، إدارة المخاطر، تنفيذ الأوامر، وتتبع الأرباح والخسائر.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Co to jest luka zero-day?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Design a quantum algorithm development platform with circuit design, simulation, backend submission, and result analysis.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "أثبت أن الخوارزمية الجشعة لمشكلة حقيبة الظهر الكسرية مثالية.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ar"}
+{"prompt": "簡単な算術式の再帰下降パーサーを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "ما هو الثقب الأسود؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "이커머스 이행 플랫폼을 설계하세요. 주문 라우팅, 재고 할당, 운송업체 선택, 추적, 반품을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "レシピ推薦プラットフォームを設計してください。食事制限、食材代替、スケーリング、栄養分析を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "اشرح كيف يعمل gRPC streaming", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "이차 함수에 대한 경사하강법의 최적 스텝 크기를 유도하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "Brainstorm 5 ways to improve the onboarding experience for new developers", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "What is MQTT?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "マルチプレイヤーゲームバックエンドを設計してください。マッチング、オーソリティティブサーバー、アンチチート、リプレイシステムを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "Chứng minh bài toán dừng là không quyết định được bằng lập luận chéo.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "vi"}
+{"prompt": "Dijkstra 알고리즘이 음이 아닌 가중치에서 최단 경로를 올바르게 찾음을 증명하세요", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "Xin chào", "expected_tier": "SIMPLE", "category": "greeting", "lang": "vi"}
+{"prompt": "무작위 퀵소트의 기대 비교 횟수를 유도하세요. O(n log n)임을 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "수평 확장과 수직 확장의 차이를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "보안 운영 센터 플랫폼을 설계하세요. SIEM 연동, 위협 헌팅, 사고 대응 플레이북, 규정 준수 보고를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Plan a migration from legacy ERP to modern SCM with data migration, integration, and phased rollout.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Soyut sözdizimi ağacı nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "B-트리 삽입 연산을 구현해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Thanks", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "What is a heat exchanger?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "こんにちは", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ja"}
+{"prompt": "صمم نظام خلفي لألعاب متعددة اللاعبين يشمل المطابقة والخادم الموثوق ومكافحة الغش ونظام إعادة التشغيل.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Udowodnij, że suma pierwszych n liczb całkowitych dodatnich wynosi n(n+1)/2, używając indukcji matematycznej.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pl"}
+{"prompt": "안녕하세요", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ko"}
+{"prompt": "What is LUFS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Rewrite this function to use list comprehension instead of a loop", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Why is quicksort O(n²) in the worst case? Prove it formally with a recurrence relation.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Udowodnij, że języki regularne są zamknięte ze względu na przecięcie. Użyj konstrukcji iloczynu.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pl"}
+{"prompt": "Build a medical imaging pipeline with DICOM ingestion, anonymization, AI inference, and radiologist workflow integration.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Diseña un stack de percepción para conducción autónoma con fusión lidar-cámara-radar, seguimiento y redundancia.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "ما هو Terraform؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "How does proof of work prevent double-spending?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Qu'est-ce qu'un bus CAN ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "What is a convex hull?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is PUE in data centers?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Докажи, что алгоритм Дейкстры правильно находит кратчайшие пути при неотрицательных весах.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ru"}
+{"prompt": "صمم واجهة مترجم تشمل المحلل المعجمي والنحوي وAST والتحليل الدلالي وتوليد IR. تضمن استعادة الأخطاء وإدارة جدول الرموز.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Matematiksel tümevarım kullanarak ilk n pozitif tam sayının toplamının n(n+1)/2 olduğunu kanıtlayın.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "सिद्ध करें कि नियमित भाषाएँ प्रतिच्छेदन के अंतर्गत संवृत हैं। गुणन निर्माण का उपयोग करें।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "관측 가능성이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "FPGA क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Fonetik ve fonoloji arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "자동 거래 시스템을 설계하세요. 시장 데이터 수집, 백테스트, 리스크 관리, 주문 실행, 실시간 손익 추적을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Projete uma pilha TCP com controle de congestionamento, fluxo, retransmissão e gerenciamento de conexões. Inclua tratamento de pacotes fora de ordem.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Prove that the two-pointer technique correctly finds a pair with a given sum in a sorted array.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Tế bào quang điện là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "サプライチェーンの牛鞭効果を説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Giải thích hiệu ứng roi trong chuỗi cung ứng", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "이 에러 처리 패턴을 리뷰하고 개선 사항을 제안해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "연합 학습이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Co to jest ogniwo fotowoltaiczne?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "音素とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Review this AR/VR rendering loop for performance bottlenecks", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Xem xét middleware xác thực này để tìm lỗ hổng bảo mật", "expected_tier": "MEDIUM", "category": "code-review", "lang": "vi"}
+{"prompt": "住宅用エネルギーで太陽光PVと風力の比較をしてください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "블랙홀이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Tedarik zincirlerinde kırbaç etkisini açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "बोल्ज़ानो-वीयरस्ट्रास प्रमेय सिद्ध करें: R में हर बाउंडेड अनुक्रम में एक अभिसारी उपअनुक्रम होता है।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "HTTP란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "マスター定理を用いてT(n)=2T(n/2)+nの閉形式を導出してください。各ケースを示してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "실수 집합이 비가산임을 칸토어의 대각선 논법으로 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Escreva um script Python para processar argumentos de linha de comando", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pt"}
+{"prompt": "1型と2型糖尿病の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "SSHのデフォルトポートは？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Check this Terraform config for security issues", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "How does a reverse proxy work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "SIEM báo quá nhiều false positive. Làm sao điều chỉnh quy tắc?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "vi"}
+{"prompt": "T(n)=T(n-1)+n의 닫힌 형태를 유도하세요", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "Napisz parser rekurencyjny zstępujący dla prostych wyrażeń arytmetycznych", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pl"}
+{"prompt": "Design a podcast analytics platform with listen-through tracking, demographic inference, and ad attribution.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "O que é um ano-luz?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Implement a simple message broker using Python asyncio", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Ideas for making our payment flow more resilient to bank outages", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "In the prisoner's dilemma repeated infinitely, prove that tit-for-tat is a Nash equilibrium under discounting.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "機械学習とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ما هو ثغرة الصفر يوم؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "What does `git merge --no-ff` do?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How do you say 'algorithm' in Turkish?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Напиши функцию на Go для чтения файла", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ru"}
+{"prompt": "ما هي قاعدة البيانات؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "再帰とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Kesirli sırt çantası problemi için açgözlü algoritmanın optimal olduğunu kanıtlayın.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "tr"}
+{"prompt": "OK", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Brainstorm features for a social media analytics dashboard", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Hallo", "expected_tier": "SIMPLE", "category": "greeting", "lang": "de"}
+{"prompt": "마이크로서비스란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Fonem nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Viết parser đệ quy xuống cho biểu thức số học đơn giản", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "vi"}
+{"prompt": "Design a cost optimization strategy for a cloud-native application including right-sizing, spot instances, autoscaling, and reserved capacity planning.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Revisa esta función y sugiere mejoras", "expected_tier": "MEDIUM", "category": "code-review", "lang": "es"}
+{"prompt": "ما هو المحلل المعجمي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "モンティ・ホール問題で、ドアを変えると勝つ確率が2/3であることを証明してください。", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "ja"}
+{"prompt": "メイラード反応と褐変の関係を説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Co to jest rok świetlny?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "What is a bounding box?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Докажи, что в каждом эйлеровом графе все вершины имеют чётную степень.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "अमूर्त वाक्यविन्यास वृक्ष क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Explain the difference between phonetics and phonology", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "SIEM generuje za dużo fałszywych alarmów. Jak dostroić reguły?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pl"}
+{"prompt": "Merhaba", "expected_tier": "SIMPLE", "category": "greeting", "lang": "tr"}
+{"prompt": "메모이제이션이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ko"}
+{"prompt": "Translate 'server' to Korean", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Summarize the podcast production best practices", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "TCP와 UDP의 차이점을 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "Thiết kế backend trò chơi nhiều người chơi với ghép cặp, máy chủ có thẩm quyền, chống gian lận và hệ thống phát lại.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "اشرح كيف يعمل فهرسة قاعدة البيانات", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "صمم منصة إدارة الطاقة المتجددة مع التنبؤ بالطاقة الشمسية/الرياح والتكامل مع الشبكة وجدولة البطاريات واستجابة الطلب والتقارير الكربونية.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "构建一个合规的电子病历系统，包括数据加密、角色权限、审计日志和 FHIR API 互操作", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "اكتب ملخصًا لهذا PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "أثبت أن الشجرة ذات n عقد لها بالضبط n-1 حافة باستخدام الاستقراء.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Dynamic vs condenser mic for podcasting", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Prove Fermat's little theorem: a^p ≡ a (mod p) for prime p. Use group theory.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "راجع ثغرات أمان هذا الوسيط واقترح إصلاحات", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "Build a proctoring system with face detection, screen monitoring, behavior analysis, and integrity reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "اشرح تأثير السوط في سلاسل التوريد", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "민법과 형법 체계를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "Ideas for reducing motion sickness in VR experiences", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "제로데이 취약점이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "ファイアウォールとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "コンパイラフロントエンドを設計してください。レキサー、パーサー、AST、意味解析、IR生成を含め、エラー回復とシンボルテーブル管理を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "Python में एक फंक्शन लिखें जो सूची को सॉर्ट करे", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "hi"}
+{"prompt": "How many players in a standard basketball game?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "اشرح كيف يعمل القياس الصافي للطاقة الشمسية على الأسطح", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "マスター定理を用いてT(n)=2T(n/2)+nの閉形式を導出してください", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "Xin chào", "expected_tier": "SIMPLE", "category": "greeting", "lang": "vi"}
+{"prompt": "SLAM là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "صمم نظام وصول شبكة صفر ثقة مع فحص حالة الجهاز والتحقق المستمر والجزء الدقيق وتسجيل التدقيق.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "実数の集合が非可算であることをカントールの対角線論法を用いて証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "背理法を用いて√2が無理数であることを証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "連続する2つの整数の積は常に偶数であることを直接証明で示してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "اشتق حجم الخطوة الأمثل للنزول التدريجي على دالة تربيعية.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ar"}
+{"prompt": "Conçois un système de gestion d'essais cliniques avec recrutement, consentement et signalement des événements indésirables.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "停止問題が決定不能であることを対角線論法で証明してください", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "Dữ liệu SCADA tuabin gió có khoảng trống. Làm sao truy vết nguyên nhân?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "vi"}
+{"prompt": "The WebSocket connection keeps dropping after 60 seconds. Why?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Porównaj SQL i NoSQL", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pl"}
+{"prompt": "Eコマース履行プラットフォームを設計してください。注文ルーティング、在庫割り当て、キャリア選択、追跡、返品を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "بيانات SCADA لتوربينات الرياح بها فجوات متقطعة. كيف أتتبع السبب؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "지붕 태양광의 순계량이 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "医療データプラットフォームのセキュリティ監査を実施してください。HIPAA、暗号化、アクセス制御を検討してください。", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "ja"}
+{"prompt": "What is HIPAA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Was ist ein RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "마스터 정리를 유도하고 세 가지 경우를 모두 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "メモ化とは何ですか？", "expected_tier": "SIMPLE", "category": "definition", "lang": "ja"}
+{"prompt": "Eşleştirme, yetkili sunucu, anti-cheat ve tekrar sistemi içeren çok oyunculu oyun arka ucu tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Durdurma probleminin karar verilemez olduğunu köşegen argümanıyla kanıtlayın.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "翻译：how much does it cost", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "風力タービンのSCADAデータに断続的な欠損があります。原因を追跡するには？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "ग्रीनहाउस प्रभाव क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Fasse die wichtigsten Änderungen dieses PRs zusammen", "expected_tier": "MEDIUM", "category": "summary", "lang": "de"}
+{"prompt": "Implement a distributed lock manager with fencing tokens, deadlock detection, and automatic lease renewal", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Revue la gestion d'erreurs de ce script de surveillance solaire", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "GPU ne demek?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Thiết kế một hệ thống điều khiển robot bao gồm hợp nhất cảm biến, lập kế hoạch đường đi, tránh chướng ngại vật và vòng lặp điều khiển thời gian thực.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "간단한 산술 표현식용 재귀 하강 파서를 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Explain how the Maillard reaction creates flavor", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "サーキットブレーカーパターンを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Raft 알고리즘이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "اشرح الفرق بين النوع 1 والنوع 2 من مرض السكري", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "認証、レート制限、サーキットブレーカー、分散トレーシングを含むAPIゲートウェイを設計してください", "expected_tier": "COMPLEX", "category": "architecture", "lang": "ja"}
+{"prompt": "صمم منصة مركز عمليات أمنية تشمل تكامل SIEM وصيد التهديدات ودفاتر استجابة الحوادث والتقارير الامتثال.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "SIEM entegrasyonu, tehdit avı, olay müdahale playbook'ları ve uyumluluk raporlaması içeren bir SOC platformu tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Compare braising vs stewing: when to use each technique", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "解释 1 型和 2 型糖尿病的区别", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "सरल अंकगणितीय व्यंजक के लिए पुनरावर्ती अवरोही पार्सर लिखें", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "hi"}
+{"prompt": "Bu kimlik doğrulama middleware'ini güvenlik açıkları için inceleyin", "expected_tier": "MEDIUM", "category": "code-review", "lang": "tr"}
+{"prompt": "हनीपॉट क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "See you", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "IoT 디바이스 관리 플랫폼을 설계하세요. 디바이스 프로비저닝, OTA 업데이트, 텔레메트리 수집, 이상 탐지를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Viết hàm Python sắp xếp danh sách", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "vi"}
+{"prompt": "اشرح الفرق بين التشفير المتماثل وغير المتماثل", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "복사량과 온도로 태양광 패널 출력을 계산하는 Python 스크립트를 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Sensör füzyonu, yol planlama, engel kaçınma ve gerçek zamanlı kontrol döngülerini içeren bir robot kontrol sistemi tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Überprüfe dieses Fehlerbehandlungsmuster und schlage Verbesserungen vor", "expected_tier": "MEDIUM", "category": "code-review", "lang": "de"}
+{"prompt": "Optimize this React app: implement code splitting, virtualized lists, memoization, image lazy loading, and service worker caching", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "Prove that in the blue-eyed islanders puzzle with n blue-eyed people, they all leave on day n. Use induction.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "ما هو RTOS؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "What does IDE stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Chứng minh định lý Bolzano-Weierstrass: mọi dãy bị chặn trong R đều có dãy con hội tụ.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "vi"}
+{"prompt": "Write a script to estimate food shelf life from temperature history", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Merhaba", "expected_tier": "SIMPLE", "category": "greeting", "lang": "tr"}
+{"prompt": "Что такое кэш?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ru"}
+{"prompt": "What is an algorithm?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "أثبت أن مجموعة الأعداد الحقيقية غير قابلة للعد باستخدام حجة كانتور القطرية. أظهر كل خطوة.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "比较容器和虚拟机在操作系统层面的区别", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "API क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "أثبت نظرية بولزانو-فايرشتراس: كل تتابع محدود في R له تتابع جزئي متقارب.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "What is a design pattern?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Năm ánh sáng là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "डेटाबेस क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Diseña un pipeline de moderación de contenido con clasificación de texto, análisis de imagen, escaneo de video y flujo de apelación.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "API 间歇性返回 500 错误，常见原因有哪些？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "zh"}
+{"prompt": "Create a simple Express.js route that returns JSON", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Zaprojektuj platformę SOC z integracją SIEM, polowaniem na zagrożenia, playbookami reagowania i raportami zgodności.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Revise este middleware de autenticação em busca de falhas de segurança", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pt"}
+{"prompt": "सिद्ध करें कि हॉल्टिंग समस्या अनिर्णायक है (विकर्ण तर्क का उपयोग करके)।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "自動取引システムを設計してください。市場データ取込、バックテスト、リスク管理、注文執行、リアルタイム損益追跡を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "Derive the closed-form solution for the recurrence T(n) = 2T(n/2) + n using the master theorem.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "مرحبا", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ar"}
+{"prompt": "Prove that (P and Q) implies P is a tautology.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "इस ऑथेंटिकेशन मिडलवेयर की सुरक्षा समीक्षा करें", "expected_tier": "MEDIUM", "category": "code-review", "lang": "hi"}
+{"prompt": "مرحبا", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ar"}
+{"prompt": "수학적 귀납법으로 1+2+...+n = n(n+1)/2를 증명하세요. 각 단계를 형식적으로.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Erkläre wie Edge Computing die Latenz reduziert", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "设计一个电商履约平台，包括订单路由、库存分配、承运商选择、追踪和退货", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "데이터베이스 인덱싱이 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "اكتب دالة Python لحساب متوسط قائمة من الأرقام", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "이 PR의 주요 변경 사항을 요약해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "What is a placebo?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Design an additive manufacturing platform with design validation, material selection, process parameters, and post-processing workflows.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Write API documentation for this REST endpoint", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "أثبت أن اللغات المنتظمة مغلقة تحت التقاطع. استخدم البناء الضربي.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Cześć", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pl"}
+{"prompt": "실시간 사기 탐지 시스템을 설계하세요. 피처 스토어, 모델 서빙, 온라인/오프라인 피처 일관성을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "ko"}
+{"prompt": "Build a smart contract system for decentralized exchange with order matching, liquidity pools, slippage protection, and MEV prevention.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "What is BGP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "APIが間欠的に500エラーを返します。一般的な原因は何ですか？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "Revue ce middleware d'authentification pour des failles de sécurité", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "LRU 페이지 교체 알고리즘을 구현해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Raftコンセンサスモジュールを実装してください。リーダー選出、ログ複製、メンバー変更、スナップショットを含め、ネットワーク分断の処理を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "Zaimplementuj producent-konsument z semaforami", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pl"}
+{"prompt": "Write snapshot tests for this React component", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Chứng minh thuật toán tham lam cho bài toán ba lô phân số là tối ưu.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "vi"}
+{"prompt": "ما هو الخادم؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "滴灌が漫灌に比べて水の無駄をどう減らすか説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "KafkaとRabbitMQを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "Ocean buoy sensors return NaN for temperature at depth. What could cause it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "证明上下文无关文法的歧义性是不可判定的。使用 Post 对应问题的归约。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "IPv4 paket başlığını ayrıştıran bir fonksiyon yazın", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "tr"}
+{"prompt": "Build a social media crisis detection system with anomaly detection, sentiment analysis, and escalation workflows.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "什么是页错误？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Implement a simple head pose estimator for AR applications", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Conçois une plateforme SOC avec intégration SIEM, chasse aux menaces, playbooks de réponse et rapports de conformité.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "VPNとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Implemente um mecanismo de consulta SQL com lexer, parser, planejador de consulta e otimização de join.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "pt"}
+{"prompt": "गणितीय आगमन द्वारा सिद्ध करें कि पहले n धनात्मक पूर्णांकों का योग n(n+1)/2 है।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "HTTP nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "ما هو الإصدار التدريجي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Sorgu yürütücüsü tasarlayın: volkan modeli, iç içe döngü/hash/merge join, agregasyon, sıralama. Maliyet tabanlı plan seçimi dahil edin.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "tr"}
+{"prompt": "B木とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Ideas for making cryptocurrency mining more energy-efficient", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "몬티 홀 문제에서 문을 바꾸면 이길 확률이 2/3임을 증명하세요.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "ko"}
+{"prompt": "Summarize the ISO 26262 safety levels for automotive", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Что такое парниковый эффект?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Ansible과 Terraform의 인프라 자동화 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "Спроектируй стек восприятия для автономного вождения с лидаром, камерами, радаром, трекингом и резервированием.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "CAN verisi nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Lỗ hổng zero-day là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "공급망의 채찍 효과를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "Set up a complete CI/CD pipeline with build, test, lint, security scan, staging deploy, canary release, and rollback automation", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "اشرح كيف يحقق Raft الإجماع في وجود الأعطال", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "In the repeated prisoner's dilemma, prove that always defect is a Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "侵入検知の誤検知を減らす5つの方法をブレインストームしてください", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "ja"}
+{"prompt": "データレイクとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Derive the formula for the sum of a geometric series and prove it by induction.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "다중 창고 재고 최적화 시스템을 설계하세요. 수요 예측과 운송 경로 최적화를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "L'API renvoie des erreurs 500 de manière intermittente. Quelles sont les causes ?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "fr"}
+{"prompt": "बौद्धिक संपदा क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "أثبت أن خوارزمية Dijkstra تحسب المسارات الأقصر بشكل صحيح عندما تكون الأوزان غير سالبة. استخدم ثوابت الحلقة.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ar"}
+{"prompt": "So sánh SQL và NoSQL", "expected_tier": "MEDIUM", "category": "comparison", "lang": "vi"}
+{"prompt": "What is the ozone layer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a seam allowance?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Build a distributed key-value store with consistent hashing, replication, conflict resolution, and membership protocol.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Python으로 비동기 HTTP 요청을 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "TL;DR this renewable energy policy document for a stakeholder meeting", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "ما هي السنة الضوئية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "マスター定理を導出し、3つのケースすべてを証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "The current latency is 2 seconds per request. Bring it under 200ms.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en", "system_prompt": "You are a performance engineer. The app is FastAPI + PostgreSQL + Redis + Elasticsearch."}
+{"prompt": "解释 Raft 如何在故障下达成共识", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "My Docker container exits immediately after starting. How do I troubleshoot this?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "ما هو FPGA؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "TCPスタックを設計してください。輻輳制御、フロー制御、再送、接続管理を含め、順序不同パケットと重複ACKの処理を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "광전지란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Rewrite this recipe in metric units for a European audience", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "ゼロデイ脆弱性とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "What is impression share?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Explique comment fonctionne l'indexation des bases de données", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "What is latency?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Her Euler grafında tüm köşelerin çift dereceli olduğunu kanıtlayın.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "صمم نظام إدارة التجارب السريرية يشمل تسجيل المرضى وتتبع الموافقة والإبلاغ عن الأحداث الضارة.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Pythonで非同期のHTTPリクエストを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "What is a learning management system?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Derive the recurrence for the number of binary search trees with n nodes.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Wyjaśnij różnicę między fonetyką a fonologią", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "日照量と温度から太陽光パネル出力を計算するPythonスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Perform a threat model for a fintech payment gateway. Identify attack vectors, propose mitigations, and design incident response.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "设计一个无人机机队管理系统，包括任务规划、BVLOS 合规、实时追踪、维护调度和事件报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "このテキストを簡潔にまとめてください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "임상 시험 관리 시스템을 설계하세요. 환자 등록, 동의 추적, 부작용 보고를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "ロボット制御システムを設計してください。センサー融合、経路計画、障害物回避、リアルタイム制御ループを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "API가 간헐적으로 500 에러를 반환합니다. 일반적인 원인은 무엇인가요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "Qu'est-ce qu'un RTOS ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "ما هو الحوسبة الطرفية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "すべてのオイラーグラフの頂点の次数が偶数であることを証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "解释联邦学习如何保护用户隐私", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "什么是联邦学习？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是词法分析器？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "أثبت أن مسألة الحقيبة NP-complete عن طريق التخفيض من مسألة مجموع الجزئي.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Build a podcast monetization platform with dynamic ad insertion, listener segmentation, and revenue attribution.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "ディレクトリのファイル変更を監視するPythonスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "API nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Przejrzyj ten middleware uwierzytelniania pod kątem luk bezpieczeństwa", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pl"}
+{"prompt": "Write a program to trace the route (traceroute) to a host", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "HTTP 默认端口是多少？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "레시피 추천 플랫폼을 설계하세요. 식이 제한, 재료 대체, 스케일링, 영양 분석을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Co to jest drzewo składni abstrakcyjnej?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Implement a function to compute podcast episode duration from audio file", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "设计一个海洋监测平台，包括传感器网络、数据摄取、质量控制、可视化和告警", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "人工知能とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ダイクストラ法が非負重みグラフで最短経路を見つけることを証明してください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "이 CVE 공지를 요약하고 영향받는 컴포넌트를 나열해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "O que é uma célula fotovoltaica?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "태양광 패널 오염 손실을 줄이는 5가지 방법을 브레인스토밍해주세요", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "ko"}
+{"prompt": "मल्टीप्लेयर गेम बैकएंड डिज़ाइन करें जिसमें मैचमेकिंग, अथॉरिटेटिव सर्वर, एंटी-चीट और रिप्ले सिस्टम शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "Erkläre wie Raft bei Ausfällen Konsens erreicht", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "اشرح الفرق بين التوسع الأفقي والعمودي", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "RTOSとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "勾配降下法の二次関数上の最適ステップサイズを導出してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "Sera etkisi nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "分散ロックマネージャを実装してください。フェンシングトークン、デッドロック検出、自動リース更新を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "设计一个实时反欺诈系统，包括特征存储、模型服务、在线/离线特征一致性和模型自动重训练", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "zh"}
+{"prompt": "¿Qué es un bus CAN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Build an AR content management system with 3D asset streaming, occlusion handling, and analytics.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement a basic block builder that partitions a CFG into blocks", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is the Nyquist rate?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "O que é um qubit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "モナドとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Co to jest błąd strony?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "What is anesthesia?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Demuestra por inducción matemática que la suma de los primeros n números naturales es n(n+1)/2.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "gRPC 스트리밍이 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "设计一个图分析平台，包括分布式存储、BFS/DFS/PageRank 和社区发现。需要增量更新。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "SLAとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Pythonでリトライデコレータを実装してください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Qu'est-ce qu'une cellule photovoltaïque ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "从这段日志中提取所有 IP 地址", "expected_tier": "MEDIUM", "category": "extraction", "lang": "zh"}
+{"prompt": "एक SOC प्लेटफॉर्म डिज़ाइन करें जिसमें SIEM इंटीग्रेशन, थ्रेट हंटिंग, इंसिडेंट रिस्पॉन्स प्लेबुक और कंप्लायंस रिपोर्टिंग शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "कंपाइलर फ्रंटएंड डिज़ाइन करें: लेक्सर, पार्सर, AST, शब्दार्थ विश्लेषण, IR जनरेशन। त्रुटि पुनर्प्राप्ति और प्रतीक तालिका शामिल करें।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "クエリ実行エンジンを設計してください。ボルケーノモデル、ネステッドループ/ハッシュ/マージジョイン、集約、ソートを含め、コストベースのプラン選択を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "LSM 스토리지 엔진을 구현하세요. 레벨 압축, 블룸 필터, 범위 쿼리, 쓰기 증폭 최적화를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ko"}
+{"prompt": "Olá", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pt"}
+{"prompt": "ما هو خطأ الصفحة؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Überprüfe diese Funktion und schlage Verbesserungen vor", "expected_tier": "MEDIUM", "category": "code-review", "lang": "de"}
+{"prompt": "연속된 두 정수의 곱은 항상 짝수임을 직접 증명으로 보이세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "ما هي شجرة البنية المجردة؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "What instrument does a pianist play?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "CRDTベースの協調データ構造を実装してください。並行編集、コンフリクト解決、結果整合性を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "أثبت أن كل رسم أويلري له جميع رؤوسه بدرجات زوجية. أظهر الاتجاهين.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Pod في K8s يتم قتله بسبب OOM. كيف أقوم بالتشخيص؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "음성학과 음운론의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "证明 A* 搜索在可接受启发式下找到最优路径。使用归纳法。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "What is a photovoltaic cell?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Fikri mülkiyet nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "اشرح كيف يحول المترجم الكود المصدري إلى كود آلي", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "분산 캐싱 시스템을 설계하세요. 캐시 무효화, 복제, 샤딩, 장애 복구를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "ما هي المراقبة؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "'ありがとう'を英語で何と言いますか？", "expected_tier": "SIMPLE", "category": "translation", "lang": "ja"}
+{"prompt": "Build an HTTP/2 implementation with multiplexing, stream prioritization, header compression, and flow control. Include server push and connection migration.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Review this API endpoint for security vulnerabilities", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "How does a monad enforce sequencing in functional programming?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "太陽光パネルの汚れ損失を減らす5つの方法をブレインストームしてください", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "ja"}
+{"prompt": "Build a clinical decision support system with symptom input, differential diagnosis, and evidence retrieval.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Was ist ein schwarzes Loch?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "ध्वनिविज्ञान और स्वनिमिकी में अंतर समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "Write a JavaScript promise wrapper for setTimeout", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "QUIC ve TCP+TLS arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "Optimize a multi-echelon inventory network: safety stock, reorder points, and transportation cost trade-offs.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "Implemente o algoritmo de Graham para casca convexa", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pt"}
+{"prompt": "Prove that the greedy algorithm for the fractional knapsack problem is optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "नमस्ते", "expected_tier": "SIMPLE", "category": "greeting", "lang": "hi"}
+{"prompt": "ما هو تأثير الاحتباس الحراري؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "クラウドコンピューティングとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "What does FDA stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove that in a symmetric two-player game, a symmetric Nash equilibrium exists.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that a graph is bipartite if and only if it contains no odd cycles.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "ما هو العقد الذكي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "مرحبا", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ar"}
+{"prompt": "Chứng minh rằng tổng n số nguyên dương đầu tiên bằng n(n+1)/2 bằng quy nạp toán học.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "vi"}
+{"prompt": "सेमाफोर का उपयोग करके उत्पादक-उपभोक्ता लागू करें", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "hi"}
+{"prompt": "RNGとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "量子ビットとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "设计一个容器镜像供应链安全系统，包括 SBOM 生成、漏洞扫描、镜像签名和策略执行", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "zh"}
+{"prompt": "Read the file src/index.ts, fix the TypeScript errors, then run the tests", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Implement binary search in Java", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Derive the optimal solution to the 0-1 knapsack problem using dynamic programming. Prove correctness.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "My Kubernetes pod keeps getting OOMKilled. How do I debug this?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "SIEM يعطي إنذارات خاطئة كثيرة. كيف أضبط القواعد؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "What is federated learning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is dropshipping?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "캐시란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Qu'est-ce qu'un conteneur Docker ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "クラスカルのアルゴリズムが最小全域木を生成することを証明してください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "How do you say 'thank you' in Japanese?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "设计一个 TCP 协议栈，包括拥塞控制、流量控制、重传和连接管理。需要处理乱序包和重复 ACK。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "Git 是什么？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "다익스트라 알고리즘이 비음수 가중치 그래프에서 최단 경로를 찾음을 증명하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "Was ist künstliche Intelligenz?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Entwerfe eine Präzisionslandwirtschaftsplattform mit Sensornetzwerken, Satellitenbildern und Ertragsprognose.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "모든 오일러 그래프의 꼭짓점 차수가 짝수임을 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "解释什么是 RESTful API，举例说明", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "Design a compiler frontend for a toy language with lexer, parser, AST, semantic analysis, and IR generation. Include error recovery and symbol table management.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "音声学と音韻論の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Lexer nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "什么是前向运动学？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "APIとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Напиши асинхронную функцию на Python для загрузки нескольких URL", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ru"}
+{"prompt": "एक रोबोटिक नियंत्रण प्रणाली डिज़ाइन करें जिसमें सेंसर फ्यूजन, पथ नियोजन, बाधा टालना और वास्तविक समय नियंत्रण शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "こんにちは", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ja"}
+{"prompt": "세마포어를 사용한 생산자-소비자 구현해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Привет", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ru"}
+{"prompt": "WebRTCがどのようにP2P接続を確立するか説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Lỗi trang là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "为这个 REST 接口编写单元测试", "expected_tier": "MEDIUM", "category": "testing", "lang": "zh"}
+{"prompt": "Design a type checker for a language with Hindley-Milner, algebraic data types, and type classes. Include inference, error reporting, and module system.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "이 태양광 패널 모니터링 스크립트의 에러 처리를 검토해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "Demuestra por inducción que un árbol con n nodos tiene exactamente n-1 aristas.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "正規言語が交叉の下で閉じていることを証明してください。積構成を用いてください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "What is the speed of sound?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "SIEM 오탐이 너무 많습니다. 규칙을 어떻게 조정하나요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "Prove that the greedy interval scheduling algorithm is optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Python'da bir listeyi sıralayan bir fonksiyon yazın", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "tr"}
+{"prompt": "근음이 주어지면 장조 음계의 음을 반환하는 함수를 작성하세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Design an fMRI analysis pipeline with preprocessing, registration, statistical modeling, and visualization.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "ما هي سلسلة الكتل؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو التعلم الآلي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Implement a simple Kalman filter for 1D position estimation", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Zaprojektuj system sterowania robotem z fuzją sensorów, planowaniem ścieżki, omijaniem przeszkód i pętlami sterowania w czasie rzeczywistym.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "根音から長調の音階の音符を返す関数を書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Implement a B+ tree from scratch in Rust with concurrent access, page splitting, and range queries", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "गणितीय आगमन द्वारा सिद्ध करें कि पहले n प्राकृतिक संख्याओं का योग n(n+1)/2 है।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "Refactor this FHIR client to use async/await", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "¿Qué es una base de datos?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Create a simple memory allocator with first-fit strategy", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "The urban planning document mentions 'transit-oriented development.' I need a quick definition for my notes.", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does YAML stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Summarize the proof-of-work vs proof-of-stake debate", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Design a BGP implementation with route reflection, policy filtering, and multipath. Include convergence optimization and route dampening.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "等比級数の和の公式を導出し、帰納法で証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "Summarize the lifecycle of a massive star", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "RTOS란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Démontre que tout graphe eulérien a tous ses sommets de degré pair.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "أثبت أن خوارزمية Dijkstra تجد المسارات الأقصر بشكل صحيح عندما تكون الأوزان غير سالبة.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ar"}
+{"prompt": "Докажи, что регулярные языки замкнуты относительно пересечения. Используй произведение автоматов.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "What is lidar?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "性別の戦いゲームのナッシュ均衡を求め、存在することを証明してください", "expected_tier": "REASONING", "category": "game-theory", "lang": "ja"}
+{"prompt": "Extract all the dates and names from the following text", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "このスタックトレースを要約して根本原因を特定してください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "수학적 귀납법으로 처음 n개의 홀수의 합이 n²임을 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "K8s Pod가 OOMKilled됩니다. 어떻게 디버그하나요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "この太陽光パネル監視スクリプトのエラー処理をレビューしてください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "Entwerfe ein Robotersteuerungssystem mit Sensorfusion, Pfadplanung, Hinderniserkennung und Echtzeit-Steuerungsschleifen.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Wyjaśnij różnicę między TCP a UDP", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "Revise o tratamento de erros deste script de monitoramento solar", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pt"}
+{"prompt": "Докажи, что множество рациональных чисел счётно, используя диагональный аргумент Кантора.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Compare Terraform with Pulumi for infrastructure as code", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Dijkstraのアルゴリズムが非負の重みで最短経路を正しく計算することを証明してください。ループ不変式を用いてください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "Extract all parties and their roles from this contract excerpt", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "게일-셰플리 알고리즘이 제안측에 최적임을 증명하세요. 귀류법을 사용하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "ブラックホールとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "What is a head-mounted display?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the Oort cloud?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "컴파일러가 소스 코드를 기계어로 변환하는 방식을 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "달의 위상이 변하는 이유를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "SIEM में बहुत ज्यादा false positive आ रहे हैं। नियम कैसे ट्यून करें?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "hi"}
+{"prompt": "Co to jest lekser?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "مرحبا", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ar"}
+{"prompt": "このCVEアドバイザリを要約して影響コンポーネントをリストしてください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "What is structural typing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Build a real-time fraud detection system with rule engine, ML scoring, case management, and regulatory reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "안녕하세요", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ko"}
+{"prompt": "HTMLとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "اشتق العدد المتوقع للمقارنات في الترتيب السريع العشوائي. أثبت أنه O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ar"}
+{"prompt": "Raft가 장애 상황에서 합의에 도달하는 방식을 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "推导错位排列的公式，用容斥原理证明。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "SLAM nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "그래함 스캔으로 볼록 껍질을 계산하는 함수를 구현해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Cơ sở dữ liệu là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "光年とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "코루틴이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ko"}
+{"prompt": "재생에너지 관리 플랫폼을 설계하세요. 태양/풍력 예측, 그리드 통합, 배터리 스케줄링, 수요 반응, 탄소 보고를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "ブロックチェーンのコンセンサスメカニズムを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Diseña un sistema de gestión de ensayos clínicos con reclutamiento, consentimiento y reporte de eventos adversos.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Identify all the third-party dependencies from this import list", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Âm vị là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Implemente produtor-consumidor com semáforos", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pt"}
+{"prompt": "ドローン艦隊管理システムを設計してください。ミッション計画、BVLOS準拠、リアルタイム追跡、メンテナンススケジュールを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "Conçois une plateforme de gestion IoT avec provisionnement, mises à jour OTA, collecte de télémétrie et détection d'anomalies.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Объясни разницу между фонетикой и фонологией", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "解释什么是断路器模式", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "Triển khai producer-consumer bằng semaphore", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "vi"}
+{"prompt": "Explain how lidar and camera fusion improves perception", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "¿Qué es blockchain?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Cây cú pháp trừu tượng là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Raft와 Paxos 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "Zaprojektuj backend gry wieloosobowej z matchmakingiem, serwerem autorytatywnym, anti-cheatem i systemem powtórek.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Dane SCADA turbin wiatrowych mają luki. Jak śledzić przyczynę?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pl"}
+{"prompt": "Three people have numbers on their foreheads. They can see others' numbers but not their own. Given that the sum is 144, and each sees at least one 48, prove all numbers are 48.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "フェデレーテッドラーニングがどのようにプライバシーを保護するか説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "회문 언어가 문맥 자유 언어가 아님을 펌핑 보조정리를 사용하여 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Raftが障害下で合意に達する仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "pandasでCSVから月次売上トレンドを分析するスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "ja"}
+{"prompt": "分数ナップサック問題の貪欲アルゴリズムが最適であることを証明してください", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "Co to jest magistrala CAN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Categorize these log entries by severity level", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Объясни разницу между гражданским и уголовным правом", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Demuestra que sqrt(2) es irracional usando prueba por contradicción.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Zaprojektuj wykonawcę zapytań z modelem wulkanowym, złączeniami nested-loop/hash/merge, agregacją i sortowaniem. Uwzględnij wybór planu oparty na koszcie.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "pl"}
+{"prompt": "What is two-factor authentication?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Food quality sensor calibration drifts after a week. How do I detect and correct?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "ما هو VPN؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "写一个 Python 函数来计算斐波那契数列", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "FPGAとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Derive o número esperado de comparações no quicksort randomizado. Prove que é O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "pt"}
+{"prompt": "デッドロックとは何ですか？", "expected_tier": "SIMPLE", "category": "definition", "lang": "ja"}
+{"prompt": "Prove that the determinant of a product of matrices equals the product of their determinants.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "쿼리 실행기를 설계하세요. 볼케이노 모델, 중첩 루프/해시/머지 조인, 집계, 정렬, 비용 기반 계획 선택을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ko"}
+{"prompt": "この認証ミドルウェアのセキュリティ脆弱性をレビューして修正案を出してください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "Explain the bullwhip effect in supply chains", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "こんにちは", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ja"}
+{"prompt": "엣지 컴퓨팅이 클라우드 컴퓨팅에 비해 지연을 어떻게 줄이는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "FPGA란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Prove that in the hat puzzle with n people, the optimal strategy guarantees n-1 correct guesses.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Projete uma plataforma de recomendação de receitas com restrições dietéticas, substituição de ingredientes e análise nutricional.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "量子ビットとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "API가 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "What is Grafana?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "게임 세이브 파일을 파싱하여 플레이어 스탯을 추출하는 Python 스크립트를 작성하세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Compare AUV vs ROV for ocean exploration", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "災害復旧戦略を設計してください。RPO1分未満、自動フェイルオーバー、データ整合性を含めてください。", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "ja"}
+{"prompt": "你好", "expected_tier": "SIMPLE", "category": "greeting", "lang": "zh"}
+{"prompt": "Qu'est-ce qu'une vulnérabilité zero-day ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "머신러닝이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "IoTフリート管理プラットフォームを設計してください。デバイスプロビジョニング、OTAアップデート、テレメトリ、異常検知を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "How many ounces in a cup?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "ما هو الذكاء الاصطناعي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Explain the difference between symmetric and asymmetric encryption", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "n개 노드의 트리가 정확히 n-1개의 간선을 가짐을 귀납법으로 증명하세요", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Hipervizör nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Projete um executor de consultas com modelo vulcânico, joins nested-loop/hash/merge, agregação e ordenação. Inclua seleção de plano baseada em custo.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "pt"}
+{"prompt": "암호화란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "스마트 계약이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Our recipe scaling produces wrong fractions. How do I debug the rounding?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "What is the difference between IPv4 and IPv6?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Wyjaśnij różnicę między cukrzycą typu 1 i typu 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "Summarize the main quantum error correction approaches", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Prove that every continuous function on [a,b] is uniformly continuous. Use epsilon-delta.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "ゼロトラストネットワークアクセスシステムを設計してください。デバイスポスチャーチェック、継続認証、マイクロセグメンテーションを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "光起電力セルとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "What is recursion?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "ما هو التخزين المؤقت؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Построй распределённое хранилище ключ-значение с согласованным хешированием, репликацией и обнаружением конфликтов", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ru"}
+{"prompt": "분수 배낭 문제의 탐욕 알고리즘이 최적임을 증명하세요", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "쿼드콥터란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "메시지 큐가 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "Rewrite this legal disclaimer in plain language for consumers", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Review this drone flight log parser for timezone handling", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "온실 효과란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "이 인증 미들웨어의 보안 취약점을 검토하고 수정 제안해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "Make this email more formal", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "ما هو BGP؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "VPN이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "재귀란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Write a function to downsample a signal by a factor N", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "自律走行の知覚スタックを設計してください。LiDAR、カメラ、レーダー融合、オブジェクト追跡、L4冗長性を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "Explica la diferencia entre diabetes tipo 1 y tipo 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "안녕하세요", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ko"}
+{"prompt": "この関数をレビューして改善点を提案してください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "QUIC와 TCP+TLS의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "AnsibleとTerraformのインフラ自動化を比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "Simplify this technical explanation for a non-technical audience", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Xin chào", "expected_tier": "SIMPLE", "category": "greeting", "lang": "vi"}
+{"prompt": "Compare trademark vs copyright protection", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "What is an SoC?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Convert this CSV data into a markdown table", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "Co to jest honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "SQL 쿼리 엔진을 구현하세요. 렉서, 파서, 쿼리 플래너, 조인 최적화를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ko"}
+{"prompt": "Sıfır gün açığı nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Xem xét xử lý lỗi của script giám sát tấm pin mặt trời này", "expected_tier": "MEDIUM", "category": "code-review", "lang": "vi"}
+{"prompt": "क्विबिट क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "ランダム化クイックソートの期待比較回数を導出してください。O(n log n)を証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "API يُرجع أخطاء 500 بشكل متقطع. ما الأسباب الشائعة؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "O que é uma vulnerabilidade zero-day?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Udowodnij, że zachłanny algorytm dla ułamkowego problemu plecakowego jest optymalny.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "pl"}
+{"prompt": "Lexer là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "What is semantic segmentation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Démontre le théorème de Bolzano-Weierstrass : toute suite bornée dans R admet une sous-suite convergente.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "Write tests for this FHIR resource validation logic", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "태양 복사량 계산 함수의 유닛 테스트를 작성해주세요", "expected_tier": "MEDIUM", "category": "testing", "lang": "ko"}
+{"prompt": "Honeypot là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "ध्वन्यात्मक इकाई क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "ما هو الحوسبة السحابية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "LSMツリーとBツリーを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "ما هي شجرة B؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ハニーポットとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Diseña una plataforma de gestión IoT con aprovisionamiento de dispositivos, actualizaciones OTA, recopilación de telemetría y detección de anomalías.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "صمم نظام إدارة أسطول الطائرات بدون طيار مع تخطيط المهام والامتثال لـ BVLOS والتتبع في الوقت الفعلي.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "FDM 3D 프린팅이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Napisz funkcję do parsowania nagłówka pakietu IPv4", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pl"}
+{"prompt": "Analyze the subgame-perfect equilibrium in a multi-stage game with perfect information.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "List all the database tables mentioned in this SQL migration", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Implement a function to normalize podcast audio to -16 LUFS", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write documentation for a contract review checklist", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "RTOS nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Giải thích sự khác biệt giữa luật dân sự và hình sự", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "ما هو الصوت اللغوي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "드론 함대 관리 시스템을 설계하세요. 미션 계획, BVLOS 준수, 실시간 추적, 유지보수 스케줄링을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Write regression tests for this podcast loudness normalization", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "ما هي الملكية الفكرية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "اكتب دالة لتحليل رأس حزمة IPv4", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "Explain how zero-knowledge proofs work at a high level", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "أثبت أن مشكلة التوقف غير قابلة للحل باستخدام جدلية القطرية.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "こんにちは", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ja"}
+{"prompt": "温室効果とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "対称暗号と非対称暗号の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "レシピのスケーリングで分数がおかしい。丸めのデバッグ方法は？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "Реализуй SQL-движок с лексером, парсером, планировщиком запросов и оптимизацией соединений.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ru"}
+{"prompt": "Derive the formula for the sum of a geometric series. Prove convergence when |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Dijkstra 알고리즘이 음이 아닌 가중치에서 최단 경로를 올바르게 계산함을 증명하세요. 루프 불변식을 사용하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "マルチプレイヤーゲームサーバーを構築してください。マッチメイキング、状態同期、ラグ補償を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "月の満ち欠けが起こる理由を説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Bu hata yönetim kalıbını inceleyin ve iyileştirmeler önerin", "expected_tier": "MEDIUM", "category": "code-review", "lang": "tr"}
+{"prompt": "太陽光発電の出力計算関数のユニットテストを書いてください", "expected_tier": "MEDIUM", "category": "testing", "lang": "ja"}
+{"prompt": "추상 구문 트리란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "What is inflation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "صمم نظام مطابقة لخدمة مشاركة الرحلات يشمل تتبع الموقع في الوقت الفعلي، التسعير الديناميكي، والتوقع الوصول.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "民法と刑法の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Show that the greedy coin change algorithm is optimal for coin systems {1, 5, 10, 25}. Prove it.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that in a repeated prisoner's dilemma, tit-for-tat is a Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Write chaos tests for our message queue", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "이 함수를 리뷰하고 개선 사항을 제안해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "Terraform이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "اشرح الفرق بين الصوتيات والصوتيات اللغوية", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Medeni hukuk ve ceza hukuku arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "Écris un script Python pour lire un CSV et calculer des statistiques", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "fr"}
+{"prompt": "このエラー処理パターンをレビューして改善点を提案してください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "エッジコンピューティングとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Что такое CAN-шина?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Build a competency-based learning platform with skill graphs, assessments, and credentialing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "コンパイラがソースコードを機械語に変換する仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Sayfa hatası nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "What is CI/CD?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "データベースインデックスの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "ブロックチェーンとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Merhaba", "expected_tier": "SIMPLE", "category": "greeting", "lang": "tr"}
+{"prompt": "Basit aritmetik ifadeler için özyinelemeli inişli ayrıştırıcı yazın", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "tr"}
+{"prompt": "صمم نظام مزايدة في الوقت الفعلي للإعلانات يشمل تحسين العروض وتحديد التكرار واكتشاف الاحتيال.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Convert this class-based React component to a functional component with hooks", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "セマフォを使ったプロデューサー・コンシューマを実装してください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "What is a deadlock?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Create test cases for this food spoilage prediction model", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Prove that the maximum flow equals the minimum cut in a flow network.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Die Windturbinen-SCADA-Daten haben Lücken. Wie finde ich die Ursache?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "de"}
+{"prompt": "Udowodnij, że problem stopu jest nierozstrzygalny, używając argumentu diagonalnego.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pl"}
+{"prompt": "Extract key financial terms from this supply contract", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "컨테이너와 가상 머신의 차이를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "Explain how to calculate fabric yardage for a gathered skirt", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "When was the Declaration of Independence signed?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "天文学の距離計算の浮動小数点精度をレビューしてください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "コンテナと仮想マシンの違いを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "IPv4 पैकेट हेडर पार्स करने के लिए फ़ंक्शन लिखें", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "hi"}
+{"prompt": "수학적 귀납법을 사용하여 처음 n개의 양의 정수의 합이 n(n+1)/2임을 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "प्रकाश वर्ष क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Chứng minh rằng các ngôn ngữ chính quy đóng dưới phép giao. Sử dụng cấu trúc tích.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "vi"}
+{"prompt": "Implement a simple feature flag system using environment variables", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Compare TOD vs sprawl for housing affordability", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Merhaba", "expected_tier": "SIMPLE", "category": "greeting", "lang": "tr"}
+{"prompt": "Giải thích sự khác biệt giữa ngữ âm học và âm vị học", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "성의 전쟁 게임의 내시 균형을 구하고 존재함을 증명하세요", "expected_tier": "REASONING", "category": "game-theory", "lang": "ko"}
+{"prompt": "How does a load balancer distribute traffic?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "광년이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Xin chào", "expected_tier": "SIMPLE", "category": "greeting", "lang": "vi"}
+{"prompt": "LSMストレージエンジンを実装してください。レベル圧縮、ブルームフィルター、範囲クエリを含め、書き込み増幅の最適化を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "صمم نظام تحكم روبوتي يشمل دمج أجهزة الاستشعار وتخطيط المسار وتجنب العقبات وحلقات التحكم في الوقت الفعلي.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "How many beats in a 4/4 measure?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "정지 문제가 결정 불가능함을 대각선 논법으로 증명하세요", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Prove that resolution is refutation-complete for propositional logic.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "证明停机问题是不可判定的（使用对角化论证）", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "什么是协程？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "Raft 합의 모듈을 구현하세요. 리더 선출, 로그 복제, 멤버십 변경, 스냅샷, 네트워크 분할 처리를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ko"}
+{"prompt": "暗号化とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "등비급수의 합 공식을 유도하고 귀납법으로 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "グローバルサプライチェーン可視化プラットフォームを設計してください。リアルタイム追跡、需要予測、リスクスコアリングを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "CAN 버스란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "एक सामग्री मॉडरेशन पाइपलाइन डिज़ाइन करें जिसमें टेक्स्ट वर्गीकरण, छवि विश्लेषण, वीडियो स्कैनिंग और अपील वर्कफ़्लो शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "Write a middleware that adds request ID to every HTTP response", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "推导等比数列求和公式，证明当 |r| < 1 时收敛。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "Prove that the set of algebraic numbers is countable while the set of transcendental numbers is uncountable.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "क्वेरी एक्ज़ीक्यूटर डिज़ाइन करें: वोल्कैनो मॉडल, नेस्टेड लूप/हैश/मर्ज जॉइन, एग्रीगेशन, सॉर्ट। लागत-आधारित योजना चयन शामिल करें।", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "hi"}
+{"prompt": "Giải thích sự khác biệt giữa TCP và UDP", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "방화벽이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "オブザーバビリティとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "カナリアリリースとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "صمم مكدس TCP مع التحكم في الازدحام والتدفق وإعادة الإرسال وإدارة الاتصال. تضمن معالجة الحزم غير المرتبة وACK المكررة.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Wyjaśnij efekt bata w łańcuchach dostaw", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "What is a 404 error?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Write mutation tests for this password hashing module", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Metin sınıflandırma, görüntü analizi, video tarama ve itiraz iş akışı içeren bir içerik moderasyon hattı tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "फोटोवोल्टिक सेल क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "TCP और UDP में क्या अंतर है, समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "コンテンツモデレーションパイプラインを設計してください。テキスト分類、画像分析、ビデオスキャン、申立てワークフローを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "セキュリティオペレーションセンターを設計してください。SIEM連携、脅威ハンティング、インシデント対応、コンプライアンスレポートを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "Co to jest baza danych?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "ما هو التشفير؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "What is phishing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a 3PL?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define idempotency", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Zaprojektuj platformę zarządzania energią odnawialną z prognozą słoneczną/wiatrową, integracją sieci, planowaniem baterii i raportowaniem emisji CO2.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Перепиши этот текст более кратко", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "ru"}
+{"prompt": "Write a Python script to parse a game save file in JSON format and extract player stats", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Kafkaとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Write a custom React hook for debouncing input", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Los datos SCADA del aerogenerador tienen huecos. ¿Cómo rastreo la causa?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "es"}
+{"prompt": "Zaprojektuj frontend kompilatora: lekser, parser, AST, analiza semantyczna, generowanie IR. Uwzględnij odzyskiwanie błędów i tabelę symboli.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Thiết kế nền tảng SOC với tích hợp SIEM, săn mối đe dọa, playbook phản hồi sự cố và báo cáo tuân thủ.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "Bal kutusu nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Summarize the key differences between AUTOSAR Classic and Adaptive", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "¿Qué es un contenedor Docker?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "ما هو Kafka؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "CANバスとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Bus CAN là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Prove that a graph has an Eulerian circuit if and only if every vertex has even degree. Show both directions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "抽象構文木とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "실시간 데이터 파이프라인을 설계하세요. 배치/스트림 수집, 스키마 진화, 데이터 품질 검증을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "ko"}
+{"prompt": "ما هو الجدار الناري؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "FDM, SLA, SLS 3D 프린팅의 주요 차이점을 요약해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "Giải thích sự khác biệt giữa tiểu đường type 1 và type 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "Udowodnij twierdzenie Bolzano-Weierstrassa: każdy ciąg ograniczony w R ma podciąg zbieżny.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pl"}
+{"prompt": "Summarize the lifecycle of a lithium-ion battery in renewable storage", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Derive the formula for the number of derangements of n elements. Prove it using inclusion-exclusion.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Revise esta função e sugira melhorias", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pt"}
+{"prompt": "RESTとGraphQLの違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "クアッドコプターとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "和音進行ジェネレーターのユニットテストを書いてください", "expected_tier": "MEDIUM", "category": "testing", "lang": "ja"}
+{"prompt": "마이야르 반응과 갈변의 관계를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "RTOS क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "把这个 YAML 配置转成 JSON 格式", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "zh"}
+{"prompt": "Design a comprehensive API security layer with OAuth2, rate limiting, IP allowlisting, request signing, and DDoS protection.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "What is a dart in sewing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Differences between optimistic and pessimistic concurrency control", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "データベースとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "정규 언어가 교집합에 대해 닫혀 있음을 증명하세요. 곱 구성을 사용하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Prove that the set of decidable languages is closed under complement.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "ما هو PCI-DSS؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "このPRの主な変更点をまとめてください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "Write a regex to extract all proper nouns from a text (simple heuristic)", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "콘텐츠 모더레이션 파이프라인을 설계하세요. 텍스트 분류, 이미지 분석, 비디오 스캔, 이의 제기 워크플로우를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Işık yılı nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Design a notification system supporting push, email, SMS, and in-app channels with priority queues, rate limiting, and user preferences.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "カスタムSQLクエリエンジンを実装してください。レキサー、パーサー、クエリプランナー、結合最適化を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "IPv4パケットヘッダーを解析する関数を書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Refactor this monolithic application into microservices. Identify service boundaries, define API contracts, and design inter-service communication.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Fotovoltaik hücre nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "대칭 암호화와 비대칭 암호화의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "Architect a real-time event processing pipeline using Kafka with exactly-once semantics, dead letter queues, schema evolution, and multi-region failover", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "जीरो डे वल्नरेबिलिटी क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "What is ACID?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "हाइपरवाइज़र क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "El SIEM genera muchos falsos positivos. ¿Cómo afino las reglas?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "es"}
+{"prompt": "Что такое база данных?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Review this rate limiter implementation for thundering herd issues", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Napisz funkcję Python sortującą listę", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pl"}
+{"prompt": "허니팟이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "O que é um page fault?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Derive the formula for the nth Fibonacci number using generating functions.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Design a wastewater treatment monitoring system with sensor networks, process control, compliance reporting, and optimization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "レキサーとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "TCP ve UDP arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "لخص الفروقات الرئيسية بين FDM و SLA و SLS في الطباعة ثلاثية الأبعاد", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "What are the trade-offs between microservices and a modular monolith?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Что такое лексер?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "把这段文字翻译成正式的学术论文风格", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "zh"}
+{"prompt": "What is last-mile delivery?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "ما هو SLAM؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Design a neuroimaging data management system with DICOM ingestion, anonymization, sharing, and compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "마스터 정리를 사용해 T(n)=2T(n/2)+n의 닫힌 형태를 유도하세요", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "لخص هذا الإعلان CVE واذكر المكونات المتأثرة", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "グラハムスキャンで凸包を計算する関数を実装してください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "分散キーバリューストアを構築してください。一貫性のあるハッシュ、レプリケーション、コンフリクト解決を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "카나리 릴리스란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "정밀 농업 플랫폼을 설계하세요. 센서 네트워크, 위성 영상, 수확량 예측, 관개 제어를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "屋上太陽光のネットメータリングの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "gRPCストリーミングの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "ما هو وعاء العسل؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "볼차노-바이어슈트라스 정리를 증명하세요: R의 유계 수열은 수렴하는 부분 수열을 가진다.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Generate a correlation matrix for these features using seaborn", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "B木の挿入操作を実装してください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Write a function to serialize and deserialize a binary tree", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "审查这个函数，给出可读性和性能的改进建议", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "ब्लैक होल क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "How does garbage collection work in Go compared to Java?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "B木のLRUページ置換を実装してください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Explain the thermocline", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does TLS certificate pinning work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "서킷 브레이커 패턴을 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "لخص هذا Stack Trace وحدد السبب الجذري", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "Démontre par récurrence que la somme des n premiers entiers naturels vaut n(n+1)/2.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "My game's physics feels floaty. How do I tune gravity and jump velocity for better feel?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Спроектируй платформу SOC с интеграцией SIEM, охотой за угрозами, плейбуками реагирования и отчётами по соответствию.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "आपूर्ति श्रृंखला में चाबुक प्रभाव समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "Bu güneş paneli izleme betiğinin hata işlemesini inceleyin", "expected_tier": "MEDIUM", "category": "code-review", "lang": "tr"}
+{"prompt": "멀티플레이어 게임 백엔드를 설계하세요. 매칭, 권위 서버, 반칙 방지, 리플레이 시스템을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Güneş/rüzgar tahmini, şebeke entegrasyonu, pil planlaması ve karbon raporlaması içeren yenilenebilir enerji yönetim platformu tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Design a real-time data lake architecture with batch and stream ingestion, schema evolution, data quality checks, and cost optimization.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "什么是带宽？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "데이터 레이크란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Przejrzyj obsługę błędów w tym skrypcie monitorowania paneli słonecznych", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pl"}
+{"prompt": "用数学归纳法证明：对所有正整数 n，1² + 2² + ... + n² = n(n+1)(2n+1)/6", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "크루스칼 알고리즘이 최소 신장 트리를 생성함을 증명하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "디렉토리의 파일 변경을 모니터링하는 Python 스크립트를 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "What is a deadline miss?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is MIDI?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "O que é um hipervisor?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "ArgoCD vs Flux: which GitOps tool is better?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "HTTP क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "ما هو بحيرة البيانات؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "TCP 스택을 설계하세요. 혼잡 제어, 흐름 제어, 재전송, 연결 관리, 순서 바뀐 패킷 및 중복 ACK 처리를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "صمم محرك تنفيذ استعلامات مع نموذج البركان، حلقات متداخلة/هاش/دمج، تجميع وفرز. تضمن اختيار خطة قائم على التكلفة.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ar"}
+{"prompt": "QUIC और TCP+TLS में क्या अंतर है?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "Tip 1 ve Tip 2 diyabet arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "양자 비트란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Bolzano-Weierstrass teoremini kanıtlayın: R'de her sınırlı dizinin yakınsak bir alt dizisi vardır.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "Build a traffic simulation platform with demand modeling, signal optimization, emissions estimation, and visualization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "How does gRPC streaming work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "K8s Podが繰り返しOOMKilledされます。デバッグ方法は？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "Design a supply chain security framework with supplier vetting, shipment verification, and tamper detection.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Kafka란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "안녕하세요", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ko"}
+{"prompt": "लेक्सर क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Derive the time complexity of quicksort in the average case using indicator random variables.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "페이지 폴트란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "IPv4 패킷 헤더를 파싱하는 함수를 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "Create a README for this Python library with usage examples", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "n頂点の木がちょうどn-1本の辺を持つことを帰納法で証明してください", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "Drone telemetry drops packets during high-speed maneuvers. Where do I start?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "블록체인이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "What is a distributed system?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "컴파일러 프론트엔드를 설계하세요. 렉서, 파서, AST, 의미 분석, IR 생성, 오류 복구, 심볼 테이블 관리를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "Cześć", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pl"}
+{"prompt": "证明 Kruskal 算法能生成最小生成树。使用切割性质。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "पेज फॉल्ट क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Python으로 문자열을 뒤집는 함수를 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "等比級数の和の公式を導出してください。|r|<1のとき収束することを証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "Implementa productor-consumidor con semáforos", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "es"}
+{"prompt": "什么是人工智能？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "하이퍼바이저란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Migrate a legacy Oracle database to PostgreSQL with zero downtime, data validation, stored procedure conversion, and performance testing.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "주거용 에너지로 태양광 PV와 풍력 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "SLAMとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Plan a migration from monolithic warehouse software to microservices with zero downtime.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Traduce 'thank you' al español", "expected_tier": "SIMPLE", "category": "translation", "lang": "es"}
+{"prompt": "마스터 정리를 사용해 T(n)=2T(n/2)+n의 닫힌 형태를 유도하세요. 각 경우를 보여주세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "Prove that merge sort is correct using induction on the merge operation.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "What is a CDN?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "SIEM çok fazla yanlış pozitif veriyor. Kuralları nasıl ayarlarım?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "tr"}
+{"prompt": "Co to jest fonem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "What is the CAP theorem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "CRDT 기반 협업 데이터 구조를 구현하세요. 동시 편집, 충돌 해결, 최종 일관성을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ko"}
+{"prompt": "臨床試験管理システムを設計してください。患者登録、同意追跡、有害事象報告を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "صمم منصة زراعة دقيقة تشمل شبكات الاستشعار والصور الفضائية والتنبؤ بالمحصول والتحكم في الري.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "How many continents are there?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "اكتب محلل نزول تكراري لتعبير حسابي بسيط", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "اشرح الفرق بين القانون المدني والجنائي", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "LSM 트리와 B 트리를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "What is a microservices architecture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Gale-Shapleyアルゴリズムが提案側にとって最適であることを証明してください。背理法を用いてください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "Qu'est-ce que l'effet de serre ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "A* 탐색이 허용 가능한 휴리스틱으로 최적 경로를 찾음을 증명하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "Derive the optimal Huffman code length bound: H(X) <= L < H(X) + 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "What is tail recursion?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Build a multi-player game server with matchmaking, state synchronization, lag compensation, and anti-cheat detection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "ما هو البروتوكول HTTP؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Beweise, dass das Halteproblem unentscheidbar ist, mit dem Diagonalargument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Co to jest API?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "数学的帰納法で、最初のn個の奇数の和がn²に等しいことを証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "Derive the Fisher information for the normal distribution. Use the definition I(θ) = E[(∂/∂θ log f(X;θ))²].", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Demuestra que el problema de la parada es indecidible usando el argumento diagonal.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Объясни как работает индексирование в базах данных", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Write a script to parse baseball box score format and extract batting stats", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "렉서란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "راجع هذه الدالة واقترح تحسينات", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "What does forte mean in music?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Derleyici ön ucu tasarlayın: lexer, parser, AST, anlamsal analiz, IR üretimi. Hata kurtarma ve sembol tablosu yönetimi dahil edin.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "数据库分片是怎么工作的？", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "SLAM이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Write a Python script to validate JWT tokens and check expiration", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is a webhook?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What does REST stand for?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "什么是 Terraform？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "What is a lintel?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Semafor kullanarak üretici-tüketici uygulayın", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "tr"}
+{"prompt": "1형과 2형 당뇨병의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "اكتب دالة Python غير متزامنة لجلب عدة URLs", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "What is a Jenkins pipeline?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Implement a function to compute IoU between two bounding boxes", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "지적 재산권이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "精密農業プラットフォームを設計してください。センサーネットワーク、衛星画像、収量予測、灌漑制御を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "What is the ELO rating system?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Kübit nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "इस एरर हैंडलिंग पैटर्न की समीक्षा करें और सुधार सुझाएं", "expected_tier": "MEDIUM", "category": "code-review", "lang": "hi"}
+{"prompt": "Pythonでリストをソートする関数を書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Düzenli dillerin kesişim altında kapalı olduğunu kanıtlayın. Çarpım yapısını kullanın.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "スポーツ分析ライブラリのREADMEを作成してください", "expected_tier": "MEDIUM", "category": "documentation", "lang": "ja"}
+{"prompt": "FDM 3Dプリントとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ゲームセーブファイルを解析してプレイヤーステータスを抽出するPythonスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "Co to jest RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "T(n)=T(n-1)+nの閉形式を導出してください", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "Write a docstring for this complex function", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Что такое Kafka?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "この認証バイパスチェック関数のユニットテストを書いてください", "expected_tier": "MEDIUM", "category": "testing", "lang": "ja"}
+{"prompt": "Prove por indução que uma árvore com n nós tem exatamente n-1 arestas.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "음소란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Dijkstraのアルゴリズムが非負の重みで最短経路を正しく見つけることを証明してください", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "Create a Python dataclass with validation using __post_init__", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "أثبت أن الجذر التربيعي لـ 2 غير نسبي باستخدام البرهان بالتناقض.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Co to jest HTTP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "A*探索が許容可能なヒューリスティックで最適パスを見つけることを証明してください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "How does activated sludge remove organic matter?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "What does RNG mean in gaming?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "API là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "What is a block explorer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "صمم منصة إدارة أجهزة إنترنت الأشياء تشمل تسجيل الأجهزة وتحديث البرامج عن بعد وجمع البيانات واكتشاف الشذوذ.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Terraformとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "أثبت أن مجموع أول n أعداد صحيحة موجبة يساوي n(n+1)/2 باستخدام الاستقراء الرياضي.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Brainstorm approaches to optimize last-mile delivery costs", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "谢谢", "expected_tier": "SIMPLE", "category": "greeting", "lang": "zh"}
+{"prompt": "Define polymorphism", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Raftアルゴリズムとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "नमस्ते", "expected_tier": "SIMPLE", "category": "greeting", "lang": "hi"}
+{"prompt": "Explain why we see different phases of the Moon", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "LSM ağacı ile B-ağacını karşılaştırın", "expected_tier": "MEDIUM", "category": "comparison", "lang": "tr"}
+{"prompt": "Thiết kế trình thực thi truy vấn với mô hình volcano, nested-loop/hash/merge join, aggregation, sort. Bao gồm lựa chọn kế hoạch dựa trên chi phí.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "vi"}
+{"prompt": "Design an automotive ECU software architecture with AUTOSAR stack, OTA updates, diagnostic services, and safety monitoring.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "What is a triple-double?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "블록체인 합의 메커니즘을 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "RaftとPaxosの比較をしてください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "メッセージキューの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "ما هو البت الكمي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "اشرح كيف تعمل قوائم الرسائل", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Prove that binary search runs in O(log n) time. State and prove the recurrence.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "등비급수의 합 공식을 유도하세요. |r|<1일 때 수렴함을 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "RTOS là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "멀티플레이어 게임 서버를 설계하세요. 매치메이킹, 상태 동기화, 지연 보상, 안티치트를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "راجع معالجة الأخطاء في سكربت مراقبة الألواح الشمسية", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "What is an antibiotic?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Mi Pod de K8s se está matando por OOM. ¿Cómo depuro esto?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "es"}
+{"prompt": "नागरिक और आपराधिक कानून में अंतर समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "コルーチンとは何ですか？", "expected_tier": "SIMPLE", "category": "definition", "lang": "ja"}
+{"prompt": "Brainstorm 5 种减少入侵检测误报的方法", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "zh"}
+{"prompt": "Derive the bias-variance decomposition for squared error loss.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Was ist ein Quadrocopter?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "भिन्नात्मक नैपसैक समस्या के लालची एल्गोरिथ्म की इष्टतमता सिद्ध करें।", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "hi"}
+{"prompt": "데드락이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ko"}
+{"prompt": "इस सोलर पैनल मॉनिटरिंग स्क्रिप्ट की एरर हैंडलिंग की समीक्षा करें", "expected_tier": "MEDIUM", "category": "code-review", "lang": "hi"}
+{"prompt": "Prove that binary search runs in O(log n) time and always finds the target if present.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Design an automated trading system with market data ingestion, strategy backtesting, risk management, order execution, and real-time P&L tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "ما هي الخلية الضوئية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "知的財産とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "No", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "B-트리란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "写一个 Prometheus 指标导出器", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "Kara delik nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Rüzgar türbini SCADA verilerinde boşluklar var. Nedeni nasıl izlerim?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "tr"}
+{"prompt": "ما هو المعالج الرسومي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "이 스택 트레이스를 요약하고 근본 원인을 파악해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "풍력 터빈 SCADA 데이터에 간헐적 공백이 있습니다. 원인을 어떻게 추적하나요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "Write a function to compute the closest pair of points in O(n log n)", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "キャッシュとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Entwerfe ein Multiplayer-Spiel-Backend mit Matchmaking, autoritativem Server, Anti-Cheat und Replay-System.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Bolzano-Weierstrassの定理を証明してください：Rの有界列は収束部分列を持つ。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "Was ist Observability?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "What does GPU stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "LSM tree और B-tree की तुलना करें", "expected_tier": "MEDIUM", "category": "comparison", "lang": "hi"}
+{"prompt": "Viết hàm phân tích tiêu đề gói IPv4", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "vi"}
+{"prompt": "نفّذ منتج-مستهلك باستخدام الإشارات", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "Qubit là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Veritabanı nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "클라우드 컴퓨팅이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "اشرح كيف يحمي التعلم الموحد خصوصية المستخدم", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "GPU का क्या मतलब है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "글로벌 공급망 가시성 플랫폼을 설계하세요. 실시간 추적, 수요 예측, 리스크 스코어링을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "ページフォルトとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Explain what a message broker does and when to use one", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Design a multi-tenant analytics platform with data isolation, custom dashboards, real-time queries, scheduled reports, and role-based access.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Prove that the set of real numbers is uncountable using Cantor's diagonal argument. Show every step.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Design an apparel supply chain platform with design-to-manufacturing workflow, size grading, material sourcing, and sustainability tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "صمم نظام أمان سلسلة التوريد لصور الحاويات يشمل إنشاء SBOM ومسح الثغرات وتوقيع الصور.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "ar"}
+{"prompt": "Derive a fórmula da soma da série geométrica. Prove convergência quando |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "pt"}
+{"prompt": "数学的帰納法を用いて 1+2+...+n = n(n+1)/2 を証明してください。各ステップを形式的に。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "Sở hữu trí tuệ là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Explain how certificate pinning prevents MITM attacks", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "CAN बस क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "Cześć", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pl"}
+{"prompt": "Build a fashion recommendation engine with style analysis, fit prediction, inventory optimization, and personalization.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Write tests for this social media engagement rate calculator", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Derive the mixed-strategy Nash equilibrium for rock-paper-scissors.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "اكتب دالة Python لعكس سلسلة نصية", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "QUICとTCP+TLSの違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "Our 3D print quality degrades over time. How do I diagnose?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "민법과 형법의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "Cześć", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pl"}
+{"prompt": "ハイパーバイザとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Что такое световой год?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "اشرح الفرق بين QUIC و TCP+TLS", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Design a food traceability platform with blockchain, batch tracking, and recall automation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "How many teaspoons in a tablespoon?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Build a food recall automation system with batch tracing, notification, and regulatory filing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Thiết kế nền tảng quản lý năng lượng tái tạo với dự báo mặt trời/gió, tích hợp lưới điện, lập lịch pin và báo cáo carbon.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "로봇 제어 시스템을 설계하세요. 센서 퓨전, 경로 계획, 장애물 회피, 실시간 제어 루프를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "What is a MAC address?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "水平スケーリングと垂直スケーリングの違いを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "Design a renewable energy management platform with solar/wind forecasting, grid integration, battery scheduling, demand response, and carbon reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Объясни как работает gRPC streaming", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "연합 학습이 사용자 프라이버시를 어떻게 보호하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "नमस्ते", "expected_tier": "SIMPLE", "category": "greeting", "lang": "hi"}
+{"prompt": "자율주행 인지 스택을 설계하세요. LiDAR, 카메라, 레이더 융합, 객체 추적, L4 중복을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "What is GMO?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "صمم منصة توصية وصفات تشمل قيود النظام الغذائي واستبدال المكونات والتحجيم وتحليل التغذية.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Explain the difference between type 1 and type 2 diabetes", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Thiết kế frontend trình biên dịch: lexer, parser, AST, phân tích ngữ nghĩa, sinh IR. Bao gồm khôi phục lỗi và quản lý bảng ký hiệu.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "Implementiere eine CRDT-basierte kollaborative Datenstruktur mit konkurrenter Bearbeitung und Konfliktlösung.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "de"}
+{"prompt": "Derive the expected number of comparisons in linear search for a uniform distribution.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Write a script to parse drone flight log and extract altitude violations", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Prove that in a congestion game, a pure Nash equilibrium always exists using a potential function.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "FDM、SLA、SLS 3Dプリントの主な違いを要約してください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "صمم استراتيجية التعافي من الكوارث مع RPO أقل من دقيقة وتبديل تلقائي واتساق البيانات.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "ar"}
+{"prompt": "Prove that binary search runs in O(log n) time and finds the element if present. Use the loop invariant.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "五个海盗分 100 金币，用逆向归纳法证明第一个海盗提出 98-0-1-0-1 的方案。", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "zh"}
+{"prompt": "Wyjaśnij różnicę między prawem cywilnym a karnym", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "SSH의 기본 포트는 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "ما هو الكوادكوبتر؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "Beweise, dass der Greedy-Algorithmus für das fraktionale Rucksackproblem optimal ist.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "de"}
+{"prompt": "マイクロサービスとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Translate 'distributed system' to Japanese", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "¿Qué es SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "HTTP là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "SIEMの誤検知が多すぎます。ルールをどうチューニングしますか？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "اشتق صيغة مجموع المتسلسلة الهندسية. أثبت التقارب عندما |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ar"}
+{"prompt": "数学的帰納法を用いて、最初のn個の正の整数の和がn(n+1)/2であることを証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "什么是 CAN 总线？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}

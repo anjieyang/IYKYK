@@ -1,0 +1,397 @@
+{"prompt": "Redis vs Memcached — when to use which?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Explain how drip irrigation reduces water waste compared to flood irrigation", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "设计一个食品安全管理系统，包括 HACCP 追踪、供应商审计、召回管理和监管报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "Write a C function to read a value from a CAN bus frame", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a metaphor explaining distributed consensus to a child", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Entwerfe eine Rezeptempfehlungsplattform mit Diätbeschränkungen, Zutatenersatz und Nährwertanalyse.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Prove that the set of context-free languages is closed under union.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "What is a zero-day vulnerability?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "给出 5 种提升新开发者入职体验的方法", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "zh"}
+{"prompt": "Compare WebXR vs native SDKs for AR/VR development", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Design a social media crisis detection system with anomaly detection, sentiment shift, and escalation.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Prove that the union-find data structure with path compression and union by rank achieves O(α(n)) amortized.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the quadratic formula by completing the square. Show all steps.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "What is habeas corpus?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Brainstorm approaches to detect insider threats from access logs", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Create a function to compute engagement rate from likes, comments, shares", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a simple game loop in Python with pygame", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is transit-oriented development?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Design a file storage service like Dropbox with versioning, sharing, deduplication, and conflict resolution for offline edits.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement Kruskal's algorithm for minimum spanning tree", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "¿Qué es el efecto invernadero?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Build a 3D print farm scheduling system with machine availability, material constraints, priority queues, and SLA tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Объясни как федеративное обучение защищает приватность", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Create a simple event emitter class in TypeScript", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is a race condition?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Build a simulation environment for AV validation with scenario injection, sensor noise, and metrics collection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Compare Docker containers with virtual machines", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compara Ansible vs Terraform para automatización de infraestructura", "expected_tier": "MEDIUM", "category": "comparison", "lang": "es"}
+{"prompt": "Prove that every connected graph has a spanning tree. Construct it explicitly.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Explica la diferencia entre fonética y fonología", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "What is tidal energy?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "机器学习是什么？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Write unit tests for this ocean depth interpolation function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write a Python script to calculate the distance to a star given its parallax angle", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Compare ResNet vs EfficientNet for mobile deployment", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Explain how quantum superposition enables parallel computation", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "What is the difference between clustered and non-clustered indexes?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Create a simple ARP cache with TTL-based expiration", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a function to convert infix expressions to postfix (RPN)", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is HIPAA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Объясни как компилятор преобразует исходный код в машинный", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Classify these music genres by typical chord progressions", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Extract all function names from this C source file", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "What is a Voronoi diagram?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Write property-based tests for this sorting function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Build a print preparation pipeline with mesh repair, support generation, slicing optimization, and multi-machine allocation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "实现一个简单的词法分析器，识别标识符、数字和运算符", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "Спроектируй систему управления клиническими испытаниями с набором пациентов, согласием и отчётами о побочных эффектах.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "What is a mirepoix?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Implement a full OAuth2 PKCE flow with refresh token rotation, token revocation, and device fingerprinting", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Что такое фонема?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Выведи формулу Байеса шаг за шагом. Докажи математически.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "What is a biopsy?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does SIEM stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does the `ls -la` command show?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is priority inversion?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Implement dead code elimination for a simple three-address IR", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "解释梅拉德反应以及为什么它影响食物的褐变", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "Is my use of async/await correct here? Can it deadlock?", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "What is middleware?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Set up a multi-cloud Kubernetes federation with unified service mesh, cross-cluster DNS, and centralized policy management.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Build a fleet management system for industrial IoT with device provisioning, remote diagnostics, firmware OTA, and predictive maintenance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Спроектируй систему модерации контента с классификацией текста, анализом изображений, сканированием видео и процессом апелляции.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Summarize the key principles of passive solar design", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Resume los cambios principales de este PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "es"}
+{"prompt": "Design a category-theoretic library with functors, monads, applicatives, and free monads. Include laws verification and documentation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Compare functor vs monad: what can each express?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "What is retraction in 3D printing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Erkläre den Peitscheneffekt in Lieferketten", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Спроектируй систему управления роботами с объединением сенсоров, планированием маршрута, обходом препятствий и контурами управления в реальном времени.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "My doctor mentioned something called hypertension during my checkup. I forgot to ask what it means. Can you give me a brief definition?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Hallo", "expected_tier": "SIMPLE", "category": "greeting", "lang": "de"}
+{"prompt": "Prove que o algoritmo de Dijkstra encontra corretamente os caminhos mais curtos com pesos não negativos.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "pt"}
+{"prompt": "How does federated learning protect user privacy?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Good evening", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Démontre que l'algorithme glouton pour le sac à dos fractionnaire est optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "fr"}
+{"prompt": "Set up a complete GitOps workflow with ArgoCD, Helm, environment promotion, secret management, and drift detection.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Что такое наблюдаемость?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "What is homomorphic encryption?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Write a script to export SCORM-compliant content from our LMS", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Perform a security audit of this API: check for broken authentication, IDOR, rate limiting gaps, and data exposure risks", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "What is xG in soccer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "解释滴灌如何比漫灌减少水资源浪费", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "Design a distributed tracing system with span propagation, sampling strategies, and storage backends. Include correlation IDs and service dependency graphs.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Write a specification document for a green roof installation", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Design a multiplayer VR platform with spatial audio, avatar sync, physics, and low-latency networking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Summarize this EdTech platform feature spec in 3 bullet points", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "What is an allophone?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Compare serverless with containerized deployment", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Design a recipe recommendation platform with dietary constraints, ingredient substitution, scaling, nutrition analysis, and meal planning.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Derive the closed-form solution for the recurrence T(n) = 2T(n/2) + n", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Design a content moderation pipeline with text classification, image analysis, video scanning, appeal workflow, and escalation to human reviewers.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a brain atlas registration pipeline with multi-modal MRI, normalization, and region extraction.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Révise ce pattern de gestion d'erreurs et suggère des améliorations", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "Prove that the greedy activity selection algorithm yields an optimal solution.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Create a function to anonymize PHI in a FHIR resource", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is a zero-trust architecture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a hypervisor?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Design a video analytics pipeline with object detection, tracking, re-identification, and alert generation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "解释作物轮作如何防止土壤贫瘠", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "Summarize the pros and cons of using MongoDB for this use case", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Build a distributed graph processing system with vertex-centric model, partitioning, and fault tolerance. Include checkpointing and recovery.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Derive the optimal bidding strategy in a first-price sealed-bid auction with independent private values.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Beweise, dass sqrt(2) irrational ist, mit Widerspruchsbeweis.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "What is a WAF?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Summarize the steps of a typical compiler pipeline", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Révise cette fonction et suggère des améliorations", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "Define buffer overflow", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Design a building energy management system with sensor fusion, occupancy prediction, and HVAC optimization.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Implement a simple two-phase locking protocol", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "解释发布-订阅模式", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "What is a morpheme?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "什么是音素？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "O que é VPN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Привет", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ru"}
+{"prompt": "Brainstorm 5 ways to reduce pesticide use while maintaining yield", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Build a container runtime from scratch supporting namespaces, cgroups, overlay filesystem, and networking.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a quantum chemistry simulation platform with circuit compilation, backend selection, and result visualization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "What is an FPS in video games?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "¿Qué es la observabilidad?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Qu'est-ce que l'edge computing ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "What is a distribution center?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Design a type checker for a language with Hindley-Milner, algebraic data types, and type classes. Include inference and error reporting.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a bidirectional type checker with subtyping and gradual typing. Include blame tracking.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Derive the expected number of comparisons in randomized quicksort. Use linearity of expectation.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "What is a SKU?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Summarize the key differences between ISO 27001 and SOC 2", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "¿Qué es un firewall?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "What is proof of work?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How does Docker layer caching work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Реализуй производитель-потребитель с семафорами", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ru"}
+{"prompt": "比较 LSM tree 和 B-tree 的适用场景", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "What is a half step?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "什么是数据库？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "How does a bloom filter work and when would you use one?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "What is a game engine?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "黑洞是什么？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Implement a full CRUD REST API with authentication, input validation, error handling, and database migrations using FastAPI and SQLAlchemy", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Summarize the FDA guidance on AI/ML in medical devices", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Prove that the greedy Huffman algorithm produces an optimal prefix code.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "设计一个支持多租户的 SaaS 平台架构，包括数据隔离、计费系统、权限管理和弹性伸缩方案", "expected_tier": "COMPLEX", "category": "architecture", "lang": "zh"}
+{"prompt": "What is a transistor?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Qu'est-ce que la récursivité ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Write unit tests for the chord progression generator", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Olá", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pt"}
+{"prompt": "Write a SQL query to find duplicate emails in a users table", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "My React app re-renders excessively. How do I identify the cause?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Write unit tests for this user registration function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Design a configuration management system for 10,000 microservices with versioning, rollback, feature flags, and audit logging.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Create a SQLAlchemy model for a blog with posts and comments", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a custom allocator for Rust with slab allocation, thread-local caching, and fragmentation mitigation.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Plan a migration from VMs to Kubernetes with zero downtime and rollback capability.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Projete um sistema de controle robótico com fusão de sensores, planejamento de caminho, desvio de obstáculos e loops de controle em tempo real.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Good morning", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Compare parallel and relative key modulations", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "证明 (A→B)∧(B→C) 蕴含 (A→C)", "expected_tier": "REASONING", "category": "formal-logic", "lang": "zh"}
+{"prompt": "What is upwelling?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Derive the formula for the number of ways to make change for n cents with coins {1,5,10}.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Design an urban mobility platform with transit data, bike-share, ride-hail integration, and multimodal routing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "What is tort law?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Кратко опиши основные изменения в этом PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "ru"}
+{"prompt": "Create a script to generate SBOM from a Docker image", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Projete um sistema de moderação de conteúdo com classificação de texto, análise de imagem, escaneamento de vídeo e fluxo de recurso.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "审查这个光伏监控脚本的错误处理和边界情况", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "Convert this AST to three-address code", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "What is jitter?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Build a real-time collaborative whiteboard with vector graphics, multi-cursor support, undo history, and conflict-free replication.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Explique a diferença entre criptografia simétrica e assimétrica", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Write a Python script to calculate reorder point given demand rate and lead time", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Le SIEM génère trop de faux positifs. Comment affiner les règles?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "fr"}
+{"prompt": "Is this retry logic correct? What edge cases am I missing?", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Generate a markdown table from this CSV data", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "Summarize the pros and cons of transit-oriented development", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "What is a product type?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Diseña un backend de juego multijugador con emparejamiento, servidor autoritativo, anti-trampas y sistema de repetición.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Open the config file, change the database URL, then restart the service", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Was ist ein Container?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce qu'un data lake ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Design a legal document analysis platform with OCR, named entity extraction, clause classification, risk scoring, and version comparison.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Prove that satisfiability of propositional logic (SAT) is NP-complete using Cook's theorem.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "实现一个完整的用户认证系统，包括 JWT、OAuth2、RBAC 权限控制、密码加密和审计日志", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "zh"}
+{"prompt": "Prove que o algoritmo de Dijkstra calcula corretamente os caminhos mais curtos com pesos não negativos. Use invariantes de loop.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "pt"}
+{"prompt": "Brainstorm hybrid classical-quantum algorithms for optimization", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Write a function to implement the Levenshtein distance algorithm", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write unit tests for this solar irradiance calculation function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Explique a diferença entre diabetes tipo 1 e tipo 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "What is the `__init__` method in Python?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a grain line?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Conçois un stack de perception pour véhicule autonome avec fusion lidar-caméra-radar, suivi et redondance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "What is proofing in baking?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "设计一个支付对账系统，处理多支付渠道、货币兑换、退款和合规报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "Review this solar panel monitoring script for error handling and edge cases", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "证明 SAT 问题是 NP-complete 的（Cook 定理）。", "expected_tier": "REASONING", "category": "formal-logic", "lang": "zh"}
+{"prompt": "证明命题逻辑的完备性定理：每个重言式都有证明。", "expected_tier": "REASONING", "category": "formal-logic", "lang": "zh"}
+{"prompt": "What is Paxos?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Compare BOD vs COD for wastewater quality", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Design a distributed rate limiter that works across multiple microservice instances using Redis. Include the algorithm, data structures, and handle edge cases like clock skew.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Prove that the pumping lemma for regular languages holds. Show that if L is regular, then the lemma conditions are satisfied.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "How many bits in a byte?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Conçois une plateforme de gestion des énergies renouvelables avec prévision solaire/éolienne, intégration réseau, planification batteries et rapports carbone.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "What is grid parity?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define idempotent", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Prove that the set of recursively enumerable languages is closed under union but not under complement.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Compare solar PV vs wind for residential energy", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Prove that a graph is bipartite if and only if it contains no odd-length cycles.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Что такое HTTP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Explain the difference between authentication and authorization", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Implement a trie data structure in Python", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Der SIEM liefert zu viele False Positives. Wie tune ich die Regeln?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "de"}
+{"prompt": "翻译：machine learning", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "总结这个 stack trace 并找到根本原因", "expected_tier": "MEDIUM", "category": "summary", "lang": "zh"}
+{"prompt": "Prove that the minimax theorem holds for two-player zero-sum games.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "总结 GDPR 对科技初创公司的关键条款", "expected_tier": "MEDIUM", "category": "summary", "lang": "zh"}
+{"prompt": "Build an automated podcast pipeline with transcription, chapter detection, show notes generation, and RSS publishing.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Was ist ein CAN-Bus?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "证明：正则语言在交运算下封闭。使用乘积构造。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "Check this EEG preprocessing code for artifact removal correctness", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Create a script to visualize a control flow graph", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Review this EOQ calculation for edge cases", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "How does the Python GIL affect multithreading?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Implement a visitor pattern for traversing and transforming an AST", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Выведи формулу суммы геометрической прогрессии. Докажи сходимость при |r| < 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "Create integration tests for this payment refund flow", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Explique la différence entre diabète de type 1 et type 2", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Prove that P is closed under union, concatenation, and Kleene star. Use Turing machine constructions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Write a tokenizer for a custom NLP pipeline", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a function to detect cycles in a directed graph using DFS", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Design a secrets management system with rotation, audit, and least-privilege access.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Explain the difference between processes and threads", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Demuestra el teorema de Bolzano-Weierstrass: toda sucesión acotada en R tiene una subsucesión convergente.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Explain consistent hashing with a diagram", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Extract all environment variables referenced in this shell script", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "How does long-term potentiation relate to learning?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "What is a cognate?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "My professor mentioned something called 'Big O notation' in class today and I have no idea what it means. Can you tell me what it is in plain English?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Write a script to profile cache hit rate for a given query workload", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is OWASP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a TLB?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Demuestra que todo grafo euleriano tiene todos los vértices de grado par.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Was ist ein Phonem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Prove by induction that a full binary tree with n internal nodes has n+1 leaves.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the formula for the sum of an arithmetic series. Prove it using induction.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "What is QUIC?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "O que é computação de borda?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "How does consistent hashing work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "O que é um data lake?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "What is container orchestration?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Implement a simple lexer that tokenizes identifiers, numbers, and operators", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Review this food shelf-life prediction model for data leakage", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Derive the optimal k for k-means when the true number of clusters is known. Use the elbow method justification.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Explain how the priority ceiling protocol prevents priority inversion", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Build a V2V communication system with message signing, prioritization, and geofencing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Write a tech horror story about a cascading failure in production", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "What does HTTP stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Summarize HACCP principles for food safety", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Build a simulation platform for AV testing with scenario generation, physics engine, sensor simulation, and regression testing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Explain why you can't sort faster than O(n log n) with comparisons. Prove the lower bound.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "你好", "expected_tier": "SIMPLE", "category": "greeting", "lang": "zh"}
+{"prompt": "Diseña un sistema de gestión de flota de drones con planificación de misiones, cumplimiento BVLOS y seguimiento en tiempo real.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "gRPC streaming 是怎么工作的？", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "Prove that there are infinitely many prime numbers.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that every finite game has at least one mixed-strategy Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "What is an ORM?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is the greenhouse effect?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Démontre que l'ensemble des nombres réels est indénombrable en utilisant l'argument diagonal de Cantor.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "What is a graph database?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "什么是死锁？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "Prove Zorn's lemma is equivalent to the axiom of choice. Show both directions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "从下面的文本中提取所有人名和地名", "expected_tier": "MEDIUM", "category": "extraction", "lang": "zh"}
+{"prompt": "Create a Python script that sends Slack notifications via webhook", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "How does virtual memory work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Design a security operations center platform with SIEM integration, threat hunting workflows, incident response playbooks, and compliance reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Summarize this podcast production workflow in 5 steps", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Brainstorm ways to improve model interpretability for clinicians", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "推导等差数列求和公式，用归纳法证明。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "什么是供应链？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Explain how a flying buttress distributes load in Gothic architecture", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Create a hash index for equality lookups", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "How many strings does a guitar have?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Explain how MQTT differs from HTTP for IoT devices", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a container differ from a virtual machine at the OS level?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "设计一个分布式搜索引擎，包括网页爬取、索引构建、排名算法、缓存策略和实时搜索建议", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "Create a merge sort for external sorting of large relations", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "什么是零日漏洞？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Prove that the greedy interval scheduling algorithm is optimal. Use the exchange argument.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that (A -> B) -> ((B -> C) -> (A -> C)) is a tautology using natural deduction.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Is Python an interpreted language?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a NAT gateway?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove that in a knockout tournament with n teams, exactly n-1 games are played.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Write a function to merge two sorted linked lists", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain what eventual consistency means in distributed systems", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare deterministic vs random loot systems in game design", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Write a function to compute all-pairs shortest paths with Floyd-Warshall", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Design and implement a custom database query optimizer that handles JOIN reordering, index selection, and cost-based plan selection", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "什么是防火墙？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Optimize a supply chain simulation: reduce runtime from 2 hours to 15 minutes while preserving accuracy.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "What is a container registry?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Explain the Bellman equation", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does virtual memory mapping work with page tables?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Prove that any comparison-based algorithm to find the maximum of n elements requires at least n-1 comparisons.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Create a chord progression generator that follows common jazz patterns", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Qu'est-ce qu'une API ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Implement a simple LSM compaction strategy", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Prove that the Ford-Fulkerson method finds a maximum flow when capacities are integers. Show that each augmentation increases flow by at least 1.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "What does CRUD stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove that in the iterated prisoner's dilemma, tit-for-tat is a Nash equilibrium when the discount factor is high enough.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "What is a feed-in tariff?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What continent is Brazil in?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "为这个 Python 库写一个 README，包含使用示例", "expected_tier": "MEDIUM", "category": "documentation", "lang": "zh"}
+{"prompt": "Build a renewable energy certificate tracking system with issuance, trading, and retirement.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Hi there", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Which country has the largest population?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is fMRI?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a race condition?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "O que é um honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Pasteurization vs sterilization for food safety", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "用 Go 实现一个简单的 HTTP 代理", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "¿Qué es recursión?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Entwerfe ein Drohnenflotten-Managementsystem mit Missionsplanung, BVLOS-Compliance und Echtzeit-Tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Prove that sqrt(2) is irrational using proof by contradiction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "```python\ndef foo(): return 42\n```\nWhat does this function return?", "expected_tier": "SIMPLE", "category": "code-snippet-qa", "lang": "en"}
+{"prompt": "What is PLA filament?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Check this social media engagement metric calculation for division-by-zero", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Rewrite this SQL to use parameterized queries and avoid injection", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Write a pandas script to calculate monthly revenue trends from a CSV", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Что такое FPGA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Compare solar PV e eólica para energia residencial", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pt"}
+{"prompt": "Summarize YOLO vs R-CNN for object detection", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Что такое кубит?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Build a brain-computer interface platform with signal acquisition, feature extraction, classification, and feedback.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Кто изобрёл телефон?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Объясни разницу между диабетом 1 и 2 типа", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "What is crop rotation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a quorum?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Explain how a message queue works and when to use one", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "What port does HTTP use?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Design a real-time control system for a drone with sensor fusion, path planning, fail-safe modes, and telemetry streaming.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Die API gibt intermittierend 500-Fehler zurück. Was sind häufige Ursachen?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "de"}
+{"prompt": "What is edge computing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "fMRI vs EEG for brain imaging: trade-offs", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "What is eutrophication?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Design a multiplayer game backend with matchmaking, authoritative server, anti-cheat, replay system, and cross-region latency compensation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement a Raft consensus module with leader election, log replication, membership changes, and snapshotting.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Review this BOD calculation for unit consistency", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Explique como funciona o gRPC streaming", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Derive the expected value of a binomial random variable B(n,p).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "What is PER in basketball?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove de Morgan's laws using truth tables and then using formal logical derivation", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Classify these symptoms into likely organ systems (cardiovascular, respiratory, etc.)", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Design test cases for this embedded firmware OTA update logic", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "What is a distributed ledger?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "设计一个编译器前端，包括词法分析、语法分析、AST、语义分析和 IR 生成。需要错误恢复和符号表管理。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "Prove that merge sort is correct and runs in O(n log n). Use the recursion tree and master theorem.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "¿Qué es Terraform?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "What is the speed of light?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "用 JavaScript 实现一个简单的防抖函数", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "Explain the difference between supervised and unsupervised learning", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Build a type checker for a subset of TypeScript supporting generics, union types, and structural typing", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Выведи оптимальный шаг градиентного спуска для квадратичной функции.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "Is this SQL query vulnerable to injection? Suggest a fix", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Compare TCP vs UDP for streaming applications", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Create a simple type checker for a language with integers and booleans", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is a quantum bit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove that A* search with an admissible heuristic finds the optimal path. Use induction.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Using formal logic, prove that if all men are mortal and Socrates is a man, then Socrates is mortal. Use first-order predicate logic.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "What is a respawn point?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove that the greedy Huffman algorithm produces an optimal prefix code.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "What is haute couture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Derive the optimal k for k-nearest neighbors when the true decision boundary is known.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that Huffman coding produces an optimal prefix code. Use the lemma about merging.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Implement a game server with authoritative physics, client prediction, lag compensation, and replay.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "What is a bias cut?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Implement a mining pool stratum protocol with job distribution, share validation, and difficulty adjustment.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Explica cómo la computación en el borde reduce la latencia", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Camera-only vs lidar for autonomous driving perception", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "设计一个可再生能源管理平台，包括太阳能/风能预测、电网集成、电池调度、需求响应和碳报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "Explain how async/await works in JavaScript", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "What is virtual memory?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove that in a two-player zero-sum game, the minimax strategy forms a Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "In a Bayesian game with incomplete information, derive the optimal strategy for the informed player in a simple signaling game.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Write a script to estimate solar panel degradation from production data", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "What is a supply chain?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "什么是超线程？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Erkläre den Unterschied zwischen REST und GraphQL", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Design a drone airspace management platform with real-time traffic, conflict detection, deconfliction, and regulatory compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "What is a load balancer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "推导梯度下降在二次函数上的最优步长，证明收敛速率。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "¿Qué es la propiedad intelectual?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "What is a neural network?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Prove that the rationals are countable by constructing an explicit bijection with the naturals.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Was ist Edge Computing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce qu'un trou noir ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "What is a split brain?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Find the slow query in the database logs and suggest an index", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "什么是语义分割？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "地球有多少颗卫星？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "Beweise, dass die Menge der rationalen Zahlen abzählbar ist. Verwende Cantors Diagonalargument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}

@@ -1,0 +1,500 @@
+{"prompt": "What is a photovoltaic cell?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is grid parity?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is net metering?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is geothermal energy?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is tidal energy?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is FDM in 3D printing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is SLA printing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is infill percentage?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is PLA filament?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a G-code file?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a quadcopter?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is BVLOS in drone operations?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a flight controller?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is geofencing for drones?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is payload capacity in drones?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a hash rate?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is proof of work?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a mining pool?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an ASIC miner?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a block reward?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the thermocline?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is ocean acidification?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an AUV?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is upwelling?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the abyssal zone?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a neuron?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a synapse?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is fMRI?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is neuroplasticity?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a neurotransmitter?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is zoning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is transit-oriented development?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is mixed-use development?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is urban sprawl?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is walkability?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a DAW?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is compression in audio?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is RSS for podcasts?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is LUFS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a condenser mic?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is last-mile delivery?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a fulfillment center?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is dropshipping?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a 3PL?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is reverse logistics?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is engagement rate?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is reach vs impressions?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is sentiment analysis?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is organic reach?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is share of voice?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the Maillard reaction?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is pasteurization?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is HACCP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is shelf life?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is umami?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is bioremediation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is BOD in wastewater?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an LCA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a carbon footprint?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is eutrophication?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define extrusion in 3D printing", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a blockchain?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a watershed?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a supply chain?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Translate 'renewable energy' to Japanese", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say '3D printing' in German?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Translate 'drone' to Arabic", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'hello' in Vietnamese?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Hey there", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Good afternoon", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "See you", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "I've been reading about renewable energy and I keep seeing the term 'grid parity' mentioned in articles. Could you give me a simple one-sentence definition of what grid parity means?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "My friend is into 3D printing and mentioned something called infill. I have no idea what that is. Can you explain in one sentence?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "I'm writing a report on ocean science and need to know: what exactly is the thermocline? Just a brief definition please.", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Someone at the crypto meetup said 'hash rate' and everyone nodded. What does hash rate mean in one sentence?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "The urban planning document mentions 'transit-oriented development.' I need a quick definition for my notes.", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a distributed ledger?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is additive manufacturing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a neural network?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is machine learning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is cloud computing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "什么是光伏电池？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 FDM 3D 打印？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是四旋翼无人机？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是哈希率？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "你好", "expected_tier": "SIMPLE", "category": "greeting", "lang": "zh"}
+{"prompt": "光起電力セルとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "FDM 3Dプリントとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "クアッドコプターとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "こんにちは", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ja"}
+{"prompt": "광전지란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "FDM 3D 프린팅이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "쿼드콥터란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "안녕하세요", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ko"}
+{"prompt": "ما هي الخلية الضوئية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو الكوادكوبتر؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "مرحبا", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ar"}
+{"prompt": "Что такое фотоэлектрический элемент?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое квадрокоптер?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Привет", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ru"}
+{"prompt": "¿Qué es una célula fotovoltaica?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un cuadricóptero?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Hola", "expected_tier": "SIMPLE", "category": "greeting", "lang": "es"}
+{"prompt": "Was ist eine Photovoltaikzelle?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein Quadrocopter?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Hallo", "expected_tier": "SIMPLE", "category": "greeting", "lang": "de"}
+{"prompt": "Qu'est-ce qu'une cellule photovoltaïque ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un quadricoptère ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Bonjour", "expected_tier": "SIMPLE", "category": "greeting", "lang": "fr"}
+{"prompt": "O que é uma célula fotovoltaica?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um quadricóptero?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Olá", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pt"}
+{"prompt": "फोटोवोल्टिक सेल क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "नमस्ते", "expected_tier": "SIMPLE", "category": "greeting", "lang": "hi"}
+{"prompt": "Fotovoltaik hücre nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Merhaba", "expected_tier": "SIMPLE", "category": "greeting", "lang": "tr"}
+{"prompt": "Tế bào quang điện là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Xin chào", "expected_tier": "SIMPLE", "category": "greeting", "lang": "vi"}
+{"prompt": "Co to jest ogniwo fotowoltaiczne?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Cześć", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pl"}
+{"prompt": "What is a heat exchanger?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is retraction in 3D printing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is waypoint navigation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a block explorer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the photic zone?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is myelin?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a setback in zoning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a limiter in audio?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a distribution center?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is impression share?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is enzymatic browning?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is primary treatment in wastewater?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a feed-in tariff?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a raft in 3D printing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is return-to-home in drones?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a mempool?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the benthic zone?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is serotonin?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a zoning variance?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a soundboard?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Review this solar panel monitoring script for error handling and edge cases", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Check this G-code parser for buffer overflow and malformed input handling", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this drone flight path validation logic for safety violations", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this mining pool payout calculation correct? Check for rounding errors", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this ocean sensor data ingestion pipeline for memory leaks", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Check this EEG preprocessing code for artifact removal correctness", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this urban traffic simulation module for race conditions", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this podcast audio normalization logic correct? Check LUFS handling", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this warehouse routing algorithm for edge cases", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Check this social media engagement metric calculation for division-by-zero", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this food shelf-life prediction model for data leakage", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this wastewater BOD calculation correct? Review units and formulas", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Our wind turbine SCADA data shows intermittent gaps. How do I trace the cause?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The 3D printer firmware hangs on large G-code files. How do I profile it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Drone telemetry drops packets during high-speed maneuvers. Where do I start?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Mining pool payouts are off by 0.1%. How do I debug the rounding logic?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Ocean buoy sensors return NaN for temperature at depth. What could cause it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "fMRI preprocessing pipeline fails on some subjects. How do I isolate the bad data?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Urban traffic model produces unrealistic congestion. How do I validate the parameters?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Podcast export has clicks between segments. How do I fix the crossfade?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "E-commerce order routing assigns wrong warehouse 5% of the time. How do I trace it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Social media sentiment API returns inconsistent labels. How do I debug?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Food quality sensor calibration drifts after a week. How do I detect and correct?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Wastewater treatment model overpredicts BOD. What should I check first?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the key differences between FDM, SLA, and SLS 3D printing", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "TL;DR this renewable energy policy document for a stakeholder meeting", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the FAA Part 107 drone regulations in 3 bullet points", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the proof-of-work vs proof-of-stake debate", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the main causes of ocean acidification", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the key findings of this neuroscience paper on memory", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the pros and cons of transit-oriented development", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize this podcast production workflow in 5 steps", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the trade-offs between centralized and distributed fulfillment", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the main social media metrics and when to use each", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize HACCP principles for food safety", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the lifecycle assessment stages for environmental impact", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write unit tests for this solar irradiance calculation function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create integration tests for the 3D printer G-code parser", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write tests for this drone geofence boundary check", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Design test cases for this mining difficulty adjustment algorithm", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write property-based tests for this ocean depth interpolation function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create test scenarios for this urban traffic light optimization module", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write regression tests for this podcast loudness normalization", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Design load tests for the order fulfillment API", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write tests for this social media engagement rate calculator", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create test cases for this food spoilage prediction model", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write chaos tests for the wastewater monitoring system", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm 5 ways to reduce solar panel soiling losses", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for making 3D printing more sustainable", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm approaches to extend drone battery life", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for making cryptocurrency mining more energy-efficient", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm methods to reduce plastic in ocean research", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for improving fMRI signal-to-noise ratio", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm ways to reduce urban heat island effect", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for automating podcast editing workflows", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm approaches to optimize last-mile delivery costs", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for detecting fake engagement on social media", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm ways to extend food shelf life without preservatives", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for reducing wastewater treatment energy consumption", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Write a Python script to calculate solar panel output from irradiance and temperature", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a function to validate G-code commands for a 3D printer", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a script to parse drone flight log and extract altitude violations", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a function to estimate mining profitability from hashrate and power cost", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Python script to interpolate ocean temperature from sensor data", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a function to detect spikes in EEG data", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a script to compute walkability score from street network data", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a function to normalize podcast audio to -16 LUFS", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Python script to assign orders to nearest warehouse by distance", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a function to compute engagement rate from likes, comments, shares", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a script to estimate food shelf life from temperature history", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a function to calculate BOD from dissolved oxygen readings", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how net metering works for rooftop solar", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does layer adhesion affect 3D print strength?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how a drone flight controller stabilizes attitude", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does proof of work prevent double-spending?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how upwelling affects ocean productivity", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does long-term potentiation relate to learning?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how mixed-use zoning reduces car dependency", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does compression affect podcast audio quality?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the bullwhip effect in e-commerce logistics", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does the algorithm affect social media reach?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how the Maillard reaction creates flavor", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does activated sludge remove organic matter?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare solar PV vs wind for residential energy", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "FDM vs SLA: when to use which for prototyping?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare fixed-wing vs multirotor drones for surveying", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "ASIC vs GPU mining: pros and cons", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare AUV vs ROV for ocean exploration", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "fMRI vs EEG for brain imaging: trade-offs", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare TOD vs sprawl for housing affordability", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Dynamic vs condenser mic for podcasting", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare 3PL vs in-house fulfillment", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Reach vs impressions: when does each matter?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Pasteurization vs sterilization for food safety", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare aerobic vs anaerobic wastewater treatment", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Rewrite this renewable energy policy for a general audience", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Refactor this G-code generator to support multiple printer types", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Rewrite this drone manual section for non-pilots", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Simplify this mining pool contract for investors", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "审查这个光伏监控脚本的错误处理和边界情况", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "风力涡轮机 SCADA 数据有间歇性缺口，如何追踪原因？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "zh"}
+{"prompt": "总结 FDM、SLA 和 SLS 3D 打印的主要区别", "expected_tier": "MEDIUM", "category": "summary", "lang": "zh"}
+{"prompt": "为这个太阳辐照度计算函数写单元测试", "expected_tier": "MEDIUM", "category": "testing", "lang": "zh"}
+{"prompt": "Brainstorm 5 种减少太阳能板积灰损失的方法", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "zh"}
+{"prompt": "写一个 Python 脚本根据辐照度和温度计算光伏板输出", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "解释净计量如何为屋顶太阳能工作", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "比较住宅用太阳能光伏和风能", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "この太陽光パネル監視スクリプトのエラー処理をレビューしてください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "風力タービンのSCADAデータに断続的な欠損があります。原因を追跡するには？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "FDM、SLA、SLS 3Dプリントの主な違いを要約してください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "太陽光発電の出力計算関数のユニットテストを書いてください", "expected_tier": "MEDIUM", "category": "testing", "lang": "ja"}
+{"prompt": "太陽光パネルの汚れ損失を減らす5つの方法をブレインストームしてください", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "ja"}
+{"prompt": "日照量と温度から太陽光パネル出力を計算するPythonスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "屋上太陽光のネットメータリングの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "住宅用エネルギーで太陽光PVと風力の比較をしてください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "이 태양광 패널 모니터링 스크립트의 에러 처리를 검토해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "풍력 터빈 SCADA 데이터에 간헐적 공백이 있습니다. 원인을 어떻게 추적하나요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "FDM, SLA, SLS 3D 프린팅의 주요 차이점을 요약해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "태양 복사량 계산 함수의 유닛 테스트를 작성해주세요", "expected_tier": "MEDIUM", "category": "testing", "lang": "ko"}
+{"prompt": "태양광 패널 오염 손실을 줄이는 5가지 방법을 브레인스토밍해주세요", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "ko"}
+{"prompt": "복사량과 온도로 태양광 패널 출력을 계산하는 Python 스크립트를 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "지붕 태양광의 순계량이 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "주거용 에너지로 태양광 PV와 풍력 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "راجع معالجة الأخطاء في سكربت مراقبة الألواح الشمسية", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "بيانات SCADA لتوربينات الرياح بها فجوات متقطعة. كيف أتتبع السبب؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "لخص الفروقات الرئيسية بين FDM و SLA و SLS في الطباعة ثلاثية الأبعاد", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "اشرح كيف يعمل القياس الصافي للطاقة الشمسية على الأسطح", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Проверь обработку ошибок в скрипте мониторинга солнечных панелей", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ru"}
+{"prompt": "Данные SCADA ветряков показывают пробелы. Как найти причину?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ru"}
+{"prompt": "Сравни солнечную PV и ветер для жилой энергетики", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ru"}
+{"prompt": "Revisa el manejo de errores de este script de monitoreo solar", "expected_tier": "MEDIUM", "category": "code-review", "lang": "es"}
+{"prompt": "Los datos SCADA del aerogenerador tienen huecos. ¿Cómo rastreo la causa?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "es"}
+{"prompt": "Compara solar PV vs eólica para energía residencial", "expected_tier": "MEDIUM", "category": "comparison", "lang": "es"}
+{"prompt": "Überprüfe die Fehlerbehandlung dieses Solar-Monitoring-Skripts", "expected_tier": "MEDIUM", "category": "code-review", "lang": "de"}
+{"prompt": "Die Windturbinen-SCADA-Daten haben Lücken. Wie finde ich die Ursache?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "de"}
+{"prompt": "Vergleiche Solar-PV und Wind für Wohnenergie", "expected_tier": "MEDIUM", "category": "comparison", "lang": "de"}
+{"prompt": "Revue la gestion d'erreurs de ce script de surveillance solaire", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "Les données SCADA des éoliennes ont des lacunes. Comment tracer la cause?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "fr"}
+{"prompt": "Compare le solaire PV et l'éolien pour l'énergie résidentielle", "expected_tier": "MEDIUM", "category": "comparison", "lang": "fr"}
+{"prompt": "Revise o tratamento de erros deste script de monitoramento solar", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pt"}
+{"prompt": "Os dados SCADA da turbina eólica têm lacunas. Como rastrear a causa?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pt"}
+{"prompt": "Compare solar PV e eólica para energia residencial", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pt"}
+{"prompt": "इस सोलर पैनल मॉनिटरिंग स्क्रिप्ट की एरर हैंडलिंग की समीक्षा करें", "expected_tier": "MEDIUM", "category": "code-review", "lang": "hi"}
+{"prompt": "पवन टरबाइन SCADA डेटा में अंतराल है। कारण कैसे ट्रैस करें?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "hi"}
+{"prompt": "Bu güneş paneli izleme betiğinin hata işlemesini inceleyin", "expected_tier": "MEDIUM", "category": "code-review", "lang": "tr"}
+{"prompt": "Rüzgar türbini SCADA verilerinde boşluklar var. Nedeni nasıl izlerim?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "tr"}
+{"prompt": "Xem xét xử lý lỗi của script giám sát tấm pin mặt trời này", "expected_tier": "MEDIUM", "category": "code-review", "lang": "vi"}
+{"prompt": "Dữ liệu SCADA tuabin gió có khoảng trống. Làm sao truy vết nguyên nhân?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "vi"}
+{"prompt": "Przejrzyj obsługę błędów w tym skrypcie monitorowania paneli słonecznych", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pl"}
+{"prompt": "Dane SCADA turbin wiatrowych mają luki. Jak śledzić przyczynę?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pl"}
+{"prompt": "Explain the thermocline", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Describe the Maillard reaction", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Walk me through proof of work", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Review this renewable energy ROI calculator for edge cases", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Our 3D print quality degrades over time. How do I diagnose?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the key urban planning principles from this textbook chapter", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write property-based tests for this engagement rate formula", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm ways to reduce last-mile delivery emissions", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Write a Python script to validate drone flight coordinates against airspace", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how ocean currents affect climate", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare dopamine vs serotonin in reward processing", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Review this food safety checklist for completeness", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "The wastewater pH sensor drifts. How do I calibrate?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the podcast production best practices", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write integration tests for the warehouse routing API", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm features for a social media analytics dashboard", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Implement a function to estimate 3D print time from G-code", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how zoning affects housing supply", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare BOD vs COD for wastewater quality", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Write a script to estimate solar panel degradation from production data", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Review this drone flight log parser for timezone handling", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Summarize the key differences between PoW and PoS consensus", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write unit tests for this ocean depth interpolation function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm ways to reduce urban heat island effect in downtown", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Implement a function to compute podcast episode duration from audio file", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Our order routing picks the wrong warehouse 3% of the time. How do I debug?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Explain how virality coefficient predicts content spread", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare natural vs artificial food preservatives", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Review this BOD calculation for unit consistency", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Summarize the lifecycle of a lithium-ion battery in renewable storage", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Design a renewable energy management platform with solar/wind forecasting, grid integration, battery scheduling, demand response, and carbon reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a smart grid system with real-time load balancing, distributed generation coordination, fault detection, and consumer dashboards.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a virtual power plant with aggregation, bidding, dispatch, settlement, and regulatory compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a 3D printing farm management system with queue scheduling, material tracking, machine monitoring, quality control, and job costing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a print preparation pipeline with mesh repair, support generation, slicing optimization, and multi-machine allocation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an additive manufacturing platform with design validation, material selection, process parameters, and post-processing workflows.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a drone fleet management system with mission planning, BVLOS compliance, real-time tracking, maintenance scheduling, and incident reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an autonomous drone delivery platform with route optimization, geofencing, payload handling, and customer notification.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a drone inspection pipeline with flight planning, image capture, defect detection, and report generation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a mining pool platform with hashrate aggregation, reward distribution, payout automation, and pool-hopping prevention.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a mining farm management system with power monitoring, cooling control, profitability tracking, and alerting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a multi-algorithm mining switcher with profitability calculation, pool selection, and failover.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an ocean monitoring platform with sensor networks, data ingestion, quality control, visualization, and alerting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an AUV mission planning system with bathymetry, obstacle avoidance, energy management, and recovery protocols.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a marine data pipeline with satellite imagery, in-situ sensors, model assimilation, and forecast products.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design an fMRI analysis pipeline with preprocessing, registration, statistical modeling, and visualization.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Build a brain-computer interface platform with signal acquisition, feature extraction, classification, and feedback.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a neuroimaging data management system with DICOM ingestion, anonymization, sharing, and compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an urban planning decision support system with GIS integration, scenario modeling, stakeholder input, and impact assessment.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a traffic simulation platform with demand modeling, signal optimization, emissions estimation, and visualization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a land use allocation system with zoning constraints, suitability analysis, and multi-objective optimization.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Design a podcast production platform with recording, editing, mixing, distribution, and analytics.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an automated podcast pipeline with transcription, chapter detection, show notes generation, and RSS publishing.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a collaborative podcast workflow with version control, review, approval, and multi-format export.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an e-commerce fulfillment platform with order routing, inventory allocation, carrier selection, tracking, and returns.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a warehouse optimization system with slotting, pick path optimization, labor scheduling, and KPIs.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a last-mile delivery platform with route optimization, time windows, proof of delivery, and customer communication.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a social media analytics platform with data ingestion, sentiment analysis, influencer identification, and reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a viral content prediction system with feature extraction, model training, A/B testing, and deployment.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a brand monitoring system with multi-platform aggregation, alerting, competitive analysis, and dashboards.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a food safety management system with HACCP tracking, supplier audits, recall management, and regulatory reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a shelf-life prediction pipeline with sensor data, model training, uncertainty quantification, and alerts.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a food traceability platform with blockchain, batch tracking, and recall automation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a wastewater treatment monitoring system with sensor networks, process control, compliance reporting, and optimization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an environmental impact assessment platform with LCA, carbon accounting, and reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a stormwater management system with real-time monitoring, flood prediction, and control actuation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Perform a security audit of a renewable energy SCADA system. Address access control, encryption, and integrity.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Plan a migration from monolithic warehouse software to microservices with zero downtime.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Optimize the ocean data pipeline: reduce processing time from 4 hours to 30 minutes.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "设计一个可再生能源管理平台，包括太阳能/风能预测、电网集成、电池调度、需求响应和碳报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个无人机机队管理系统，包括任务规划、BVLOS 合规、实时追踪、维护调度和事件报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个电商履约平台，包括订单路由、库存分配、承运商选择、追踪和退货", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个海洋监测平台，包括传感器网络、数据摄取、质量控制、可视化和告警", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个食品安全管理系统，包括 HACCP 追踪、供应商审计、召回管理和监管报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "再生可能エネルギー管理プラットフォームを設計してください。太陽/風力予測、グリッド統合、バッテリースケジューリング、需要応答、カーボンレポートを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "ドローン艦隊管理システムを設計してください。ミッション計画、BVLOS準拠、リアルタイム追跡、メンテナンススケジュールを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "Eコマース履行プラットフォームを設計してください。注文ルーティング、在庫割り当て、キャリア選択、追跡、返品を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "재생에너지 관리 플랫폼을 설계하세요. 태양/풍력 예측, 그리드 통합, 배터리 스케줄링, 수요 반응, 탄소 보고를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "드론 함대 관리 시스템을 설계하세요. 미션 계획, BVLOS 준수, 실시간 추적, 유지보수 스케줄링을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "이커머스 이행 플랫폼을 설계하세요. 주문 라우팅, 재고 할당, 운송업체 선택, 추적, 반품을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "صمم منصة إدارة الطاقة المتجددة مع التنبؤ بالطاقة الشمسية/الرياح والتكامل مع الشبكة وجدولة البطاريات واستجابة الطلب والتقارير الكربونية.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "صمم نظام إدارة أسطول الطائرات بدون طيار مع تخطيط المهام والامتثال لـ BVLOS والتتبع في الوقت الفعلي.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Спроектируй платформу управления возобновляемой энергией с прогнозом солнца/ветра, интеграцией в сеть, расписанием батарей и отчётами по углероду.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Спроектируй систему управления парком дронов с планированием миссий, BVLOS, отслеживанием и отчётами.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Diseña una plataforma de gestión de energía renovable con predicción solar/eólica, integración de red, programación de baterías y reportes de carbono.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Diseña un sistema de gestión de flota de drones con planificación de misiones, cumplimiento BVLOS y seguimiento en tiempo real.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Entwerfe eine Plattform für erneuerbare Energien mit Solar-/Windprognose, Netzintegration, Batterieplanung und Kohlenstoffberichterstattung.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Entwerfe ein Drohnenflotten-Managementsystem mit Missionsplanung, BVLOS-Compliance und Echtzeit-Tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Conçois une plateforme de gestion des énergies renouvelables avec prévision solaire/éolienne, intégration réseau, planification batteries et rapports carbone.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Conçois un système de gestion de flotte de drones avec planification de missions, conformité BVLOS et suivi en temps réel.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Projete uma plataforma de gestão de energia renovável com previsão solar/eólica, integração de rede, agendamento de baterias e relatórios de carbono.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Projete um sistema de gestão de frota de drones com planejamento de missões, conformidade BVLOS e rastreamento em tempo real.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "नवीकरणीय ऊर्जा प्रबंधन प्लेटफॉर्म डिज़ाइन करें जिसमें सौर/पवन पूर्वानुमान, ग्रिड एकीकरण, बैटरी शेड्यूलिंग और कार्बन रिपोर्टिंग शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "Güneş/rüzgar tahmini, şebeke entegrasyonu, pil planlaması ve karbon raporlaması içeren yenilenebilir enerji yönetim platformu tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Thiết kế nền tảng quản lý năng lượng tái tạo với dự báo mặt trời/gió, tích hợp lưới điện, lập lịch pin và báo cáo carbon.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "Zaprojektuj platformę zarządzania energią odnawialną z prognozą słoneczną/wiatrową, integracją sieci, planowaniem baterii i raportowaniem emisji CO2.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Design a 3D printing quality assurance pipeline with defect detection, dimensional verification, and traceability.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Build a mining profitability dashboard with real-time hashrate, power cost, and multi-coin comparison.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a neuroimaging data sharing platform with consent management, anonymization, and access control.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Plan a migration from legacy warehouse WMS to cloud-native with data sync and validation.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Design a podcast analytics platform with listen-through tracking, demographic inference, and ad attribution.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a food recall automation system with batch tracing, notification, and regulatory filing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a wastewater treatment optimization system with real-time control and predictive maintenance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement a drone collision avoidance system with sensor fusion, path replanning, and fail-safe.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a social media crisis detection system with anomaly detection, sentiment shift, and escalation.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Build a renewable energy certificate tracking system with issuance, trading, and retirement.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a multi-tenant 3D printing service with queue management, billing, and SLA tracking.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Perform a security audit of a mining pool payout system. Address double-spend and front-running.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Design a renewable energy certificate marketplace with issuance, verification, trading, and retirement tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a 3D print farm scheduling system with machine availability, material constraints, priority queues, and SLA tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a drone airspace management platform with real-time traffic, conflict detection, deconfliction, and regulatory compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a mining profitability dashboard with multi-coin support, power cost modeling, and real-time alerts.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an ocean sensor calibration pipeline with drift detection, cross-validation, and quality flags.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Build a neuroimaging data sharing platform with de-identification, consent management, and access control.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Design an urban mobility platform with transit data, bike-share, ride-hail integration, and multimodal routing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a podcast monetization platform with dynamic ad insertion, listener segmentation, and revenue attribution.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a same-day delivery optimization system with demand forecasting, driver assignment, and route optimization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a social media crisis detection system with anomaly detection, sentiment analysis, and escalation workflows.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a food recall traceability system with batch tracking, supplier mapping, and notification automation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a wastewater treatment control system with real-time sensors, predictive control, and compliance reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a hybrid renewable microgrid with solar, wind, battery, and diesel backup, including load shedding and islanding.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a multi-material 3D printing workflow with material switching, purge towers, and quality verification.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a drone delivery network with hub locations, route optimization, battery swap stations, and weather routing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement a mining pool stratum protocol with job distribution, share validation, and difficulty adjustment.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a marine mammal detection pipeline with hydrophone data, ML classification, and real-time alerting.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Build a brain atlas registration pipeline with multi-modal MRI, normalization, and region extraction.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a participatory urban planning platform with citizen input, visualization, and impact simulation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a podcast analytics pipeline with transcription, speaker diarization, topic extraction, and engagement metrics.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Design a cross-border e-commerce fulfillment network with customs, duties, and multi-carrier routing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Implement a real-time social media trend detection system with streaming processing and anomaly alerts.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Prove that the greedy algorithm for the fractional knapsack problem is optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that a tree with n nodes has exactly n-1 edges using induction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the set of regular languages is closed under concatenation.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that every connected graph has a spanning tree.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the greedy activity selection algorithm yields an optimal solution.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the sum of degrees of all vertices in a graph equals twice the number of edges.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that a directed acyclic graph has a topological ordering.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the greedy Huffman algorithm produces an optimal prefix code.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the set of context-free languages is closed under union.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that every finite automaton has an equivalent minimal DFA.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the closed-form solution for the recurrence T(n) = T(n-1) + n.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the expected number of comparisons in linear search for a uniform distribution.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the optimal substructure for the longest common subsequence problem.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the recurrence for the number of binary search trees with n nodes.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the amortized cost of a dynamic array with doubling using the accounting method.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the formula for the number of ways to make change for n cents with coins {1,5,10}.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the optimal policy for a simple two-state MDP using value iteration.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the probability of a full house in poker.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Find the Nash equilibrium in the battle of the sexes game. Prove it exists.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that in a symmetric two-player game, a symmetric Nash equilibrium exists.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Analyze the subgame-perfect equilibrium in a two-stage sequential game.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Derive the mixed-strategy Nash equilibrium for rock-paper-scissors.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that the minimax theorem holds for finite two-player zero-sum games.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that in the hat puzzle with n people, the optimal strategy guarantees n-1 correct guesses.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that the two-envelope paradox is resolved when considering the proper prior.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that the liar paradox (this statement is false) has no consistent truth value.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that (A implies B) and (B implies C) implies (A implies C) using natural deduction.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the satisfiability of 3-SAT is NP-complete via reduction from SAT.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "证明分数背包问题的贪心算法是最优的", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "证明 n 个节点的树恰好有 n-1 条边（用归纳法）", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导 T(n)=T(n-1)+n 的闭式解", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "求性别之战博弈的纳什均衡并证明其存在", "expected_tier": "REASONING", "category": "game-theory", "lang": "zh"}
+{"prompt": "证明 (A→B)∧(B→C) 蕴含 (A→C)", "expected_tier": "REASONING", "category": "formal-logic", "lang": "zh"}
+{"prompt": "分数ナップサック問題の貪欲アルゴリズムが最適であることを証明してください", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "n頂点の木がちょうどn-1本の辺を持つことを帰納法で証明してください", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "T(n)=T(n-1)+nの閉形式を導出してください", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "性別の戦いゲームのナッシュ均衡を求め、存在することを証明してください", "expected_tier": "REASONING", "category": "game-theory", "lang": "ja"}
+{"prompt": "분수 배낭 문제의 탐욕 알고리즘이 최적임을 증명하세요", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "n개 노드의 트리가 정확히 n-1개의 간선을 가짐을 귀납법으로 증명하세요", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "T(n)=T(n-1)+n의 닫힌 형태를 유도하세요", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "성의 전쟁 게임의 내시 균형을 구하고 존재함을 증명하세요", "expected_tier": "REASONING", "category": "game-theory", "lang": "ko"}
+{"prompt": "أثبت أن الخوارزمية الجشعة لمشكلة حقيبة الظهر الكسرية مثالية.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ar"}
+{"prompt": "أثبت أن الشجرة ذات n عقد لها بالضبط n-1 حافة باستخدام الاستقراء.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Докажи, что жадный алгоритм для дробной задачи о рюкзаке оптимален.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ru"}
+{"prompt": "Докажи по индукции, что дерево с n вершинами имеет ровно n-1 рёбер.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Demuestra que el algoritmo voraz para la mochila fraccionaria es óptimo.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "es"}
+{"prompt": "Demuestra por inducción que un árbol con n nodos tiene exactamente n-1 aristas.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Beweise, dass der Greedy-Algorithmus für das fraktionale Rucksackproblem optimal ist.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "de"}
+{"prompt": "Beweise per Induktion, dass ein Baum mit n Knoten genau n-1 Kanten hat.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Démontre que l'algorithme glouton pour le sac à dos fractionnaire est optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "fr"}
+{"prompt": "Démontre par récurrence qu'un arbre à n nœuds a exactement n-1 arêtes.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "Prove que o algoritmo guloso para a mochila fracionária é ótimo.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "pt"}
+{"prompt": "Prove por indução que uma árvore com n nós tem exatamente n-1 arestas.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "भिन्नात्मक नैपसैक समस्या के लालची एल्गोरिथ्म की इष्टतमता सिद्ध करें।", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "hi"}
+{"prompt": "Kesirli sırt çantası problemi için açgözlü algoritmanın optimal olduğunu kanıtlayın.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "tr"}
+{"prompt": "Chứng minh thuật toán tham lam cho bài toán ba lô phân số là tối ưu.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "vi"}
+{"prompt": "Udowodnij, że zachłanny algorytm dla ułamkowego problemu plecakowego jest optymalny.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "pl"}
+{"prompt": "Prove that the greedy set cover algorithm has approximation ratio H(n).", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the greedy interval scheduling algorithm is optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the optimal stopping rule for the secretary problem.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that in a repeated prisoner's dilemma, tit-for-tat is a Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that (P and Q) implies P is a tautology.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the greedy algorithm for set cover is not optimal. Give a counterexample.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the expected value of a binomial random variable B(n,p).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that a graph is Eulerian if and only if every vertex has even degree.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the greedy coin-changing algorithm is optimal for US denominations.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the set of decidable languages is closed under complement.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the greedy algorithm for the coin change problem is optimal for denominations {1, 5, 10, 25}.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the expected number of trials until first success for a geometric distribution.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that in a zero-sum game, the value of the game is unique.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that (P or Q) and (not P) implies Q using natural deduction.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the greedy algorithm for the activity selection problem is optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the variance of a binomial random variable B(n, p).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that every connected graph with n vertices and n-1 edges is a tree.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the set of context-free languages is not closed under intersection.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "In the repeated prisoner's dilemma, prove that always defect is a Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that the resolution rule preserves satisfiability.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Derive the optimal k for k-nearest neighbors when the true decision boundary is known.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that a graph has an Eulerian circuit if and only if every vertex has even degree and the graph is connected.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the greedy algorithm for the maximum spanning tree is optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}

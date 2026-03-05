@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ruff
+.ruff_cache/
+
+# Environment
+.env
+.env.local
+
+# Node (openclaw-plugin)
+openclaw-plugin/node_modules/
+
+# Spend control local data
+spending.json
+
+# Benchmark results (large files, regenerate locally)
+bench/results/
+bench/data/*.generated.jsonl

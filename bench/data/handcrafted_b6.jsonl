@@ -1,0 +1,288 @@
+{"prompt": "Who wrote Romeo and Juliet?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the tallest building in the world?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many players are on a soccer team?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is sushi?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Who painted the Mona Lisa?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What instrument does a pianist play?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the chemical formula for salt?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What continent is Brazil in?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the currency of Japan?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many days are in a leap year?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Terraform?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Prometheus?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Grafana?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a monorepo?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is trunk-based development?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a canary release?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does SLA stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is observability?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a data lake?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Apache Kafka?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define idempotent", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a semaphore?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a goroutine?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a coroutine?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a monad?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Translate 'machine learning' to German", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'open source' in French?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Translate 'distributed system' to Japanese", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "谁写了《红楼梦》？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 Terraform？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是可观测性？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是数据湖？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是协程？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "什么是信号量？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "什么是 Kafka？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "SLA 是什么意思？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是灰度发布？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是单体仓库？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "翻译：distributed system", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "翻译：machine learning", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "Terraformとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Kafkaとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "オブザーバビリティとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "コルーチンとは何ですか？", "expected_tier": "SIMPLE", "category": "definition", "lang": "ja"}
+{"prompt": "データレイクとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "SLAとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "カナリアリリースとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "Terraform이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "Kafka란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "코루틴이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ko"}
+{"prompt": "데이터 레이크란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "관측 가능성이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "카나리 릴리스란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "ما هو Terraform؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو Kafka؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هي المراقبة؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو بحيرة البيانات؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو الإصدار التدريجي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "O que é Terraform?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é Kafka?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é observabilidade?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um data lake?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Что такое Terraform?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое Kafka?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое наблюдаемость?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое канареечный релиз?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "¿Qué es Terraform?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es Kafka?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es la observabilidad?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un data lake?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Was ist Terraform?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist Observability?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein Data Lake?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce que Terraform ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce que l'observabilité ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un data lake ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "HTTP क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "API क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "डेटाबेस क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "नमस्ते", "expected_tier": "SIMPLE", "category": "greeting", "lang": "hi"}
+{"prompt": "HTTP nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "API nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Veritabanı nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Merhaba", "expected_tier": "SIMPLE", "category": "greeting", "lang": "tr"}
+{"prompt": "I've heard people at my company talking about something called 'Kubernetes' and I have absolutely no idea what they mean by it. Could you briefly explain what Kubernetes is?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "My friend keeps talking about 'microservices' in the context of building web apps. I don't really understand the term. What does it mean in simple words?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "My Python script crashes with 'RecursionError'. How do I debug this?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The API returns 500 errors intermittently. What are the common causes?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "My Docker container exits immediately after starting. How do I troubleshoot this?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The database query is taking 30 seconds. How do I find and fix the bottleneck?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "My React app re-renders excessively. How do I identify the cause?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Git merge conflict in package-lock.json. How do I resolve this properly?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Review this function and suggest improvements for readability and performance", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "What are the potential issues with this database query?", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this API endpoint for security vulnerabilities", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this a good use of dependency injection here? Suggest improvements.", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Write a pandas script to calculate monthly revenue trends from a CSV", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Create a SQL query to find the top 10 customers by lifetime value", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Write Python code to detect outliers in a dataset using IQR method", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Generate a correlation matrix for these features using seaborn", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "en"}
+{"prompt": "Brainstorm 5 ways to improve the onboarding experience for new developers", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Suggest 3 approaches to reduce API latency without changing the architecture", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "What are some creative ways to visualize real-time server metrics?", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Write unit tests for this user registration function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create integration tests for the checkout API endpoint", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write a test to verify that the rate limiter works correctly", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "How should I test this async function in pytest?", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write API documentation for this REST endpoint", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Create a README for this Python library with usage examples", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Write a docstring for this complex function", "expected_tier": "MEDIUM", "category": "documentation", "lang": "en"}
+{"prompt": "Summarize the key changes in this pull request", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Give me a TL;DR of the CAP theorem", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the architecture of this system in 5 bullet points", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the pros and cons of using MongoDB for this use case", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Briefly describe the main features of FastAPI", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write a limerick about debugging production issues", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Create a funny commit message for a bug fix that took 3 days", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Write a short analogy explaining microservices to a 5-year-old", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Write an error message that is both informative and amusing", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Open the config file, change the database URL, then restart the service", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Run the failing test, read the error output, and fix the issue", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Deploy this branch to staging and verify the health check passes", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Find all TODO comments in the codebase and create GitHub issues for each", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "How does gRPC streaming work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a write-ahead log work in databases?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does Kubernetes handle pod scheduling?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a bloom filter reduce unnecessary disk reads?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does TLS certificate pinning work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a skip list achieve O(log n) search?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Write a Python script to monitor a directory for file changes", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple circuit breaker in TypeScript", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Lua script for Redis to atomically increment and check a counter", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a Python dataclass with validation using __post_init__", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a shell one-liner to find the 10 largest files in a directory", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple state machine in Python for order processing", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Compare write-ahead log vs redo log in databases", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Differences between gRPC streaming and WebSockets", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare Helm and Kustomize for Kubernetes deployments", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "我的 Python 脚本报 RecursionError，怎么调试？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "zh"}
+{"prompt": "API 间歇性返回 500 错误，常见原因有哪些？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "zh"}
+{"prompt": "审查这个函数，给出可读性和性能的改进建议", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "写一个 pandas 脚本分析 CSV 中的月度收入趋势", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "zh"}
+{"prompt": "给出 5 种提升新开发者入职体验的方法", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "zh"}
+{"prompt": "为这个 REST 接口编写单元测试", "expected_tier": "MEDIUM", "category": "testing", "lang": "zh"}
+{"prompt": "总结这个 PR 的主要变更", "expected_tier": "MEDIUM", "category": "summary", "lang": "zh"}
+{"prompt": "写一个关于 debug 的打油诗", "expected_tier": "MEDIUM", "category": "creative", "lang": "zh"}
+{"prompt": "打开配置文件，修改数据库 URL，然后重启服务", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "zh"}
+{"prompt": "gRPC streaming 是怎么工作的？", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "写一个 Python 脚本监控目录中的文件变化", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "比较 WAL 和 redo log 的区别", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "为这个 Python 库写一个 README，包含使用示例", "expected_tier": "MEDIUM", "category": "documentation", "lang": "zh"}
+{"prompt": "APIが間欠的に500エラーを返します。一般的な原因は何ですか？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "この関数をレビューして改善点を提案してください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "pandasでCSVから月次売上トレンドを分析するスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "data-analysis", "lang": "ja"}
+{"prompt": "このPRの主な変更点をまとめてください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "gRPCストリーミングの仕組みを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "ディレクトリのファイル変更を監視するPythonスクリプトを書いてください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "API가 간헐적으로 500 에러를 반환합니다. 일반적인 원인은 무엇인가요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "이 함수를 리뷰하고 개선 사항을 제안해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "이 PR의 주요 변경 사항을 요약해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "gRPC 스트리밍이 어떻게 작동하는지 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "디렉토리의 파일 변경을 모니터링하는 Python 스크립트를 작성해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "API يُرجع أخطاء 500 بشكل متقطع. ما الأسباب الشائعة؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "راجع هذه الدالة واقترح تحسينات", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "اكتب ملخصًا لهذا PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "اشرح كيف يعمل gRPC streaming", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "A API retorna erros 500 intermitentemente. Quais são as causas comuns?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pt"}
+{"prompt": "Revise esta função e sugira melhorias", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pt"}
+{"prompt": "Resuma as principais mudanças deste PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "pt"}
+{"prompt": "Explique como funciona o gRPC streaming", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "API периодически возвращает 500. Какие частые причины?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ru"}
+{"prompt": "Проведи ревью этой функции и предложи улучшения", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ru"}
+{"prompt": "Кратко опиши основные изменения в этом PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "ru"}
+{"prompt": "Объясни как работает gRPC streaming", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "La API devuelve errores 500 intermitentes. ¿Cuáles son las causas comunes?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "es"}
+{"prompt": "Revisa esta función y sugiere mejoras", "expected_tier": "MEDIUM", "category": "code-review", "lang": "es"}
+{"prompt": "Resume los cambios principales de este PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "es"}
+{"prompt": "Die API gibt intermittierend 500-Fehler zurück. Was sind häufige Ursachen?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "de"}
+{"prompt": "Überprüfe diese Funktion und schlage Verbesserungen vor", "expected_tier": "MEDIUM", "category": "code-review", "lang": "de"}
+{"prompt": "Fasse die wichtigsten Änderungen dieses PRs zusammen", "expected_tier": "MEDIUM", "category": "summary", "lang": "de"}
+{"prompt": "L'API renvoie des erreurs 500 de manière intermittente. Quelles sont les causes ?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "fr"}
+{"prompt": "Révise cette fonction et suggère des améliorations", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "Résume les changements principaux de ce PR", "expected_tier": "MEDIUM", "category": "summary", "lang": "fr"}
+{"prompt": "Python में एक फंक्शन लिखें जो सूची को सॉर्ट करे", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "hi"}
+{"prompt": "TCP और UDP में क्या अंतर है, समझाएं", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "Python'da bir listeyi sıralayan bir fonksiyon yazın", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "tr"}
+{"prompt": "TCP ve UDP arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "Convert this JSON response into a TypeScript type definition", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "Generate an OpenAPI spec for this REST endpoint", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "Create a database schema diagram from these model descriptions", "expected_tier": "MEDIUM", "category": "structured-output", "lang": "en"}
+{"prompt": "Extract all environment variables referenced in this shell script", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "List all the database tables mentioned in this SQL migration", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Identify all the third-party dependencies from this import list", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Design a ride-sharing matching system with real-time location tracking, surge pricing, driver-rider matching, ETA prediction, and trip tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a content moderation pipeline with text classification, image analysis, video scanning, appeal workflow, and escalation to human reviewers.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a multi-tenant analytics platform with data isolation, custom dashboards, real-time queries, scheduled reports, and role-based access.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a payment reconciliation system that handles multiple payment providers, currency conversion, chargebacks, refunds, and regulatory reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a configuration management system for 10,000 microservices with versioning, rollback, feature flags, and audit logging.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a query planner for a distributed SQL engine that handles joins across shards, predicate pushdown, and parallel execution.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a CRDT-based collaborative data structure that supports concurrent edits, conflict resolution, and eventual consistency.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a custom load balancer with health checking, weighted routing, circuit breaking, and graceful draining.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a log-structured merge tree storage engine with compaction, bloom filters, and range scan support.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a real-time anomaly detection engine for time-series data with sliding windows, statistical analysis, and alert correlation.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a comprehensive API security layer with OAuth2, rate limiting, IP allowlisting, request signing, and DDoS protection.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Perform a threat model for a fintech payment gateway. Identify attack vectors, propose mitigations, and design incident response.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Design a disaster recovery strategy for a multi-region cloud deployment with RPO < 1 minute, automatic failover, and data consistency.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Set up a complete GitOps workflow with ArgoCD, Helm, environment promotion, secret management, and drift detection.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Design a cost optimization strategy for a cloud-native application including right-sizing, spot instances, autoscaling, and reserved capacity planning.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Plan a migration from a synchronous REST architecture to event-driven CQRS with backward compatibility, data synchronization, and phased rollout.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Migrate a legacy Oracle database to PostgreSQL with zero downtime, data validation, stored procedure conversion, and performance testing.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Profile and optimize a Node.js API server handling 50K req/sec. Address event loop blocking, memory leaks, connection pooling, and caching.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "Optimize a slow machine learning training pipeline. Address data loading, GPU utilization, distributed training, and checkpoint management.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "Build an MLOps platform with model versioning, experiment tracking, automated training, A/B testing, model monitoring, and rollback.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "设计一个内容审核流水线，包括文本分类、图片分析、视频扫描、申诉流程和人工升级审核", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "实现一个基于 CRDT 的协作数据结构，支持并发编辑、冲突解决和最终一致性", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "zh"}
+{"prompt": "设计一个支付对账系统，处理多支付渠道、货币兑换、退款和合规报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个全面的 API 安全层，包括 OAuth2、速率限制、IP 白名单和 DDoS 防护", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "zh"}
+{"prompt": "规划从同步 REST 架构迁移到事件驱动 CQRS 的方案，需要向后兼容和分阶段上线", "expected_tier": "COMPLEX", "category": "migration", "lang": "zh"}
+{"prompt": "コンテンツモデレーションパイプラインを設計してください。テキスト分類、画像分析、ビデオスキャン、申立てワークフローを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "CRDTベースの協調データ構造を実装してください。並行編集、コンフリクト解決、結果整合性を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "災害復旧戦略を設計してください。RPO1分未満、自動フェイルオーバー、データ整合性を含めてください。", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "ja"}
+{"prompt": "콘텐츠 모더레이션 파이프라인을 설계하세요. 텍스트 분류, 이미지 분석, 비디오 스캔, 이의 제기 워크플로우를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "CRDT 기반 협업 데이터 구조를 구현하세요. 동시 편집, 충돌 해결, 최종 일관성을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ko"}
+{"prompt": "재해 복구 전략을 설계하세요. RPO 1분 미만, 자동 페일오버, 데이터 일관성을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "ko"}
+{"prompt": "صمم نظام مطابقة لخدمة مشاركة الرحلات يشمل تتبع الموقع في الوقت الفعلي، التسعير الديناميكي، والتوقع الوصول.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "صمم استراتيجية التعافي من الكوارث مع RPO أقل من دقيقة وتبديل تلقائي واتساق البيانات.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "ar"}
+{"prompt": "Projete um sistema de moderação de conteúdo com classificação de texto, análise de imagem, escaneamento de vídeo e fluxo de recurso.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Implemente uma estrutura de dados colaborativa baseada em CRDT com edição concorrente e resolução de conflitos.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "pt"}
+{"prompt": "Спроектируй систему модерации контента с классификацией текста, анализом изображений, сканированием видео и процессом апелляции.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Реализуй CRDT-структуру данных с поддержкой конкурентного редактирования, разрешения конфликтов и согласованности.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ru"}
+{"prompt": "Спроектируй стратегию восстановления после катастрофы с RPO менее 1 минуты и автоматическим переключением.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "ru"}
+{"prompt": "Diseña un pipeline de moderación de contenido con clasificación de texto, análisis de imagen, escaneo de video y flujo de apelación.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Implementa una estructura de datos colaborativa basada en CRDT con edición concurrente y resolución de conflictos.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "es"}
+{"prompt": "Entwerfe ein Content-Moderationssystem mit Textklassifizierung, Bildanalyse, Video-Scanning und Beschwerde-Workflow.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Implementiere eine CRDT-basierte kollaborative Datenstruktur mit konkurrenter Bearbeitung und Konfliktlösung.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "de"}
+{"prompt": "Conçois un système de modération de contenu avec classification de texte, analyse d'image, scan vidéo et processus d'appel.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Implémente une structure de données collaborative basée sur CRDT avec édition concurrente et résolution de conflits.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "fr"}
+{"prompt": "एक सामग्री मॉडरेशन पाइपलाइन डिज़ाइन करें जिसमें टेक्स्ट वर्गीकरण, छवि विश्लेषण, वीडियो स्कैनिंग और अपील वर्कफ़्लो शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "Metin sınıflandırma, görüntü analizi, video tarama ve itiraz iş akışı içeren bir içerik moderasyon hattı tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Prove that every Eulerian graph has all vertices of even degree. Show both directions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the determinant of a product of matrices equals the product of their determinants.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the regular languages are closed under complement using DFA construction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that any continuous bijection from a compact space to a Hausdorff space is a homeomorphism.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that every finite integral domain is a field.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the Hamiltonian cycle problem is NP-complete by reduction from vertex cover.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove Fermat's little theorem: a^p ≡ a (mod p) for prime p. Use group theory.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the expected number of comparisons in randomized quicksort. Show it's O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the PageRank formula from first principles. Show convergence guarantees.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the information gain formula used in decision tree splitting. Prove it's non-negative.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the variance of the sample mean and prove it equals σ²/n.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "A database has N records. Binary search takes O(log N). If N doubles every year and currently takes 20 comparisons, derive how many years until it takes 25 comparisons. Prove your answer.", "expected_tier": "REASONING", "category": "math-word-problem", "lang": "en"}
+{"prompt": "A hash table with load factor α has expected O(1/(1-α)) probes for unsuccessful search. Derive the optimal load factor that minimizes total memory * time cost. Show your work.", "expected_tier": "REASONING", "category": "math-word-problem", "lang": "en"}
+{"prompt": "Prove that Kruskal's algorithm produces a minimum spanning tree. Use the cut property.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that BFS finds the shortest path in an unweighted graph. Use induction on distance.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove the correctness of the Floyd-Warshall algorithm using dynamic programming invariants.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that every finite extensive-form game has a subgame-perfect equilibrium. Use Zermelo's theorem.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "In an auction with n bidders and private values, derive the optimal bidding strategy in a first-price sealed-bid auction.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Five pirates divide 100 gold coins. Using backward induction, prove that the first pirate proposes 98-0-1-0-1. Show every step.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove that in the blue-eyed islanders puzzle with n blue-eyed people, they all leave on day n. Use induction.", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "en"}
+{"prompt": "Prove the completeness theorem for propositional logic: every tautology has a proof in a given proof system.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that first-order logic is undecidable but semi-decidable. Use the halting problem.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "证明每个欧拉图的所有顶点度数都是偶数。双向证明。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导随机快速排序的期望比较次数，证明是 O(n log n)。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "证明 Kruskal 算法能生成最小生成树。使用切割性质。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "五个海盗分 100 金币，用逆向归纳法证明第一个海盗提出 98-0-1-0-1 的方案。", "expected_tier": "REASONING", "category": "logic-puzzle", "lang": "zh"}
+{"prompt": "证明命题逻辑的完备性定理：每个重言式都有证明。", "expected_tier": "REASONING", "category": "formal-logic", "lang": "zh"}
+{"prompt": "すべてのオイラーグラフの頂点の次数が偶数であることを証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "ランダム化クイックソートの期待比較回数を導出してください。O(n log n)を証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "クラスカルのアルゴリズムが最小全域木を生成することを証明してください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "모든 오일러 그래프의 꼭짓점 차수가 짝수임을 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "무작위 퀵소트의 기대 비교 횟수를 유도하세요. O(n log n)임을 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "크루스칼 알고리즘이 최소 신장 트리를 생성함을 증명하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "أثبت أن كل رسم أويلري له جميع رؤوسه بدرجات زوجية. أظهر الاتجاهين.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "اشتق العدد المتوقع للمقارنات في الترتيب السريع العشوائي. أثبت أنه O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ar"}
+{"prompt": "Prove que todo grafo euleriano tem todos os vértices de grau par.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "Derive o número esperado de comparações no quicksort randomizado. Prove que é O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "pt"}
+{"prompt": "Prove que o algoritmo de Kruskal produz uma árvore geradora mínima.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "pt"}
+{"prompt": "Докажи, что в каждом эйлеровом графе все вершины имеют чётную степень.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Выведи ожидаемое число сравнений в рандомизированной быстрой сортировке.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "Докажи, что алгоритм Крускала строит минимальное остовное дерево.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ru"}
+{"prompt": "Demuestra que todo grafo euleriano tiene todos los vértices de grado par.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Deriva el número esperado de comparaciones en quicksort aleatorizado. Demuestra que es O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "es"}
+{"prompt": "Beweise, dass in jedem Euler-Graphen alle Knoten geraden Grad haben.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Leite die erwartete Anzahl von Vergleichen bei randomisiertem Quicksort ab. Beweise O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "de"}
+{"prompt": "Démontre que tout graphe eulérien a tous ses sommets de degré pair.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "Dérive le nombre attendu de comparaisons dans le tri rapide aléatoire. Démontre O(n log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "fr"}
+{"prompt": "गणितीय आगमन द्वारा सिद्ध करें कि पहले n प्राकृतिक संख्याओं का योग n(n+1)/2 है।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "Her Euler grafında tüm köşelerin çift dereceli olduğunu kanıtlayın.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}

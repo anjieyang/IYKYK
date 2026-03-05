@@ -1,0 +1,159 @@
+{"prompt": "What is a patent?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is GDP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does FDA stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is inflation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a stock market?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is DNA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an antibiotic?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is HIPAA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a copyright?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a firewall?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is bandwidth?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is latency?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a VPN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is two-factor authentication?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a kernel?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "I've been trying to understand what exactly a database index is, and I was hoping you could give me a brief and simple explanation of what it does and why it's useful?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "My professor mentioned something called 'Big O notation' in class today and I have no idea what it means. Can you tell me what it is in plain English?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "I keep hearing people at work talk about 'the cloud' and I feel embarrassed to ask what it actually means. What is cloud computing in the simplest possible terms?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "什么是 VPN？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是防火墙？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是带宽？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "GDP 是什么意思？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 DNA？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是人工智能？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "翻译：see you later", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "翻译：how much does it cost", "expected_tier": "SIMPLE", "category": "translation", "lang": "zh"}
+{"prompt": "VPNとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ファイアウォールとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "人工知能とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "クラウドコンピューティングとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ブロックチェーンとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "'ありがとう'を英語で何と言いますか？", "expected_tier": "SIMPLE", "category": "translation", "lang": "ja"}
+{"prompt": "VPN이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "방화벽이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "인공지능이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "블록체인이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "클라우드 컴퓨팅이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "ما هو الذكاء الاصطناعي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو VPN؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هي سلسلة الكتل؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو الحوسبة السحابية؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو الجدار الناري؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "O que é inteligência artificial?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um firewall?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é VPN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é blockchain?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é computação em nuvem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Что такое искусственный интеллект?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое блокчейн?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое VPN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "¿Qué es la inteligencia artificial?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un firewall?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es blockchain?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Was ist künstliche Intelligenz?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist eine Blockchain?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein VPN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce que l'intelligence artificielle ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un pare-feu ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce que la blockchain ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Write a Python script to load a CSV file with pandas and calculate basic statistics", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a simple data visualization with matplotlib showing sales trends", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Terraform configuration for an S3 bucket with versioning enabled", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a Prometheus alert rule for high CPU usage", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a SQL query to calculate the moving average of daily revenue over 7 days", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple retry decorator with configurable max retries and delay", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how blockchain consensus mechanisms work", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a neural network learn through backpropagation?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the difference between symmetric and asymmetric encryption", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a container differ from a virtual machine at the OS level?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain what eventual consistency means in distributed systems", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a B-tree index improve database query performance?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain the difference between supervised and unsupervised learning", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a reverse proxy work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain what a message broker does and when to use one", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does garbage collection work in Go compared to Java?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Write a function to implement the Levenshtein distance algorithm", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple bloom filter in Python", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a topological sort algorithm for a directed acyclic graph", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a simple event emitter class in TypeScript", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Compare eventual consistency and strong consistency in databases", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "What are the trade-offs between microservices and a modular monolith?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare GraphQL subscriptions with WebSockets for real-time data", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Categorize these error logs by type: timeout, auth failure, or server error", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "Extract all URLs from this HTML document", "expected_tier": "MEDIUM", "category": "extraction", "lang": "en"}
+{"prompt": "Identify the programming language of each code snippet below", "expected_tier": "MEDIUM", "category": "classification", "lang": "en"}
+{"prompt": "写一个 Python 脚本读取 CSV 文件并计算基本统计量", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "解释区块链的共识机制是怎么工作的", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释对称加密和非对称加密的区别", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "解释什么是最终一致性", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "比较容器和虚拟机在操作系统层面的区别", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "比较 GraphQL 和 REST 的优缺点", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "写一个 Python 的重试装饰器", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "Pythonでリトライデコレータを実装してください", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ja"}
+{"prompt": "対称暗号と非対称暗号の違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "ブロックチェーンのコンセンサスメカニズムを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "コンテナと仮想マシンの違いを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "Python으로 리트라이 데코레이터를 구현해주세요", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ko"}
+{"prompt": "대칭 암호화와 비대칭 암호화의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "블록체인 합의 메커니즘을 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "컨테이너와 가상 머신의 차이를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "اكتب دالة Python لحساب متوسط قائمة من الأرقام", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ar"}
+{"prompt": "اشرح الفرق بين التشفير المتماثل وغير المتماثل", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "Escreva um script Python para ler um CSV e calcular estatísticas", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pt"}
+{"prompt": "Explique a diferença entre criptografia simétrica e assimétrica", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Compare microsserviços com um monólito modular", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pt"}
+{"prompt": "Напиши декоратор для повторных попыток на Python", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "ru"}
+{"prompt": "Объясни разницу между симметричным и асимметричным шифрованием", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Сравни контейнеры и виртуальные машины на уровне ОС", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ru"}
+{"prompt": "Escribe un script Python para leer un CSV y calcular estadísticas", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "es"}
+{"prompt": "Explica la diferencia entre cifrado simétrico y asimétrico", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Schreibe ein Python-Skript zum Lesen einer CSV-Datei", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "de"}
+{"prompt": "Erkläre den Unterschied zwischen symmetrischer und asymmetrischer Verschlüsselung", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Écris un script Python pour lire un CSV et calculer des statistiques", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "fr"}
+{"prompt": "Explique la différence entre chiffrement symétrique et asymétrique", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "Design an automated trading system with market data ingestion, strategy backtesting, risk management, order execution, and real-time P&L tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a HIPAA-compliant electronic health records system with patient data encryption, role-based access, audit trails, and interoperability via FHIR API.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a legal document analysis platform with OCR, named entity extraction, clause classification, risk scoring, and version comparison.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an ETL pipeline that ingests data from 5 sources, handles schema drift, performs data quality validation, deduplication, and loads into a data warehouse with SCD Type 2.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Design a real-time fraud detection system with feature store, model serving, online/offline feature consistency, and feedback loop for model retraining.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "Implement a distributed lock manager with fencing tokens, deadlock detection, and automatic lease renewal", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a CDC pipeline from PostgreSQL to Elasticsearch with exactly-once delivery and schema evolution", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a custom garbage collector for a toy language runtime with mark-sweep, generational collection, and compaction", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "设计一个自动化交易系统，包括行情数据接入、策略回测、风险控制、订单执行和实时盈亏追踪", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "构建一个合规的电子病历系统，包括数据加密、角色权限、审计日志和 FHIR API 互操作", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个实时反欺诈系统，包括特征存储、模型服务、在线/离线特征一致性和模型自动重训练", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "zh"}
+{"prompt": "自動取引システムを設計してください。市場データ取込、バックテスト、リスク管理、注文執行、リアルタイム損益追跡を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "分散ロックマネージャを実装してください。フェンシングトークン、デッドロック検出、自動リース更新を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "자동 거래 시스템을 설계하세요. 시장 데이터 수집, 백테스트, 리스크 관리, 주문 실행, 실시간 손익 추적을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "실시간 사기 탐지 시스템을 설계하세요. 피처 스토어, 모델 서빙, 온라인/오프라인 피처 일관성을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "ko"}
+{"prompt": "صمم نظام تداول آلي يشمل استيعاب بيانات السوق، اختبار الاستراتيجيات، إدارة المخاطر، تنفيذ الأوامر، وتتبع الأرباح والخسائر.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Projete um sistema de negociação automatizado com ingestão de dados de mercado, backtesting, gestão de riscos, execução de ordens e rastreamento de P&L.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Спроектируй систему автоматической торговли с приёмом рыночных данных, бэктестингом стратегий, управлением рисками и исполнением ордеров.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Построй ETL-пайплайн для 5 источников с обработкой дрейфа схемы, валидацией данных и дедупликацией.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "ru"}
+{"prompt": "Diseña un sistema de trading automatizado con ingesta de datos de mercado, backtesting, gestión de riesgos y ejecución de órdenes.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Entwerfe ein automatisiertes Handelssystem mit Marktdatenaufnahme, Backtesting, Risikomanagement und Auftragsausführung.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Conçois un système de trading automatisé avec ingestion de données de marché, backtesting, gestion des risques et exécution des ordres.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Prove that the set of real numbers is uncountable using Cantor's diagonal argument. Show every step.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that if a function is differentiable at a point, it is continuous at that point. Use epsilon-delta.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the formula for the number of derangements of n elements. Prove it using inclusion-exclusion.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that the eigenvalues of a real symmetric matrix are always real. Show each step formally.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove the master theorem for divide-and-conquer recurrences. Show all three cases with proofs.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that P is closed under union, concatenation, and Kleene star. Use Turing machine constructions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "In the prisoner's dilemma repeated infinitely, prove that tit-for-tat is a Nash equilibrium under discounting.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Why is quicksort O(n²) in the worst case? Prove it formally with a recurrence relation.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Explain why you can't sort faster than O(n log n) with comparisons. Prove the lower bound.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "证明实数集是不可数的，使用 Cantor 对角线论证。逐步展示。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导错位排列的公式，用容斥原理证明。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "证明实对称矩阵的特征值都是实数。展示每一步。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "実数の集合が非可算であることをカントールの対角線論法を用いて証明してください。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "マスター定理を導出し、3つのケースすべてを証明してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "실수 집합이 비가산임을 칸토어의 대각선 논법으로 증명하세요.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "마스터 정리를 유도하고 세 가지 경우를 모두 증명하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "أثبت أن مجموعة الأعداد الحقيقية غير قابلة للعد باستخدام حجة كانتور القطرية. أظهر كل خطوة.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "Prove que o conjunto dos números reais é incontável usando o argumento diagonal de Cantor.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "Докажи, что множество действительных чисел несчётно, используя диагональный аргумент Кантора.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Выведи формулу для количества беспорядков из n элементов, используя формулу включения-исключения.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "Demuestra que el conjunto de los números reales es incontable usando el argumento diagonal de Cantor.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Beweise, dass die Menge der reellen Zahlen überabzählbar ist, mit Cantors Diagonalargument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Démontre que l'ensemble des nombres réels est indénombrable en utilisant l'argument diagonal de Cantor.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}

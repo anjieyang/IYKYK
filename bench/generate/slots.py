@@ -1,0 +1,335 @@
+"""Slot vocabularies for template-based prompt generation.
+
+Each slot is a list of values that can be plugged into templates.
+Organized by language and semantic category.
+"""
+
+from __future__ import annotations
+
+# ─── Languages ───
+
+PROG_LANGS = [
+    "Python", "JavaScript", "TypeScript", "Rust", "Go", "Java", "C++", "C#",
+    "Ruby", "PHP", "Swift", "Kotlin", "Scala", "Haskell", "Elixir", "Lua",
+    "Bash", "SQL", "R", "Dart",
+]
+
+HUMAN_LANGS = {
+    "en": "English", "zh": "Chinese", "ru": "Russian", "es": "Spanish",
+    "de": "German", "fr": "French", "pt": "Portuguese", "ja": "Japanese",
+    "ko": "Korean", "ar": "Arabic",
+}
+
+# ─── SIMPLE slots ───
+
+SIMPLE_CONCEPTS = [
+    "HTTP", "DNS", "API", "REST", "TCP", "UDP", "JSON", "XML", "HTML", "CSS",
+    "Git", "Docker", "Kubernetes", "Linux", "SQL", "NoSQL", "OAuth", "JWT",
+    "CORS", "HTTPS", "SSH", "FTP", "SMTP", "WebSocket", "GraphQL", "gRPC",
+    "Redis", "MongoDB", "PostgreSQL", "MySQL", "Elasticsearch", "Kafka",
+    "React", "Vue", "Angular", "Node.js", "Django", "Flask", "FastAPI",
+    "Spring Boot", "Rails", "Laravel", "Express.js", "Next.js", "Svelte",
+    "machine learning", "deep learning", "neural network", "blockchain",
+    "microservice", "serverless", "DevOps", "CI/CD", "agile", "scrum",
+    "polymorphism", "inheritance", "encapsulation", "abstraction",
+    "recursion", "closure", "promise", "async/await", "generator",
+    "decorator", "middleware", "ORM", "MVC", "MVVM", "singleton",
+    "observer pattern", "factory pattern", "dependency injection",
+    "binary search", "hash table", "linked list", "binary tree",
+    "stack", "queue", "heap", "graph", "trie", "B-tree",
+]
+
+SIMPLE_PEOPLE = [
+    "Alan Turing", "Ada Lovelace", "Linus Torvalds", "Tim Berners-Lee",
+    "Grace Hopper", "Dennis Ritchie", "Guido van Rossum", "James Gosling",
+    "Brendan Eich", "Bjarne Stroustrup", "Ken Thompson", "Donald Knuth",
+]
+
+SIMPLE_FACTS = [
+    ("the boiling point of water", "100°C"),
+    ("the speed of light", "299,792,458 m/s"),
+    ("the capital of Japan", "Tokyo"),
+    ("the largest planet in the solar system", "Jupiter"),
+    ("the chemical symbol for gold", "Au"),
+    ("the year the internet was invented", "1969"),
+    ("the number of bits in a byte", "8"),
+    ("the creator of Linux", "Linus Torvalds"),
+    ("the first programming language", "Fortran"),
+]
+
+TRANSLATE_PHRASES = [
+    "hello world", "good morning", "thank you", "how are you",
+    "goodbye", "please help me", "I love programming",
+    "the weather is nice today", "where is the nearest restaurant",
+    "happy birthday", "congratulations", "see you tomorrow",
+]
+
+# ─── MEDIUM slots ───
+
+MEDIUM_CODE_TASKS = [
+    "reverses a string", "checks if a number is prime", "sorts a list",
+    "finds the maximum element", "calculates the factorial",
+    "implements binary search", "flattens a nested array",
+    "removes duplicates from a list", "counts word frequencies",
+    "validates an email address", "parses a CSV file",
+    "implements a stack", "implements a queue", "generates Fibonacci numbers",
+    "converts between bases", "implements a simple cache",
+    "reads a JSON file", "merges two sorted arrays",
+    "finds the longest common subsequence", "implements a hash map",
+    "checks if a string is a palindrome", "rotates an array",
+    "finds all permutations", "implements a linked list",
+    "calculates the GCD", "implements a debounce function",
+    "creates a simple HTTP server", "implements retry logic",
+    "validates a phone number", "generates a random password",
+]
+
+MEDIUM_EXPLAIN_TOPICS = [
+    "how garbage collection works", "the difference between TCP and UDP",
+    "how async/await works", "the CAP theorem", "ACID properties",
+    "how DNS resolution works", "the difference between REST and GraphQL",
+    "how a hash table works internally", "how TLS/SSL handshake works",
+    "the difference between processes and threads", "how virtual memory works",
+    "how HTTP/2 differs from HTTP/1.1", "how OAuth2 authorization code flow works",
+    "the difference between SQL and NoSQL databases",
+    "how container orchestration works", "the reactor pattern",
+    "how consistent hashing works", "the difference between monolith and microservices",
+    "how event sourcing works", "the SOLID principles",
+    "how WebSockets work", "the difference between gRPC and REST",
+    "how a compiler works at a high level", "the actor model",
+    "how load balancing algorithms work", "how B-trees are used in databases",
+]
+
+MEDIUM_COMPARE_PAIRS = [
+    ("SQL", "NoSQL"), ("REST", "GraphQL"), ("Docker", "virtual machines"),
+    ("TCP", "UDP"), ("React", "Vue"), ("Python", "JavaScript"),
+    ("Git merge", "Git rebase"), ("monolith", "microservices"),
+    ("relational databases", "document databases"), ("Kafka", "RabbitMQ"),
+    ("Kubernetes", "Docker Swarm"), ("gRPC", "REST"),
+    ("serverless", "containers"), ("TypeScript", "JavaScript"),
+    ("Redis", "Memcached"), ("PostgreSQL", "MySQL"),
+    ("threads", "processes"), ("OAuth", "JWT"),
+    ("synchronous", "asynchronous programming"),
+    ("compiled", "interpreted languages"),
+]
+
+MEDIUM_REWRITE_TASKS = [
+    "Rewrite this paragraph to be more concise",
+    "Make this text more formal and professional",
+    "Simplify this technical explanation for a non-technical audience",
+    "Convert this bullet list into a flowing paragraph",
+    "Rewrite this error message to be user-friendly",
+]
+
+MEDIUM_EXTRACT_TASKS = [
+    "Extract all dates and names from the following text",
+    "Pull out the key metrics and numbers from this report",
+    "List all the technical requirements mentioned in this document",
+    "Extract the API endpoints described in this specification",
+    "Identify all the action items from these meeting notes",
+]
+
+# ─── COMPLEX slots ───
+
+COMPLEX_SYSTEMS = [
+    "distributed rate limiter", "URL shortener service", "real-time chat system",
+    "notification service", "payment processing system", "search engine",
+    "recommendation engine", "file storage service", "video streaming platform",
+    "social media feed", "ride-sharing matching service", "inventory management system",
+    "CI/CD pipeline", "monitoring and alerting system", "API gateway",
+    "distributed cache", "message queue", "task scheduler",
+    "authentication service", "content delivery network",
+    "real-time analytics pipeline", "log aggregation system",
+    "feature flag service", "A/B testing platform", "webhook delivery system",
+]
+
+COMPLEX_REQUIREMENTS = [
+    "authentication and authorization", "input validation and sanitization",
+    "rate limiting and throttling", "caching with invalidation",
+    "database migrations", "error handling and recovery",
+    "logging and monitoring", "health checks and readiness probes",
+    "auto-scaling", "load balancing", "circuit breaking",
+    "retry with exponential backoff", "distributed tracing",
+    "schema evolution", "data partitioning and sharding",
+    "exactly-once delivery", "dead letter queues",
+    "blue-green deployment", "canary releases", "rolling updates",
+    "RBAC permission model", "audit logging", "data encryption at rest",
+    "multi-region failover", "disaster recovery",
+    "horizontal scaling", "vertical partitioning",
+    "event sourcing", "CQRS pattern", "saga pattern",
+    "service mesh integration", "API versioning",
+    "WebSocket support", "streaming responses",
+    "batch processing", "real-time processing",
+    "data validation pipeline", "schema registry",
+    "secrets management", "configuration management",
+]
+
+COMPLEX_CONSTRAINTS = [
+    "Handle 10M daily requests",
+    "Support 1M concurrent connections",
+    "Maintain sub-100ms p99 latency",
+    "Achieve 99.99% uptime",
+    "Process 100K events per second",
+    "Store 1TB of data with fast retrieval",
+    "Support 50 concurrent users editing the same document",
+    "Handle network partitions gracefully",
+]
+
+# ─── REASONING slots ───
+
+REASONING_THEOREMS = [
+    "the sum of first n natural numbers equals n(n+1)/2",
+    "the square root of 2 is irrational",
+    "there are infinitely many prime numbers",
+    "the pigeonhole principle",
+    "every finite group of order p (prime) is cyclic",
+    "the fundamental theorem of arithmetic",
+    "Cantor's theorem that |P(S)| > |S|",
+    "the halting problem is undecidable",
+    "every continuous function on [a,b] is uniformly continuous",
+    "the time complexity of comparison-based sorting is Omega(n log n)",
+    "Dijkstra's algorithm produces shortest paths",
+    "the greedy algorithm for fractional knapsack is optimal",
+    "merge sort has O(n log n) time complexity",
+    "every tree with n vertices has exactly n-1 edges",
+    "a connected graph with n vertices and n-1 edges is a tree",
+    "the sum of angles in a triangle is 180 degrees",
+    "Euler's formula: V - E + F = 2 for planar graphs",
+    "the binomial theorem",
+    "Bayes' theorem",
+    "the central limit theorem",
+]
+
+REASONING_METHODS = [
+    "mathematical induction",
+    "proof by contradiction",
+    "direct proof",
+    "proof by contrapositive",
+    "the pigeonhole principle",
+    "diagonalization argument",
+    "strong induction",
+    "proof by construction",
+    "exchange argument",
+    "loop invariants",
+]
+
+# ─── Multilingual patterns ───
+
+QA_PATTERNS: dict[str, list[str]] = {
+    "en": ["What is {concept}?", "What does {concept} stand for?", "Define {concept}", "Who is {person}?", "What is {fact}?"],
+    "zh": ["{concept}是什么？", "什么是{concept}？", "定义{concept}", "{person}是谁？"],
+    "ru": ["Что такое {concept}?", "Что означает {concept}?", "Кто такой {person}?"],
+    "es": ["¿Qué es {concept}?", "¿Qué significa {concept}?", "Define {concept}"],
+    "de": ["Was ist {concept}?", "Was bedeutet {concept}?", "Definiere {concept}"],
+    "fr": ["Qu'est-ce que {concept} ?", "Définir {concept}", "Qui est {person} ?"],
+    "pt": ["O que é {concept}?", "Defina {concept}", "Quem é {person}?"],
+    "ja": ["{concept}とは何ですか？", "{concept}を定義してください"],
+    "ko": ["{concept}란 무엇인가요?", "{concept}을 정의해주세요"],
+    "ar": ["ما هو {concept}؟", "عرّف {concept}"],
+}
+
+TRANSLATE_PATTERNS: dict[str, list[str]] = {
+    "en": ["Translate '{phrase}' to {target_lang}", "How do you say '{phrase}' in {target_lang}?"],
+    "zh": ["翻译：{phrase}", "'{phrase}'用{target_lang}怎么说？"],
+    "ru": ["Переведи '{phrase}' на {target_lang}", "Как сказать '{phrase}' на {target_lang}?"],
+    "es": ["Traduce '{phrase}' al {target_lang}", "¿Cómo se dice '{phrase}' en {target_lang}?"],
+    "de": ["Übersetze '{phrase}' ins {target_lang}", "Wie sagt man '{phrase}' auf {target_lang}?"],
+    "fr": ["Traduis '{phrase}' en {target_lang}"],
+    "pt": ["Traduza '{phrase}' para {target_lang}"],
+    "ja": ["'{phrase}'を{target_lang}に翻訳してください"],
+    "ko": ["'{phrase}'를 {target_lang}로 번역해주세요"],
+    "ar": ["ترجم '{phrase}' إلى {target_lang}"],
+}
+
+CODE_PATTERNS: dict[str, list[str]] = {
+    "en": ["Write a {lang} function that {task}", "Create a {lang} program that {task}", "Implement {task} in {lang}"],
+    "zh": ["写一个{lang}函数来{task}", "用{lang}实现{task}"],
+    "ru": ["Напиши функцию на {lang}, которая {task}", "Реализуй {task} на {lang}"],
+    "es": ["Escribe una función en {lang} que {task}", "Implementa {task} en {lang}"],
+    "de": ["Schreibe eine {lang}-Funktion, die {task}", "Implementiere {task} in {lang}"],
+    "fr": ["Écris une fonction {lang} qui {task}"],
+    "pt": ["Escreva uma função {lang} que {task}"],
+    "ja": ["{lang}で{task}する関数を書いてください"],
+    "ko": ["{lang}로 {task}하는 함수를 작성해주세요"],
+    "ar": ["اكتب دالة {lang} تقوم بـ {task}"],
+}
+
+EXPLAIN_PATTERNS: dict[str, list[str]] = {
+    "en": ["Explain {topic}", "Describe {topic} in simple terms", "How does {topic_short} work?"],
+    "zh": ["解释{topic}", "用简单的话描述{topic}"],
+    "ru": ["Объясни {topic}", "Опиши {topic} простыми словами"],
+    "es": ["Explica {topic}", "Describe {topic} en términos simples"],
+    "de": ["Erkläre {topic}", "Beschreibe {topic} in einfachen Worten"],
+    "fr": ["Explique {topic}", "Décris {topic} simplement"],
+    "pt": ["Explique {topic}", "Descreva {topic} em termos simples"],
+    "ja": ["{topic}を説明してください"],
+    "ko": ["{topic}을 설명해주세요"],
+    "ar": ["اشرح {topic}"],
+}
+
+COMPARE_PATTERNS: dict[str, list[str]] = {
+    "en": ["Compare {a} and {b}", "What are the differences between {a} and {b}?", "Pros and cons of {a} vs {b}"],
+    "zh": ["比较{a}和{b}", "{a}和{b}有什么区别？"],
+    "ru": ["Сравни {a} и {b}", "В чём разница между {a} и {b}?"],
+    "es": ["Compara {a} y {b}", "¿Cuáles son las diferencias entre {a} y {b}?"],
+    "de": ["Vergleiche {a} und {b}", "Was sind die Unterschiede zwischen {a} und {b}?"],
+    "fr": ["Compare {a} et {b}"],
+    "pt": ["Compare {a} e {b}"],
+    "ja": ["{a}と{b}を比較してください"],
+    "ko": ["{a}와 {b}를 비교해주세요"],
+    "ar": ["قارن بين {a} و {b}"],
+}
+
+COMPLEX_PATTERNS: dict[str, list[str]] = {
+    "en": [
+        "Design a {system} with {r1}, {r2}, {r3}, and {r4}. {constraint}.",
+        "Implement a {system} that supports {r1}, {r2}, and {r3}. Include {r4}.",
+        "Build a {system} with {r1}, {r2}, {r3}, {r4}, and {r5}.",
+    ],
+    "zh": [
+        "设计一个{system}，包括{r1}、{r2}、{r3}和{r4}。{constraint}。",
+        "实现一个{system}，支持{r1}、{r2}和{r3}。包含{r4}。",
+    ],
+    "ru": [
+        "Спроектируй {system} с поддержкой {r1}, {r2}, {r3} и {r4}. {constraint}.",
+        "Реализуй {system} с {r1}, {r2} и {r3}. Добавь {r4}.",
+    ],
+    "es": ["Diseña un {system} con {r1}, {r2}, {r3} y {r4}. {constraint}."],
+    "de": ["Entwirf ein {system} mit {r1}, {r2}, {r3} und {r4}. {constraint}."],
+    "fr": ["Conçois un {system} avec {r1}, {r2}, {r3} et {r4}. {constraint}."],
+    "ja": ["{system}を設計してください。{r1}、{r2}、{r3}、{r4}を含めてください。"],
+    "ko": ["{system}을 설계하세요. {r1}, {r2}, {r3}, {r4}를 포함해야 합니다."],
+}
+
+REASONING_PATTERNS: dict[str, list[str]] = {
+    "en": [
+        "Prove that {theorem} using {method}. Show each step formally.",
+        "Derive {theorem}. Prove it step by step.",
+        "Using {method}, prove that {theorem}.",
+    ],
+    "zh": [
+        "用{method}证明：{theorem}。请写出完整的形式化证明过程。",
+        "逐步推导{theorem}，并用形式化符号证明其正确性。",
+    ],
+    "ru": [
+        "Докажи, что {theorem}, используя {method}. Покажи каждый шаг формально.",
+        "Выведи {theorem} шаг за шагом. Докажи математически.",
+    ],
+    "es": ["Demuestra que {theorem} usando {method}. Muestra cada paso formalmente."],
+    "de": ["Beweise, dass {theorem}, mittels {method}. Zeige jeden Schritt formal."],
+    "fr": ["Démontre que {theorem} en utilisant {method}. Montre chaque étape."],
+    "ja": ["{method}を用いて{theorem}を証明してください。各ステップを形式的に示してください。"],
+    "ko": ["{method}을 사용하여 {theorem}을 증명하세요. 각 단계를 형식적으로 보여주세요."],
+}
+
+GREETINGS: dict[str, list[str]] = {
+    "en": ["Hello", "Hi", "Hey", "Thanks!", "Help", "OK", "Yes", "No"],
+    "zh": ["你好", "谢谢", "好的", "是", "否", "帮帮我"],
+    "ru": ["Привет", "Спасибо", "Да", "Нет", "Помоги"],
+    "es": ["Hola", "Gracias", "Sí", "No", "Ayuda"],
+    "de": ["Hallo", "Danke", "Ja", "Nein", "Hilfe"],
+    "fr": ["Bonjour", "Merci", "Oui", "Non", "Aide"],
+    "pt": ["Olá", "Obrigado", "Sim", "Não", "Ajuda"],
+    "ja": ["こんにちは", "ありがとう", "はい", "いいえ"],
+    "ko": ["안녕하세요", "감사합니다", "네", "아니요"],
+    "ar": ["مرحبا", "شكرا", "نعم", "لا", "مساعدة"],
+}

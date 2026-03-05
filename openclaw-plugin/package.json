@@ -1,0 +1,32 @@
+{
+  "name": "@anjieyang/uncommon-route",
+  "version": "0.1.0",
+  "description": "OpenClaw plugin — UncommonRoute smart LLM router, 98% accuracy, <1ms local routing",
+  "type": "module",
+  "main": "src/index.js",
+  "openclaw": {
+    "extensions": [
+      "./src/index.js"
+    ]
+  },
+  "files": [
+    "src/",
+    "openclaw.plugin.json",
+    "openclaw.security.json"
+  ],
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "llm-router",
+    "smart-routing"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "openclaw": ">=2025.1.0"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  }
+}

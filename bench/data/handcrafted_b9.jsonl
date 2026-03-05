@@ -1,0 +1,502 @@
+{"prompt": "What is a zero-day vulnerability?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does SIEM stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is phishing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a DDoS attack?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does SOC stand for in security?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a man-in-the-middle attack?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is OWASP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a penetration test?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is RBAC?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is Ansible?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a CAN bus?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is PCI-DSS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is SWIFT in banking?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a Jenkins pipeline?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an SoC?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is AML in fintech?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the difference between SPI and I2C?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a CI/CD pipeline?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a learning management system?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is HIPAA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is lidar?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a head-mounted display?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the difference between AR and VR?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is FHIR?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the SAE autonomy level?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is SCORM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a digital twin in healthcare?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a token embedding?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is semantic segmentation?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a qubit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is quantum entanglement?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is carbon footprint in tech?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is green computing?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a BERT model?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is object detection?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a quantum gate?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is PUE in data centers?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define buffer overflow", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a race condition?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a deadlock?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a Bloom filter?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is attention in neural networks?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a bounding box?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a hash collision?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a watchdog timer?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "Translate 'machine learning' to Arabic", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'cybersecurity' in Russian?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Translate 'autonomous vehicle' to Japanese", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "How do you say 'hello' in Hindi?", "expected_tier": "SIMPLE", "category": "translation", "lang": "en"}
+{"prompt": "Hey", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Hi there", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Good morning", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "Bye", "expected_tier": "SIMPLE", "category": "greeting", "lang": "en"}
+{"prompt": "什么是零日漏洞？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是蜜罐？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 CAN 总线？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 RTOS？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 FHIR？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是 SLAM？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是量子比特？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是语义分割？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是缓冲区溢出？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "什么是死锁？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "你好", "expected_tier": "SIMPLE", "category": "greeting", "lang": "zh"}
+{"prompt": "ゼロデイ脆弱性とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ハニーポットとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "CANバスとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "RTOSとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "SLAMとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "量子ビットとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "デッドロックとは何ですか？", "expected_tier": "SIMPLE", "category": "definition", "lang": "ja"}
+{"prompt": "こんにちは", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ja"}
+{"prompt": "제로데이 취약점이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "허니팟이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "CAN 버스란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "RTOS란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "SLAM이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "양자 비트란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "데드락이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ko"}
+{"prompt": "안녕하세요", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ko"}
+{"prompt": "ما هو ثغرة الصفر يوم؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو وعاء العسل؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو PCI-DSS؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو RTOS؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو SLAM؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو البت الكمي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "مرحبا", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ar"}
+{"prompt": "Что такое уязвимость нулевого дня?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое CAN-шина?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое кубит?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Привет", "expected_tier": "SIMPLE", "category": "greeting", "lang": "ru"}
+{"prompt": "¿Qué es una vulnerabilidad de día cero?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un bus CAN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un qubit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Hola", "expected_tier": "SIMPLE", "category": "greeting", "lang": "es"}
+{"prompt": "Was ist eine Zero-Day-Schwachstelle?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein Honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein CAN-Bus?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein Qubit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Hallo", "expected_tier": "SIMPLE", "category": "greeting", "lang": "de"}
+{"prompt": "Qu'est-ce qu'une vulnérabilité zero-day ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un honeypot ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un bus CAN ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un RTOS ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce que SLAM ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un qubit ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Bonjour", "expected_tier": "SIMPLE", "category": "greeting", "lang": "fr"}
+{"prompt": "O que é uma vulnerabilidade zero-day?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um barramento CAN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um qubit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Olá", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pt"}
+{"prompt": "जीरो डे वल्नरेबिलिटी क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "हनीपॉट क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "CAN बस क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "RTOS क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "SLAM क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "क्विबिट क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "नमस्ते", "expected_tier": "SIMPLE", "category": "greeting", "lang": "hi"}
+{"prompt": "Sıfır gün açığı nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Bal kutusu nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "CAN verisi nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "RTOS nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "SLAM nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Kübit nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Merhaba", "expected_tier": "SIMPLE", "category": "greeting", "lang": "tr"}
+{"prompt": "Lỗ hổng zero-day là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Honeypot là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Bus CAN là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "RTOS là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "SLAM là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Qubit là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Xin chào", "expected_tier": "SIMPLE", "category": "greeting", "lang": "vi"}
+{"prompt": "Co to jest luka zero-day?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest honeypot?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest magistrala CAN?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest RTOS?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest SLAM?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest kubit?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Cześć", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pl"}
+{"prompt": "What is a zero-trust architecture?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is differential privacy?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is homomorphic encryption?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the CAP theorem?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the Byzantine fault tolerance?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Review this authentication middleware for security flaws and suggest fixes", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this SQL prepared statement usage correct? Check for injection risks", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this Ansible playbook for idempotency and error handling", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Check this embedded C code for memory leaks and buffer overflows", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this payment processing logic for PCI compliance issues", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this HIPAA-compliant? Review the PHI handling in this function", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this AR/VR rendering loop for performance bottlenecks", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Check this NLP tokenization code for edge cases with Unicode", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this computer vision preprocessing pipeline for correctness", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this quantum circuit implementation correct? Review the gate sequence", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this carbon footprint calculation module for accuracy", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Check this DevOps script for race conditions when run in parallel", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "My SIEM keeps alerting on false positives. How do I tune the rules?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The Ansible playbook fails on the third host with a timeout. How do I debug?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Our embedded device resets randomly. How do I isolate the cause?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The payment gateway returns 3DS failures intermittently. Where do I start?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The LMS course export fails for large enrollments. How do I fix it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Our healthcare FHIR API returns 500 on certain patient queries. How do I trace it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The autonomous vehicle perception stack drops frames under load. How do I profile it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "VR headset tracking jitters in one corner of the play space. What could cause it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Our NER model mislabels medical terms. How do I debug the training data?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Object detection misses small objects at distance. How do I improve recall?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Quantum simulator gives different results on different backends. Why?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Our PUE monitoring shows spikes at odd hours. How do I correlate with workload?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize this CVE advisory and list the affected components", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Give a brief overview of the OWASP Top 10 for a non-technical stakeholder", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "TL;DR this DevOps incident postmortem", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the key differences between AUTOSAR Classic and Adaptive", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the main risks in this fintech regulatory document", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize this EdTech platform feature spec in 3 bullet points", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the FDA guidance on AI/ML in medical devices", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the SAE J3016 levels of driving automation", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the key challenges in AR/VR latency reduction", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the BERT vs GPT architecture differences", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize YOLO vs R-CNN for object detection", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the main quantum error correction approaches", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the carbon impact of cloud vs on-prem data centers", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write unit tests for this authentication bypass check function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create integration tests for this payment refund flow", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write fuzz tests for this parser that handles untrusted input", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Design test cases for this embedded firmware OTA update logic", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write property-based tests for this financial rounding function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create load tests for this LMS video streaming endpoint", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write tests for this FHIR resource validation logic", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Design test scenarios for this autonomous driving decision module", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write regression tests for this NLP sentiment classifier", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create test cases for this image augmentation pipeline", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write tests for this quantum gate decomposition function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Design chaos tests for this green energy scheduling service", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm 5 ways to reduce false positives in our intrusion detection system", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for automating our release process without breaking production", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm approaches to reduce power consumption in our IoT fleet", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for making our payment flow more resilient to bank outages", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm features for an adaptive learning platform that personalizes content", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for improving diagnostic accuracy with AI while staying explainable", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm ways to handle edge cases in autonomous parking", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for reducing motion sickness in VR experiences", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm methods to improve low-resource language NER", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for real-time object tracking in crowded scenes", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Brainstorm hybrid classical-quantum algorithms for optimization", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Ideas for making our data center carbon-neutral", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Write a Python script to scan a directory for files with weak file permissions", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create an Ansible task to ensure a service is running and enabled on boot", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a C function to read a value from a CAN bus frame", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a function to validate an IBAN format", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a script to export SCORM-compliant content from our LMS", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a function to anonymize PHI in a FHIR resource", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Python script to parse lidar point cloud data", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple head pose estimator for AR applications", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a tokenizer for a custom NLP pipeline", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a function to compute IoU between two bounding boxes", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a script to estimate carbon emissions from compute usage", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how a buffer overflow can lead to code execution", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does Ansible achieve idempotency in playbook execution?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how CAN bus arbitration works when multiple nodes transmit", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does PCI-DSS require encryption of cardholder data at rest?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how SCORM packages are structured and launched", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does FHIR support interoperability between healthcare systems?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how lidar and camera fusion improves perception", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does inside-out tracking work in VR headsets?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how BERT's masked language modeling pretraining works", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does non-maximum suppression work in object detection?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Explain how quantum superposition enables parallel computation", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does PUE relate to data center efficiency?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare Ansible vs Terraform for infrastructure automation", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "FreeRTOS vs Zephyr for embedded: when to use which?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare Stripe vs Adyen for fintech payment processing", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Moodle vs Canvas for EdTech: pros and cons", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare rule-based vs ML-based clinical decision support", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Camera-only vs lidar for autonomous driving perception", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare WebXR vs native SDKs for AR/VR development", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "BERT vs GPT for text classification: when to use which?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "YOLO vs Faster R-CNN: speed vs accuracy tradeoffs", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "IBM Qiskit vs Cirq for quantum programming", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Rewrite this shell script as an idempotent Ansible playbook", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Refactor this C code to be MISRA compliant", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Rewrite this SQL to use parameterized queries and avoid injection", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "Refactor this FHIR client to use async/await", "expected_tier": "MEDIUM", "category": "rewrite", "lang": "en"}
+{"prompt": "审查这个认证中间件的安全漏洞并给出修复建议", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "SIEM 误报太多，如何调优规则？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "zh"}
+{"prompt": "总结这个 CVE 公告并列出受影响组件", "expected_tier": "MEDIUM", "category": "summary", "lang": "zh"}
+{"prompt": "为这个认证绕过检查函数写单元测试", "expected_tier": "MEDIUM", "category": "testing", "lang": "zh"}
+{"prompt": "Brainstorm 5 种减少入侵检测误报的方法", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "zh"}
+{"prompt": "写一个 Python 脚本扫描目录中权限过弱的文件", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "解释缓冲区溢出如何导致代码执行", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "比较 Ansible 和 Terraform 在基础设施自动化上的优劣", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "この認証ミドルウェアのセキュリティ脆弱性をレビューして修正案を出してください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "SIEMの誤検知が多すぎます。ルールをどうチューニングしますか？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "このCVEアドバイザリを要約して影響コンポーネントをリストしてください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "この認証バイパスチェック関数のユニットテストを書いてください", "expected_tier": "MEDIUM", "category": "testing", "lang": "ja"}
+{"prompt": "侵入検知の誤検知を減らす5つの方法をブレインストームしてください", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "ja"}
+{"prompt": "AnsibleとTerraformのインフラ自動化を比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "이 인증 미들웨어의 보안 취약점을 검토하고 수정 제안해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "SIEM 오탐이 너무 많습니다. 규칙을 어떻게 조정하나요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "이 CVE 공지를 요약하고 영향받는 컴포넌트를 나열해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "Ansible과 Terraform의 인프라 자동화 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "راجع ثغرات أمان هذا الوسيط واقترح إصلاحات", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "SIEM يعطي إنذارات خاطئة كثيرة. كيف أضبط القواعد؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "لخص هذا الإعلان CVE واذكر المكونات المتأثرة", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "Проверь этот middleware аутентификации на уязвимости и предложи исправления", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ru"}
+{"prompt": "SIEM выдаёт много ложных срабатываний. Как настроить правила?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ru"}
+{"prompt": "Сравни Ansible и Terraform для автоматизации инфраструктуры", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ru"}
+{"prompt": "Revisa este middleware de autenticación en busca de fallos de seguridad", "expected_tier": "MEDIUM", "category": "code-review", "lang": "es"}
+{"prompt": "El SIEM genera muchos falsos positivos. ¿Cómo afino las reglas?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "es"}
+{"prompt": "Compara Ansible vs Terraform para automatización de infraestructura", "expected_tier": "MEDIUM", "category": "comparison", "lang": "es"}
+{"prompt": "Überprüfe diese Auth-Middleware auf Sicherheitslücken", "expected_tier": "MEDIUM", "category": "code-review", "lang": "de"}
+{"prompt": "Der SIEM liefert zu viele False Positives. Wie tune ich die Regeln?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "de"}
+{"prompt": "Vergleiche Ansible und Terraform für Infrastruktur-Automatisierung", "expected_tier": "MEDIUM", "category": "comparison", "lang": "de"}
+{"prompt": "Revue ce middleware d'authentification pour des failles de sécurité", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "Le SIEM génère trop de faux positifs. Comment affiner les règles?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "fr"}
+{"prompt": "Compare Ansible et Terraform pour l'automatisation d'infrastructure", "expected_tier": "MEDIUM", "category": "comparison", "lang": "fr"}
+{"prompt": "Revise este middleware de autenticação em busca de falhas de segurança", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pt"}
+{"prompt": "O SIEM gera muitos falsos positivos. Como ajustar as regras?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pt"}
+{"prompt": "Compare Ansible e Terraform para automação de infraestrutura", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pt"}
+{"prompt": "इस ऑथेंटिकेशन मिडलवेयर की सुरक्षा समीक्षा करें", "expected_tier": "MEDIUM", "category": "code-review", "lang": "hi"}
+{"prompt": "SIEM में बहुत ज्यादा false positive आ रहे हैं। नियम कैसे ट्यून करें?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "hi"}
+{"prompt": "Bu kimlik doğrulama middleware'ini güvenlik açıkları için inceleyin", "expected_tier": "MEDIUM", "category": "code-review", "lang": "tr"}
+{"prompt": "SIEM çok fazla yanlış pozitif veriyor. Kuralları nasıl ayarlarım?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "tr"}
+{"prompt": "Xem xét middleware xác thực này để tìm lỗ hổng bảo mật", "expected_tier": "MEDIUM", "category": "code-review", "lang": "vi"}
+{"prompt": "SIEM báo quá nhiều false positive. Làm sao điều chỉnh quy tắc?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "vi"}
+{"prompt": "Przejrzyj ten middleware uwierzytelniania pod kątem luk bezpieczeństwa", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pl"}
+{"prompt": "SIEM generuje za dużo fałszywych alarmów. Jak dostroić reguły?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pl"}
+{"prompt": "Explain the Bellman equation", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Describe the Viterbi algorithm", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Walk me through HMAC", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Review this rate limiter implementation for thundering herd issues", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Our CAN bus logger drops messages under load. How do I profile and fix it?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the GDPR requirements for AI systems in 3 bullet points", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write contract tests for this payment API using Pact", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm ways to reduce cold start latency in our serverless functions", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Write a Python script to validate JWT tokens and check expiration", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how certificate pinning prevents MITM attacks", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare OAuth2 vs SAML for enterprise SSO", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Review this RBAC policy for privilege escalation risks", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "The Ansible run hangs on 'Gathering Facts'. How do I debug?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the NIST cybersecurity framework core functions", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write mutation tests for this password hashing module", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm approaches to detect insider threats from access logs", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Implement a circuit breaker pattern in Python", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how SPI mode affects communication in embedded systems", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare PCIe Gen4 vs Gen5 for storage workloads", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Review this Kafka consumer for exactly-once semantics", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Our FHIR server times out on bulk export. How do I optimize?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the ISO 26262 safety levels for automotive", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write chaos tests for our message queue", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm features for a developer onboarding platform", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Create a script to generate SBOM from a Docker image", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how attention mechanisms reduce long-range dependency issues", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare ResNet vs EfficientNet for mobile deployment", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Review this Helm chart for security best practices", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "The VR app crashes when switching scenes. How do I debug?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the key differences between ISO 27001 and SOC 2", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write property-based tests for this date parsing function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm ways to improve model interpretability for clinicians", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Implement a retry with exponential backoff in Go", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Explain how Kalman filters fuse sensor data", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare gRPC vs REST for microservice communication", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Review this Prometheus alert rule for false positive rate", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Our quantum circuit simulation runs out of memory. How do I optimize?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Summarize the carbon offset vs reduction strategies for tech", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Write load tests for our GraphQL API using k6", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Brainstorm ways to make our API more resilient to third-party outages", "expected_tier": "MEDIUM", "category": "brainstorming", "lang": "en"}
+{"prompt": "Design a security operations center platform with SIEM integration, threat hunting workflows, incident response playbooks, and compliance reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a zero-trust network access system with device posture checks, continuous authentication, micro-segmentation, and audit logging.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a vulnerability management pipeline with asset discovery, scanning, prioritization by risk, patch orchestration, and executive dashboards.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a GitOps platform with multi-cluster sync, drift detection, rollback automation, secret management, and approval workflows.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an infrastructure provisioning system with Terraform state locking, cost estimation, policy-as-code validation, and change approval gates.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a CI/CD pipeline for microservices with parallel builds, artifact signing, environment promotion, canary deployment, and rollback.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an automotive ECU software architecture with AUTOSAR stack, OTA updates, diagnostic services, and safety monitoring.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a fleet management system for industrial IoT with device provisioning, remote diagnostics, firmware OTA, and predictive maintenance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a real-time control system for a drone with sensor fusion, path planning, fail-safe modes, and telemetry streaming.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a payment orchestration platform with multi-gateway routing, 3DS handling, reconciliation, dispute management, and PCI compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an AML transaction monitoring system with rule engine, ML anomaly detection, case management, and regulatory reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a core banking API with account management, transaction processing, audit trails, and regulatory compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an adaptive learning platform with content recommendation, progress tracking, assessment engine, and instructor dashboards.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a proctoring system with face detection, screen monitoring, behavior analysis, and integrity reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an LMS with SCORM support, video streaming, discussion forums, gradebook, and mobile app sync.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a clinical decision support system with FHIR integration, evidence-based rules, explainability, and audit trails for FDA compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a medical imaging pipeline with DICOM ingestion, AI inference, radiologist workflow, and HIPAA-compliant storage.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a patient engagement platform with appointment scheduling, telehealth, medication reminders, and interoperability.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a perception stack with lidar, camera, radar fusion, object tracking, and redundancy for L4 autonomy.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a simulation platform for AV testing with scenario generation, physics engine, sensor simulation, and regression testing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a V2X communication system with DSRC, message prioritization, security, and integration with the driving stack.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a multiplayer VR platform with spatial audio, avatar sync, physics, and low-latency networking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build an AR content management system with 3D asset streaming, occlusion handling, and analytics.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a mixed reality training simulator with hand tracking, object interaction, and performance assessment.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design an enterprise search system with document ingestion, embedding, retrieval, reranking, and answer extraction.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a multilingual NER pipeline with model serving, entity linking, and confidence calibration.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a conversational AI platform with intent detection, slot filling, backend integration, and fallback handling.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a video analytics pipeline with object detection, tracking, re-identification, and alert generation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a defect inspection system with image capture, model inference, classification, and reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a facial recognition system with liveness detection, enrollment, matching, and privacy controls.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a quantum algorithm development platform with circuit design, simulation, backend submission, and result analysis.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a carbon accounting system for cloud workloads with usage tracking, emission factors, and reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a green data center management system with workload scheduling, renewable forecasting, and PUE optimization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a secure software supply chain with SBOM generation, vulnerability scanning, signing, and policy enforcement.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Plan a migration from monolithic to microservices with API versioning, feature flags, and gradual traffic shift.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Design a multi-tenant SaaS platform with isolation, billing, and compliance per tenant.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "设计一个安全运营中心平台，包括 SIEM 集成、威胁狩猎工作流、事件响应手册和合规报告", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个零信任网络接入系统，包括设备态势检查、持续认证、微隔离和审计日志", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个自动驾驶感知栈，包括激光雷达、相机、雷达融合、目标跟踪和 L4 冗余", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个医疗影像流水线，包括 DICOM 摄取、AI 推理、放射科工作流和 HIPAA 合规存储", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "设计一个量子算法开发平台，包括电路设计、仿真、后端提交和结果分析", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "セキュリティオペレーションセンターを設計してください。SIEM連携、脅威ハンティング、インシデント対応、コンプライアンスレポートを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "ゼロトラストネットワークアクセスシステムを設計してください。デバイスポスチャーチェック、継続認証、マイクロセグメンテーションを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "自律走行の知覚スタックを設計してください。LiDAR、カメラ、レーダー融合、オブジェクト追跡、L4冗長性を含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "보안 운영 센터 플랫폼을 설계하세요. SIEM 연동, 위협 헌팅, 사고 대응 플레이북, 규정 준수 보고를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "자율주행 인지 스택을 설계하세요. LiDAR, 카메라, 레이더 융합, 객체 추적, L4 중복을 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "صمم منصة مركز عمليات أمنية تشمل تكامل SIEM وصيد التهديدات ودفاتر استجابة الحوادث والتقارير الامتثال.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "صمم نظام وصول شبكة صفر ثقة مع فحص حالة الجهاز والتحقق المستمر والجزء الدقيق وتسجيل التدقيق.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "Спроектируй платформу SOC с интеграцией SIEM, охотой за угрозами, плейбуками реагирования и отчётами по соответствию.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Спроектируй стек восприятия для автономного вождения с лидаром, камерами, радаром, трекингом и резервированием.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Diseña una plataforma SOC con integración SIEM, caza de amenazas, playbooks de respuesta e informes de cumplimiento.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Diseña un stack de percepción para conducción autónoma con fusión lidar-cámara-radar, seguimiento y redundancia.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Entwerfe eine SOC-Plattform mit SIEM-Integration, Threat Hunting, Incident Response Playbooks und Compliance-Berichten.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Entwerfe einen Wahrnehmungsstack für autonomes Fahren mit Lidar-Kamera-Radar-Fusion, Tracking und Redundanz.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Conçois une plateforme SOC avec intégration SIEM, chasse aux menaces, playbooks de réponse et rapports de conformité.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Conçois un stack de perception pour véhicule autonome avec fusion lidar-caméra-radar, suivi et redondance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "Projete uma plataforma SOC com integração SIEM, caça a ameaças, playbooks de resposta e relatórios de conformidade.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Projete um stack de percepção para veículo autônomo com fusão lidar-câmera-radar, rastreamento e redundância.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "एक SOC प्लेटफॉर्म डिज़ाइन करें जिसमें SIEM इंटीग्रेशन, थ्रेट हंटिंग, इंसिडेंट रिस्पॉन्स प्लेबुक और कंप्लायंस रिपोर्टिंग शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "SIEM entegrasyonu, tehdit avı, olay müdahale playbook'ları ve uyumluluk raporlaması içeren bir SOC platformu tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Thiết kế nền tảng SOC với tích hợp SIEM, săn mối đe dọa, playbook phản hồi sự cố và báo cáo tuân thủ.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "Zaprojektuj platformę SOC z integracją SIEM, polowaniem na zagrożenia, playbookami reagowania i raportami zgodności.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Design a DevSecOps pipeline with SAST, DAST, dependency scanning, container signing, and deployment gates.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a real-time fraud detection system with rule engine, ML scoring, case management, and regulatory reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a telemedicine platform with video calls, EHR integration, prescription workflow, and HIPAA compliance.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a simulation environment for AV validation with scenario injection, sensor noise, and metrics collection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a spatial computing platform with 6DoF tracking, hand gestures, shared anchors, and persistence.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a document intelligence pipeline with OCR, entity extraction, classification, and workflow routing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a video surveillance system with edge inference, cloud aggregation, search, and retention policies.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a quantum chemistry simulation platform with circuit compilation, backend selection, and result visualization.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a sustainable cloud platform with carbon-aware scheduling, renewable matching, and reporting.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a multi-region active-active system with conflict resolution, eventual consistency, and failover.", "expected_tier": "COMPLEX", "category": "architecture", "lang": "en"}
+{"prompt": "Plan a migration from VMs to Kubernetes with zero downtime and rollback capability.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Design a secrets management system with rotation, audit, and least-privilege access.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Build an industrial control system with PLC integration, SCADA, historian, and security monitoring.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a regulatory reporting platform for fintech with data lineage, validation, and audit.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a competency-based learning platform with skill graphs, assessments, and credentialing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a clinical trial management system with patient recruitment, consent, and data collection.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a V2V communication system with message signing, prioritization, and geofencing.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a holographic display pipeline with light field rendering and eye tracking.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a multilingual customer support system with translation, sentiment, and escalation.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a defect detection system with multi-camera sync, 3D reconstruction, and classification.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Prove that the halting problem is undecidable using a diagonalization argument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the set of recursively enumerable languages is closed under union but not under complement.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that every context-free language has a pumping lemma. State and prove the lemma.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the class NP is closed under polynomial-time reduction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that a graph is bipartite if and only if it contains no odd-length cycles.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the maximum flow equals the minimum cut in a flow network.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the rationals are countable by constructing an explicit bijection with the naturals.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that sqrt(2) is irrational using proof by contradiction.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that there are infinitely many prime numbers.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the sum of the first n positive integers is n(n+1)/2.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that Dijkstra's algorithm correctly finds shortest paths when all edge weights are non-negative.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that binary search runs in O(log n) time and always finds the target if present.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the greedy activity selection algorithm yields an optimal solution.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that Kruskal's algorithm produces a minimum spanning tree.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the Ford-Fulkerson method terminates and finds a maximum flow when capacities are integers.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that quicksort's expected comparison count is O(n log n).", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the two-pointer technique correctly finds a pair with a given sum in a sorted array.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the greedy coin change algorithm is optimal for certain coin systems.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the closed-form solution for the recurrence T(n) = 2T(n/2) + n using the master theorem.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the expected number of comparisons in randomized quicksort.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the optimal Huffman code length bound: H(X) <= L < H(X) + 1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the Bayes optimal classifier for binary classification with 0-1 loss.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the bias-variance decomposition for squared error loss.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the optimal policy for a simple MDP using value iteration.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the Fisher information for the Bernoulli distribution.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the Cramer-Rao lower bound for an unbiased estimator.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Find the Nash equilibrium in a two-player zero-sum game. Prove it exists.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that every finite game has at least one mixed-strategy Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Analyze the iterated prisoner's dilemma: under what conditions does cooperation emerge?", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that in a symmetric game, a symmetric Nash equilibrium exists.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Derive the optimal bidding strategy in a first-price sealed-bid auction with independent private values.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that the minimax theorem holds for two-player zero-sum games.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Analyze the subgame-perfect equilibrium in a multi-stage game with perfect information.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that (A -> B) -> ((B -> C) -> (A -> C)) is a tautology using natural deduction.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the validity problem for first-order logic is undecidable.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that resolution is refutation-complete for propositional logic.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the satisfiability of 2-SAT can be solved in linear time.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the set of tautologies in propositional logic is decidable.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "证明停机问题是不可判定的（使用对角化论证）", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "证明二分图当且仅当不含奇数长度环", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "证明 Dijkstra 算法在边权非负时正确找到最短路径", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "推导 T(n)=2T(n/2)+n 的主定理闭式解", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "求两人零和博弈的纳什均衡并证明其存在", "expected_tier": "REASONING", "category": "game-theory", "lang": "zh"}
+{"prompt": "证明 (A->B)->((B->C)->(A->C)) 是重言式", "expected_tier": "REASONING", "category": "formal-logic", "lang": "zh"}
+{"prompt": "停止問題が決定不能であることを対角線論法で証明してください", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "Dijkstraのアルゴリズムが非負の重みで最短経路を正しく見つけることを証明してください", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "マスター定理を用いてT(n)=2T(n/2)+nの閉形式を導出してください", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "二人ゼロサムゲームのナッシュ均衡を求め、存在することを証明してください", "expected_tier": "REASONING", "category": "game-theory", "lang": "ja"}
+{"prompt": "정지 문제가 결정 불가능함을 대각선 논법으로 증명하세요", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "Dijkstra 알고리즘이 음이 아닌 가중치에서 최단 경로를 올바르게 찾음을 증명하세요", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "마스터 정리를 사용해 T(n)=2T(n/2)+n의 닫힌 형태를 유도하세요", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "2인 제로섬 게임의 내시 균형을 구하고 존재함을 증명하세요", "expected_tier": "REASONING", "category": "game-theory", "lang": "ko"}
+{"prompt": "أثبت أن مشكلة التوقف غير قابلة للحل باستخدام جدلية القطرية.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "أثبت أن خوارزمية Dijkstra تجد المسارات الأقصر بشكل صحيح عندما تكون الأوزان غير سالبة.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ar"}
+{"prompt": "Докажи, что проблема остановки неразрешима, используя диагональный аргумент.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Докажи, что алгоритм Дейкстры правильно находит кратчайшие пути при неотрицательных весах.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ru"}
+{"prompt": "Demuestra que el problema de la parada es indecidible usando el argumento diagonal.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Demuestra que el algoritmo de Dijkstra encuentra correctamente los caminos más cortos con pesos no negativos.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "es"}
+{"prompt": "Beweise, dass das Halteproblem unentscheidbar ist, mit dem Diagonalargument.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Beweise, dass Dijkstras Algorithmus bei nichtnegativen Gewichten korrekt kürzeste Wege findet.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "de"}
+{"prompt": "Démontre que le problème de l'arrêt est indécidable en utilisant l'argument diagonal.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "Démontre que l'algorithme de Dijkstra trouve correctement les plus courts chemins avec des poids non négatifs.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "fr"}
+{"prompt": "Prove que o problema da parada é indecidível usando o argumento diagonal.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "Prove que o algoritmo de Dijkstra encontra corretamente os caminhos mais curtos com pesos não negativos.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "pt"}
+{"prompt": "सिद्ध करें कि हॉल्टिंग समस्या अनिर्णायक है (विकर्ण तर्क का उपयोग करके)।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "Durdurma probleminin karar verilemez olduğunu köşegen argümanıyla kanıtlayın.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "Chứng minh bài toán dừng là không quyết định được bằng lập luận chéo.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "vi"}
+{"prompt": "Udowodnij, że problem stopu jest nierozstrzygalny, używając argumentu diagonalnego.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pl"}
+{"prompt": "Prove that merge sort is correct and runs in O(n log n) time.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the greedy set cover algorithm has approximation ratio H(n).", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the greedy interval scheduling algorithm is optimal.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the optimal k for k-means clustering when the true number of clusters is known.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that the perceptron algorithm converges when the data is linearly separable.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the set of regular languages is closed under intersection.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the set of context-free languages is not closed under intersection.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the optimal stopping rule for the secretary problem.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that in a repeated game, the grim trigger strategy is a Nash equilibrium.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that (A and B) -> A is a tautology using truth tables.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "Prove that the greedy Huffman algorithm produces an optimal prefix code.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Derive the optimal policy for a bandit with known reward distributions.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}

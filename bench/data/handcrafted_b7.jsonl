@@ -1,0 +1,269 @@
+{"prompt": "What temperature should I bake bread at?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many strings does a guitar have?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the speed of sound?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How far is Mars from the Sun?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What causes tides?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the ozone layer?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "How many bones are in the human body?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a calorie?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Who won the last World Cup?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a black hole?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What does GPU stand for?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a transistor?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is MIDI?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is the greenhouse effect?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is RGB?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is an FPGA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is PCIe?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is NUMA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a hypervisor?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is BGP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a NAT gateway?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a WAF?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is eBPF?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a CRD in Kubernetes?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is ArgoCD?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Define latency vs throughput", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a data race?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a union type?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is memoization?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "What is a spinlock?", "expected_tier": "SIMPLE", "category": "definition", "lang": "en"}
+{"prompt": "什么是 FPGA？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是超线程？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是温室效应？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "黑洞是什么？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "什么是自旋锁？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "什么是记忆化？", "expected_tier": "SIMPLE", "category": "definition", "lang": "zh"}
+{"prompt": "GPU 是什么意思？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "zh"}
+{"prompt": "FPGAとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ハイパーバイザとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "ブラックホールとは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "温室効果とは何ですか？", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ja"}
+{"prompt": "メモ化とは何ですか？", "expected_tier": "SIMPLE", "category": "definition", "lang": "ja"}
+{"prompt": "FPGA란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "하이퍼바이저란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "블랙홀이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "온실 효과란 무엇인가요?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ko"}
+{"prompt": "메모이제이션이란 무엇인가요?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ko"}
+{"prompt": "ما هو FPGA؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو الثقب الأسود؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو تأثير الاحتباس الحراري؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو المعالج الرسومي؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "ما هو BGP؟", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ar"}
+{"prompt": "O que é um FPGA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é um buraco negro?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é o efeito estufa?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "O que é memoização?", "expected_tier": "SIMPLE", "category": "definition", "lang": "pt"}
+{"prompt": "O que é um hipervisor?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pt"}
+{"prompt": "Что такое FPGA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое чёрная дыра?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое парниковый эффект?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое гипервизор?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "ru"}
+{"prompt": "Что такое мемоизация?", "expected_tier": "SIMPLE", "category": "definition", "lang": "ru"}
+{"prompt": "¿Qué es un FPGA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un agujero negro?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es el efecto invernadero?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "¿Qué es un hipervisor?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "es"}
+{"prompt": "Was ist ein FPGA?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist ein schwarzes Loch?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Was ist der Treibhauseffekt?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "de"}
+{"prompt": "Qu'est-ce qu'un FPGA ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce qu'un trou noir ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "Qu'est-ce que l'effet de serre ?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "fr"}
+{"prompt": "FPGA क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "ब्लैक होल क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "ग्रीनहाउस प्रभाव क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "GPU का क्या मतलब है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "हाइपरवाइज़र क्या है?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "hi"}
+{"prompt": "FPGA nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Kara delik nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Sera etkisi nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "GPU ne demek?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "Hipervizör nedir?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "tr"}
+{"prompt": "HTTP là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "API là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Cơ sở dữ liệu là gì?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "vi"}
+{"prompt": "Xin chào", "expected_tier": "SIMPLE", "category": "greeting", "lang": "vi"}
+{"prompt": "Co to jest HTTP?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest API?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Co to jest baza danych?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "pl"}
+{"prompt": "Cześć", "expected_tier": "SIMPLE", "category": "greeting", "lang": "pl"}
+{"prompt": "What is the difference between gRPC and REST?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a distributed hash table?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is container orchestration?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a consensus protocol?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "What is a Merkle tree?", "expected_tier": "SIMPLE", "category": "factual-qa", "lang": "en"}
+{"prompt": "Review this error handling pattern and suggest improvements", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this SQL query vulnerable to injection? Suggest a fix", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this Dockerfile for best practices", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Check this Terraform config for security issues", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is this retry logic correct? What edge cases am I missing?", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Review this React component for performance anti-patterns", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Is my use of async/await correct here? Can it deadlock?", "expected_tier": "MEDIUM", "category": "code-review", "lang": "en"}
+{"prompt": "Summarize this stack trace and identify the root cause", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Give a brief overview of the CQRS pattern", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the key differences between Raft and Paxos", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "TL;DR this API changelog", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "Summarize the security implications of this change", "expected_tier": "MEDIUM", "category": "summary", "lang": "en"}
+{"prompt": "My Kubernetes pod keeps getting OOMKilled. How do I debug this?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The CI pipeline fails only on the main branch. How do I investigate?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "I'm getting 'connection refused' when connecting to Redis. What should I check?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "My database migration failed halfway through. How do I recover?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "The WebSocket connection keeps dropping after 60 seconds. Why?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Why is my Elasticsearch cluster showing yellow status?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "en"}
+{"prompt": "Write a Python script to resize images in a directory to 512x512", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a CLI tool that converts CSV to JSON using argparse", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a health check endpoint that verifies database and Redis connectivity", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple message broker using Python asyncio", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a Prometheus metrics exporter for a Python app", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Create a Python script that sends Slack notifications via webhook", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Write a middleware that adds request ID to every HTTP response", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "Implement a simple feature flag system using environment variables", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "en"}
+{"prompt": "How does QUIC differ from TCP+TLS?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a LSM tree handle writes differently from a B-tree?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does eBPF enable kernel-level observability?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does Raft leader election work?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a CRD extend the Kubernetes API?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a WASM runtime differ from a container runtime?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does a skip list compare to a balanced BST?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "How does io_uring improve Linux I/O performance?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "en"}
+{"prompt": "Compare QUIC and TCP for modern web applications", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "LSM tree vs B-tree: when to use which?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare eBPF and kernel modules for observability", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "ArgoCD vs Flux: which GitOps tool is better?", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Compare io_uring and epoll for high-performance networking", "expected_tier": "MEDIUM", "category": "comparison", "lang": "en"}
+{"prompt": "Write a tech horror story about a cascading failure in production", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Create a metaphor explaining distributed consensus to a child", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Write a product changelog entry for a major feature release", "expected_tier": "MEDIUM", "category": "creative", "lang": "en"}
+{"prompt": "Write property-based tests for this sorting function", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Create a load test script using k6 for this API endpoint", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Write snapshot tests for this React component", "expected_tier": "MEDIUM", "category": "testing", "lang": "en"}
+{"prompt": "Find the slow query in the database logs and suggest an index", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "Check the error rate dashboard, find the spike, and correlate with recent deploys", "expected_tier": "MEDIUM", "category": "agentic-task", "lang": "en"}
+{"prompt": "审查这个错误处理模式，给出改进建议", "expected_tier": "MEDIUM", "category": "code-review", "lang": "zh"}
+{"prompt": "总结这个 stack trace 并找到根本原因", "expected_tier": "MEDIUM", "category": "summary", "lang": "zh"}
+{"prompt": "我的 K8s pod 一直被 OOMKilled，怎么调试？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "zh"}
+{"prompt": "写一个 Python 脚本把目录下的图片统一缩放到 512x512", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "QUIC 和 TCP+TLS 有什么区别？", "expected_tier": "MEDIUM", "category": "explanation", "lang": "zh"}
+{"prompt": "比较 LSM tree 和 B-tree 的适用场景", "expected_tier": "MEDIUM", "category": "comparison", "lang": "zh"}
+{"prompt": "写一个 Prometheus 指标导出器", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "zh"}
+{"prompt": "为这个排序函数写基于属性的测试", "expected_tier": "MEDIUM", "category": "testing", "lang": "zh"}
+{"prompt": "このエラー処理パターンをレビューして改善点を提案してください", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ja"}
+{"prompt": "K8s Podが繰り返しOOMKilledされます。デバッグ方法は？", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ja"}
+{"prompt": "QUICとTCP+TLSの違いを説明してください", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ja"}
+{"prompt": "LSMツリーとBツリーを比較してください", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ja"}
+{"prompt": "このスタックトレースを要約して根本原因を特定してください", "expected_tier": "MEDIUM", "category": "summary", "lang": "ja"}
+{"prompt": "이 에러 처리 패턴을 리뷰하고 개선 사항을 제안해주세요", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ko"}
+{"prompt": "K8s Pod가 OOMKilled됩니다. 어떻게 디버그하나요?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ko"}
+{"prompt": "QUIC와 TCP+TLS의 차이를 설명해주세요", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ko"}
+{"prompt": "LSM 트리와 B 트리를 비교해주세요", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ko"}
+{"prompt": "이 스택 트레이스를 요약하고 근본 원인을 파악해주세요", "expected_tier": "MEDIUM", "category": "summary", "lang": "ko"}
+{"prompt": "راجع نمط معالجة الأخطاء هذا واقترح تحسينات", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ar"}
+{"prompt": "Pod في K8s يتم قتله بسبب OOM. كيف أقوم بالتشخيص؟", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ar"}
+{"prompt": "اشرح الفرق بين QUIC و TCP+TLS", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ar"}
+{"prompt": "لخص هذا Stack Trace وحدد السبب الجذري", "expected_tier": "MEDIUM", "category": "summary", "lang": "ar"}
+{"prompt": "Revise este padrão de tratamento de erros e sugira melhorias", "expected_tier": "MEDIUM", "category": "code-review", "lang": "pt"}
+{"prompt": "Meu Pod K8s está sendo OOMKilled. Como depuro isso?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "pt"}
+{"prompt": "Explique a diferença entre QUIC e TCP+TLS", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pt"}
+{"prompt": "Compare LSM tree e B-tree", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pt"}
+{"prompt": "Проверь этот паттерн обработки ошибок и предложи улучшения", "expected_tier": "MEDIUM", "category": "code-review", "lang": "ru"}
+{"prompt": "Мой Pod в K8s постоянно убивается по OOM. Как отладить?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "ru"}
+{"prompt": "Объясни разницу между QUIC и TCP+TLS", "expected_tier": "MEDIUM", "category": "explanation", "lang": "ru"}
+{"prompt": "Сравни LSM-дерево и B-дерево", "expected_tier": "MEDIUM", "category": "comparison", "lang": "ru"}
+{"prompt": "Revisa este patrón de manejo de errores y sugiere mejoras", "expected_tier": "MEDIUM", "category": "code-review", "lang": "es"}
+{"prompt": "Mi Pod de K8s se está matando por OOM. ¿Cómo depuro esto?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "es"}
+{"prompt": "Explica la diferencia entre QUIC y TCP+TLS", "expected_tier": "MEDIUM", "category": "explanation", "lang": "es"}
+{"prompt": "Überprüfe dieses Fehlerbehandlungsmuster und schlage Verbesserungen vor", "expected_tier": "MEDIUM", "category": "code-review", "lang": "de"}
+{"prompt": "Mein K8s Pod wird ständig OOMKilled. Wie debugge ich das?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "de"}
+{"prompt": "Erkläre den Unterschied zwischen QUIC und TCP+TLS", "expected_tier": "MEDIUM", "category": "explanation", "lang": "de"}
+{"prompt": "Révise ce pattern de gestion d'erreurs et suggère des améliorations", "expected_tier": "MEDIUM", "category": "code-review", "lang": "fr"}
+{"prompt": "Mon Pod K8s est constamment OOMKilled. Comment déboguer ?", "expected_tier": "MEDIUM", "category": "debugging", "lang": "fr"}
+{"prompt": "Explique la différence entre QUIC et TCP+TLS", "expected_tier": "MEDIUM", "category": "explanation", "lang": "fr"}
+{"prompt": "इस एरर हैंडलिंग पैटर्न की समीक्षा करें और सुधार सुझाएं", "expected_tier": "MEDIUM", "category": "code-review", "lang": "hi"}
+{"prompt": "QUIC और TCP+TLS में क्या अंतर है?", "expected_tier": "MEDIUM", "category": "explanation", "lang": "hi"}
+{"prompt": "LSM tree और B-tree की तुलना करें", "expected_tier": "MEDIUM", "category": "comparison", "lang": "hi"}
+{"prompt": "Bu hata yönetim kalıbını inceleyin ve iyileştirmeler önerin", "expected_tier": "MEDIUM", "category": "code-review", "lang": "tr"}
+{"prompt": "QUIC ve TCP+TLS arasındaki farkı açıklayın", "expected_tier": "MEDIUM", "category": "explanation", "lang": "tr"}
+{"prompt": "LSM ağacı ile B-ağacını karşılaştırın", "expected_tier": "MEDIUM", "category": "comparison", "lang": "tr"}
+{"prompt": "Viết hàm Python sắp xếp danh sách", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "vi"}
+{"prompt": "Giải thích sự khác biệt giữa TCP và UDP", "expected_tier": "MEDIUM", "category": "explanation", "lang": "vi"}
+{"prompt": "So sánh SQL và NoSQL", "expected_tier": "MEDIUM", "category": "comparison", "lang": "vi"}
+{"prompt": "Napisz funkcję Python sortującą listę", "expected_tier": "MEDIUM", "category": "simple-code", "lang": "pl"}
+{"prompt": "Wyjaśnij różnicę między TCP a UDP", "expected_tier": "MEDIUM", "category": "explanation", "lang": "pl"}
+{"prompt": "Porównaj SQL i NoSQL", "expected_tier": "MEDIUM", "category": "comparison", "lang": "pl"}
+{"prompt": "Design a robotics control system with sensor fusion, path planning, obstacle avoidance, real-time control loops, and failure recovery.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a music production pipeline with audio ingestion, beat detection, stem separation, mixing automation, and format export.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a climate data analysis platform with satellite data ingestion, time-series processing, anomaly detection, visualization, and predictive modeling.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Design a hardware-in-the-loop testing platform with FPGA simulation, real-time data acquisition, fault injection, and automated test orchestration.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "en"}
+{"prompt": "Build a real-time multiplayer physics engine with deterministic simulation, rollback netcode, client prediction, and spectator mode.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a custom allocator for Rust with slab allocation, thread-local caching, and fragmentation mitigation.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a SQL query engine with lexer, parser, query planner, join optimization, and execution engine.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a peer-to-peer file sharing protocol with DHT, NAT traversal, chunk verification, and bandwidth management.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Build a real-time collaborative whiteboard with vector graphics, multi-cursor support, undo history, and conflict-free replication.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Implement a custom TLS 1.3 handshake library with certificate validation, key exchange, and session resumption.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "en"}
+{"prompt": "Design a supply chain security system for container images with SBOM generation, vulnerability scanning, image signing, and policy enforcement.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "en"}
+{"prompt": "Set up a multi-cloud Kubernetes federation with unified service mesh, cross-cluster DNS, and centralized policy management.", "expected_tier": "COMPLEX", "category": "infrastructure", "lang": "en"}
+{"prompt": "Plan a migration from REST to gRPC with backward compatibility, protobuf schema management, and gradual traffic shifting.", "expected_tier": "COMPLEX", "category": "migration", "lang": "en"}
+{"prompt": "Optimize a video transcoding pipeline for 4K content: GPU acceleration, parallel processing, adaptive bitrate, and storage optimization.", "expected_tier": "COMPLEX", "category": "performance", "lang": "en"}
+{"prompt": "Design an end-to-end NLP pipeline with data cleaning, tokenization, embedding training, fine-tuning, evaluation, and deployment.", "expected_tier": "COMPLEX", "category": "ml-pipeline", "lang": "en"}
+{"prompt": "设计一个机器人控制系统，包括传感器融合、路径规划、避障、实时控制回路和故障恢复", "expected_tier": "COMPLEX", "category": "system-design", "lang": "zh"}
+{"prompt": "实现一个 SQL 查询引擎，包括词法分析、语法分析、查询规划、连接优化和执行引擎", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "zh"}
+{"prompt": "设计一个容器镜像供应链安全系统，包括 SBOM 生成、漏洞扫描、镜像签名和策略执行", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "zh"}
+{"prompt": "优化一个 4K 视频转码流水线：GPU 加速、并行处理、自适应码率和存储优化", "expected_tier": "COMPLEX", "category": "performance", "lang": "zh"}
+{"prompt": "ロボット制御システムを設計してください。センサー融合、経路計画、障害物回避、リアルタイム制御ループを含めてください。", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ja"}
+{"prompt": "カスタムSQLクエリエンジンを実装してください。レキサー、パーサー、クエリプランナー、結合最適化を含めてください。", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ja"}
+{"prompt": "로봇 제어 시스템을 설계하세요. 센서 퓨전, 경로 계획, 장애물 회피, 실시간 제어 루프를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ko"}
+{"prompt": "SQL 쿼리 엔진을 구현하세요. 렉서, 파서, 쿼리 플래너, 조인 최적화를 포함해야 합니다.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ko"}
+{"prompt": "صمم نظام تحكم روبوتي يشمل دمج أجهزة الاستشعار وتخطيط المسار وتجنب العقبات وحلقات التحكم في الوقت الفعلي.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ar"}
+{"prompt": "صمم نظام أمان سلسلة التوريد لصور الحاويات يشمل إنشاء SBOM ومسح الثغرات وتوقيع الصور.", "expected_tier": "COMPLEX", "category": "security-analysis", "lang": "ar"}
+{"prompt": "Projete um sistema de controle robótico com fusão de sensores, planejamento de caminho, desvio de obstáculos e loops de controle em tempo real.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pt"}
+{"prompt": "Implemente um mecanismo de consulta SQL com lexer, parser, planejador de consulta e otimização de join.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "pt"}
+{"prompt": "Спроектируй систему управления роботами с объединением сенсоров, планированием маршрута, обходом препятствий и контурами управления в реальном времени.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "ru"}
+{"prompt": "Реализуй SQL-движок с лексером, парсером, планировщиком запросов и оптимизацией соединений.", "expected_tier": "COMPLEX", "category": "complex-code", "lang": "ru"}
+{"prompt": "Diseña un sistema de control robótico con fusión de sensores, planificación de rutas, evasión de obstáculos y bucles de control en tiempo real.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "es"}
+{"prompt": "Entwerfe ein Robotersteuerungssystem mit Sensorfusion, Pfadplanung, Hinderniserkennung und Echtzeit-Steuerungsschleifen.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "de"}
+{"prompt": "Conçois un système de contrôle robotique avec fusion de capteurs, planification de chemin, évitement d'obstacles et boucles de contrôle temps réel.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "fr"}
+{"prompt": "एक रोबोटिक नियंत्रण प्रणाली डिज़ाइन करें जिसमें सेंसर फ्यूजन, पथ नियोजन, बाधा टालना और वास्तविक समय नियंत्रण शामिल हो।", "expected_tier": "COMPLEX", "category": "system-design", "lang": "hi"}
+{"prompt": "Sensör füzyonu, yol planlama, engel kaçınma ve gerçek zamanlı kontrol döngülerini içeren bir robot kontrol sistemi tasarlayın.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "tr"}
+{"prompt": "Thiết kế một hệ thống điều khiển robot bao gồm hợp nhất cảm biến, lập kế hoạch đường đi, tránh chướng ngại vật và vòng lặp điều khiển thời gian thực.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "vi"}
+{"prompt": "Zaprojektuj system sterowania robotem z fuzją sensorów, planowaniem ścieżki, omijaniem przeszkód i pętlami sterowania w czasie rzeczywistym.", "expected_tier": "COMPLEX", "category": "system-design", "lang": "pl"}
+{"prompt": "Prove that the set of algebraic numbers is countable while the set of transcendental numbers is uncountable.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove the Bolzano-Weierstrass theorem: every bounded sequence in R has a convergent subsequence.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that a language is regular if and only if it can be recognized by a finite automaton. Show both directions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the chromatic number of a planar graph is at most 5 using the five-color theorem.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove that the space of continuous functions on [0,1] with the sup norm is complete (a Banach space).", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Prove Zorn's lemma is equivalent to the axiom of choice. Show both directions.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "en"}
+{"prompt": "Derive the optimal step size for gradient descent on a quadratic function. Prove convergence rate.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the VC dimension of linear classifiers in d dimensions. Prove it equals d+1.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the expected depth of a randomly built binary search tree. Prove it's O(log n).", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Derive the capacity of a binary symmetric channel with error probability p. Show the proof.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "en"}
+{"prompt": "Prove that A* search with an admissible heuristic finds the optimal path. Use induction.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove the amortized O(1) cost of dynamic array doubling using the potential method.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that the union-find data structure with path compression and union by rank achieves O(α(n)) amortized.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "en"}
+{"prompt": "Prove that satisfiability of propositional logic (SAT) is NP-complete using Cook's theorem.", "expected_tier": "REASONING", "category": "formal-logic", "lang": "en"}
+{"prompt": "In a Bayesian game with incomplete information, derive the optimal strategy for the informed player in a simple signaling game.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "Prove that in a congestion game, a pure Nash equilibrium always exists using a potential function.", "expected_tier": "REASONING", "category": "game-theory", "lang": "en"}
+{"prompt": "证明 Bolzano-Weierstrass 定理：R 中每个有界序列都有收敛子序列。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "zh"}
+{"prompt": "推导梯度下降在二次函数上的最优步长，证明收敛速率。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "zh"}
+{"prompt": "证明 A* 搜索在可接受启发式下找到最优路径。使用归纳法。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "zh"}
+{"prompt": "证明 SAT 问题是 NP-complete 的（Cook 定理）。", "expected_tier": "REASONING", "category": "formal-logic", "lang": "zh"}
+{"prompt": "Bolzano-Weierstrassの定理を証明してください：Rの有界列は収束部分列を持つ。", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ja"}
+{"prompt": "勾配降下法の二次関数上の最適ステップサイズを導出してください。", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ja"}
+{"prompt": "A*探索が許容可能なヒューリスティックで最適パスを見つけることを証明してください。", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ja"}
+{"prompt": "볼차노-바이어슈트라스 정리를 증명하세요: R의 유계 수열은 수렴하는 부분 수열을 가진다.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ko"}
+{"prompt": "이차 함수에 대한 경사하강법의 최적 스텝 크기를 유도하세요.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ko"}
+{"prompt": "A* 탐색이 허용 가능한 휴리스틱으로 최적 경로를 찾음을 증명하세요.", "expected_tier": "REASONING", "category": "algorithm-proof", "lang": "ko"}
+{"prompt": "أثبت نظرية بولزانو-فايرشتراس: كل تتابع محدود في R له تتابع جزئي متقارب.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ar"}
+{"prompt": "اشتق حجم الخطوة الأمثل للنزول التدريجي على دالة تربيعية.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ar"}
+{"prompt": "Prove o teorema de Bolzano-Weierstrass: toda sequência limitada em R tem uma subsequência convergente.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pt"}
+{"prompt": "Derive o tamanho ótimo do passo para gradiente descendente em uma função quadrática.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "pt"}
+{"prompt": "Докажи теорему Больцано-Вейерштрасса: каждая ограниченная последовательность имеет сходящуюся подпоследовательность.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "ru"}
+{"prompt": "Выведи оптимальный шаг градиентного спуска для квадратичной функции.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "ru"}
+{"prompt": "Demuestra el teorema de Bolzano-Weierstrass: toda sucesión acotada en R tiene una subsucesión convergente.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "es"}
+{"prompt": "Deriva el tamaño de paso óptimo para el descenso por gradiente en una función cuadrática.", "expected_tier": "REASONING", "category": "math-derivation", "lang": "es"}
+{"prompt": "Beweise den Satz von Bolzano-Weierstraß: Jede beschränkte Folge in R hat eine konvergente Teilfolge.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "de"}
+{"prompt": "Démontre le théorème de Bolzano-Weierstrass : toute suite bornée dans R admet une sous-suite convergente.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "fr"}
+{"prompt": "बोल्ज़ानो-वीयरस्ट्रास प्रमेय सिद्ध करें: R में हर बाउंडेड अनुक्रम में एक अभिसारी उपअनुक्रम होता है।", "expected_tier": "REASONING", "category": "formal-proof", "lang": "hi"}
+{"prompt": "Bolzano-Weierstrass teoremini kanıtlayın: R'de her sınırlı dizinin yakınsak bir alt dizisi vardır.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "tr"}
+{"prompt": "Chứng minh định lý Bolzano-Weierstrass: mọi dãy bị chặn trong R đều có dãy con hội tụ.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "vi"}
+{"prompt": "Udowodnij twierdzenie Bolzano-Weierstrassa: każdy ciąg ograniczony w R ma podciąg zbieżny.", "expected_tier": "REASONING", "category": "formal-proof", "lang": "pl"}
