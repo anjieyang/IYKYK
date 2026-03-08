@@ -56,7 +56,7 @@ from uncommon_route.anthropic_compat import (
     OpenAIToAnthropicStreamConverter,
 )
 
-VERSION = "0.2.2"
+VERSION = "0.2.3"
 DEFAULT_UPSTREAM = os.environ.get("UNCOMMON_ROUTE_UPSTREAM", "")
 DEFAULT_PORT = int(os.environ.get("UNCOMMON_ROUTE_PORT", "8403"))
 VIRTUAL_MODEL = "uncommon-route/auto"
@@ -70,15 +70,11 @@ Set one of the following:
   export UNCOMMON_ROUTE_UPSTREAM="https://api.openai.com/v1"
   export UNCOMMON_ROUTE_API_KEY="sk-..."
 
-  # Option 2: OpenRouter (100+ models, single key)
-  export UNCOMMON_ROUTE_UPSTREAM="https://openrouter.ai/api/v1"
-  export UNCOMMON_ROUTE_API_KEY="sk-or-..."
-
-  # Option 3: Commonstack (multi-provider gateway)
+  # Option 2: Commonstack (multi-provider gateway)
   export UNCOMMON_ROUTE_UPSTREAM="https://api.commonstack.ai/v1"
   export UNCOMMON_ROUTE_API_KEY="csk-..."
 
-  # Option 4: Local (Ollama, vLLM, etc.)
+  # Option 3: Local (Ollama, vLLM, etc.)
   export UNCOMMON_ROUTE_UPSTREAM="http://127.0.0.1:11434/v1"
 
 Then restart:  uncommon-route serve

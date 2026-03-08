@@ -34,14 +34,14 @@ from uncommon_route.router.classifier import classify
 from uncommon_route.router.structural import extract_structural_features, extract_unicode_block_features
 from uncommon_route.router.keywords import extract_keyword_features
 
-VERSION = "0.2.2"
+VERSION = "0.2.3"
 _DATA_DIR = Path.home() / ".uncommon-route"
 _PID_FILE = _DATA_DIR / "serve.pid"
 _LOG_FILE = _DATA_DIR / "serve.log"
 
 
 def _print_help() -> None:
-    print(f"""uncommon-route v{VERSION} — SOTA LLM Router
+    print(f"""uncommon-route v{VERSION} — Local LLM Router
 
 Quick start:
   uncommon-route serve              Start proxy (set UNCOMMON_ROUTE_UPSTREAM first)
@@ -703,8 +703,8 @@ def _setup_env_display() -> tuple[str, str, str]:
     """Return (upstream_val, key_display, status_msg) from current env."""
     upstream = os.environ.get("UNCOMMON_ROUTE_UPSTREAM", "")
     api_key = os.environ.get("UNCOMMON_ROUTE_API_KEY", "")
-    upstream_val = upstream or "https://openrouter.ai/api/v1"
-    key_display = f"{api_key[:12]}..." if len(api_key) > 12 else (api_key or "sk-or-your-key-here")
+    upstream_val = upstream or "https://api.commonstack.ai/v1"
+    key_display = f"{api_key[:12]}..." if len(api_key) > 12 else (api_key or "csk-your-key-here")
     if upstream and api_key:
         status = "upstream and key already configured — ready to go."
     elif upstream:

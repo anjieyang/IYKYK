@@ -1,8 +1,8 @@
 # @anjieyang/uncommon-route
 
-**OpenClaw plugin for [UncommonRoute](https://github.com/anjieyang/UncommonRoute) — SOTA LLM Router**
+**OpenClaw plugin for [UncommonRoute](https://github.com/anjieyang/UncommonRoute)**
 
-98% accuracy, <1ms local routing, OpenAI + Anthropic compatible.
+The local LLM router that cuts premium-model spend with smart routing.
 
 ## Install
 
@@ -15,7 +15,7 @@ That's it. The plugin auto-installs the Python package, starts the proxy, and re
 
 ## What It Does
 
-Routes every LLM request to the **cheapest model that can handle it** — simple questions go to budget models, complex tasks go to frontier models. Saves 60-97% on API costs with no quality loss.
+Routes every LLM request to the **cheapest model that can handle it** — simple questions go to budget models, complex tasks go to frontier models. In the repo's real coding-session simulation, UncommonRoute cuts cost by **67%** vs always using Claude Opus while retaining **93.5%** quality.
 
 - **39-feature cascade classifier** — structural, unicode, and keyword analysis
 - **Step-aware agentic routing** — different models for different steps in a workflow
@@ -53,7 +53,6 @@ Works with any OpenAI-compatible API:
 | Provider | URL |
 |---|---|
 | [Commonstack](https://commonstack.ai) | `https://api.commonstack.ai/v1` |
-| [OpenRouter](https://openrouter.ai) | `https://openrouter.ai/api/v1` |
 | OpenAI | `https://api.openai.com/v1` |
 | Local (Ollama) | `http://127.0.0.1:11434/v1` |
 

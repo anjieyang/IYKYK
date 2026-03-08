@@ -53,7 +53,7 @@ done
 
 echo ""
 echo -e "${BOLD}  UncommonRoute v${VERSION}${NC}"
-echo -e "  SOTA LLM Router — 98% accuracy, <1ms local routing"
+echo -e "  Local LLM Router — route by difficulty, cut premium-model spend"
 echo ""
 
 # ── Step 1: Check Python ─────────────────────────────────────────────

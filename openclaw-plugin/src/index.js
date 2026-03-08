@@ -16,7 +16,7 @@
 import { spawn, execSync } from "node:child_process";
 import { setTimeout as sleep } from "node:timers/promises";
 
-const VERSION = "0.2.2";
+const VERSION = "0.2.3";
 const DEFAULT_PORT = 8403;
 const DEFAULT_UPSTREAM = "";
 const HEALTH_TIMEOUT_MS = 15_000;
@@ -190,7 +190,7 @@ let pyProc = null;
 const plugin = {
   id: "uncommon-route",
   name: "UncommonRoute",
-  description: "SOTA smart LLM router — 98% accuracy, <1ms local routing",
+  description: "Local LLM router plugin that cuts premium-model spend with smart routing",
   version: VERSION,
 
   register(api) {
@@ -209,7 +209,7 @@ const plugin = {
 
     if (!upstream) {
       api.logger.warn("UncommonRoute: No upstream configured. Set UNCOMMON_ROUTE_UPSTREAM or configure 'upstream' in plugin config.");
-      api.logger.warn("  Example: UNCOMMON_ROUTE_UPSTREAM=https://openrouter.ai/api/v1 UNCOMMON_ROUTE_API_KEY=sk-or-...");
+      api.logger.warn("  Example: UNCOMMON_ROUTE_UPSTREAM=https://api.commonstack.ai/v1 UNCOMMON_ROUTE_API_KEY=csk-...");
     }
 
     // 1. Register provider immediately (sync, models available right away)

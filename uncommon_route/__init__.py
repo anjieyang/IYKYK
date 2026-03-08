@@ -1,4 +1,4 @@
-"""UncommonRoute — SOTA LLM router with cascade classifier, <1ms local routing."""
+"""UncommonRoute — local LLM router with 4-tier routing and local-first cost control."""
 
 from uncommon_route.router.api import route
 from uncommon_route.router.types import (

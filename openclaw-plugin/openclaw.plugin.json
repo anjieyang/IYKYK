@@ -1,7 +1,7 @@
 {
   "id": "uncommon-route",
   "name": "UncommonRoute",
-  "description": "SOTA smart LLM router — 98% accuracy, <1ms local routing, session persistence, spend control",
+  "description": "Local LLM router that cuts premium-model spend with smart routing, sessions, and spend control",
   "configSchema": {
     "type": "object",
     "properties": {
@@ -36,7 +36,7 @@
     },
     "upstream": {
       "label": "Upstream API URL",
-      "placeholder": "https://openrouter.ai/api/v1"
+      "placeholder": "https://api.commonstack.ai/v1"
     },
     "pythonPath": {
       "label": "Python Path",

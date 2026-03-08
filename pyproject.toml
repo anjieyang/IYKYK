@@ -1,7 +1,7 @@
 [project]
 name = "uncommon-route"
-version = "0.2.2"
-description = "SOTA LLM router — 98% accuracy, OpenAI + Anthropic compatible, <1ms local routing"
+version = "0.2.3"
+description = "Local LLM router that cuts premium-model spend with 4-tier routing, OpenAI + Anthropic compatible"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 readme = "README.md"

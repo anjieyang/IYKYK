@@ -32,7 +32,6 @@ logger = logging.getLogger("uncommon-route")
 
 GATEWAY_DOMAINS: dict[str, str] = {
     "commonstack.ai": "commonstack",
-    "openrouter.ai": "openrouter",
 }
 
 DIRECT_PROVIDER_DOMAINS: dict[str, str] = {

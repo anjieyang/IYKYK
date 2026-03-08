@@ -2,26 +2,57 @@
 
 <h1>UncommonRoute</h1>
 
-<p><strong>SOTA LLM Router — 98% accuracy, &lt;1ms local routing</strong></p>
+<p><strong>The local LLM router that cuts premium-model spend before your next agent session.</strong></p>
 
 <p>
-Route every LLM request to the optimal model.<br>
-Step-aware agentic routing, 39-feature cascade classifier, session persistence, spend control.<br>
-Pure local — no external API calls for routing decisions.
+<strong>92.3% held-out routing accuracy</strong>, <strong>0.5ms local routing</strong>, and <strong>67% lower cost than always using Claude Opus</strong> in a real coding-session simulation.<br>
+If your agent sends every prompt to the same frontier model, you are probably overpaying. UncommonRoute fixes that locally with 4-tier routing for SIMPLE, MEDIUM, COMPLEX, and REASONING prompts.
 </p>
 
-<img src="https://img.shields.io/badge/98%25_Accuracy-success?style=for-the-badge" alt="98% accuracy">&nbsp;
-<img src="https://img.shields.io/badge/<1ms_Latency-blue?style=for-the-badge" alt="<1ms">&nbsp;
-<img src="https://img.shields.io/badge/Zero_External_Calls-purple?style=for-the-badge" alt="Local">&nbsp;
-<img src="https://img.shields.io/badge/OpenAI_Compatible-orange?style=for-the-badge" alt="OpenAI compatible">&nbsp;
-<img src="https://img.shields.io/badge/Anthropic_Compatible-blueviolet?style=for-the-badge" alt="Anthropic compatible">
+<p><strong>Don't route by habit. Route by difficulty.</strong></p>
+
+<p>
+<strong>UncommonRoute is developed by <a href="https://commonstack.ai">Commonstack</a></strong>, a unified LLM API gateway for production apps.<br>
+Commonstack gives you one API key for OpenAI, Anthropic, Google, DeepSeek, MiniMax, xAI, and more, with consolidated billing and infrastructure designed for teams that care about cost, reliability, and privacy.
+</p>
+
+<p>
+<a href="#quick-start"><strong>Quick Start</strong></a> ·
+<a href="#benchmarks"><strong>Benchmarks</strong></a> ·
+<a href="#usage-modes"><strong>Supported Apps</strong></a> ·
+<a href="https://commonstack.ai"><strong>Commonstack</strong></a>
+</p>
+
+<img src="https://img.shields.io/badge/92.3%25_Held--Out_Accuracy-success?style=for-the-badge" alt="92.3% held-out accuracy">&nbsp;
+<img src="https://img.shields.io/badge/67%25_Lower_Cost_vs_Opus-brightgreen?style=for-the-badge" alt="67% lower cost vs opus">&nbsp;
+<img src="https://img.shields.io/badge/0.5ms_Local_Routing-blue?style=for-the-badge" alt="0.5ms routing">&nbsp;
+<img src="https://img.shields.io/badge/93.5%25_Quality_Retained-blueviolet?style=for-the-badge" alt="93.5% quality retained">&nbsp;
+<img src="https://img.shields.io/badge/Zero_Router_API_Calls-purple?style=for-the-badge" alt="Local routing">
 
 <br><br>
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776ab?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Tests](https://img.shields.io/badge/Tests-169_passing-success?style=flat-square)]()
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Ready-111111?style=flat-square)](#usage-modes)
+[![Codex](https://img.shields.io/badge/Codex-Ready-412991?style=flat-square)](#usage-modes)
+[![Cursor and OpenAI SDK](https://img.shields.io/badge/Cursor_and_OpenAI_SDK-Compatible-0ea5e9?style=flat-square)](#usage-modes)
 [![OpenClaw Plugin](https://img.shields.io/badge/OpenClaw-Plugin-orange?style=flat-square)](https://openclaw.ai)
+[![Train Your Own Router](https://img.shields.io/badge/Train_Your_Own_Router-Locally-16a34a?style=flat-square)](#benchmarks)
+
+<br><br>
+
+<img src="docs/uncommon-route-cost-savings.svg" alt="Before UncommonRoute every request hits Claude Opus, after UncommonRoute requests are split across cheaper and stronger models with 67 percent lower cost" width="960">
+
+| | Without UncommonRoute | With UncommonRoute |
+|---|---|---|
+| **Routing strategy** | Default everything to the same premium model | Route by task difficulty: SIMPLE, MEDIUM, COMPLEX, REASONING |
+| **Cost profile** | Easy prompts pay frontier-model prices | 67% lower cost vs always using Opus in a real coding-session simulation |
+| **Latency** | No routing logic, but no cost control either | 0.5ms local routing, zero router API calls |
+| **Tooling** | You hand-wire behavior per client | Claude Code, Codex, Cursor, OpenAI SDKs, Anthropic-compatible clients, and OpenClaw |
+| **Control** | Hosted black box or manual prompt heuristics | Local-first router you can retrain on 1,904 prompts in about 26 seconds |
+
+<p><strong>Works with Claude Code, Codex, Cursor, OpenAI SDKs, and OpenClaw. Local first. Cheap by default. Strong when it matters.</strong></p>
 
 </div>
 
@@ -29,44 +60,72 @@ Pure local — no external API calls for routing decisions.
 
 ## Quick Navigation
 
-| Section | Description |
-|---|---|
-| [Quick Start](#quick-start) | Install and choose your client |
-| [Usage Modes](#usage-modes) | CLI, SDK, Proxy, Claude Code, Codex, OpenClaw |
-| [Dashboard](#dashboard) | Web UI for monitoring and management |
-| [How It Works](#how-it-works) | Cascade classifier architecture |
-| [Model Mapping](#model-mapping) | Automatic upstream model discovery |
-| [Routing Tiers](#routing-tiers) | SIMPLE → MEDIUM → COMPLEX → REASONING |
-| [Step-Aware Routing](#step-aware-routing) | Per-step model selection for agent workflows |
-| [Session Management](#session-management) | Smart sessions, auto-escalation |
-| [Spend Control](#spend-control) | Per-request, hourly, daily limits |
-| [Diagnostics](#diagnostics) | doctor, logs, background mode |
-| [Models & Pricing](#models--pricing) | Supported models and costs |
-| [Configuration](#configuration) | Upstream, env vars, BYOK |
-| [Benchmarks](#benchmarks) | Accuracy & latency results |
+[Quick Start](#quick-start) ·
+[Supported Apps](#usage-modes) ·
+[Benchmarks](#benchmarks) ·
+[How It Works](#how-it-works) ·
+[Dashboard](#dashboard) ·
+[Configuration](#configuration) ·
+[Models & Pricing](#models--pricing) ·
+[Diagnostics](#diagnostics)
 
 ---
 
 ## Quick Start
 
+Get from install to routed requests in about 30 seconds.
+
+### 1. Install
+
 ```bash
 pip install uncommon-route
 ```
 
-**Choose your client:**
+Or use the one-line installer:
 
-| Client | Setup command |
+```bash
+curl -fsSL https://anjieyang.github.io/uncommon-route/install | bash
+```
+
+### 2. Point it at your upstream
+
+```bash
+export UNCOMMON_ROUTE_UPSTREAM="https://api.commonstack.ai/v1"
+export UNCOMMON_ROUTE_API_KEY="csk-..."
+```
+
+### 3. Start the router
+
+```bash
+uncommon-route serve
+```
+
+### 4. Prove it works
+
+```bash
+uncommon-route route "write a Python function that validates email addresses"
+# Model: moonshot/kimi-k2.5  Tier: MEDIUM  Savings: ...
+
+uncommon-route doctor
+# Checks Python, upstream, API key, model discovery, integrations
+```
+
+### 5. Connect your client
+
+Pick the client you already use:
+
+| If you use | Do this |
 |---|---|
-| **CLI / Python SDK** | No config needed — `uncommon-route route "hello"` |
-| **Claude Code** | `uncommon-route setup claude-code` |
-| **OpenAI Codex** | `uncommon-route setup codex` |
-| **OpenAI SDK / Cursor** | `uncommon-route setup openai` |
-| **OpenClaw** | `openclaw plugins install @anjieyang/uncommon-route` |
+| **CLI / Python SDK** | Already ready — use `uncommon-route route "hello"` |
+| **Claude Code** | Run `uncommon-route setup claude-code` |
+| **OpenAI Codex** | Run `uncommon-route setup codex` |
+| **OpenAI SDK / Cursor** | Run `uncommon-route setup openai` |
+| **OpenClaw** | Run `openclaw plugins install @anjieyang/uncommon-route` |
 
 Each `setup` command prints the exact environment variables for your shell.
 
 <details>
-<summary>Manual setup (all clients)</summary>
+<summary>Manual setup reference</summary>
 
 ```bash
 # 1. Configure upstream (any OpenAI-compatible API)
@@ -78,15 +137,6 @@ uncommon-route serve
 
 # 3. Check everything works
 uncommon-route doctor
-```
-
-</details>
-
-<details>
-<summary>One-line installer</summary>
-
-```bash
-curl -fsSL https://anjieyang.github.io/uncommon-route/install | bash
 ```
 
 </details>
@@ -250,7 +300,7 @@ UncommonRoute handles this automatically:
 
 1. **On startup**, the proxy fetches `/v1/models` from the upstream to discover available models
 2. **Fuzzy matching** maps internal names to upstream names — handles provider prefix differences (`xai/` ↔ `x-ai/`), version format changes (`4.6` ↔ `4-6`), and suffix additions (`-preview`)
-3. **Gateway detection** — gateways (Commonstack, OpenRouter) receive the full `provider/model` format; direct provider APIs receive only the model name
+3. **Gateway detection** — gateways (Commonstack) receive the full `provider/model` format; direct provider APIs receive only the model name
 4. **Fallback retry** — if the upstream rejects a model, the proxy automatically tries the next model in the fallback chain
 
 Check the mapping status:
@@ -410,7 +460,7 @@ PID file: `~/.uncommon-route/serve.pid`. Log file: `~/.uncommon-route/serve.log`
 
 ## Models & Pricing
 
-The router selects models by tier to minimize cost. Availability depends on your upstream provider — multi-provider gateways (OpenRouter, Commonstack) expose all of these; direct provider APIs expose only their own models.
+The router selects models by tier to minimize cost. Availability depends on your upstream provider — multi-provider gateways (Commonstack) expose all of these; direct provider APIs expose only their own models.
 
 | Model | Input ($/1M) | Output ($/1M) | Role |
 |---|---|---|---|
@@ -440,10 +490,6 @@ UncommonRoute is a **routing layer only** — it does not host models. It forwar
 export UNCOMMON_ROUTE_UPSTREAM="https://api.openai.com/v1"
 export UNCOMMON_ROUTE_API_KEY="sk-..."
 
-# OpenRouter (100+ models, single key)
-export UNCOMMON_ROUTE_UPSTREAM="https://openrouter.ai/api/v1"
-export UNCOMMON_ROUTE_API_KEY="sk-or-..."
-
 # Commonstack (multi-provider gateway)
 export UNCOMMON_ROUTE_UPSTREAM="https://api.commonstack.ai/v1"
 export UNCOMMON_ROUTE_API_KEY="csk-..."
@@ -452,7 +498,7 @@ export UNCOMMON_ROUTE_API_KEY="csk-..."
 export UNCOMMON_ROUTE_UPSTREAM="http://127.0.0.1:11434/v1"
 ```
 
-> **Tip:** Multi-provider gateways like [OpenRouter](https://openrouter.ai) or [Commonstack](https://commonstack.ai) work well with UncommonRoute because they expose all models (OpenAI, Claude, Gemini, DeepSeek, etc.) behind a single API key — the router can select across providers without extra configuration.
+> **Tip:** Multi-provider gateways like [Commonstack](https://commonstack.ai) work well with UncommonRoute because they expose all models (OpenAI, Claude, Gemini, DeepSeek, etc.) behind a single API key — the router can select across providers without extra configuration.
 
 ### Environment Variables
 
@@ -488,7 +534,7 @@ plugins:
   entries:
     "@anjieyang/uncommon-route":
       port: 8403
-      upstream: "https://openrouter.ai/api/v1"  # or any OpenAI-compatible API
+      upstream: "https://api.commonstack.ai/v1"  # or any OpenAI-compatible API
       spendLimits:
         hourly: 5.00
         daily: 20.00
@@ -498,29 +544,63 @@ plugins:
 
 ## Benchmarks
 
-Evaluated on 2000+ multilingual prompts across 10 languages (EN, ZH, KO, JA, ES, PT, AR, RU, DE, HI):
+There are two benchmark questions that matter:
+
+1. **Does the router classify prompt complexity correctly on unseen data?**
+2. **Does that classification actually reduce spend in a real coding session?**
+
+### Held-Out Routing Benchmark (`router-bench`)
+
+Evaluated on **763 hand-written prompts**, never used for training, across **15 languages** and **35 categories**.
+
+| Metric | UncommonRoute | ClawRouter | NotDiamond (cost) |
+|---|---|---|---|
+| **Accuracy** | **92.3%** | 52.6% | 46.1% |
+| **Weighted F1** | **92.3%** | 47.0% | 38.0% |
+| **Latency / request** | **0.5ms** | 0.6ms | 37.6ms |
+| **MEDIUM F1** | **88.7%** | 43.6% | 6.2% |
+| **REASONING F1** | **97.8%** | 61.7% | 0.0% |
+
+Why this matters: most routers can roughly tell "cheap" from "expensive". The money is won or lost in the middle. UncommonRoute is strong on the **MEDIUM** tier, which is exactly where coding assistants spend most of their time.
+
+### Real Cost Simulation
+
+Simulated on a realistic **131-request agent coding session** and compared against always sending every request to `anthropic/claude-opus-4.6`.
+
+| Metric | Always Opus | UncommonRoute |
+|---|---|---|
+| **Total cost** | $1.7529 | **$0.5801** |
+| **Cost saved** | — | **67%** |
+| **Quality retained** | 100% | **93.5%** |
+| **Routing accuracy** | — | **90.8%** |
+
+This is the practical pitch in one line: **keep the hard prompts smart, route the easy and medium prompts cheaper, and cut most of the waste.**
+
+### Local Training
+
+The router is not a black box SaaS. You can retrain the local classifier on your own data.
 
 | Metric | Value |
 |---|---|
-| **Overall Accuracy** | 98.4% |
-| **Average Latency** | 356µs |
-| **Features** | 39 (structural + unicode + keyword) |
-| **Learning** | Averaged Perceptron |
-| **External API Calls** | None (pure local) |
-
-### Per-Tier F1 Scores
-
-| Tier | F1 |
-|---|---|
-| SIMPLE | 0.988 |
-| MEDIUM | 0.968 |
-| COMPLEX | 0.987 |
-| REASONING | 1.000 |
+| **Training set used in repo** | 1,904 prompts |
+| **Local retraining time** | ~26 seconds |
+| **Training accuracy** | 98.6% |
+| **Model type** | Averaged Perceptron |
+| **Feature family** | 39 features (structural + unicode + keyword) |
 
 Run the benchmark suite yourself:
 
 ```bash
-cd bench && python run.py
+cd ../router-bench && python -m router_bench.run
+```
+
+Retrain the local classifier yourself:
+
+```bash
+python - <<'PY'
+from uncommon_route.router.classifier import train_and_save_model
+train_and_save_model("bench/data/train.jsonl")
+PY
 ```
 
 ---
