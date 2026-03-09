@@ -58,6 +58,45 @@ def detect_provider(url: str) -> tuple[str, bool]:
 
 
 # ---------------------------------------------------------------------------
+# Static aliases for models that renamed across providers.
+# Maps internal name -> set of known upstream equivalents.
+# Fuzzy matching cannot handle these (e.g. "deepseek-chat" vs "deepseek-v3.2").
+# ---------------------------------------------------------------------------
+
+KNOWN_ALIASES: dict[str, list[str]] = {
+    "deepseek/deepseek-chat": [
+        "deepseek/deepseek-v3.2",
+        "deepseek/deepseek-v3.1",
+        "deepseek/deepseek-v3",
+    ],
+    "deepseek/deepseek-reasoner": [
+        "deepseek/deepseek-r1-0528",
+        "deepseek/deepseek-r1",
+    ],
+    "xai/grok-4-1-fast-reasoning": [
+        "x-ai/grok-4.1-fast-reasoning",
+    ],
+    "xai/grok-4-1-fast-non-reasoning": [
+        "x-ai/grok-4-1-fast-non-reasoning",
+    ],
+    "xai/grok-4-0709": [
+        "x-ai/grok-4-0709",
+    ],
+    "xai/grok-code-fast-1": [
+        "x-ai/grok-code-fast-1",
+    ],
+    "google/gemini-2.5-flash-lite": [
+        "google/gemini-3.1-flash-lite-preview",
+        "google/gemini-2.5-flash",
+    ],
+    "google/gemini-3.1-pro": [
+        "google/gemini-3.1-pro-preview",
+        "google/gemini-3-pro-preview",
+    ],
+}
+
+
+# ---------------------------------------------------------------------------
 # Normalization helpers for fuzzy matching
 # ---------------------------------------------------------------------------
 
@@ -145,16 +184,30 @@ class ModelMapper:
         return 0
 
     def _build_map(self) -> None:
-        """Match every internal model name to the best upstream candidate."""
+        """Match every internal model name to the best upstream candidate.
+
+        Priority: exact match > static alias > fuzzy match.
+        """
         from uncommon_route.router.config import DEFAULT_MODEL_PRICING
 
         self._map.clear()
         for internal in DEFAULT_MODEL_PRICING:
             if internal in self._upstream_models:
                 continue
+            alias = self._alias_match(internal)
+            if alias:
+                self._map[internal] = alias
+                continue
             match = self._fuzzy_match(internal)
             if match:
                 self._map[internal] = match
+
+    def _alias_match(self, internal: str) -> str | None:
+        """Check static alias table for known renames."""
+        for candidate in KNOWN_ALIASES.get(internal, []):
+            if candidate in self._upstream_models:
+                return candidate
+        return None
 
     def _fuzzy_match(self, internal: str) -> str | None:
         """Find the best-matching upstream model for *internal*.

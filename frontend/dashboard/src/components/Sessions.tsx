@@ -1,23 +1,10 @@
-import {
-  Card,
-  Metric,
-  Text,
-  Title,
-  Badge,
-  Table,
-  TableHead,
-  TableHeaderCell,
-  TableBody,
-  TableRow,
-  TableCell,
-} from "@tremor/react";
 import type { Session } from "../api";
 
-const TIER_COLORS: Record<string, "emerald" | "blue" | "amber" | "violet"> = {
-  SIMPLE: "emerald",
-  MEDIUM: "blue",
-  COMPLEX: "amber",
-  REASONING: "violet",
+const TIER_LABEL: Record<string, string> = {
+  SIMPLE: "text-emerald-300/80",
+  MEDIUM: "text-sky-300/80",
+  COMPLEX: "text-orange-300/80",
+  REASONING: "text-violet-300/80",
 };
 
 function fmtAge(s: number): string {
@@ -35,59 +22,37 @@ export default function Sessions({ data }: Props) {
   const sessions = data?.sessions ?? [];
 
   return (
-    <div className="mt-6 space-y-6">
-      <Card>
-        <Text>Active Sessions</Text>
-        <Metric className="mt-1">{count}</Metric>
-      </Card>
+    <div>
+      <div className="flex items-baseline gap-3 mb-10">
+        <h1 className="text-[18px] font-semibold text-white tracking-tight">Sessions</h1>
+        <span className="text-[13px] font-mono text-[#6e6e72]">{count} active</span>
+      </div>
 
-      <Card>
-        <Title>Session List</Title>
-        <Table className="mt-4">
-          <TableHead>
-            <TableRow>
-              <TableHeaderCell>Session ID</TableHeaderCell>
-              <TableHeaderCell>Model</TableHeaderCell>
-              <TableHeaderCell>Tier</TableHeaderCell>
-              <TableHeaderCell className="text-right">
-                Requests
-              </TableHeaderCell>
-              <TableHeaderCell className="text-right">Age</TableHeaderCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {sessions.length > 0 ? (
-              sessions.map((s) => (
-                <TableRow key={s.id}>
-                  <TableCell className="font-mono text-xs">{s.id}</TableCell>
-                  <TableCell className="font-mono text-xs">
-                    {s.model}
-                  </TableCell>
-                  <TableCell>
-                    <Badge color={TIER_COLORS[s.tier] ?? "gray"} size="xs">
-                      {s.tier}
-                    </Badge>
-                  </TableCell>
-                  <TableCell className="text-right font-mono">
-                    {s.requests}
-                  </TableCell>
-                  <TableCell className="text-right font-mono">
-                    {fmtAge(s.age_s)}
-                  </TableCell>
-                </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableCell colSpan={5}>
-                  <Text className="text-center text-gray-500">
-                    No active sessions
-                  </Text>
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </Card>
+      <table className="w-full">
+        <thead>
+          <tr className="border-b border-white/[0.07]">
+            <th className="text-left text-[11px] font-medium text-[#5a5a5d] uppercase tracking-[0.06em] py-2">ID</th>
+            <th className="text-left text-[11px] font-medium text-[#5a5a5d] uppercase tracking-[0.06em] py-2">Model</th>
+            <th className="text-left text-[11px] font-medium text-[#5a5a5d] uppercase tracking-[0.06em] py-2 w-24">Tier</th>
+            <th className="text-right text-[11px] font-medium text-[#5a5a5d] uppercase tracking-[0.06em] py-2 w-20">Requests</th>
+            <th className="text-right text-[11px] font-medium text-[#5a5a5d] uppercase tracking-[0.06em] py-2 w-16">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sessions.map((s) => (
+            <tr key={s.id} className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors">
+              <td className="font-mono text-[12px] text-[#b4b4b7] py-3">{s.id}</td>
+              <td className="font-mono text-[12px] text-[#6e6e72] py-3">{s.model}</td>
+              <td className={`font-mono text-[12px] py-3 ${TIER_LABEL[s.tier] ?? "text-[#6e6e72]"}`}>{s.tier}</td>
+              <td className="text-right font-mono text-[12px] text-[#b4b4b7] py-3">{s.requests}</td>
+              <td className="text-right font-mono text-[12px] text-[#6e6e72] py-3">{fmtAge(s.age_s)}</td>
+            </tr>
+          ))}
+          {sessions.length === 0 && (
+            <tr><td colSpan={5} className="py-10 text-center text-[13px] text-[#4a4a4d]">No active sessions</td></tr>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }

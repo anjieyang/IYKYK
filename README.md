@@ -16,20 +16,16 @@ UncommonRoute is a local 4-tier LLM router — <strong>92.3% accuracy</strong>, 
 <a href="https://commonstack.ai"><strong>Commonstack</strong></a>
 </p>
 
-<br>
+<a href="https://python.org"><img src="https://img.shields.io/badge/Python-3.11+-3776ab?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11+"></a>&nbsp;
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="MIT"></a>&nbsp;
+<img src="https://img.shields.io/badge/Tests-169_passing-16a34a?style=for-the-badge&logo=pytest&logoColor=white" alt="169 tests">&nbsp;
+<a href="#usage-modes"><img src="https://img.shields.io/badge/Claude_Code-Ready-f97316?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code"></a>&nbsp;
+<a href="#usage-modes"><img src="https://img.shields.io/badge/Codex-Ready-412991?style=for-the-badge&logo=openai&logoColor=white" alt="Codex"></a>&nbsp;
+<a href="#usage-modes"><img src="https://img.shields.io/badge/Cursor-Compatible-007acc?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="Cursor"></a>&nbsp;
+<a href="https://openclaw.ai"><img src="https://img.shields.io/badge/OpenClaw-Plugin-e11d48?style=for-the-badge" alt="OpenClaw"></a>&nbsp;
+<a href="#benchmarks"><img src="https://img.shields.io/badge/Train_Your_Own-Router-8b5cf6?style=for-the-badge&logo=databricks&logoColor=white" alt="Train locally"></a>
 
-<img src="docs/uncommon-route-cost-savings.svg" alt="Before: every request to Claude Opus at $1.75. After: mixed routing at $0.58, 67 percent lower cost" width="880">
-
-<br>
-
-<p>
-<strong>Python 3.11+</strong> · <strong>MIT</strong> · <strong>169 tests</strong> ·
-<a href="#usage-modes"><strong>Claude Code</strong></a> ·
-<a href="#usage-modes"><strong>Codex</strong></a> ·
-<a href="#usage-modes"><strong>Cursor</strong></a> ·
-<a href="https://openclaw.ai"><strong>OpenClaw</strong></a> ·
-<a href="#benchmarks"><strong>Train your own router</strong></a>
-</p>
+<br><br>
 
 <p>
 Built by <a href="https://commonstack.ai"><strong>Commonstack</strong></a> — one API key for OpenAI, Anthropic, Google, DeepSeek, xAI, and more.

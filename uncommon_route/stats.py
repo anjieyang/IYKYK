@@ -36,6 +36,8 @@ class RouteRecord:
     latency_us: float = 0.0
     session_id: str | None = None
     streaming: bool = False
+    request_id: str = ""
+    prompt_preview: str = ""
 
 
 @dataclass
@@ -141,6 +143,23 @@ class RouteStats:
         records = list(reversed(self._records))
         return records[:limit] if limit else records
 
+    def recent(self, limit: int = 30) -> list[dict[str, Any]]:
+        """Most recent routed requests that carry a request_id (for feedback)."""
+        records = [r for r in reversed(self._records) if r.request_id]
+        return [
+            {
+                "request_id": r.request_id,
+                "timestamp": r.timestamp,
+                "model": r.model,
+                "tier": r.tier,
+                "method": r.method,
+                "cost": r.actual_cost if r.actual_cost is not None else r.estimated_cost,
+                "savings": r.savings,
+                "prompt_preview": r.prompt_preview,
+            }
+            for r in records[:limit]
+        ]
+
     def summary(self) -> StatsSummary:
         if not self._records:
             return StatsSummary(
@@ -224,6 +243,8 @@ class RouteStats:
                 "latency_us": r.latency_us,
                 "session_id": r.session_id,
                 "streaming": r.streaming,
+                "request_id": r.request_id,
+                "prompt_preview": r.prompt_preview,
             }
             for r in self._records
         ])
@@ -244,5 +265,7 @@ class RouteStats:
                 latency_us=r.get("latency_us", 0.0),
                 session_id=r.get("session_id"),
                 streaming=r.get("streaming", False),
+                request_id=r.get("request_id", ""),
+                prompt_preview=r.get("prompt_preview", ""),
             ))
         self._cleanup()

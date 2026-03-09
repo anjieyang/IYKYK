@@ -16,7 +16,7 @@
 import { spawn, execSync } from "node:child_process";
 import { setTimeout as sleep } from "node:timers/promises";
 
-const VERSION = "0.2.4";
+const VERSION = "0.2.5";
 const DEFAULT_PORT = 8403;
 const DEFAULT_UPSTREAM = "";
 const HEALTH_TIMEOUT_MS = 15_000;
@@ -188,7 +188,7 @@ async function postJson(url, body) {
 let pyProc = null;
 
 const plugin = {
-  id: "uncommon-route",
+  id: "@anjieyang/uncommon-route",
   name: "UncommonRoute",
   description: "Local LLM router plugin that cuts premium-model spend with smart routing",
   version: VERSION,

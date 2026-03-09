@@ -121,3 +121,43 @@ export async function clearSpendLimit(window: string): Promise<boolean> {
     return false;
   }
 }
+
+export interface RecentRequest {
+  request_id: string;
+  timestamp: number;
+  model: string;
+  tier: string;
+  method: string;
+  cost: number;
+  savings: number;
+  prompt_preview: string;
+  feedback_pending: boolean;
+}
+
+export interface FeedbackResult {
+  ok: boolean;
+  action: string;
+  from_tier: string;
+  to_tier: string;
+  reason?: string;
+  total_updates: number;
+}
+
+export const fetchRecent = (limit = 30) =>
+  get<RecentRequest[]>(`/v1/stats/recent?limit=${limit}`);
+
+export async function submitFeedback(
+  requestId: string,
+  signal: "ok" | "weak" | "strong",
+): Promise<FeedbackResult | null> {
+  try {
+    const res = await fetch("/v1/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ request_id: requestId, signal }),
+    });
+    return res.ok ? ((await res.json()) as FeedbackResult) : null;
+  } catch {
+    return null;
+  }
+}

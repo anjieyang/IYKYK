@@ -495,6 +495,14 @@ def create_app(
             "total_updates": _feedback.total_updates,
         }, status_code=200 if result.ok else 404)
 
+    async def handle_recent(request: Request) -> JSONResponse:
+        """GET /v1/stats/recent — recent routed requests with feedback status."""
+        limit = int(request.query_params.get("limit", "30"))
+        records = _stats.recent(limit)
+        for r in records:
+            r["feedback_pending"] = _feedback.has_pending(r["request_id"])
+        return JSONResponse(records)
+
     async def _handle_chat_core(
         body: dict,
         request: Request,
@@ -521,10 +529,13 @@ def create_app(
         estimated_cost = 0.0
         session_id: str | None = None
         request_id = ""
+        prompt_preview = ""
         fallback_models: list[str] = []
 
         if is_virtual:
             prompt, system_prompt, max_tokens = _extract_prompt(body)
+            _pv = " ".join(prompt[:80].split())
+            prompt_preview = (_pv + "...") if len(prompt) > 80 else _pv
 
             if prompt.startswith("/debug"):
                 debug_prompt = prompt[len("/debug"):].strip() or "hello"
@@ -689,6 +700,7 @@ def create_app(
                         estimated_cost=estimated_cost, savings=savings,
                         latency_us=route_latency_us, session_id=session_id,
                         streaming=True,
+                        request_id=request_id, prompt_preview=prompt_preview,
                     ))
 
                 if api_format == "anthropic":
@@ -766,6 +778,7 @@ def create_app(
                     estimated_cost=estimated_cost, actual_cost=actual_cost,
                     savings=savings, latency_us=route_latency_us,
                     session_id=session_id, streaming=False,
+                    request_id=request_id, prompt_preview=prompt_preview,
                 ))
 
             if api_format == "anthropic":
@@ -804,6 +817,7 @@ def create_app(
                     estimated_cost=estimated_cost, savings=savings,
                     latency_us=route_latency_us, session_id=session_id,
                     streaming=is_streaming,
+                    request_id=request_id, prompt_preview=prompt_preview,
                 ))
             msg = f"Upstream unreachable: {upstream_chat}"
             if api_format == "anthropic":
@@ -821,6 +835,7 @@ def create_app(
                     estimated_cost=estimated_cost, savings=savings,
                     latency_us=route_latency_us, session_id=session_id,
                     streaming=is_streaming,
+                    request_id=request_id, prompt_preview=prompt_preview,
                 ))
             msg = "Upstream request timed out"
             if api_format == "anthropic":
@@ -856,6 +871,7 @@ def create_app(
         Route("/v1/sessions", handle_sessions, methods=["GET"]),
         Route("/v1/stats", handle_stats, methods=["GET", "POST"]),
         Route("/v1/feedback", handle_feedback, methods=["GET", "POST"]),
+        Route("/v1/stats/recent", handle_recent, methods=["GET"]),
     ]
     if _dashboard_mount is not None:
         routes.append(Mount("/dashboard", app=_dashboard_mount))

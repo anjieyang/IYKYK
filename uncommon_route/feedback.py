@@ -114,6 +114,11 @@ class FeedbackCollector:
             from_tier=ctx.tier, to_tier=target,
         )
 
+    def has_pending(self, request_id: str) -> bool:
+        """Check if feedback can still be submitted for a request."""
+        self._cleanup_buffer()
+        return request_id in self._buffer
+
     def learn_from_escalation(
         self,
         features: dict[str, float],
