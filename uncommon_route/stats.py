@@ -15,12 +15,14 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 
+from uncommon_route.paths import data_dir
+
 RETENTION_S = 7 * 86_400  # 7 days
 MAX_RECORDS = 10_000
 
-RouteMethod = Literal["cascade", "session-hold", "session-upgrade", "step-aware", "escalated"]
+RouteMethod = Literal["cascade", "session-hold", "session-upgrade", "step-aware", "escalated", "fallback", "passthrough"]
 
-_DATA_DIR = Path.home() / ".uncommon-route"
+_DATA_DIR = data_dir()
 
 
 @dataclass
@@ -31,10 +33,36 @@ class RouteRecord:
     confidence: float
     method: RouteMethod
     estimated_cost: float
+    requested_model: str = ""
+    profile: str = "auto"
+    decision_tier: str = ""
     actual_cost: float | None = None
     savings: float = 0.0
     latency_us: float = 0.0
+    usage_input_tokens: int = 0
+    usage_output_tokens: int = 0
+    cache_read_input_tokens: int = 0
+    cache_write_input_tokens: int = 0
+    cache_hit_ratio: float = 0.0
+    transport: str = "openai-chat"
+    cache_mode: str = "none"
+    cache_family: str = "generic"
+    cache_breakpoints: int = 0
+    input_tokens_before: int = 0
+    input_tokens_after: int = 0
+    artifacts_created: int = 0
+    compacted_messages: int = 0
+    semantic_summaries: int = 0
+    semantic_calls: int = 0
+    semantic_failures: int = 0
+    semantic_quality_fallbacks: int = 0
+    checkpoint_created: bool = False
+    rehydrated_artifacts: int = 0
+    sidechannel_estimated_cost: float = 0.0
+    sidechannel_actual_cost: float | None = None
     session_id: str | None = None
+    step_type: str = "general"
+    fallback_reason: str = ""
     streaming: bool = False
     request_id: str = ""
     prompt_preview: str = ""
@@ -59,13 +87,35 @@ class StatsSummary:
     total_requests: int
     time_range_s: float
     by_tier: dict[str, TierSummary]
+    by_decision_tier: dict[str, int]
     by_model: dict[str, ModelSummary]
+    by_transport: dict[str, ModelSummary]
+    by_cache_mode: dict[str, ModelSummary]
+    by_cache_family: dict[str, ModelSummary]
+    by_profile: dict[str, int]
     by_method: dict[str, int]
     avg_confidence: float
     avg_savings: float
     avg_latency_us: float
+    avg_input_reduction_ratio: float
+    avg_cache_hit_ratio: float
     total_estimated_cost: float
     total_actual_cost: float
+    total_usage_input_tokens: int
+    total_usage_output_tokens: int
+    total_cache_read_input_tokens: int
+    total_cache_write_input_tokens: int
+    total_cache_breakpoints: int
+    total_input_tokens_before: int
+    total_input_tokens_after: int
+    total_artifacts_created: int
+    total_compacted_messages: int
+    total_semantic_summaries: int
+    total_semantic_calls: int
+    total_semantic_failures: int
+    total_semantic_quality_fallbacks: int
+    total_checkpoints_created: int
+    total_rehydrated_artifacts: int
 
 
 # ─── Storage abstraction ───
@@ -118,7 +168,9 @@ class InMemoryRouteStatsStorage(RouteStatsStorage):
 
 
 def _effective_cost(r: RouteRecord) -> float:
-    return r.actual_cost if r.actual_cost is not None else r.estimated_cost
+    main_cost = r.actual_cost if r.actual_cost is not None else r.estimated_cost
+    side_cost = r.sidechannel_actual_cost if r.sidechannel_actual_cost is not None else r.sidechannel_estimated_cost
+    return main_cost + side_cost
 
 
 class RouteStats:
@@ -150,11 +202,22 @@ class RouteStats:
             {
                 "request_id": r.request_id,
                 "timestamp": r.timestamp,
+                "profile": r.profile,
                 "model": r.model,
                 "tier": r.tier,
+                "decision_tier": r.decision_tier or r.tier,
                 "method": r.method,
-                "cost": r.actual_cost if r.actual_cost is not None else r.estimated_cost,
+                "cost": _effective_cost(r),
                 "savings": r.savings,
+                "transport": r.transport,
+                "cache_mode": r.cache_mode,
+                "cache_family": r.cache_family,
+                "cache_breakpoints": r.cache_breakpoints,
+                "cache_hit_ratio": r.cache_hit_ratio,
+                "cache_read_input_tokens": r.cache_read_input_tokens,
+                "input_tokens_before": r.input_tokens_before,
+                "input_tokens_after": r.input_tokens_after,
+                "artifacts_created": r.artifacts_created,
                 "prompt_preview": r.prompt_preview,
             }
             for r in records[:limit]
@@ -164,9 +227,21 @@ class RouteStats:
         if not self._records:
             return StatsSummary(
                 total_requests=0, time_range_s=0.0,
-                by_tier={}, by_model={}, by_method={},
+                by_tier={}, by_decision_tier={}, by_model={},
+                by_transport={}, by_cache_mode={}, by_cache_family={},
+                by_profile={}, by_method={},
                 avg_confidence=0.0, avg_savings=0.0, avg_latency_us=0.0,
+                avg_input_reduction_ratio=0.0, avg_cache_hit_ratio=0.0,
                 total_estimated_cost=0.0, total_actual_cost=0.0,
+                total_usage_input_tokens=0, total_usage_output_tokens=0,
+                total_cache_read_input_tokens=0, total_cache_write_input_tokens=0,
+                total_cache_breakpoints=0,
+                total_input_tokens_before=0, total_input_tokens_after=0,
+                total_artifacts_created=0, total_compacted_messages=0,
+                total_semantic_summaries=0, total_semantic_calls=0,
+                total_semantic_failures=0, total_semantic_quality_fallbacks=0,
+                total_checkpoints_created=0,
+                total_rehydrated_artifacts=0,
             )
 
         now = self._now()
@@ -175,11 +250,22 @@ class RouteStats:
 
         tier_groups: dict[str, list[RouteRecord]] = {}
         model_groups: dict[str, list[RouteRecord]] = {}
+        transport_groups: dict[str, list[RouteRecord]] = {}
+        cache_mode_groups: dict[str, list[RouteRecord]] = {}
+        cache_family_groups: dict[str, list[RouteRecord]] = {}
+        profile_counts: dict[str, int] = {}
+        decision_tier_counts: dict[str, int] = {}
         method_counts: dict[str, int] = {}
 
         for r in self._records:
             tier_groups.setdefault(r.tier, []).append(r)
             model_groups.setdefault(r.model, []).append(r)
+            transport_groups.setdefault(r.transport, []).append(r)
+            cache_mode_groups.setdefault(r.cache_mode, []).append(r)
+            cache_family_groups.setdefault(r.cache_family, []).append(r)
+            profile_counts[r.profile] = profile_counts.get(r.profile, 0) + 1
+            decision_tier = r.decision_tier or r.tier
+            decision_tier_counts[decision_tier] = decision_tier_counts.get(decision_tier, 0) + 1
             method_counts[r.method] = method_counts.get(r.method, 0) + 1
 
         by_tier: dict[str, TierSummary] = {}
@@ -199,6 +285,34 @@ class RouteStats:
                 total_cost=sum(_effective_cost(r) for r in recs),
             )
 
+        by_transport: dict[str, ModelSummary] = {}
+        for transport, recs in transport_groups.items():
+            by_transport[transport] = ModelSummary(
+                count=len(recs),
+                total_cost=sum(_effective_cost(r) for r in recs),
+            )
+
+        by_cache_mode: dict[str, ModelSummary] = {}
+        for cache_mode, recs in cache_mode_groups.items():
+            by_cache_mode[cache_mode] = ModelSummary(
+                count=len(recs),
+                total_cost=sum(_effective_cost(r) for r in recs),
+            )
+
+        by_cache_family: dict[str, ModelSummary] = {}
+        for cache_family, recs in cache_family_groups.items():
+            by_cache_family[cache_family] = ModelSummary(
+                count=len(recs),
+                total_cost=sum(_effective_cost(r) for r in recs),
+            )
+
+        total_before = sum(r.input_tokens_before for r in self._records)
+        total_after = sum(r.input_tokens_after for r in self._records)
+        ratios = [
+            (r.input_tokens_before - r.input_tokens_after) / r.input_tokens_before
+            for r in self._records
+            if r.input_tokens_before > 0
+        ]
         total_est = sum(r.estimated_cost for r in self._records)
         total_act = sum(_effective_cost(r) for r in self._records)
 
@@ -206,13 +320,35 @@ class RouteStats:
             total_requests=n,
             time_range_s=now - oldest,
             by_tier=by_tier,
+            by_decision_tier=decision_tier_counts,
             by_model=by_model,
+            by_transport=by_transport,
+            by_cache_mode=by_cache_mode,
+            by_cache_family=by_cache_family,
+            by_profile=profile_counts,
             by_method=method_counts,
             avg_confidence=sum(r.confidence for r in self._records) / n,
             avg_savings=sum(r.savings for r in self._records) / n,
             avg_latency_us=sum(r.latency_us for r in self._records) / n,
+            avg_input_reduction_ratio=(sum(ratios) / len(ratios)) if ratios else 0.0,
+            avg_cache_hit_ratio=sum(r.cache_hit_ratio for r in self._records) / n,
             total_estimated_cost=total_est,
             total_actual_cost=total_act,
+            total_usage_input_tokens=sum(r.usage_input_tokens for r in self._records),
+            total_usage_output_tokens=sum(r.usage_output_tokens for r in self._records),
+            total_cache_read_input_tokens=sum(r.cache_read_input_tokens for r in self._records),
+            total_cache_write_input_tokens=sum(r.cache_write_input_tokens for r in self._records),
+            total_cache_breakpoints=sum(r.cache_breakpoints for r in self._records),
+            total_input_tokens_before=total_before,
+            total_input_tokens_after=total_after,
+            total_artifacts_created=sum(r.artifacts_created for r in self._records),
+            total_compacted_messages=sum(r.compacted_messages for r in self._records),
+            total_semantic_summaries=sum(r.semantic_summaries for r in self._records),
+            total_semantic_calls=sum(r.semantic_calls for r in self._records),
+            total_semantic_failures=sum(r.semantic_failures for r in self._records),
+            total_semantic_quality_fallbacks=sum(r.semantic_quality_fallbacks for r in self._records),
+            total_checkpoints_created=sum(1 for r in self._records if r.checkpoint_created),
+            total_rehydrated_artifacts=sum(r.rehydrated_artifacts for r in self._records),
         )
 
     def reset(self) -> None:
@@ -233,15 +369,41 @@ class RouteStats:
         self._storage.save([
             {
                 "timestamp": r.timestamp,
+                "requested_model": r.requested_model,
+                "profile": r.profile,
                 "model": r.model,
                 "tier": r.tier,
+                "decision_tier": r.decision_tier,
                 "confidence": r.confidence,
                 "method": r.method,
                 "estimated_cost": r.estimated_cost,
                 "actual_cost": r.actual_cost,
                 "savings": r.savings,
                 "latency_us": r.latency_us,
+                "usage_input_tokens": r.usage_input_tokens,
+                "usage_output_tokens": r.usage_output_tokens,
+                "cache_read_input_tokens": r.cache_read_input_tokens,
+                "cache_write_input_tokens": r.cache_write_input_tokens,
+                "cache_hit_ratio": r.cache_hit_ratio,
+                "transport": r.transport,
+                "cache_mode": r.cache_mode,
+                "cache_family": r.cache_family,
+                "cache_breakpoints": r.cache_breakpoints,
+                "input_tokens_before": r.input_tokens_before,
+                "input_tokens_after": r.input_tokens_after,
+                "artifacts_created": r.artifacts_created,
+                "compacted_messages": r.compacted_messages,
+                "semantic_summaries": r.semantic_summaries,
+                "semantic_calls": r.semantic_calls,
+                "semantic_failures": r.semantic_failures,
+                "semantic_quality_fallbacks": r.semantic_quality_fallbacks,
+                "checkpoint_created": r.checkpoint_created,
+                "rehydrated_artifacts": r.rehydrated_artifacts,
+                "sidechannel_estimated_cost": r.sidechannel_estimated_cost,
+                "sidechannel_actual_cost": r.sidechannel_actual_cost,
                 "session_id": r.session_id,
+                "step_type": r.step_type,
+                "fallback_reason": r.fallback_reason,
                 "streaming": r.streaming,
                 "request_id": r.request_id,
                 "prompt_preview": r.prompt_preview,
@@ -255,15 +417,41 @@ class RouteStats:
                 continue
             self._records.append(RouteRecord(
                 timestamp=r["timestamp"],
+                requested_model=r.get("requested_model", ""),
+                profile=r.get("profile", "auto"),
                 model=r.get("model", ""),
                 tier=r.get("tier", ""),
+                decision_tier=r.get("decision_tier", ""),
                 confidence=r.get("confidence", 0.0),
                 method=r.get("method", "cascade"),
                 estimated_cost=r.get("estimated_cost", 0.0),
                 actual_cost=r.get("actual_cost"),
                 savings=r.get("savings", 0.0),
                 latency_us=r.get("latency_us", 0.0),
+                usage_input_tokens=r.get("usage_input_tokens", 0),
+                usage_output_tokens=r.get("usage_output_tokens", 0),
+                cache_read_input_tokens=r.get("cache_read_input_tokens", 0),
+                cache_write_input_tokens=r.get("cache_write_input_tokens", 0),
+                cache_hit_ratio=r.get("cache_hit_ratio", 0.0),
+                transport=r.get("transport", "openai-chat"),
+                cache_mode=r.get("cache_mode", "none"),
+                cache_family=r.get("cache_family", "generic"),
+                cache_breakpoints=r.get("cache_breakpoints", 0),
+                input_tokens_before=r.get("input_tokens_before", 0),
+                input_tokens_after=r.get("input_tokens_after", 0),
+                artifacts_created=r.get("artifacts_created", 0),
+                compacted_messages=r.get("compacted_messages", 0),
+                semantic_summaries=r.get("semantic_summaries", 0),
+                semantic_calls=r.get("semantic_calls", 0),
+                semantic_failures=r.get("semantic_failures", 0),
+                semantic_quality_fallbacks=r.get("semantic_quality_fallbacks", 0),
+                checkpoint_created=r.get("checkpoint_created", False),
+                rehydrated_artifacts=r.get("rehydrated_artifacts", 0),
+                sidechannel_estimated_cost=r.get("sidechannel_estimated_cost", 0.0),
+                sidechannel_actual_cost=r.get("sidechannel_actual_cost"),
                 session_id=r.get("session_id"),
+                step_type=r.get("step_type", "general"),
+                fallback_reason=r.get("fallback_reason", ""),
                 streaming=r.get("streaming", False),
                 request_id=r.get("request_id", ""),
                 prompt_preview=r.get("prompt_preview", ""),

@@ -22,7 +22,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from uncommon_route.router.config import DEFAULT_MODEL_PRICING
+from uncommon_route.router.config import DEFAULT_MODEL_PRICING, VIRTUAL_MODEL_IDS
+from uncommon_route.router.types import RoutingProfile
 
 _OPENCLAW_DIR = Path.home() / ".openclaw"
 _CONFIG_FILE = _OPENCLAW_DIR / "openclaw.json"
@@ -49,10 +50,50 @@ def _build_provider_block(port: int) -> dict[str, Any]:
 
     models: list[dict[str, Any]] = [
         {
-            "id": "uncommon-route/auto",
+            "id": VIRTUAL_MODEL_IDS[RoutingProfile.AUTO],
             "name": "UncommonRoute Auto (smart routing)",
             "api": "openai-completions",
             "reasoning": False,
+            "input": ["text"],
+            "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0},
+            "contextWindow": 200000,
+            "maxTokens": 16384,
+        },
+        {
+            "id": VIRTUAL_MODEL_IDS[RoutingProfile.ECO],
+            "name": "UncommonRoute Eco (cheap-first)",
+            "api": "openai-completions",
+            "reasoning": False,
+            "input": ["text"],
+            "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0},
+            "contextWindow": 200000,
+            "maxTokens": 16384,
+        },
+        {
+            "id": VIRTUAL_MODEL_IDS[RoutingProfile.PREMIUM],
+            "name": "UncommonRoute Premium (quality-first)",
+            "api": "openai-completions",
+            "reasoning": True,
+            "input": ["text"],
+            "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0},
+            "contextWindow": 200000,
+            "maxTokens": 16384,
+        },
+        {
+            "id": VIRTUAL_MODEL_IDS[RoutingProfile.FREE],
+            "name": "UncommonRoute Free (free-first)",
+            "api": "openai-completions",
+            "reasoning": False,
+            "input": ["text"],
+            "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0},
+            "contextWindow": 200000,
+            "maxTokens": 16384,
+        },
+        {
+            "id": VIRTUAL_MODEL_IDS[RoutingProfile.AGENTIC],
+            "name": "UncommonRoute Agentic (tool-aware)",
+            "api": "openai-completions",
+            "reasoning": True,
             "input": ["text"],
             "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0},
             "contextWindow": 200000,

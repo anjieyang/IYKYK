@@ -33,6 +33,11 @@ export default function Overview({ stats, health }: Props) {
   const latency = stats?.avg_latency_us != null ? `${Math.round(stats.avg_latency_us)}µs` : "—";
   const sessionCount = health?.sessions?.count ?? 0;
   const cost = stats?.total_actual_cost != null ? `$${stats.total_actual_cost.toFixed(2)}` : "—";
+  const nativeAnthropic = stats?.by_transport?.["anthropic-messages"]?.count ?? 0;
+  const openaiChat = stats?.by_transport?.["openai-chat"]?.count ?? 0;
+  const cacheControl = stats?.by_cache_mode?.cache_control?.count ?? 0;
+  const promptCacheKey = stats?.by_cache_mode?.prompt_cache_key?.count ?? 0;
+  const breakpoints = stats?.total_cache_breakpoints ?? 0;
 
   const tiers = ["SIMPLE", "MEDIUM", "COMPLEX", "REASONING"]
     .map((t) => ({ name: t, count: stats?.by_tier?.[t]?.count ?? 0 }))
@@ -58,6 +63,23 @@ export default function Overview({ stats, health }: Props) {
         <Stat label="Avg Latency" value={latency} />
         <Stat label="Sessions" value={sessionCount.toString()} />
       </div>
+
+      <section className="mb-14">
+        <p className="text-[12px] font-medium text-[#6e6e72] uppercase tracking-[0.08em] mb-5">Transport & Cache</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
+          <MiniStat label="Anthropic Native" value={nativeAnthropic} total={total} />
+          <MiniStat label="OpenAI Chat" value={openaiChat} total={total} />
+          <MiniStat label="cache_control" value={cacheControl} total={total} />
+          <MiniStat label="prompt_cache_key" value={promptCacheKey} total={total} />
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-4">
+            <p className="text-[11px] font-medium text-[#5a5a5d] uppercase tracking-[0.08em]">Breakpoints</p>
+            <p className="mt-3 text-[24px] font-semibold text-white font-mono tracking-tight">{breakpoints.toLocaleString()}</p>
+            <p className="mt-1 text-[12px] font-mono text-[#5a5a5d]">
+              {total > 0 ? `${(breakpoints / total).toFixed(1)} per request` : "0.0 per request"}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Tier breakdown */}
       <section className="mb-14">
@@ -119,6 +141,18 @@ function Stat({ label, value }: { label: string; value: string }) {
     <div>
       <p className="text-[12px] text-[#5a5a5d] mb-1">{label}</p>
       <p className="text-[20px] font-semibold text-white font-mono tracking-tight">{value}</p>
+    </div>
+  );
+}
+
+function MiniStat({ label, value, total }: { label: string; value: number; total: number }) {
+  return (
+    <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-4">
+      <p className="text-[11px] font-medium text-[#5a5a5d] uppercase tracking-[0.08em]">{label}</p>
+      <p className="mt-3 text-[24px] font-semibold text-white font-mono tracking-tight">{value.toLocaleString()}</p>
+      <p className="mt-1 text-[12px] font-mono text-[#5a5a5d]">
+        {total > 0 ? `${((value / total) * 100).toFixed(1)}% of routed requests` : "0.0% of routed requests"}
+      </p>
     </div>
   );
 }

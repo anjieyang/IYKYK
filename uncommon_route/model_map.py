@@ -38,6 +38,7 @@ DIRECT_PROVIDER_DOMAINS: dict[str, str] = {
     "api.openai.com": "openai",
     "api.anthropic.com": "anthropic",
     "api.deepseek.com": "deepseek",
+    "api.minimax.io": "minimax",
     "api.minimax.chat": "minimax",
     "generativelanguage.googleapis.com": "google",
     "api.x.ai": "xai",

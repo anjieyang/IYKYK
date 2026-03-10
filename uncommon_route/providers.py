@@ -11,7 +11,7 @@ Example (providers.json):
       "providers": {
         "minimax": {
           "api_key": "eyJ...",
-          "base_url": "https://api.minimax.chat/v1",
+          "base_url": "https://api.minimax.io/v1",
           "models": ["minimax/minimax-m2.5"],
           "plan": "coding-plan"
         },
@@ -32,12 +32,14 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-_DATA_DIR = Path.home() / ".uncommon-route"
+from uncommon_route.paths import data_dir
+
+_DATA_DIR = data_dir()
 _PROVIDERS_FILE = _DATA_DIR / "providers.json"
 
 KNOWN_BASE_URLS: dict[str, str] = {
     "commonstack": "https://api.commonstack.ai/v1",
-    "minimax": "https://api.minimax.chat/v1",
+    "minimax": "https://api.minimax.io/v1",
     "deepseek": "https://api.deepseek.com/v1",
     "openai": "https://api.openai.com/v1",
     "anthropic": "https://api.anthropic.com/v1",

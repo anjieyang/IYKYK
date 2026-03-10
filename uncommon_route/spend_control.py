@@ -18,13 +18,15 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Literal
 
+from uncommon_route.paths import data_dir
+
 HOUR_S = 3600
 DAY_S = 86400
 
 SpendWindow = Literal["per_request", "hourly", "daily", "session"]
 _ALL_WINDOWS: list[SpendWindow] = ["per_request", "hourly", "daily", "session"]
 
-_DATA_DIR = Path.home() / ".uncommon-route"
+_DATA_DIR = data_dir()
 
 
 @dataclass

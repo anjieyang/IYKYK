@@ -100,6 +100,17 @@ class TestBuildProviderBlock:
         block = _build_provider_block(8403)
         assert block["models"][0]["id"] == "uncommon-route/auto"
 
+    def test_virtual_profiles_are_registered(self) -> None:
+        block = _build_provider_block(8403)
+        ids = [m["id"] for m in block["models"][:5]]
+        assert ids == [
+            "uncommon-route/auto",
+            "uncommon-route/eco",
+            "uncommon-route/premium",
+            "uncommon-route/free",
+            "uncommon-route/agentic",
+        ]
+
     def test_model_costs(self) -> None:
         block = _build_provider_block(8403)
         auto_model = block["models"][0]

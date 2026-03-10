@@ -21,6 +21,7 @@ import pytest
 from starlette.testclient import TestClient
 
 from uncommon_route.proxy import create_app
+from uncommon_route.proxy import VERSION as PROXY_VERSION
 from uncommon_route.session import SessionConfig, SessionStore
 from uncommon_route.spend_control import InMemorySpendControlStorage, SpendControl
 
@@ -53,7 +54,7 @@ class TestCLI:
     def test_version(self) -> None:
         r = subprocess.run([*CLI_MODULE, "--version"], capture_output=True, text=True)
         assert r.returncode == 0
-        assert "0.1.0" in r.stdout
+        assert PROXY_VERSION in r.stdout
 
     def test_help(self) -> None:
         r = subprocess.run([*CLI_MODULE, "--help"], capture_output=True, text=True)

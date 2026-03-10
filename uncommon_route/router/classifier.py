@@ -22,6 +22,7 @@ import math
 import re
 from pathlib import Path
 
+from uncommon_route.paths import data_file
 from uncommon_route.router.types import (
     ScoringConfig,
     ScoringResult,
@@ -39,7 +40,7 @@ _model: ScriptAgnosticClassifier | None = None
 _model_load_attempted = False
 
 def _get_online_model_path() -> Path:
-    return Path.home() / ".uncommon-route" / "model_online.json"
+    return data_file("model_online.json")
 
 
 def _ensure_model_loaded() -> None:
@@ -66,7 +67,13 @@ def load_learned_model(path: str | None = None) -> None:
 
 
 def extract_features(prompt: str, system_prompt: str | None = None) -> dict[str, float]:
-    """Public API: extract the full 39-dim feature vector for a prompt."""
+    """Public API: extract the full 39-dim feature vector for a prompt.
+
+    Features are extracted from the user prompt only — the system_prompt
+    parameter is accepted for API compatibility but no longer used for
+    feature extraction (agentic framework system prompts were inflating
+    every complexity signal).
+    """
     _ensure_model_loaded()
     full_text = f"{system_prompt or ''} {prompt}".strip()
     return _extract_all_features(prompt, full_text)
@@ -105,13 +112,20 @@ def rollback_online_model() -> bool:
 
 
 def _extract_all_features(prompt: str, full_text: str) -> dict[str, float]:
-    """Extract the complete feature vector for model input."""
-    # Structural features (12 dims)
-    struct_dims = extract_structural_features(full_text)
+    """Extract the complete feature vector for model input.
+
+    Structural and Unicode features are extracted from the user prompt only,
+    NOT from full_text (system_prompt + prompt).  Agentic frameworks (Claude
+    Code, Cursor, etc.) inject massive system prompts full of tool definitions,
+    code examples, and instructions that inflate every complexity signal and
+    cause nearly all queries to route to COMPLEX.
+    """
+    # Structural features (12 dims) — prompt only
+    struct_dims = extract_structural_features(prompt)
     structural_scores = {d.name: d.score for d in struct_dims}
 
-    # Unicode block features (15 dims)
-    unicode_blocks = extract_unicode_block_features(full_text)
+    # Unicode block features (15 dims) — prompt only
+    unicode_blocks = extract_unicode_block_features(prompt)
 
     # Keyword features (12 dims)
     kw_dims = extract_keyword_features(prompt)
@@ -150,11 +164,11 @@ def train_and_save_model(data_path: str, out_path: str | None = None) -> None:
     for case in cases:
         prompt = case["prompt"]
         sys_prompt = case.get("system_prompt")
-        full_text = f"{sys_prompt or ''} {prompt}".strip()
 
-        struct_dims = extract_structural_features(full_text)
+        # Extract features from prompt only (matches inference behavior)
+        struct_dims = extract_structural_features(prompt)
         structural_scores = {d.name: d.score for d in struct_dims}
-        unicode_blocks = extract_unicode_block_features(full_text)
+        unicode_blocks = extract_unicode_block_features(prompt)
         kw_dims = extract_keyword_features(prompt)
         keyword_scores = {d.name: d.score for d in kw_dims}
 
@@ -267,8 +281,10 @@ def classify(
     if config is None:
         config = ScoringConfig()
 
-    full_text = f"{system_prompt or ''} {prompt}".strip()
-    estimated_tokens = estimate_tokens(full_text)
+    # Estimate tokens from user prompt only.  Agentic frameworks inject
+    # massive system prompts that would inflate the token count and push
+    # everything past trivial / into the long-text regime.
+    estimated_tokens = estimate_tokens(prompt)
 
     _ensure_model_loaded()
 
@@ -280,8 +296,8 @@ def classify(
             signals=[f"trivial:{trivial.value}"], agentic_score=0.0,
         )
 
-    # Extract all features
-    all_features = _extract_all_features(prompt, full_text)
+    # Extract all features (prompt-only; full_text is passed for compat but unused)
+    all_features = _extract_all_features(prompt, prompt)
 
     # Agentic score
     agentic_score = all_features.get("k_agentic_task", 0.0)
@@ -298,7 +314,7 @@ def classify(
 
     # Level 2: Rule-based fallback
     tier, confidence = _rule_based_classify(all_features, config)
-    struct_dims = extract_structural_features(full_text)
+    struct_dims = extract_structural_features(prompt)
     kw_dims = extract_keyword_features(prompt)
     all_dims = struct_dims + kw_dims
     signals = [d.signal for d in all_dims if d.signal is not None]

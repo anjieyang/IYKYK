@@ -31,6 +31,8 @@ class RequestContext:
     features: dict[str, float]
     tier: str
     timestamp: float
+    model: str = ""
+    profile: str = "auto"
 
 
 @dataclass
@@ -55,12 +57,14 @@ class FeedbackCollector:
         buffer_ttl_s: int = 3600,
         max_updates_per_hour: int = 100,
         save_every: int = 10,
+        model_experience: Any = None,
         now_fn: Any = None,
     ) -> None:
         self._buffer: dict[str, RequestContext] = {}
         self._buffer_ttl_s = buffer_ttl_s
         self._max_hourly = max_updates_per_hour
         self._save_every = save_every
+        self._model_experience = model_experience
         self._now = now_fn or time.time
         self._update_ts: list[float] = []
         self._total_updates: int = 0
@@ -68,12 +72,43 @@ class FeedbackCollector:
 
     # ─── Public API ───
 
-    def capture(self, request_id: str, features: dict[str, float], tier: str) -> None:
+    def capture(
+        self,
+        request_id: str,
+        features: dict[str, float],
+        tier: str,
+        *,
+        model: str = "",
+        profile: str = "auto",
+    ) -> None:
         """Buffer compact features for a routed request (no raw prompts stored)."""
         self._cleanup_buffer()
         compact = {k: v for k, v in features.items() if not k.startswith("ngram_")}
         self._buffer[request_id] = RequestContext(
-            features=compact, tier=tier, timestamp=self._now(),
+            features=compact,
+            tier=tier,
+            timestamp=self._now(),
+            model=model,
+            profile=profile,
+        )
+
+    def rebind_request(
+        self,
+        request_id: str,
+        *,
+        tier: str | None = None,
+        model: str | None = None,
+        profile: str | None = None,
+    ) -> None:
+        ctx = self._buffer.get(request_id)
+        if ctx is None:
+            return
+        self._buffer[request_id] = RequestContext(
+            features=ctx.features,
+            tier=tier or ctx.tier,
+            timestamp=ctx.timestamp,
+            model=model or ctx.model,
+            profile=profile or ctx.profile,
         )
 
     def submit(self, request_id: str, signal: FeedbackSignal) -> FeedbackResult:
@@ -87,6 +122,13 @@ class FeedbackCollector:
             )
 
         target = _adjust_tier(ctx.tier, signal)
+        if self._model_experience is not None and ctx.model:
+            self._model_experience.record_feedback(
+                ctx.model,
+                ctx.profile,
+                ctx.tier,
+                signal,
+            )
 
         if signal == "ok":
             self._do_update(ctx.features, ctx.tier)

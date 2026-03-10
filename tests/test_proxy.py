@@ -7,9 +7,84 @@ import json
 import pytest
 from starlette.testclient import TestClient
 
-from uncommon_route.proxy import create_app
+from uncommon_route.artifacts import ArtifactStore
+from uncommon_route.composition import CompositionPolicy
+from uncommon_route.model_experience import InMemoryModelExperienceStorage, ModelExperienceStore
+from uncommon_route.proxy import _extract_prompt, create_app
+from uncommon_route.router.config import routing_profile_from_model
 from uncommon_route.session import SessionConfig, SessionStore
+from uncommon_route.semantic import SemanticCallResult, SideChannelConfig, SideChannelTaskConfig
 from uncommon_route.spend_control import InMemorySpendControlStorage, SpendControl
+from uncommon_route.router.types import RoutingProfile
+
+
+class FakeSemanticCompressor:
+    async def summarize_tool_result(self, content: str, *, tool_name: str, latest_user_prompt: str, request: object) -> SemanticCallResult | None:
+        return SemanticCallResult(text=f"semantic summary for {tool_name}", model="deepseek/deepseek-chat", estimated_cost=0.001)
+
+    async def summarize_history(self, transcript: str, *, latest_user_prompt: str, session_id: str, request: object) -> SemanticCallResult | None:
+        return SemanticCallResult(text=f"checkpoint summary for {session_id}", model="deepseek/deepseek-chat", estimated_cost=0.002)
+
+    async def rehydrate_artifact(self, query: str, *, artifact_id: str, content: str, summary: str, request: object) -> SemanticCallResult | None:
+        return SemanticCallResult(text=f"rehydrated excerpt for {artifact_id}", model="deepseek/deepseek-chat", estimated_cost=0.001)
+
+
+class QualityFallbackSemanticCompressor(FakeSemanticCompressor):
+    async def summarize_tool_result(self, content: str, *, tool_name: str, latest_user_prompt: str, request: object) -> SemanticCallResult | None:
+        return SemanticCallResult(
+            text=f"semantic summary for {tool_name}",
+            model="google/gemini-2.5-flash-lite",
+            estimated_cost=0.001,
+            quality_fallbacks=3,
+        )
+
+
+class TestPromptExtraction:
+    def test_extract_prompt_ignores_claude_code_wrapper_blocks(self) -> None:
+        prompt, system_prompt, max_tokens = _extract_prompt({
+            "max_tokens": 128,
+            "messages": [
+                {"role": "system", "content": "top-level system"},
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "<system-reminder>\nThe following skills are available for use with the Skill tool.\n</system-reminder>",
+                        },
+                        {
+                            "type": "text",
+                            "text": "<system-reminder>\nAs you answer the user's questions, you can use the following context.\n# claudeMd\n</system-reminder>",
+                        },
+                        {
+                            "type": "text",
+                            "text": "List the top-level directories in the current repository.",
+                        },
+                    ],
+                },
+            ],
+        })
+
+        assert prompt == "List the top-level directories in the current repository."
+        assert system_prompt == "top-level system"
+        assert max_tokens == 128
+
+    def test_extract_prompt_strips_wrapper_prefix_from_string_message(self) -> None:
+        prompt, _system_prompt, _max_tokens = _extract_prompt({
+            "messages": [
+                {
+                    "role": "user",
+                    "content": (
+                        "<system-reminder>\n"
+                        "The following skills are available for use with the Skill tool.\n"
+                        "</system-reminder>\n"
+                        "Find routing_profile_from_model in this repository."
+                    ),
+                },
+            ],
+        })
+
+        assert prompt == "Find routing_profile_from_model in this repository."
 
 
 @pytest.fixture
@@ -43,6 +118,35 @@ class TestHealthEndpoint:
         assert "spending" in data
         assert "calls" in data["spending"]
 
+    def test_health_exposes_custom_composition_policy(self, tmp_path) -> None:
+        app = create_app(
+            upstream="http://127.0.0.1:1/fake",
+            session_store=SessionStore(SessionConfig(enabled=True, timeout_s=300)),
+            spend_control=SpendControl(storage=InMemorySpendControlStorage()),
+            artifact_store=ArtifactStore(root=tmp_path / "artifacts"),
+            composition_policy=CompositionPolicy(
+                tool_offload_threshold_tokens=1234,
+                sidechannel=SideChannelConfig(
+                    tool_summary=SideChannelTaskConfig(
+                        primary="openai/gpt-4o-mini",
+                        fallback=("anthropic/claude-haiku-4.5",),
+                    ),
+                    checkpoint=SideChannelTaskConfig(primary="moonshot/kimi-k2.5"),
+                    rehydrate=SideChannelTaskConfig(primary="deepseek/deepseek-chat"),
+                ),
+            ),
+        )
+        client = TestClient(app, raise_server_exceptions=False)
+
+        data = client.get("/health").json()
+
+        assert data["composition"]["policy"]["tool_offload_threshold_tokens"] == 1234
+        assert data["composition"]["policy"]["sidechannel"]["tool_summary"]["primary"] == "openai/gpt-4o-mini"
+        assert data["composition"]["sidechannel_models"]["tool_summary"] == [
+            "openai/gpt-4o-mini",
+            "anthropic/claude-haiku-4.5",
+        ]
+
 
 class TestModelsEndpoint:
     def test_models_list(self, client: TestClient) -> None:
@@ -52,6 +156,105 @@ class TestModelsEndpoint:
         assert data["object"] == "list"
         model_ids = [m["id"] for m in data["data"]]
         assert "uncommon-route/auto" in model_ids
+        assert "uncommon-route/eco" in model_ids
+        assert "uncommon-route/premium" in model_ids
+        assert "uncommon-route/free" in model_ids
+        assert "uncommon-route/agentic" in model_ids
+
+
+class TestVirtualModelAliases:
+    def test_routing_profile_from_bare_alias(self) -> None:
+        assert routing_profile_from_model("auto") is RoutingProfile.AUTO
+        assert routing_profile_from_model("premium") is RoutingProfile.PREMIUM
+
+    def test_chat_accepts_bare_virtual_alias(self, client: TestClient) -> None:
+        resp = client.post("/v1/chat/completions", json={
+            "model": "auto",
+            "messages": [{"role": "user", "content": "hello"}],
+        })
+
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-profile"] == "auto"
+
+
+class TestSelectorEndpoint:
+    def test_get_selector_state(self, client: TestClient) -> None:
+        resp = client.get("/v1/selector")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert "selection_profiles" in data
+        assert "bandit_profiles" in data
+        assert "experience" in data
+
+    def test_get_selector_bucket_summary(self) -> None:
+        store = ModelExperienceStore(storage=InMemoryModelExperienceStorage())
+        store.record_feedback("google/gemini-2.5-flash-lite", "auto", "SIMPLE", "ok")
+        app = create_app(
+            upstream="http://127.0.0.1:1/fake",
+            session_store=SessionStore(SessionConfig(enabled=True, timeout_s=300)),
+            spend_control=SpendControl(storage=InMemorySpendControlStorage()),
+            model_experience=store,
+        )
+        client = TestClient(app, raise_server_exceptions=False)
+
+        resp = client.get("/v1/selector?profile=auto&tier=SIMPLE")
+
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["bucket"]["profile"] == "auto"
+        assert data["bucket"]["tier"] == "SIMPLE"
+        assert data["bucket"]["models"][0]["model"] == "google/gemini-2.5-flash-lite"
+
+    def test_selector_preview_accepts_prompt_shape(self, client: TestClient) -> None:
+        resp = client.post("/v1/selector", json={
+            "profile": "auto",
+            "prompt": "hello",
+            "max_tokens": 128,
+        })
+
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["virtual"] is True
+        assert data["profile"] == "auto"
+        assert data["candidate_scores"]
+        assert data["candidate_scores"][0]["model"] == data["decision_model"]
+
+    def test_selector_preview_reflects_session_hold(self, client: TestClient) -> None:
+        headers = {"x-session-id": "selector-hold"}
+        client.post("/v1/chat/completions", json={
+            "model": "uncommon-route/auto",
+            "messages": [{"role": "user", "content": "design a distributed database with failure proofs"}],
+        }, headers=headers)
+
+        resp = client.post("/v1/selector", json={
+            "model": "uncommon-route/auto",
+            "messages": [{"role": "user", "content": "hello"}],
+        }, headers=headers)
+
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["method"] == "session-hold"
+        assert data["session"]["applied"] is True
+        assert data["served_model"] != data["decision_model"] or data["served_tier"] != data["decision_tier"]
+
+    def test_selector_preview_caps_tool_selection_to_medium(self, client: TestClient) -> None:
+        resp = client.post("/v1/selector", json={
+            "model": "uncommon-route/auto",
+            "messages": [{"role": "user", "content": "list the files changed in this repo and pick the best tool"}],
+            "tools": [{
+                "type": "function",
+                "function": {
+                    "name": "bash",
+                    "description": "Run shell commands",
+                    "parameters": {"type": "object", "properties": {}},
+                },
+            }],
+        })
+
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["step_type"] == "tool-selection"
+        assert data["decision_tier"] == "MEDIUM"
 
 
 class TestChatCompletions:
@@ -75,6 +278,161 @@ class TestChatCompletions:
         assert resp.status_code == 502
         assert "x-uncommon-route-model" in resp.headers
         assert "x-uncommon-route-tier" in resp.headers
+        assert resp.headers["x-uncommon-route-profile"] == "auto"
+        assert "x-uncommon-route-transport" in resp.headers
+        assert "x-uncommon-route-cache-mode" in resp.headers
+
+    def test_openai_cache_key_is_emitted_for_sessioned_openai_routing(self, client: TestClient) -> None:
+        resp = client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/premium",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+            headers={"x-session-id": "premium-cache"},
+        )
+
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-transport"] == "openai-chat"
+        assert resp.headers["x-uncommon-route-cache-family"] == "openai"
+        assert resp.headers["x-uncommon-route-cache-mode"] == "prompt_cache_key"
+        assert resp.headers["x-uncommon-route-cache-key"].startswith("ur:")
+
+    def test_free_profile_tool_request_avoids_non_tool_model(self, client: TestClient) -> None:
+        resp = client.post("/v1/chat/completions", json={
+            "model": "uncommon-route/free",
+            "messages": [{"role": "user", "content": "list files in this repo"}],
+            "tools": [{
+                "type": "function",
+                "function": {
+                    "name": "bash",
+                    "description": "Run a shell command",
+                    "parameters": {"type": "object", "properties": {}},
+                },
+            }],
+        })
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-profile"] == "free"
+        assert resp.headers["x-uncommon-route-model"] != "nvidia/gpt-oss-120b"
+
+    def test_premium_profile_routes(self, client: TestClient) -> None:
+        resp = client.post("/v1/chat/completions", json={
+            "model": "uncommon-route/premium",
+            "messages": [{"role": "user", "content": "design a distributed database with five constraints"}],
+        })
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-profile"] == "premium"
+
+    def test_anthropic_messages_accept_explicit_provider_model(self, client: TestClient) -> None:
+        resp = client.post("/v1/messages", json={
+            "model": "anthropic/claude-sonnet-4.6",
+            "max_tokens": 64,
+            "messages": [{"role": "user", "content": "hello"}],
+        })
+
+        assert resp.status_code == 502
+        assert "x-uncommon-route-profile" not in resp.headers
+
+    def test_large_tool_result_creates_artifact(self, tmp_path) -> None:
+        session_store = SessionStore(SessionConfig(enabled=True, timeout_s=300))
+        spend_control = SpendControl(storage=InMemorySpendControlStorage())
+        artifact_store = ArtifactStore(root=tmp_path / "artifacts")
+        app = create_app(
+            upstream="http://127.0.0.1:1/fake",
+            session_store=session_store,
+            spend_control=spend_control,
+            artifact_store=artifact_store,
+        )
+        client = TestClient(app, raise_server_exceptions=False)
+
+        large_text = "\n".join(f"line {i} with repeated tool output" for i in range(3000))
+        resp = client.post("/v1/chat/completions", json={
+            "model": "uncommon-route/auto",
+            "messages": [
+                {"role": "user", "content": "analyze this output"},
+                {
+                    "role": "assistant",
+                    "content": "",
+                    "tool_calls": [{
+                        "id": "call_1",
+                        "type": "function",
+                        "function": {"name": "bash", "arguments": "{}"},
+                    }],
+                },
+                {"role": "tool", "tool_call_id": "call_1", "content": large_text},
+            ],
+        })
+
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-artifacts"] == "1"
+        assert int(resp.headers["x-uncommon-route-input-after"]) < int(resp.headers["x-uncommon-route-input-before"])
+
+        artifacts = client.get("/v1/artifacts").json()
+        assert artifacts["count"] == 1
+        artifact_id = artifacts["items"][0]["id"]
+        artifact = client.get(f"/v1/artifacts/{artifact_id}").json()
+        assert artifact["tool_name"] == "bash"
+        assert "line 0 with repeated tool output" in artifact["content"]
+
+    def test_semantic_headers_present_when_compressor_runs(self, tmp_path) -> None:
+        app = create_app(
+            upstream="http://127.0.0.1:1/fake",
+            session_store=SessionStore(SessionConfig(enabled=True, timeout_s=300)),
+            spend_control=SpendControl(storage=InMemorySpendControlStorage()),
+            artifact_store=ArtifactStore(root=tmp_path / "artifacts"),
+            semantic_compressor=FakeSemanticCompressor(),
+        )
+        client = TestClient(app, raise_server_exceptions=False)
+        large_text = "\n".join(f"tool output {i}" for i in range(2500))
+        resp = client.post("/v1/chat/completions", json={
+            "model": "uncommon-route/auto",
+            "messages": [
+                {"role": "user", "content": "analyze and keep using artifact:// references later"},
+                {
+                    "role": "assistant",
+                    "content": "",
+                    "tool_calls": [{
+                        "id": "call_1",
+                        "type": "function",
+                        "function": {"name": "bash", "arguments": "{}"},
+                    }],
+                },
+                {"role": "tool", "tool_call_id": "call_1", "content": large_text},
+            ],
+        })
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-semantic-calls"] == "1"
+        assert resp.headers["x-uncommon-route-artifacts"] == "1"
+
+    def test_semantic_quality_fallback_header_present(self, tmp_path) -> None:
+        app = create_app(
+            upstream="http://127.0.0.1:1/fake",
+            session_store=SessionStore(SessionConfig(enabled=True, timeout_s=300)),
+            spend_control=SpendControl(storage=InMemorySpendControlStorage()),
+            artifact_store=ArtifactStore(root=tmp_path / "artifacts"),
+            semantic_compressor=QualityFallbackSemanticCompressor(),
+        )
+        client = TestClient(app, raise_server_exceptions=False)
+        large_text = "\n".join(f"tool output {i}" for i in range(2500))
+        resp = client.post("/v1/chat/completions", json={
+            "model": "uncommon-route/auto",
+            "messages": [
+                {"role": "user", "content": "extract the critical error"},
+                {
+                    "role": "assistant",
+                    "content": "",
+                    "tool_calls": [{
+                        "id": "call_1",
+                        "type": "function",
+                        "function": {"name": "bash", "arguments": "{}"},
+                    }],
+                },
+                {"role": "tool", "tool_call_id": "call_1", "content": large_text},
+            ],
+        })
+
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-semantic-fallbacks"] == "3"
 
     def test_passthrough_no_routing_headers(self, client: TestClient) -> None:
         resp = client.post("/v1/chat/completions", json={

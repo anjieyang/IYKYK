@@ -41,8 +41,12 @@ export interface Stats {
   avg_latency_us: number;
   total_estimated_cost: number;
   total_actual_cost: number;
+  total_cache_breakpoints: number;
   by_tier: Record<string, TierStats>;
   by_model: Record<string, ModelStats>;
+  by_transport: Record<string, ModelStats>;
+  by_cache_mode: Record<string, ModelStats>;
+  by_cache_family: Record<string, ModelStats>;
   by_method: Record<string, number>;
 }
 
@@ -130,6 +134,10 @@ export interface RecentRequest {
   method: string;
   cost: number;
   savings: number;
+  transport: string;
+  cache_mode: string;
+  cache_family: string;
+  cache_breakpoints: number;
   prompt_preview: string;
   feedback_pending: boolean;
 }

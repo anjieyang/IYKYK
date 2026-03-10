@@ -14,6 +14,32 @@ class Tier(str, Enum):
     REASONING = "REASONING"
 
 
+class RoutingProfile(str, Enum):
+    FREE = "free"
+    ECO = "eco"
+    AUTO = "auto"
+    PREMIUM = "premium"
+    AGENTIC = "agentic"
+
+
+@dataclass(frozen=True, slots=True)
+class ModelCapabilities:
+    tool_calling: bool = False
+    vision: bool = False
+    reasoning: bool = False
+    free: bool = False
+    local: bool = False
+    responses: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class RequestRequirements:
+    needs_tool_calling: bool = False
+    needs_vision: bool = False
+    prefers_reasoning: bool = False
+    is_agentic: bool = False
+
+
 
 @dataclass(frozen=True, slots=True)
 class DimensionScore:
@@ -36,6 +62,7 @@ class ScoringResult:
 class RoutingDecision:
     model: str
     tier: Tier
+    profile: RoutingProfile
     confidence: float
     method: Literal["rules", "cascade"]
     reasoning: str
@@ -45,6 +72,7 @@ class RoutingDecision:
     agentic_score: float = 0.0
     suggested_output_budget: int = 4096
     fallback_chain: list[FallbackOption] = field(default_factory=list)
+    candidate_scores: list[CandidateScore] = field(default_factory=list)
 
 
 @dataclass(frozen=True, slots=True)
@@ -53,6 +81,27 @@ class FallbackOption:
     model: str
     cost_estimate: float
     suggested_output_budget: int
+
+
+@dataclass(frozen=True, slots=True)
+class CandidateScore:
+    model: str
+    total: float
+    predicted_cost: float
+    effective_cost_multiplier: float = 1.0
+    editorial: float = 0.0
+    cost: float = 0.0
+    latency: float = 0.0
+    reliability: float = 0.0
+    feedback: float = 0.0
+    cache_affinity: float = 0.0
+    byok: float = 0.0
+    free_bias: float = 0.0
+    local_bias: float = 0.0
+    reasoning_bias: float = 0.0
+    bandit_mean: float = 0.5
+    exploration_bonus: float = 0.0
+    samples: int = 0
 
 
 @dataclass(frozen=True, slots=True)
@@ -65,6 +114,34 @@ class TierConfig:
 class ModelPricing:
     input_price: float  # per 1M tokens
     output_price: float  # per 1M tokens
+    cached_input_price: float | None = None  # per 1M cached-read tokens
+    cache_write_price: float | None = None  # per 1M cache-write / cache-create tokens
+
+
+@dataclass(frozen=True, slots=True)
+class SelectionWeights:
+    editorial: float = 0.4
+    cost: float = 0.2
+    latency: float = 0.1
+    reliability: float = 0.1
+    feedback: float = 0.1
+    cache_affinity: float = 0.05
+    byok: float = 0.05
+    free_bias: float = 0.0
+    local_bias: float = 0.0
+    reasoning_bias: float = 0.05
+
+
+@dataclass(frozen=True, slots=True)
+class BanditConfig:
+    enabled: bool = True
+    reward_weight: float = 0.12
+    exploration_weight: float = 0.18
+    warmup_pulls: int = 2
+    min_samples_for_guardrail: int = 3
+    min_reliability: float = 0.25
+    max_cost_ratio: float = 3.0
+    enabled_tiers: tuple[Tier, ...] = (Tier.SIMPLE, Tier.MEDIUM)
 
 
 @dataclass
@@ -122,6 +199,16 @@ class RoutingConfig:
     version: str = "3.0"
     scoring: ScoringConfig = field(default_factory=ScoringConfig)
     tiers: dict[Tier, TierConfig] = field(default_factory=dict)
+    free_tiers: dict[Tier, TierConfig] = field(default_factory=dict)
+    eco_tiers: dict[Tier, TierConfig] = field(default_factory=dict)
+    premium_tiers: dict[Tier, TierConfig] = field(default_factory=dict)
+    agentic_tiers: dict[Tier, TierConfig] = field(default_factory=dict)
+    selection_profiles: dict[RoutingProfile, SelectionWeights] = field(default_factory=dict)
+    agentic_selection: SelectionWeights | None = None
+    bandit_profiles: dict[RoutingProfile, BanditConfig] = field(default_factory=dict)
+    agentic_bandit: BanditConfig | None = None
+    model_capabilities: dict[str, ModelCapabilities] = field(default_factory=dict)
+    free_model: str = "nvidia/gpt-oss-120b"
     max_tokens_force_complex: int = 100_000
     structured_output_min_tier: Tier = Tier.MEDIUM
     ambiguous_default_tier: Tier = Tier.MEDIUM

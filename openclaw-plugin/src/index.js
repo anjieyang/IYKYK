@@ -16,7 +16,7 @@
 import { spawn, execSync } from "node:child_process";
 import { setTimeout as sleep } from "node:timers/promises";
 
-const VERSION = "0.2.5";
+const VERSION = "0.2.6";
 const DEFAULT_PORT = 8403;
 const DEFAULT_UPSTREAM = "";
 const HEALTH_TIMEOUT_MS = 15_000;
@@ -25,6 +25,10 @@ const PY_PACKAGE = "uncommon-route";
 
 const MODELS = [
   { id: "uncommon-route/auto", name: "UncommonRoute Auto", reasoning: false, input: 0, output: 0, ctx: 200_000, max: 16_384 },
+  { id: "uncommon-route/eco", name: "UncommonRoute Eco", reasoning: false, input: 0, output: 0, ctx: 200_000, max: 16_384 },
+  { id: "uncommon-route/premium", name: "UncommonRoute Premium", reasoning: true, input: 0, output: 0, ctx: 200_000, max: 16_384 },
+  { id: "uncommon-route/free", name: "UncommonRoute Free", reasoning: false, input: 0, output: 0, ctx: 200_000, max: 16_384 },
+  { id: "uncommon-route/agentic", name: "UncommonRoute Agentic", reasoning: true, input: 0, output: 0, ctx: 200_000, max: 16_384 },
   { id: "moonshot/kimi-k2.5", name: "Kimi K2.5", reasoning: false, input: 0.60, output: 3.00, ctx: 128_000, max: 8_192 },
   { id: "google/gemini-3.1-pro", name: "Gemini 3.1 Pro", reasoning: false, input: 2.00, output: 12.00, ctx: 200_000, max: 16_384 },
   { id: "xai/grok-4-1-fast-reasoning", name: "Grok 4.1 Fast", reasoning: true, input: 0.20, output: 0.50, ctx: 200_000, max: 16_384 },

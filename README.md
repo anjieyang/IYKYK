@@ -181,6 +181,16 @@ response = client.chat.completions.create(
 )
 ```
 
+Available virtual routing profiles:
+
+| Model | Strategy |
+|---|---|
+| `uncommon-route/auto` | Balanced default |
+| `uncommon-route/eco` | Cheapest capable model first |
+| `uncommon-route/premium` | Quality-first routing |
+| `uncommon-route/free` | Free-first, then cheapest capable fallback |
+| `uncommon-route/agentic` | Tool-heavy workflow routing |
+
 | Endpoint | Method | Format | Description |
 |---|---|---|---|
 | `/v1/chat/completions` | POST | OpenAI | Chat with smart routing |
@@ -190,6 +200,9 @@ response = client.chat.completions.create(
 | `/v1/spend` | GET/POST | — | Spend control |
 | `/v1/sessions` | GET | — | Active sessions |
 | `/v1/stats` | GET/POST | — | Routing analytics |
+| `/v1/selector` | GET/POST | — | Selector state + routing preview |
+| `/v1/artifacts` | GET | — | Stored large tool outputs |
+| `/v1/artifacts/{id}` | GET | — | Retrieve a stored artifact |
 | `/v1/feedback` | GET/POST | — | Online learning feedback |
 | `/health` | GET | — | Health + status |
 | `/dashboard` | GET | — | Web management UI |
@@ -201,6 +214,8 @@ uncommon-route setup claude-code   # prints env vars for your shell
 ```
 
 Claude Code connects via the Anthropic Messages API (`/v1/messages`). All requests are automatically smart-routed — the proxy converts between Anthropic and OpenAI formats transparently.
+
+When the selected model is an Anthropic-family model and the upstream is Commonstack or Anthropic directly, UncommonRoute now preserves the request on the native Anthropic `/v1/messages` path so `cache_control` breakpoints and Anthropic cache usage survive end to end.
 
 ```bash
 # Terminal 1
@@ -219,6 +234,8 @@ uncommon-route setup codex         # prints env vars for your shell
 ```
 
 Codex connects via the OpenAI Chat Completions API (`/v1/chat/completions`). Use `model="uncommon-route/auto"` for smart routing.
+
+The same Anthropic-native transport is also used behind `/v1/chat/completions` when routing lands on an Anthropic model, so OpenAI-compatible clients still get normal chat-completions JSON/SSE while the upstream request uses Anthropic-native caching semantics.
 
 ```bash
 # Terminal 1
@@ -257,8 +274,8 @@ http://127.0.0.1:8403/dashboard/
 
 | Tab | What it shows |
 |---|---|
-| **Overview** | KPI cards (requests, savings, latency, sessions, cost), tier distribution chart, top models |
-| **Routing** | Breakdown by tier, model, and routing method |
+| **Overview** | KPI cards (requests, savings, latency, sessions, cost), tier distribution chart, top models, transport/cache usage summary |
+| **Routing** | Breakdown by tier, model, routing method, upstream transport, cache mode/family, cache breakpoints |
 | **Models** | Upstream model discovery status, full internal → resolved mapping table |
 | **Sessions** | Active sessions with model, tier, request count, age |
 | **Spend** | Current limits, set/clear limits, spending history |
@@ -266,6 +283,8 @@ http://127.0.0.1:8403/dashboard/
 The dashboard handles edge cases gracefully: a loading spinner while connecting, a guided setup card when no requests have been made yet, and clear error states when the proxy is unreachable or the upstream is not configured.
 
 Data auto-refreshes every 5 seconds. Built with React + [Tremor](https://tremor.so) + Tailwind CSS.
+
+`GET /v1/stats` also exposes the same transport/cache observability data programmatically via `by_transport`, `by_cache_mode`, `by_cache_family`, and `total_cache_breakpoints`.
 
 ---
 
@@ -326,6 +345,43 @@ Input Prompt
 
 ---
 
+## Routing Profiles
+
+Profiles choose *which tier table* to use before model selection:
+
+| Profile | Best For | SIMPLE | MEDIUM | COMPLEX | REASONING |
+|---|---|---|---|---|---|
+| `auto` | General default | kimi-k2.5 | kimi-k2.5 | gemini-3.1-pro | grok-4.1-fast-reasoning |
+| `eco` | Cost minimization | gpt-oss-120b | gemini-2.5-flash-lite | gemini-2.5-flash-lite | grok-4.1-fast-reasoning |
+| `premium` | Quality-first routing | gpt-4o | gpt-5.2-codex | claude-opus-4.6 | claude-sonnet-4.6 |
+| `free` | Free-first routing | gpt-oss-120b | gpt-oss-120b | gpt-oss-120b | gpt-oss-120b |
+| `agentic` | Tool-heavy workflows | kimi-k2.5 | kimi-k2.5 | claude-sonnet-4.6 | claude-sonnet-4.6 |
+
+`free` is best-effort free, not a hard guarantee. If the free model lacks required capabilities (for example tool calling), UncommonRoute falls back to the cheapest capable model instead of forcing an obviously bad choice.
+
+Within each tier, UncommonRoute now uses an adaptive candidate chooser instead of always taking the configured primary model. Each profile applies different weights to:
+
+- curated candidate order
+- predicted token cost
+- observed latency / throughput
+- observed reliability
+- explicit user feedback
+- cache affinity and effective cached-input cost
+- BYOK / free / local biases
+
+That means `eco`, `auto`, `premium`, `free`, and `agentic` can all prefer different models even when they land on the same tier.
+
+On top of those profile weights, UncommonRoute now applies a lightweight bandit scheduler. The current weighted score remains the base policy, then the router adds:
+
+- learned reward from observed success / latency / throughput
+- learned reward from real cache-hit efficiency and cached-input savings
+- a bounded exploration bonus for under-sampled candidates
+- guardrails that disable exploration for low-reliability or overly expensive candidates
+
+Bandit exploration is bucketed by `profile + tier`, so low-risk paths like `SIMPLE` and `MEDIUM` can adapt quickly without destabilizing `REASONING` traffic.
+
+You can inspect the live selector state with `GET /v1/selector`, including current profile weights, bandit config, promoted/demoted models, and recent feedback-driven changes. `POST /v1/selector` accepts either a normal chat-completions-shaped payload or a lightweight `{ "profile": "auto", "prompt": "..." }` body and returns the full candidate score breakdown for that request. The same selector summary is also exposed via `/health` and `/v1/stats`.
+
 ## Routing Tiers
 
 The router classifies each prompt and selects the **cheapest model that can handle it**. Default primary models are chosen for cost efficiency — all models (including OpenAI, Claude) are accessible through the upstream provider.
@@ -356,6 +412,54 @@ In agentic workflows (OpenClaw, LangChain, etc.), different steps within a singl
 **After (step-aware):** Tool-result steps automatically use $0.40-2.50/M models. Only steps that need reasoning use expensive models.
 
 The step type is visible in the `x-uncommon-route-step` response header.
+
+When a request includes `tools` or image content, UncommonRoute now filters out models that do not advertise the required capability before building the fallback chain. Fallback order follows the selected profile instead of globally sorting everything by cost.
+
+When the upstream returns runtime usage telemetry such as `ttft`, `tps`, `cache_read_input_tokens`, `cache_creation_input_tokens`, or `prompt_tokens_details.cached_tokens` (for example through Commonstack's OpenAI-compatible responses), UncommonRoute feeds those observations back into candidate scoring for future requests. Cached reads are now priced separately when the upstream exposes them, so the selector can learn that some models become much cheaper after the prefix stabilizes.
+
+For `tool-selection` steps, the router now applies a cache-first tier cap before model choice. This keeps the "pick the next tool" turn on a cheaper tool-capable model and leaves the expensive reasoning model for the follow-up step that actually consumes the tool result.
+
+## Composition Pipeline
+
+Large `role: "tool"` payloads are no longer forwarded verbatim by default. UncommonRoute now applies a composition pipeline before forwarding:
+
+- Safe compaction for long text / JSON payloads
+- Artifact offload for very large tool results
+- Semantic side-channel summaries for large tool outputs
+- Checkpoint summaries when the conversation history grows too large
+- Explicit artifact rehydration when the user references `artifact://...`
+
+Artifacts are stored locally under `~/.uncommon-route/artifacts/` and exposed via `/v1/artifacts`.
+
+Useful response headers:
+
+- `x-uncommon-route-input-before`
+- `x-uncommon-route-input-after`
+- `x-uncommon-route-artifacts`
+- `x-uncommon-route-semantic-calls`
+- `x-uncommon-route-semantic-fallbacks`
+- `x-uncommon-route-checkpoints`
+- `x-uncommon-route-rehydrated`
+
+The side-channel models are configured independently from routing profiles. By default, tool summaries, checkpoints, and rehydration each have their own primary model, fallback chain, token budget, and quality gate. You can override the full composition policy with:
+
+```bash
+export UNCOMMON_ROUTE_COMPOSITION_CONFIG=/path/to/composition.json
+# or
+export UNCOMMON_ROUTE_COMPOSITION_CONFIG_JSON='{"sidechannel":{"tool_summary":{"primary":"openai/gpt-4o-mini"}}}'
+
+uncommon-route serve --composition-config /path/to/composition.json
+```
+
+The active composition policy is visible via `/health` under `composition.policy`.
+
+Checkpointing is now cache-aware for agentic workflows:
+
+- `tool-selection` turns skip checkpointing entirely
+- active tool windows delay checkpoint creation
+- agentic sessions use a higher checkpoint token threshold and preserve a longer raw tail
+
+That keeps Claude Code / OpenClaw style sessions append-only for longer, which improves prompt-cache hit rates instead of rewriting the middle of the transcript too early.
 
 ---
 

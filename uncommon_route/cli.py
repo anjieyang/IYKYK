@@ -27,15 +27,15 @@ import signal
 import subprocess
 import sys
 import time
-from pathlib import Path
 
+from uncommon_route.paths import data_dir
 from uncommon_route.router.api import route
 from uncommon_route.router.classifier import classify
 from uncommon_route.router.structural import extract_structural_features, extract_unicode_block_features
 from uncommon_route.router.keywords import extract_keyword_features
 
-VERSION = "0.2.4"
-_DATA_DIR = Path.home() / ".uncommon-route"
+VERSION = "0.2.6"
+_DATA_DIR = data_dir()
 _PID_FILE = _DATA_DIR / "serve.pid"
 _LOG_FILE = _DATA_DIR / "serve.log"
 
@@ -74,6 +74,7 @@ Serve options:
   --port <n>                          Port to listen on (default: 8403)
   --host <addr>                       Host to bind (default: 127.0.0.1)
   --upstream <url>                    Upstream API base URL
+  --composition-config <path>         JSON composition policy override
   --daemon                            Run in background (logs to ~/.uncommon-route/serve.log)
 
 Logs options:
@@ -290,6 +291,7 @@ def _cmd_serve(args: list[str]) -> None:
         "port": True,
         "host": True,
         "upstream": True,
+        "composition-config": True,
         "daemon": False,
         "background": False,
     })
@@ -299,6 +301,7 @@ def _cmd_serve(args: list[str]) -> None:
     port = int(flags.get("port", DEFAULT_PORT))
     host = str(flags.get("host", "127.0.0.1"))
     upstream = str(flags.get("upstream", DEFAULT_UPSTREAM))
+    composition_config = str(flags.get("composition-config", "")).strip()
     daemon = bool(flags.get("daemon") or flags.get("background"))
 
     if daemon:
@@ -316,6 +319,8 @@ def _cmd_serve(args: list[str]) -> None:
                "--port", str(port), "--host", host]
         if upstream:
             cmd.extend(["--upstream", upstream])
+        if composition_config:
+            cmd.extend(["--composition-config", composition_config])
 
         with open(_LOG_FILE, "a") as lf:
             proc = subprocess.Popen(
@@ -331,6 +336,8 @@ def _cmd_serve(args: list[str]) -> None:
         return
 
     from uncommon_route.proxy import serve
+    if composition_config:
+        os.environ["UNCOMMON_ROUTE_COMPOSITION_CONFIG"] = composition_config
     serve(port=port, host=host, upstream=upstream)
 
 
@@ -575,7 +582,29 @@ def _cmd_stats(args: list[str]) -> None:
         print(f"  Avg confidence: {s.avg_confidence:.2f}")
         print(f"  Avg savings:    {s.avg_savings:.0%}")
         print(f"  Avg latency:    {s.avg_latency_us:.0f}µs")
+        print(f"  Avg reduction:  {s.avg_input_reduction_ratio:.0%}")
+        print(f"  Avg cache hit:  {s.avg_cache_hit_ratio:.0%}")
         print(f"  Total cost:     ${s.total_actual_cost:.4f} (estimated: ${s.total_estimated_cost:.4f})")
+        print(
+            f"  Input tokens:   {s.total_input_tokens_before} -> {s.total_input_tokens_after}"
+            f"  | artifacts: {s.total_artifacts_created}"
+            f"  | compacted: {s.total_compacted_messages}"
+        )
+        print(
+            f"  Upstream usage: in {s.total_usage_input_tokens}"
+            f"  | out {s.total_usage_output_tokens}"
+            f"  | cache-read {s.total_cache_read_input_tokens}"
+            f"  | cache-write {s.total_cache_write_input_tokens}"
+            f"  | breakpoints {s.total_cache_breakpoints}"
+        )
+        print(
+            f"  Semantic:       calls {s.total_semantic_calls}"
+            f"  | summaries {s.total_semantic_summaries}"
+            f"  | checkpoints {s.total_checkpoints_created}"
+            f"  | rehydrated {s.total_rehydrated_artifacts}"
+            f"  | failures {s.total_semantic_failures}"
+            f"  | quality-fallbacks {s.total_semantic_quality_fallbacks}"
+        )
 
         if s.by_tier:
             print(f"\n  By Tier:")
@@ -597,11 +626,35 @@ def _cmd_stats(args: list[str]) -> None:
             for model, ms in ranked[:8]:
                 print(f"    {model:<40} {ms.count:>5} reqs  ${ms.total_cost:.4f}")
 
+        if s.by_profile:
+            print(f"\n  By Profile:")
+            for profile, count in sorted(s.by_profile.items(), key=lambda x: -x[1]):
+                pct = count / s.total_requests * 100
+                print(f"    {profile:<20} {count:>5} ({pct:.1f}%)")
+
         if s.by_method:
             print(f"\n  By Method:")
             for method, count in sorted(s.by_method.items(), key=lambda x: -x[1]):
                 pct = count / s.total_requests * 100
                 print(f"    {method:<20} {count:>5} ({pct:.1f}%)")
+
+        if s.by_transport:
+            print(f"\n  By Transport:")
+            for transport, ms in sorted(s.by_transport.items(), key=lambda x: -x[1].count):
+                pct = ms.count / s.total_requests * 100
+                print(f"    {transport:<20} {ms.count:>5} ({pct:.1f}%)  ${ms.total_cost:.4f}")
+
+        if s.by_cache_mode:
+            print(f"\n  By Cache Mode:")
+            for cache_mode, ms in sorted(s.by_cache_mode.items(), key=lambda x: -x[1].count):
+                pct = ms.count / s.total_requests * 100
+                print(f"    {cache_mode:<20} {ms.count:>5} ({pct:.1f}%)  ${ms.total_cost:.4f}")
+
+        if s.by_cache_family:
+            print(f"\n  By Cache Family:")
+            for cache_family, ms in sorted(s.by_cache_family.items(), key=lambda x: -x[1].count):
+                pct = ms.count / s.total_requests * 100
+                print(f"    {cache_family:<20} {ms.count:>5} ({pct:.1f}%)  ${ms.total_cost:.4f}")
         print()
 
     elif sub == "history":
@@ -615,7 +668,20 @@ def _cmd_stats(args: list[str]) -> None:
         for r in records:
             ts = time.strftime("%H:%M:%S", time.localtime(r.timestamp))
             cost_str = f"${r.actual_cost:.6f}" if r.actual_cost is not None else f"~${r.estimated_cost:.6f}"
-            print(f"    {ts}  {r.tier:<10} {r.model:<35} {cost_str}  [{r.method}]")
+            token_delta = ""
+            if r.input_tokens_before > 0:
+                token_delta = f"  {r.input_tokens_before}->{r.input_tokens_after}t"
+            artifact_tag = f"  art:{r.artifacts_created}" if r.artifacts_created else ""
+            semantic_tag = f"  sem:{r.semantic_calls}" if r.semantic_calls else ""
+            quality_tag = f"  qfb:{r.semantic_quality_fallbacks}" if r.semantic_quality_fallbacks else ""
+            transport_tag = f"  {r.transport}"
+            cache_tag = f"  cache:{r.cache_mode}"
+            breakpoint_tag = f"  bp:{r.cache_breakpoints}" if r.cache_breakpoints else ""
+            print(
+                f"    {ts}  {r.profile:<8} {r.tier:<10} {r.model:<35}"
+                f" {cost_str}  [{r.method}]{transport_tag}{cache_tag}{breakpoint_tag}"
+                f"{token_delta}{artifact_tag}{semantic_tag}{quality_tag}"
+            )
 
     elif sub == "reset":
         rs.reset()

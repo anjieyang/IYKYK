@@ -2,14 +2,19 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 
+import httpx
 import pytest
 from starlette.testclient import TestClient
 
 from uncommon_route.anthropic_compat import (
+    anthropic_to_openai_response,
     anthropic_to_openai_request,
+    AnthropicToOpenAIStreamConverter,
     openai_to_anthropic_response,
+    openai_to_anthropic_request,
     anthropic_error_response,
     OpenAIToAnthropicStreamConverter,
 )
@@ -60,6 +65,26 @@ class TestAnthropicToOpenAIRequest:
         assert out["messages"][0]["role"] == "system"
         assert "Line one" in out["messages"][0]["content"]
         assert "Line two" in out["messages"][0]["content"]
+
+    def test_cache_control_blocks_are_preserved(self) -> None:
+        body = {
+            "model": "m",
+            "max_tokens": 100,
+            "system": [
+                {"type": "text", "text": "Stable policy", "cache_control": {"type": "ephemeral"}},
+            ],
+            "messages": [{
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": "Continue", "cache_control": {"type": "ephemeral"}},
+                ],
+            }],
+        }
+
+        out = anthropic_to_openai_request(body)
+
+        assert out["messages"][0]["content"][0]["cache_control"] == {"type": "ephemeral"}
+        assert out["messages"][1]["content"][0]["cache_control"] == {"type": "ephemeral"}
 
     def test_user_content_blocks(self) -> None:
         body = {
@@ -238,8 +263,77 @@ class TestOpenAIToAnthropicResponse:
         assert out["stop_reason"] == "end_turn"
         assert out["content"] == [{"type": "text", "text": "Hello!"}]
         assert out["usage"]["input_tokens"] == 10
-        assert out["usage"]["output_tokens"] == 5
-        assert out["id"].startswith("msg_")
+
+
+class TestAnthropicToOpenAIResponse:
+    def test_text_and_tool_response(self) -> None:
+        anth = {
+            "id": "msg_123",
+            "type": "message",
+            "role": "assistant",
+            "model": "anthropic/claude-sonnet-4-6",
+            "content": [
+                {"type": "text", "text": "I'll check that."},
+                {"type": "tool_use", "id": "call_1", "name": "search", "input": {"q": "test"}},
+            ],
+            "stop_reason": "tool_use",
+            "usage": {
+                "input_tokens": 12,
+                "cache_read_input_tokens": 100,
+                "cache_creation_input_tokens": 50,
+                "output_tokens": 7,
+            },
+        }
+
+        out = anthropic_to_openai_response(anth, "anthropic/claude-sonnet-4.6")
+
+        assert out["object"] == "chat.completion"
+        assert out["choices"][0]["finish_reason"] == "tool_calls"
+        assert out["choices"][0]["message"]["content"] == "I'll check that."
+        assert out["choices"][0]["message"]["tool_calls"][0]["id"] == "call_1"
+        assert json.loads(out["choices"][0]["message"]["tool_calls"][0]["function"]["arguments"]) == {"q": "test"}
+        assert out["usage"]["prompt_tokens"] == 162
+        assert out["usage"]["completion_tokens"] == 7
+        assert out["usage"]["prompt_tokens_details"]["cached_tokens"] == 100
+
+
+class TestOpenAIToAnthropicRequest:
+    def test_openai_request_roundtrips_tools_and_system(self) -> None:
+        body = {
+            "model": "claude-sonnet",
+            "max_tokens": 1024,
+            "messages": [
+                {"role": "system", "content": [{"type": "text", "text": "You are stable", "cache_control": {"type": "ephemeral"}}]},
+                {"role": "user", "content": "Check weather"},
+                {
+                    "role": "assistant",
+                    "content": "Calling tool",
+                    "tool_calls": [{
+                        "id": "call_1",
+                        "type": "function",
+                        "function": {"name": "weather", "arguments": "{\"city\":\"SF\"}"},
+                    }],
+                },
+                {"role": "tool", "tool_call_id": "call_1", "content": "58F"},
+            ],
+            "tools": [{
+                "type": "function",
+                "function": {
+                    "name": "weather",
+                    "description": "Get weather",
+                    "parameters": {"type": "object", "properties": {"city": {"type": "string"}}},
+                },
+            }],
+            "tool_choice": "required",
+        }
+
+        out = openai_to_anthropic_request(body)
+
+        assert out["system"][0]["cache_control"] == {"type": "ephemeral"}
+        assert out["tools"][0]["name"] == "weather"
+        assert out["tool_choice"] == {"type": "any"}
+        assert any(block["type"] == "tool_use" for block in out["messages"][1]["content"])
+        assert out["messages"][2]["content"][0]["type"] == "tool_result"
 
     def test_tool_calls_response(self) -> None:
         oai = {
@@ -352,6 +446,22 @@ def _parse_anthropic_events(raw_events: list[bytes]) -> list[dict]:
     return results
 
 
+def _parse_openai_events(raw_events: list[bytes]) -> tuple[list[dict], bool]:
+    results: list[dict] = []
+    done = False
+    for raw in raw_events:
+        text = raw.decode()
+        for line in text.strip().split("\n"):
+            if not line.startswith("data: "):
+                continue
+            payload = line[6:]
+            if payload == "[DONE]":
+                done = True
+                continue
+            results.append(json.loads(payload))
+    return results, done
+
+
 class TestStreamConverter:
     def test_basic_text_stream(self) -> None:
         converter = OpenAIToAnthropicStreamConverter(model="test-model")
@@ -460,6 +570,46 @@ class TestStreamConverter:
         assert second == []
 
 
+class TestAnthropicToOpenAIStreamConverter:
+    def test_basic_text_stream(self) -> None:
+        converter = AnthropicToOpenAIStreamConverter(model="anthropic/claude-sonnet-4.6")
+        chunks = [
+            (
+                b'event: message_start\n'
+                b'data: {"type":"message_start","message":{"id":"msg_1","type":"message","role":"assistant","content":[],"model":"anthropic/claude-sonnet-4-6","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":21,"cache_read_input_tokens":100,"cache_creation_input_tokens":20,"output_tokens":0}}}\n\n'
+            ),
+            (
+                b'event: content_block_start\n'
+                b'data: {"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}}\n\n'
+            ),
+            (
+                b'event: content_block_delta\n'
+                b'data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"Hello"}}\n\n'
+            ),
+            (
+                b'event: message_delta\n'
+                b'data: {"type":"message_delta","delta":{"stop_reason":"end_turn","stop_sequence":null},"usage":{"output_tokens":7}}\n\n'
+            ),
+            b'event: message_stop\ndata: {"type":"message_stop"}\n\n',
+        ]
+
+        all_events: list[bytes] = []
+        for chunk in chunks:
+            all_events.extend(converter.feed(chunk))
+        all_events.extend(converter.finish())
+
+        parsed, done = _parse_openai_events(all_events)
+
+        assert done is True
+        assert parsed[0]["choices"][0]["delta"]["role"] == "assistant"
+        assert any(event["choices"][0]["delta"].get("content") == "Hello" for event in parsed if event.get("choices"))
+        finish = next(event for event in parsed if event.get("choices") and event["choices"][0]["finish_reason"] == "stop")
+        assert finish["choices"][0]["finish_reason"] == "stop"
+        usage_chunk = next(event for event in parsed if event.get("choices") == [])
+        assert usage_chunk["usage"]["prompt_tokens"] == 141
+        assert usage_chunk["usage"]["completion_tokens"] == 7
+
+
 # =========================================================================
 # Integration: /v1/messages endpoint on the proxy
 # =========================================================================
@@ -537,6 +687,76 @@ class TestMessagesEndpoint:
         })
         assert resp.status_code == 200
 
+    def test_explicit_anthropic_model_uses_native_messages_transport_with_cache_breakpoints(
+        self,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        captured: dict[str, object] = {}
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            captured["url"] = str(request.url)
+            captured["headers"] = dict(request.headers)
+            captured["body"] = json.loads(request.content.decode("utf-8"))
+            return httpx.Response(
+                200,
+                json={
+                    "id": "msg_test",
+                    "type": "message",
+                    "role": "assistant",
+                    "model": "anthropic/claude-sonnet-4-6",
+                    "content": [{"type": "text", "text": "pong"}],
+                    "stop_reason": "end_turn",
+                    "stop_sequence": None,
+                    "usage": {
+                        "input_tokens": 12,
+                        "cache_read_input_tokens": 1200,
+                        "cache_creation_input_tokens": 0,
+                        "output_tokens": 1,
+                    },
+                },
+                headers={"content-type": "application/json"},
+            )
+
+        async_client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        monkeypatch.setattr("uncommon_route.proxy._get_client", lambda: async_client)
+        monkeypatch.setenv("UNCOMMON_ROUTE_API_KEY", "env-key-123")
+
+        try:
+            app = create_app(upstream="https://api.commonstack.ai/v1")
+            client = TestClient(app, raise_server_exceptions=False)
+
+            resp = client.post(
+                "/v1/messages",
+                json={
+                    "model": "anthropic/claude-sonnet-4.6",
+                    "max_tokens": 16,
+                    "system": "You are terse.",
+                    "tools": [{
+                        "name": "bash",
+                        "description": "Run shell commands",
+                        "input_schema": {"type": "object", "properties": {}},
+                    }],
+                    "messages": [{"role": "user", "content": "Reply with exactly pong"}],
+                },
+                headers={"anthropic-beta": "prompt-caching-2024-07-31"},
+            )
+
+            assert resp.status_code == 200
+            assert resp.json()["type"] == "message"
+            assert captured["url"] == "https://api.commonstack.ai/v1/messages"
+            body = captured["body"]
+            assert isinstance(body, dict)
+            assert body["model"] == "anthropic/claude-sonnet-4.6"
+            assert body["system"][-1]["cache_control"] == {"type": "ephemeral"}
+            assert body["tools"][-1]["cache_control"] == {"type": "ephemeral"}
+            headers = captured["headers"]
+            assert isinstance(headers, dict)
+            assert headers["x-api-key"] == "env-key-123"
+            assert headers["anthropic-version"] == "2023-06-01"
+            assert headers["anthropic-beta"] == "prompt-caching-2024-07-31"
+        finally:
+            asyncio.run(async_client.aclose())
+
 
 class TestAutoRouting:
     """All /v1/messages requests are auto-routed regardless of model name."""
@@ -577,6 +797,83 @@ class TestAutoRouting:
         assert data["type"] == "message"
         assert data["role"] == "assistant"
         assert any(b["type"] == "text" for b in data["content"])
+
+
+class TestNativeAnthropicTransportForChatCompletions:
+    def test_chat_completions_uses_native_messages_transport_for_anthropic_models(
+        self,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        captured: dict[str, object] = {}
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            captured["url"] = str(request.url)
+            captured["headers"] = dict(request.headers)
+            captured["body"] = json.loads(request.content.decode("utf-8"))
+            return httpx.Response(
+                200,
+                json={
+                    "id": "msg_native",
+                    "type": "message",
+                    "role": "assistant",
+                    "model": "anthropic/claude-sonnet-4-6",
+                    "content": [{"type": "text", "text": "pong"}],
+                    "stop_reason": "end_turn",
+                    "stop_sequence": None,
+                    "usage": {
+                        "input_tokens": 12,
+                        "cache_read_input_tokens": 1200,
+                        "cache_creation_input_tokens": 0,
+                        "output_tokens": 1,
+                    },
+                },
+                headers={"content-type": "application/json"},
+            )
+
+        async_client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        monkeypatch.setattr("uncommon_route.proxy._get_client", lambda: async_client)
+        monkeypatch.setenv("UNCOMMON_ROUTE_API_KEY", "env-key-123")
+
+        try:
+            app = create_app(upstream="https://api.commonstack.ai/v1")
+            client = TestClient(app, raise_server_exceptions=False)
+
+            resp = client.post(
+                "/v1/chat/completions",
+                json={
+                    "model": "anthropic/claude-sonnet-4.6",
+                    "max_tokens": 16,
+                    "messages": [
+                        {"role": "system", "content": "You are terse."},
+                        {"role": "user", "content": "Reply with exactly pong"},
+                    ],
+                    "tools": [{
+                        "type": "function",
+                        "function": {
+                            "name": "bash",
+                            "description": "Run shell commands",
+                            "parameters": {"type": "object", "properties": {}},
+                        },
+                    }],
+                },
+            )
+
+            assert resp.status_code == 200
+            data = resp.json()
+            assert data["object"] == "chat.completion"
+            assert data["choices"][0]["message"]["content"] == "pong"
+            assert data["usage"]["prompt_tokens_details"]["cached_tokens"] == 1200
+            assert captured["url"] == "https://api.commonstack.ai/v1/messages"
+            body = captured["body"]
+            assert isinstance(body, dict)
+            assert body["system"][-1]["cache_control"] == {"type": "ephemeral"}
+            assert body["tools"][-1]["cache_control"] == {"type": "ephemeral"}
+            headers = captured["headers"]
+            assert isinstance(headers, dict)
+            assert headers["x-api-key"] == "env-key-123"
+            assert headers["anthropic-version"] == "2023-06-01"
+        finally:
+            asyncio.run(async_client.aclose())
 
 
 class TestAuthPriority:

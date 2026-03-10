@@ -20,6 +20,7 @@ from typing import Any
 class SessionEntry:
     model: str
     tier: str
+    profile: str
     created_at: float
     last_used_at: float
     request_count: int = 1
@@ -61,7 +62,7 @@ class SessionStore:
             return None
         return entry
 
-    def set(self, session_id: str, model: str, tier: str) -> None:
+    def set(self, session_id: str, model: str, tier: str, profile: str = "auto") -> None:
         if not self._config.enabled or not session_id:
             return
         now = time.monotonic()
@@ -72,10 +73,12 @@ class SessionStore:
             if existing.model != model:
                 existing.model = model
                 existing.tier = tier
+            existing.profile = profile
         else:
             self._sessions[session_id] = SessionEntry(
                 model=model,
                 tier=tier,
+                profile=profile,
                 created_at=now,
                 last_used_at=now,
             )
@@ -146,6 +149,7 @@ class SessionStore:
                 "id": sid[:8] + "...",
                 "model": entry.model,
                 "tier": entry.tier,
+                "profile": entry.profile,
                 "requests": entry.request_count,
                 "age_s": round(now - entry.created_at),
             }
