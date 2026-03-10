@@ -28,6 +28,7 @@ import signal
 import subprocess
 import sys
 import time
+from urllib.parse import urlparse
 
 from uncommon_route.paths import data_dir
 from uncommon_route.router.api import route
@@ -35,7 +36,7 @@ from uncommon_route.router.classifier import classify
 from uncommon_route.router.structural import extract_structural_features, extract_unicode_block_features
 from uncommon_route.router.keywords import extract_keyword_features
 
-VERSION = "0.2.7"
+VERSION = "0.2.8"
 _DATA_DIR = data_dir()
 _PID_FILE = _DATA_DIR / "serve.pid"
 _LOG_FILE = _DATA_DIR / "serve.log"
@@ -383,22 +384,34 @@ def _cmd_doctor(args: list[str]) -> None:
     upstream = os.environ.get("UNCOMMON_ROUTE_UPSTREAM", "")
     checks.append(("Upstream configured", bool(upstream), upstream or "(not set)"))
 
+    def _upstream_is_local(url: str) -> bool:
+        host = (urlparse(url).hostname or "").lower()
+        return host in {"localhost", "127.0.0.1", "0.0.0.0", "::1"}
+
     # API key configured
     api_key = (
         os.environ.get("UNCOMMON_ROUTE_API_KEY", "")
         or os.environ.get("COMMONSTACK_API_KEY", "")
     )
+    local_upstream = bool(upstream) and _upstream_is_local(upstream)
     key_preview = f"{api_key[:8]}..." if len(api_key) > 8 else ("(set)" if api_key else "(not set)")
-    checks.append(("API key configured", bool(api_key), key_preview))
+    if api_key:
+        checks.append(("API key configured", True, key_preview))
+    elif local_upstream:
+        checks.append(("API key configured", True, "(not needed for local upstream)"))
+    else:
+        checks.append(("API key configured", False, key_preview))
 
     # Upstream reachable + model discovery
-    if upstream and api_key:
+    if upstream and (api_key or local_upstream):
         from uncommon_route.model_map import ModelMapper
         mapper = ModelMapper(upstream)
         gw_tag = " (gateway)" if mapper.is_gateway else ""
         count = asyncio.run(mapper.discover(api_key or None))
-        checks.append(("Upstream reachable", count > 0, f"{mapper.provider}{gw_tag}"))
-        checks.append(("Models discovered", count > 0, f"{count} models"))
+        provider_label = f"{mapper.provider}{gw_tag}"
+        reachability_detail = provider_label if count > 0 else f"{provider_label} (discovery failed)"
+        checks.append(("Upstream reachable", count > 0, reachability_detail))
+        checks.append(("Models discovered", count > 0, f"{count} models" if count > 0 else "0 models"))
         if mapper.discovered:
             unresolved = mapper.unresolved_models()
             if unresolved:

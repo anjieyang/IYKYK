@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import time
@@ -107,6 +108,22 @@ class TestCLI:
     def test_route_no_prompt_fails(self) -> None:
         r = subprocess.run([*CLI_MODULE, "route"], capture_output=True, text=True)
         assert r.returncode != 0
+
+    def test_doctor_local_upstream_without_key(self) -> None:
+        env = dict(os.environ)
+        env["UNCOMMON_ROUTE_UPSTREAM"] = "http://127.0.0.1:11434/v1"
+        env.pop("UNCOMMON_ROUTE_API_KEY", None)
+        env.pop("COMMONSTACK_API_KEY", None)
+
+        r = subprocess.run(
+            [*CLI_MODULE, "doctor"],
+            capture_output=True,
+            text=True,
+            env=env,
+        )
+
+        assert r.returncode == 0
+        assert "✓ API key configured: (not needed for local upstream)" in r.stdout
 
 
 # ── Mode 2: Python SDK ───────────────────────────────────────────────

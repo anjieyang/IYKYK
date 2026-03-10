@@ -5,7 +5,9 @@
 @tailwind utilities;
 
 body {
-  background: #111113;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.04), transparent 24%),
+    linear-gradient(180deg, #0f1012 0%, #0b0c0f 100%);
   color: #dcdcde;
   font-family: "Inter", system-ui, sans-serif;
   font-size: 14px;

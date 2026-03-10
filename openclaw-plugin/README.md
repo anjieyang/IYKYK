@@ -1,8 +1,21 @@
 # @anjieyang/uncommon-route
 
-**OpenClaw plugin for [UncommonRoute](https://github.com/anjieyang/UncommonRoute)**
+OpenClaw plugin for [UncommonRoute](https://github.com/anjieyang/UncommonRoute), the local LLM router that sends easy requests to cheaper models and saves stronger models for harder work.
 
-The local LLM router that cuts premium-model spend with smart routing.
+If you use OpenClaw and want one local endpoint with smart routing behind it, this plugin is the shortest path.
+
+## Mental Model
+
+```text
+OpenClaw -> UncommonRoute -> your upstream API
+```
+
+This plugin:
+
+- installs the Python `uncommon-route` package if needed
+- starts `uncommon-route serve`
+- registers the local provider with OpenClaw
+- exposes the virtual routing profiles like `uncommon-route/auto`
 
 ## Install
 
@@ -11,29 +24,15 @@ openclaw plugins install @anjieyang/uncommon-route
 openclaw gateway restart
 ```
 
-That's it. The plugin auto-installs the Python package, starts the proxy, and registers everything.
+That is enough to install the plugin.
 
-## What It Does
+For real responses, you still need to configure an upstream model API.
 
-Routes every LLM request to the **cheapest model that can handle it** — simple questions go to budget models, complex tasks go to frontier models. In the repo's real coding-session simulation, UncommonRoute cuts cost by **67%** vs always using Claude Opus while retaining **93.5%** quality.
+## Configure An Upstream
 
-- **39-feature cascade classifier** — structural, unicode, and keyword analysis
-- **Step-aware agentic routing** — different models for different steps in a workflow
-- **Session persistence** — sticky model per task, auto-escalation on failure
-- **Spend control** — per-request, hourly, daily, session limits
-- **Dual protocol** — OpenAI (`/v1/chat/completions`) + Anthropic (`/v1/messages`)
+UncommonRoute does not host models. It routes to an upstream OpenAI-compatible API.
 
-## Commands
-
-| Command | Description |
-|---|---|
-| `/route <prompt>` | Preview which model would be selected |
-| `/spend status` | View current spending and limits |
-| `/spend set hourly 5.00` | Set an hourly spending limit |
-| `/feedback ok\|weak\|strong` | Rate the last routing decision |
-| `/sessions` | View active routing sessions |
-
-## Configuration
+Example plugin config:
 
 ```yaml
 plugins:
@@ -46,21 +45,58 @@ plugins:
         daily: 20.00
 ```
 
-## Upstream Providers
-
-Works with any OpenAI-compatible API:
+Common upstream choices:
 
 | Provider | URL |
 |---|---|
 | [Commonstack](https://commonstack.ai) | `https://api.commonstack.ai/v1` |
 | OpenAI | `https://api.openai.com/v1` |
-| Local (Ollama) | `http://127.0.0.1:11434/v1` |
+| Local Ollama / vLLM | `http://127.0.0.1:11434/v1` |
+
+If your upstream needs a key, set `UNCOMMON_ROUTE_API_KEY` in the environment where OpenClaw runs.
+
+## What You Get
+
+- `uncommon-route/auto` for balanced smart routing
+- `uncommon-route/eco` for cheapest capable routing
+- `uncommon-route/premium` for quality-first routing
+- `uncommon-route/free` for free-first routing
+- `uncommon-route/agentic` for tool-heavy workflows
+
+The router also keeps a fallback chain, applies session-aware routing, and exposes a local dashboard at `http://127.0.0.1:8403/dashboard/`.
+
+## OpenClaw Commands
+
+| Command | Description |
+|---|---|
+| `/route <prompt>` | Preview which model the router would pick |
+| `/spend status` | Show current spending and limits |
+| `/spend set hourly 5.00` | Set an hourly spend limit |
+| `/feedback ok\|weak\|strong` | Rate the last routing decision |
+| `/sessions` | Show active routing sessions |
+
+## Troubleshooting
+
+If the plugin is installed but responses are failing:
+
+1. Make sure your upstream URL is configured.
+2. Make sure `UNCOMMON_ROUTE_API_KEY` is set if your provider requires one.
+3. Open `http://127.0.0.1:8403/health`.
+4. Open `http://127.0.0.1:8403/dashboard/`.
+
+## Benchmarks
+
+Current repo benchmarks:
+
+- 92.3% held-out routing accuracy
+- ~0.5ms average routing latency
+- 67% lower simulated cost than always using Claude Opus in a coding session
 
 ## Links
 
 - [GitHub](https://github.com/anjieyang/UncommonRoute)
 - [PyPI](https://pypi.org/project/uncommon-route/)
-- [Full Documentation](https://github.com/anjieyang/UncommonRoute#readme)
+- [Full README](https://github.com/anjieyang/UncommonRoute#readme)
 
 ## License
 
