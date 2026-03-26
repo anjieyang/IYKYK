@@ -1,5 +1,5 @@
 {
-  "id": "@anjieyang/uncommon-route",
+  "id": "uncommon-route",
   "name": "UncommonRoute",
   "description": "Local LLM router that cuts premium-model spend with smart routing, local feedback, and spend control",
   "configSchema": {

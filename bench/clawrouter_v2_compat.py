@@ -44,79 +44,222 @@ DIMENSION_WEIGHTS = {
 # ─── Keywords (subset from config.ts) ───
 
 CODE_KEYWORDS = [
-    "function", "class", "import", "def", "select", "async", "await",
-    "const", "let", "var", "return", "```",
-    "函数", "类", "导入", "异步", "返回",
-    "関数", "クラス", "非同期",
-    "функция", "класс", "импорт", "асинхронный",
+    "function",
+    "class",
+    "import",
+    "def",
+    "select",
+    "async",
+    "await",
+    "const",
+    "let",
+    "var",
+    "return",
+    "```",
+    "函数",
+    "类",
+    "导入",
+    "异步",
+    "返回",
+    "関数",
+    "クラス",
+    "非同期",
+    "функция",
+    "класс",
+    "импорт",
+    "асинхронный",
 ]
 
 REASONING_KEYWORDS = [
-    "prove", "theorem", "derive", "step by step", "chain of thought",
-    "formally", "mathematical", "proof", "logically",
-    "证明", "定理", "推导", "逐步", "数学", "逻辑",
-    "証明", "定理", "ステップバイステップ",
-    "доказать", "докажи", "теорема", "шаг за шагом", "формально",
+    "prove",
+    "theorem",
+    "derive",
+    "step by step",
+    "chain of thought",
+    "formally",
+    "mathematical",
+    "proof",
+    "logically",
+    "证明",
+    "定理",
+    "推导",
+    "逐步",
+    "数学",
+    "逻辑",
+    "証明",
+    "定理",
+    "ステップバイステップ",
+    "доказать",
+    "докажи",
+    "теорема",
+    "шаг за шагом",
+    "формально",
 ]
 
 SIMPLE_KEYWORDS = [
-    "what is", "define", "translate", "hello", "yes or no", "capital of",
-    "who is", "when was", "how old",
-    "什么是", "翻译", "你好", "是否", "谁是",
-    "что такое", "перевести", "привет",
+    "what is",
+    "define",
+    "translate",
+    "hello",
+    "yes or no",
+    "capital of",
+    "who is",
+    "when was",
+    "how old",
+    "什么是",
+    "翻译",
+    "你好",
+    "是否",
+    "谁是",
+    "что такое",
+    "перевести",
+    "привет",
 ]
 
 TECHNICAL_KEYWORDS = [
-    "algorithm", "optimize", "architecture", "distributed", "kubernetes",
-    "microservice", "database", "infrastructure",
-    "算法", "优化", "架构", "分布式", "微服务", "数据库",
+    "algorithm",
+    "optimize",
+    "architecture",
+    "distributed",
+    "kubernetes",
+    "microservice",
+    "database",
+    "infrastructure",
+    "算法",
+    "优化",
+    "架构",
+    "分布式",
+    "微服务",
+    "数据库",
 ]
 
 CREATIVE_KEYWORDS = [
-    "story", "poem", "compose", "brainstorm", "creative", "imagine", "write a",
-    "故事", "诗", "创作", "创意",
+    "story",
+    "poem",
+    "compose",
+    "brainstorm",
+    "creative",
+    "imagine",
+    "write a",
+    "故事",
+    "诗",
+    "创作",
+    "创意",
 ]
 
 IMPERATIVE_KEYWORDS = [
-    "build", "create", "implement", "design", "develop", "deploy", "configure",
-    "构建", "创建", "实现", "设计", "开发", "部署",
+    "build",
+    "create",
+    "implement",
+    "design",
+    "develop",
+    "deploy",
+    "configure",
+    "构建",
+    "创建",
+    "实现",
+    "设计",
+    "开发",
+    "部署",
 ]
 
 CONSTRAINT_KEYWORDS = [
-    "at most", "at least", "within", "no more than", "maximum", "minimum", "limit",
-    "不超过", "至少", "最多", "限制",
+    "at most",
+    "at least",
+    "within",
+    "no more than",
+    "maximum",
+    "minimum",
+    "limit",
+    "不超过",
+    "至少",
+    "最多",
+    "限制",
 ]
 
 OUTPUT_FORMAT_KEYWORDS = [
-    "json", "yaml", "xml", "table", "csv", "markdown", "schema", "format as",
-    "表格", "格式化", "结构化",
+    "json",
+    "yaml",
+    "xml",
+    "table",
+    "csv",
+    "markdown",
+    "schema",
+    "format as",
+    "表格",
+    "格式化",
+    "结构化",
 ]
 
 DOMAIN_KEYWORDS = [
-    "quantum", "fpga", "vlsi", "risc-v", "genomics", "proteomics",
-    "homomorphic", "zero-knowledge",
-    "量子", "基因组", "零知识",
+    "quantum",
+    "fpga",
+    "vlsi",
+    "risc-v",
+    "genomics",
+    "proteomics",
+    "homomorphic",
+    "zero-knowledge",
+    "量子",
+    "基因组",
+    "零知识",
 ]
 
 AGENTIC_KEYWORDS = [
-    "read file", "edit", "modify", "update the", "create file",
-    "execute", "deploy", "install", "npm", "pip", "compile",
-    "after that", "once done", "step 1", "step 2",
-    "fix", "debug", "until it works", "verify", "confirm",
+    "read file",
+    "edit",
+    "modify",
+    "update the",
+    "create file",
+    "execute",
+    "deploy",
+    "install",
+    "npm",
+    "pip",
+    "compile",
+    "after that",
+    "once done",
+    "step 1",
+    "step 2",
+    "fix",
+    "debug",
+    "until it works",
+    "verify",
+    "confirm",
 ]
 
 NEGATION_KEYWORDS = [
-    "don't", "do not", "avoid", "never", "without", "except", "exclude",
-    "不要", "避免", "从不", "没有",
+    "don't",
+    "do not",
+    "avoid",
+    "never",
+    "without",
+    "except",
+    "exclude",
+    "不要",
+    "避免",
+    "从不",
+    "没有",
 ]
 
 REFERENCE_KEYWORDS = [
-    "above", "below", "previous", "following", "the docs", "the api", "the code",
-    "上面", "下面", "之前", "文档", "代码",
+    "above",
+    "below",
+    "previous",
+    "following",
+    "the docs",
+    "the api",
+    "the code",
+    "上面",
+    "下面",
+    "之前",
+    "文档",
+    "代码",
 ]
 
 
 # ─── Scoring functions (from src/router/rules.ts) ───
+
 
 def _score_token_count(tokens: int) -> tuple[float, str | None]:
     if tokens < TOKEN_THRESHOLDS["simple"]:
@@ -126,7 +269,9 @@ def _score_token_count(tokens: int) -> tuple[float, str | None]:
     return 0.0, None
 
 
-def _score_keywords(text: str, keywords: list[str], low_thresh: int, high_thresh: int, low_score: float, high_score: float) -> float:
+def _score_keywords(
+    text: str, keywords: list[str], low_thresh: int, high_thresh: int, low_score: float, high_score: float
+) -> float:
     matches = sum(1 for kw in keywords if kw.lower() in text)
     if matches >= high_thresh:
         return high_score

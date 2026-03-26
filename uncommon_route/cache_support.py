@@ -88,14 +88,17 @@ def apply_anthropic_cache_breakpoints(
     messages = body.get("messages") or []
     breakpoints = 0
 
-    # Anthropic requires cache_control TTLs to be non-increasing across
-    # tools → system → messages.  Determine the effective TTL by taking the
-    # longest of (a) our session-based preference and (b) any TTL already
-    # present in the request so breakpoints we add never violate ordering.
-    computed_ttl = "1h" if session_id and step_type != "general" else None
-    existing_max = _max_existing_cache_ttl(body)
-    use_1h = computed_ttl == "1h" or existing_max == "1h"
-    cc: dict[str, Any] = {"type": "ephemeral", "ttl": "1h"} if use_1h else {"type": "ephemeral"}
+    # Anthropic processes cache_control blocks in tools -> system -> messages
+    # order, so once a request contains any 5m block we must not inject a 1h
+    # block later in the same request. Pick one request-wide TTL that keeps the
+    # full ordering valid, then normalize existing cache blocks before adding
+    # our own breakpoints.
+    effective_ttl = _select_anthropic_cache_ttl(
+        body,
+        prefers_1h=bool(session_id and step_type != "general"),
+    )
+    _normalize_anthropic_cache_controls(body, ttl=effective_ttl)
+    cc: dict[str, Any] = {"type": "ephemeral", "ttl": "1h"} if effective_ttl == "1h" else {"type": "ephemeral"}
 
     if tools:
         tools[-1]["cache_control"] = dict(cc)
@@ -123,7 +126,7 @@ def apply_anthropic_cache_breakpoints(
                 breakpoints += 1
                 break
 
-    ttl = "1h" if use_1h else "5m"
+    ttl = "1h" if effective_ttl == "1h" else "5m"
     return CacheRequestPlan(
         family="anthropic",
         mode="cache_control",
@@ -132,27 +135,89 @@ def apply_anthropic_cache_breakpoints(
     )
 
 
-def _max_existing_cache_ttl(body: dict[str, Any]) -> str | None:
-    """Return ``"1h"`` if any cache_control block in *body* uses that TTL."""
-    for key in ("tools", "system", "messages"):
-        section = body.get(key)
-        if not isinstance(section, list):
+def strip_anthropic_cache_controls(body: dict[str, Any]) -> CacheRequestPlan:
+    for holder in _iter_anthropic_cache_control_holders(body):
+        if "cache_control" in holder:
+            holder.pop("cache_control", None)
+    return CacheRequestPlan(
+        family="anthropic",
+        mode="none",
+    )
+
+
+def _select_anthropic_cache_ttl(body: dict[str, Any], *, prefers_1h: bool) -> str | None:
+    """Choose a request-wide TTL that keeps Anthropic cache ordering valid.
+
+    Anthropic requires TTLs to be monotonic across tools -> system -> messages.
+    To avoid ever sending a request with 5m before 1h, we normalize the whole
+    request to 5m whenever any existing block already uses 5m. If every existing
+    cache block is 1h, we preserve that. Otherwise we only opt into 1h when the
+    current request shape prefers it.
+    """
+    existing_ttls = [
+        ttl
+        for holder in _iter_anthropic_cache_control_holders(body)
+        if (ttl := _anthropic_cache_ttl(holder.get("cache_control"))) is not None
+    ]
+    if any(ttl == "5m" for ttl in existing_ttls):
+        return None
+    if any(ttl == "1h" for ttl in existing_ttls):
+        return "1h"
+    return "1h" if prefers_1h else None
+
+
+def _normalize_anthropic_cache_controls(body: dict[str, Any], *, ttl: str | None) -> None:
+    for holder in _iter_anthropic_cache_control_holders(body):
+        if "cache_control" not in holder:
             continue
-        for item in section:
-            if not isinstance(item, dict):
+        holder["cache_control"] = _build_anthropic_cache_control(holder.get("cache_control"), ttl=ttl)
+
+
+def _iter_anthropic_cache_control_holders(body: dict[str, Any]) -> list[dict[str, Any]]:
+    holders: list[dict[str, Any]] = []
+
+    tools = body.get("tools")
+    if isinstance(tools, list):
+        for tool in tools:
+            if isinstance(tool, dict):
+                holders.append(tool)
+
+    system = body.get("system")
+    if isinstance(system, list):
+        for block in system:
+            if isinstance(block, dict):
+                holders.append(block)
+
+    messages = body.get("messages")
+    if isinstance(messages, list):
+        for message in messages:
+            if not isinstance(message, dict):
                 continue
-            if _cache_control_has_1h(item.get("cache_control")):
-                return "1h"
-            content = item.get("content")
-            if isinstance(content, list):
-                for block in content:
-                    if isinstance(block, dict) and _cache_control_has_1h(block.get("cache_control")):
-                        return "1h"
-    return None
+            content = message.get("content")
+            if not isinstance(content, list):
+                continue
+            for block in content:
+                if isinstance(block, dict):
+                    holders.append(block)
+
+    return holders
 
 
-def _cache_control_has_1h(cc: Any) -> bool:
-    return isinstance(cc, dict) and cc.get("ttl") == "1h"
+def _anthropic_cache_ttl(cache_control: Any) -> str | None:
+    if not isinstance(cache_control, dict):
+        return None
+    ttl = str(cache_control.get("ttl") or "").strip().lower()
+    return "1h" if ttl == "1h" else "5m"
+
+
+def _build_anthropic_cache_control(cache_control: Any, *, ttl: str | None) -> dict[str, Any]:
+    cache_type = "ephemeral"
+    if isinstance(cache_control, dict):
+        cache_type = str(cache_control.get("type") or "ephemeral")
+    normalized: dict[str, Any] = {"type": cache_type}
+    if ttl == "1h":
+        normalized["ttl"] = "1h"
+    return normalized
 
 
 def parse_usage_metrics(
@@ -323,16 +388,8 @@ def estimate_input_cost(
     cache_write_input_tokens: int,
     pricing: ModelPricing,
 ) -> float:
-    cached_read_price = (
-        pricing.cached_input_price
-        if pricing.cached_input_price is not None
-        else pricing.input_price
-    )
-    cache_write_price = (
-        pricing.cache_write_price
-        if pricing.cache_write_price is not None
-        else pricing.input_price
-    )
+    cached_read_price = pricing.cached_input_price if pricing.cached_input_price is not None else pricing.input_price
+    cache_write_price = pricing.cache_write_price if pricing.cache_write_price is not None else pricing.input_price
     return (
         (input_tokens_uncached / 1_000_000) * pricing.input_price
         + (cache_read_input_tokens / 1_000_000) * cached_read_price

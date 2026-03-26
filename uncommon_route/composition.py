@@ -432,7 +432,7 @@ async def _rehydrate_artifacts(
     quality_fallbacks = 0
     est = 0.0
     act = 0.0
-    for artifact_id in refs[:policy.rehydrate_max_artifacts]:
+    for artifact_id in refs[: policy.rehydrate_max_artifacts]:
         artifact = artifact_store.get(artifact_id)
         if artifact is None:
             continue
@@ -457,7 +457,7 @@ async def _rehydrate_artifacts(
                 act += call.actual_cost or 0.0
                 quality_fallbacks += call.quality_fallbacks
         else:
-            excerpt = excerpt[:policy.rehydrate_append_chars]
+            excerpt = excerpt[: policy.rehydrate_append_chars]
         if excerpt:
             appended.append(f"[Rehydrated artifact://{artifact_id}]\n{excerpt}")
             used += 1
@@ -484,15 +484,9 @@ async def _checkpoint_history(
         return None
 
     keep_last_messages = (
-        policy.checkpoint_agentic_keep_last_messages
-        if is_agentic
-        else policy.checkpoint_keep_last_messages
+        policy.checkpoint_agentic_keep_last_messages if is_agentic else policy.checkpoint_keep_last_messages
     )
-    threshold_tokens = (
-        policy.checkpoint_agentic_threshold_tokens
-        if is_agentic
-        else policy.checkpoint_threshold_tokens
-    )
+    threshold_tokens = policy.checkpoint_agentic_threshold_tokens if is_agentic else policy.checkpoint_threshold_tokens
 
     if len(messages) < max(policy.checkpoint_min_messages, keep_last_messages + 2):
         return None
@@ -505,7 +499,7 @@ async def _checkpoint_history(
     if (
         is_agentic
         and policy.checkpoint_skip_recent_tool_window > 0
-        and _has_recent_tool_activity(remainder[-policy.checkpoint_skip_recent_tool_window:])
+        and _has_recent_tool_activity(remainder[-policy.checkpoint_skip_recent_tool_window :])
     ):
         return None
 
@@ -621,8 +615,8 @@ def _infer_tool_name(messages: list[dict[str, Any]], idx: int, tool_call_id: str
 
 
 def _build_artifact_stub(text: str, record: Any, policy: CompositionPolicy) -> str:
-    preview = text[:policy.preview_chars].strip()
-    tail = text[-policy.tail_chars:].strip() if len(text) > policy.preview_chars else ""
+    preview = text[: policy.preview_chars].strip()
+    tail = text[-policy.tail_chars :].strip() if len(text) > policy.preview_chars else ""
     lines = [
         f"[UncommonRoute artifact://{record.id}]",
         "Large tool result offloaded for token efficiency.",
@@ -727,7 +721,7 @@ def _truncate_excerpt(text: str, limit: int) -> str:
     if len(stripped) <= limit:
         return stripped
     head = stripped[: max(1, limit // 2)].strip()
-    tail = stripped[-max(1, limit // 3):].strip()
+    tail = stripped[-max(1, limit // 3) :].strip()
     return f"{head}\n...\n{tail}"
 
 

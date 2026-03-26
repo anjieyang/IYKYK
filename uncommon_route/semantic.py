@@ -86,11 +86,7 @@ class SideChannelTaskConfig:
         primary = str(data.get("primary", base.primary)).strip()
         if not primary:
             raise ValueError("side-channel primary model cannot be empty")
-        fallback = tuple(
-            str(model).strip()
-            for model in data.get("fallback", base.fallback)
-            if str(model).strip()
-        )
+        fallback = tuple(str(model).strip() for model in data.get("fallback", base.fallback) if str(model).strip())
         task = cls(
             primary=primary,
             fallback=fallback,
@@ -279,7 +275,8 @@ def _query_overlap_terms(candidate: str, query_text: str) -> int:
     if not query_text.strip():
         return 0
     query_terms = {
-        term for term in re.findall(r"[a-zA-Z_][a-zA-Z0-9_/-]{2,}", query_text.lower())
+        term
+        for term in re.findall(r"[a-zA-Z_][a-zA-Z0-9_/-]{2,}", query_text.lower())
         if term not in {"the", "and", "for", "with", "that", "this", "from", "into"}
     }
     if not query_terms:

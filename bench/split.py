@@ -47,8 +47,8 @@ def stratified_split(
         n_dev = max(0, int(n * dev_ratio))
 
         train.extend(items[:n_train])
-        dev.extend(items[n_train:n_train + n_dev])
-        test.extend(items[n_train + n_dev:])
+        dev.extend(items[n_train : n_train + n_dev])
+        test.extend(items[n_train + n_dev :])
 
     # Hold-out languages go to test
     test.extend(holdout)
@@ -94,6 +94,7 @@ def main() -> None:
                 f.write("\n")
         # Stats
         from collections import Counter
+
         tiers = Counter(c["expected_tier"] for c in data)
         langs = Counter(c["lang"] for c in data)
         print(f"  {name}: {len(data)} cases | tiers={dict(tiers)} | langs={len(langs)}")

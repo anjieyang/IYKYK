@@ -1,7 +1,7 @@
 {
   "$schema": "https://openclaw.ai/schemas/plugin-security.json",
   "version": "1.0",
-  "plugin": "@anjieyang/uncommon-route",
+  "plugin": "uncommon-route",
   "permissions": {
     "network": {
       "outbound": ["localhost:8403"],

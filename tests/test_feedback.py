@@ -143,55 +143,79 @@ class TestFeedbackEndpoint:
         assert data["pending_contexts"] == 0
 
     def test_request_id_in_headers(self, fb_client: TestClient) -> None:
-        resp = fb_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = fb_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         assert "x-uncommon-route-request-id" in resp.headers
         rid = resp.headers["x-uncommon-route-request-id"]
         assert len(rid) == 12
 
     def test_feedback_round_trip(self, fb_client: TestClient) -> None:
-        resp = fb_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = fb_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         rid = resp.headers["x-uncommon-route-request-id"]
 
         pending = fb_client.get("/v1/feedback").json()
         assert pending["pending_contexts"] >= 1
 
-        fb = fb_client.post("/v1/feedback", json={
-            "request_id": rid, "signal": "ok",
-        })
+        fb = fb_client.post(
+            "/v1/feedback",
+            json={
+                "request_id": rid,
+                "signal": "ok",
+            },
+        )
         assert fb.status_code == 200
         assert fb.json()["action"] == "reinforced"
 
     def test_feedback_weak_updates(self, fb_client: TestClient) -> None:
-        resp = fb_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = fb_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         rid = resp.headers["x-uncommon-route-request-id"]
 
-        fb = fb_client.post("/v1/feedback", json={
-            "request_id": rid, "signal": "weak",
-        })
+        fb = fb_client.post(
+            "/v1/feedback",
+            json={
+                "request_id": rid,
+                "signal": "weak",
+            },
+        )
         data = fb.json()
         assert data["ok"]
         assert data["action"] == "updated"
         assert data["total_updates"] >= 1
 
     def test_feedback_result_persists_in_recent(self, fb_client: TestClient) -> None:
-        resp = fb_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = fb_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         rid = resp.headers["x-uncommon-route-request-id"]
 
-        fb = fb_client.post("/v1/feedback", json={
-            "request_id": rid, "signal": "weak",
-        })
+        fb = fb_client.post(
+            "/v1/feedback",
+            json={
+                "request_id": rid,
+                "signal": "weak",
+            },
+        )
         assert fb.status_code == 200
 
         recent = fb_client.get("/v1/stats/recent").json()
@@ -211,10 +235,13 @@ class TestFeedbackEndpoint:
         )
         client = TestClient(app, raise_server_exceptions=False)
 
-        resp = client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         rid = resp.headers["x-uncommon-route-request-id"]
         assert feedback.has_pending(rid) is True
 
@@ -233,10 +260,13 @@ class TestFeedbackEndpoint:
         )
         client = TestClient(app, raise_server_exceptions=False)
 
-        resp = client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         rid = resp.headers["x-uncommon-route-request-id"]
         assert feedback.has_pending(rid) is True
         assert client.get("/health").json()["feedback"]["pending"] == 1
@@ -248,16 +278,24 @@ class TestFeedbackEndpoint:
         assert client.get("/v1/stats/recent").json() == []
 
     def test_feedback_expired_request(self, fb_client: TestClient) -> None:
-        fb = fb_client.post("/v1/feedback", json={
-            "request_id": "nonexistent", "signal": "weak",
-        })
+        fb = fb_client.post(
+            "/v1/feedback",
+            json={
+                "request_id": "nonexistent",
+                "signal": "weak",
+            },
+        )
         assert fb.status_code == 404
         assert fb.json()["action"] == "expired"
 
     def test_feedback_bad_params(self, fb_client: TestClient) -> None:
-        fb = fb_client.post("/v1/feedback", json={
-            "request_id": "abc", "signal": "invalid",
-        })
+        fb = fb_client.post(
+            "/v1/feedback",
+            json={
+                "request_id": "abc",
+                "signal": "invalid",
+            },
+        )
         assert fb.status_code == 400
 
     def test_rollback(self, fb_client: TestClient) -> None:
@@ -266,10 +304,13 @@ class TestFeedbackEndpoint:
         assert "rolled_back" in fb.json()
 
     def test_passthrough_no_request_id(self, fb_client: TestClient) -> None:
-        resp = fb_client.post("/v1/chat/completions", json={
-            "model": "some-other/model",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = fb_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "some-other/model",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         assert "x-uncommon-route-request-id" not in resp.headers
 
     def test_health_includes_feedback(self, fb_client: TestClient) -> None:

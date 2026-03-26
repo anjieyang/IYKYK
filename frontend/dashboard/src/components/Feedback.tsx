@@ -23,6 +23,11 @@ function normalizeTier(tier: string): string {
   return tier;
 }
 
+function displayTag(tag: string): string {
+  const normalized = tag === "tool-heavy" ? "agentic" : tag;
+  return normalized.replace(/[-_]/g, " ");
+}
+
 function storedFeedback(request: RecentRequest): FeedbackResult | null {
   if (!request.feedback_action) return null;
   if (request.feedback_action === "expired") return null;
@@ -144,12 +149,12 @@ export default function Feedback() {
                               )}
                               {r.constraint_tags?.map((tag) => (
                                 <span key={`${r.request_id}-${tag}`} className="inline-flex items-center rounded-full bg-gray-50 px-2 py-0.5 text-[11px] font-medium text-[#6B7280] ring-1 ring-black/[0.04]">
-                                  {tag.replace(/[-_]/g, " ")}
+                                  {displayTag(tag)}
                                 </span>
                               ))}
                               {r.hint_tags?.map((tag) => (
                                 <span key={`${r.request_id}-${tag}`} className="inline-flex items-center rounded-full bg-gray-50 px-2 py-0.5 text-[11px] font-medium text-[#6B7280] ring-1 ring-black/[0.04]">
-                                  {tag.replace(/[-_]/g, " ")}
+                                  {displayTag(tag)}
                                 </span>
                               ))}
                             </div>

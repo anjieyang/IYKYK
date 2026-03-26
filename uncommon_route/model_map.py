@@ -93,6 +93,7 @@ KNOWN_ALIASES = SEED_ALIASES
 # Pricing parser
 # ---------------------------------------------------------------------------
 
+
 def _parse_upstream_pricing(raw: dict | None) -> ModelPricing:
     """Convert per-token pricing from upstream into per-1M-token ModelPricing."""
     if not raw or not isinstance(raw, dict):
@@ -152,11 +153,7 @@ def infer_capabilities(
 
     tool_calling = True
 
-    free = (
-        has_explicit_pricing
-        and pricing.input_price <= 0.0
-        and pricing.output_price <= 0.0
-    )
+    free = has_explicit_pricing and pricing.input_price <= 0.0 and pricing.output_price <= 0.0
 
     return ModelCapabilities(
         tool_calling=tool_calling,
@@ -169,6 +166,7 @@ def infer_capabilities(
 # ---------------------------------------------------------------------------
 # Normalization helpers for fuzzy matching
 # ---------------------------------------------------------------------------
+
 
 def _normalize(name: str) -> str:
     """Normalize a model name for comparison."""
@@ -192,19 +190,23 @@ def _provider_prefix(model_id: str) -> str:
 # DiscoveredModel
 # ---------------------------------------------------------------------------
 
+
 @dataclass(frozen=True, slots=True)
 class DiscoveredModel:
     """A model discovered from the upstream catalog."""
+
     id: str
     provider: str
     owned_by: str
     pricing: ModelPricing
     capabilities: ModelCapabilities
+    pricing_explicit: bool = False
 
 
 # ---------------------------------------------------------------------------
 # ModelMapper
 # ---------------------------------------------------------------------------
+
 
 @dataclass
 class ModelMapper:
@@ -256,7 +258,9 @@ class ModelMapper:
                 resp = await client.get(models_url, headers=headers)
                 if resp.status_code != 200:
                     logger.warning(
-                        "Model discovery: HTTP %d from %s", resp.status_code, models_url,
+                        "Model discovery: HTTP %d from %s",
+                        resp.status_code,
+                        models_url,
                     )
                     return 0
                 data = resp.json()
@@ -271,11 +275,13 @@ class ModelMapper:
                     model_id = m["id"]
                     self._upstream_models.add(model_id)
 
-                    pricing = _parse_upstream_pricing(m.get("pricing"))
+                    pricing_raw = m.get("pricing")
+                    pricing_explicit = isinstance(pricing_raw, dict) and bool(pricing_raw)
+                    pricing = _parse_upstream_pricing(pricing_raw)
                     capabilities = infer_capabilities(
                         model_id,
                         pricing,
-                        has_explicit_pricing=isinstance(m.get("pricing"), dict) and bool(m.get("pricing")),
+                        has_explicit_pricing=pricing_explicit,
                     )
                     provider_name = _provider_prefix(model_id) or m.get("owned_by", "unknown")
 
@@ -285,6 +291,7 @@ class ModelMapper:
                         owned_by=m.get("owned_by", ""),
                         pricing=pricing,
                         capabilities=capabilities,
+                        pricing_explicit=pricing_explicit,
                     )
 
                 self._build_map()
@@ -414,9 +421,10 @@ class ModelMapper:
             return {}
         result: dict[str, ModelPricing] = {}
         for model_id, dm in self._pool.items():
-            result[model_id] = dm.pricing
+            if dm.pricing_explicit:
+                result[model_id] = dm.pricing
         for internal, upstream in self._map.items():
-            if upstream in self._pool:
+            if upstream in self._pool and self._pool[upstream].pricing_explicit:
                 result[internal] = self._pool[upstream].pricing
         return result
 
@@ -436,6 +444,40 @@ class ModelMapper:
     @property
     def available_models(self) -> list[str]:
         """All available upstream model IDs, sorted."""
+        return sorted(self._pool.keys())
+
+    @property
+    def routing_models(self) -> list[str]:
+        """Preferred candidate IDs for routing.
+
+        When discovery returns provider-native IDs like ``gpt-4o-mini``, route
+        using the internal canonical alias (for example ``openai/gpt-4o-mini``)
+        so pricing, BYOK, and provider-family logic stay consistent.
+
+        Unknown upstream IDs are only exposed directly when no canonical alias
+        exists and the upstream supplied explicit pricing, or when discovery did
+        not yield any canonical route candidates at all.
+        """
+        if not self._discovered:
+            return []
+
+        seen: set[str] = set()
+        preferred: list[str] = []
+        for upstream_id in sorted(self._pool.keys()):
+            canonical = self._best_internal_alias(upstream_id)
+            if canonical is not None:
+                if canonical not in seen:
+                    preferred.append(canonical)
+                    seen.add(canonical)
+                continue
+
+            dm = self._pool.get(upstream_id)
+            if dm is not None and dm.pricing_explicit and upstream_id not in seen:
+                preferred.append(upstream_id)
+                seen.add(upstream_id)
+
+        if preferred:
+            return preferred
         return sorted(self._pool.keys())
 
     def get_pricing(self, model_id: str) -> ModelPricing | None:
@@ -494,6 +536,7 @@ class ModelMapper:
     @staticmethod
     def _learned_aliases_path() -> Path:
         from uncommon_route.paths import data_dir
+
         return data_dir() / "learned_aliases.json"
 
     # ---- rediscovery ------------------------------------------------------
@@ -536,12 +579,14 @@ class ModelMapper:
             available: bool | None = None
             if self._discovered:
                 available = resolved in self._upstream_models
-            rows.append({
-                "internal": name,
-                "resolved": resolved,
-                "mapped": name != resolved,
-                "available": available,
-            })
+            rows.append(
+                {
+                    "internal": name,
+                    "resolved": resolved,
+                    "mapped": name != resolved,
+                    "available": available,
+                }
+            )
         return rows
 
     def pool_table(self) -> list[dict]:
@@ -549,23 +594,26 @@ class ModelMapper:
         rows: list[dict] = []
         for model_id in sorted(self._pool.keys()):
             dm = self._pool[model_id]
-            rows.append({
-                "id": dm.id,
-                "provider": dm.provider,
-                "owned_by": dm.owned_by,
-                "pricing": {
-                    "input": dm.pricing.input_price,
-                    "output": dm.pricing.output_price,
-                    "cached_input": dm.pricing.cached_input_price,
-                    "cache_write": dm.pricing.cache_write_price,
-                },
-                "capabilities": {
-                    "tool_calling": dm.capabilities.tool_calling,
-                    "vision": dm.capabilities.vision,
-                    "reasoning": dm.capabilities.reasoning,
-                    "free": dm.capabilities.free,
-                },
-            })
+            rows.append(
+                {
+                    "id": dm.id,
+                    "provider": dm.provider,
+                    "owned_by": dm.owned_by,
+                    "pricing": {
+                        "input": dm.pricing.input_price,
+                        "output": dm.pricing.output_price,
+                        "cached_input": dm.pricing.cached_input_price,
+                        "cache_write": dm.pricing.cache_write_price,
+                        "explicit": dm.pricing_explicit,
+                    },
+                    "capabilities": {
+                        "tool_calling": dm.capabilities.tool_calling,
+                        "vision": dm.capabilities.vision,
+                        "reasoning": dm.capabilities.reasoning,
+                        "free": dm.capabilities.free,
+                    },
+                }
+            )
         return rows
 
     @property
@@ -579,3 +627,20 @@ class ModelMapper:
     @property
     def pool_size(self) -> int:
         return len(self._pool)
+
+    def _best_internal_alias(self, upstream_id: str) -> str | None:
+        aliases = [internal for internal, upstream in self._map.items() if upstream == upstream_id]
+        if not aliases:
+            return None
+
+        upstream_core = _normalize(_core(upstream_id))
+        upstream_provider = _provider_prefix(upstream_id)
+
+        def _alias_rank(internal: str) -> tuple[int, int, int, int]:
+            internal_core = _normalize(_core(internal))
+            same_provider = 0 if _provider_prefix(internal) == upstream_provider else 1
+            exact_core = 0 if internal_core == upstream_core else 1
+            prefix_match = 0 if (internal_core in upstream_core or upstream_core in internal_core) else 1
+            return (same_provider, exact_core, prefix_match, len(internal))
+
+        return min(aliases, key=_alias_rank)

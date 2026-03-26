@@ -18,13 +18,16 @@ from uncommon_route.anthropic_compat import (
     anthropic_error_response,
     OpenAIToAnthropicStreamConverter,
 )
+from uncommon_route.cache_support import apply_anthropic_cache_breakpoints
 from uncommon_route.proxy import create_app
+from uncommon_route.router.types import RoutingDecision, RoutingMode, Tier
 from uncommon_route.spend_control import InMemorySpendControlStorage, SpendControl
 
 
 # =========================================================================
 # Request conversion: Anthropic → OpenAI
 # =========================================================================
+
 
 class TestAnthropicToOpenAIRequest:
     def test_basic_text_message(self) -> None:
@@ -72,12 +75,14 @@ class TestAnthropicToOpenAIRequest:
             "system": [
                 {"type": "text", "text": "Stable policy", "cache_control": {"type": "ephemeral"}},
             ],
-            "messages": [{
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": "Continue", "cache_control": {"type": "ephemeral"}},
-                ],
-            }],
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": "Continue", "cache_control": {"type": "ephemeral"}},
+                    ],
+                }
+            ],
         }
 
         out = anthropic_to_openai_request(body)
@@ -89,12 +94,14 @@ class TestAnthropicToOpenAIRequest:
         body = {
             "model": "m",
             "max_tokens": 100,
-            "messages": [{
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": "What is this?"},
-                ],
-            }],
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": "What is this?"},
+                    ],
+                }
+            ],
         }
         out = anthropic_to_openai_request(body)
         assert out["messages"][0]["content"] == "What is this?"
@@ -134,12 +141,14 @@ class TestAnthropicToOpenAIRequest:
         body = {
             "model": "m",
             "max_tokens": 100,
-            "messages": [{
-                "role": "user",
-                "content": [
-                    {"type": "tool_result", "tool_use_id": "toolu_01", "content": "72F sunny"},
-                ],
-            }],
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "tool_result", "tool_use_id": "toolu_01", "content": "72F sunny"},
+                    ],
+                }
+            ],
         }
         out = anthropic_to_openai_request(body)
         assert out["messages"][0]["role"] == "tool"
@@ -150,16 +159,18 @@ class TestAnthropicToOpenAIRequest:
         body = {
             "model": "m",
             "max_tokens": 100,
-            "messages": [{
-                "role": "user",
-                "content": [
-                    {
-                        "type": "tool_result",
-                        "tool_use_id": "t1",
-                        "content": [{"type": "text", "text": "result data"}],
-                    },
-                ],
-            }],
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "tool_result",
+                            "tool_use_id": "t1",
+                            "content": [{"type": "text", "text": "result data"}],
+                        },
+                    ],
+                }
+            ],
         }
         out = anthropic_to_openai_request(body)
         assert out["messages"][0]["content"] == "result data"
@@ -169,15 +180,17 @@ class TestAnthropicToOpenAIRequest:
             "model": "m",
             "max_tokens": 100,
             "messages": [{"role": "user", "content": "go"}],
-            "tools": [{
-                "name": "get_weather",
-                "description": "Get weather for a city",
-                "input_schema": {
-                    "type": "object",
-                    "properties": {"city": {"type": "string"}},
-                    "required": ["city"],
-                },
-            }],
+            "tools": [
+                {
+                    "name": "get_weather",
+                    "description": "Get weather for a city",
+                    "input_schema": {
+                        "type": "object",
+                        "properties": {"city": {"type": "string"}},
+                        "required": ["city"],
+                    },
+                }
+            ],
         }
         out = anthropic_to_openai_request(body)
         assert len(out["tools"]) == 1
@@ -188,7 +201,8 @@ class TestAnthropicToOpenAIRequest:
 
     def test_tool_choice_auto(self) -> None:
         body = {
-            "model": "m", "max_tokens": 1,
+            "model": "m",
+            "max_tokens": 1,
             "messages": [{"role": "user", "content": "x"}],
             "tool_choice": {"type": "auto"},
         }
@@ -196,7 +210,8 @@ class TestAnthropicToOpenAIRequest:
 
     def test_tool_choice_any(self) -> None:
         body = {
-            "model": "m", "max_tokens": 1,
+            "model": "m",
+            "max_tokens": 1,
             "messages": [{"role": "user", "content": "x"}],
             "tool_choice": {"type": "any"},
         }
@@ -204,7 +219,8 @@ class TestAnthropicToOpenAIRequest:
 
     def test_tool_choice_specific(self) -> None:
         body = {
-            "model": "m", "max_tokens": 1,
+            "model": "m",
+            "max_tokens": 1,
             "messages": [{"role": "user", "content": "x"}],
             "tool_choice": {"type": "tool", "name": "my_func"},
         }
@@ -213,17 +229,82 @@ class TestAnthropicToOpenAIRequest:
 
     def test_stop_sequences(self) -> None:
         body = {
-            "model": "m", "max_tokens": 1,
+            "model": "m",
+            "max_tokens": 1,
             "messages": [{"role": "user", "content": "x"}],
             "stop_sequences": ["END", "STOP"],
         }
         assert anthropic_to_openai_request(body)["stop"] == ["END", "STOP"]
 
+
+class TestAnthropicCacheControlTTLOrdering:
+    def test_existing_five_minute_blocks_force_request_wide_five_minute_ttl(self) -> None:
+        body = {
+            "tools": [
+                {"name": "bash", "description": "Run shell commands", "input_schema": {"type": "object"}},
+            ],
+            "system": [
+                {"type": "text", "text": "Base policy"},
+                {"type": "text", "text": "Stable skills", "cache_control": {"type": "ephemeral"}},
+                {"type": "text", "text": "Workspace context", "cache_control": {"type": "ephemeral"}},
+            ],
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": "Wrapper prefix"},
+                        {"type": "text", "text": "Current task", "cache_control": {"type": "ephemeral"}},
+                    ],
+                }
+            ],
+        }
+
+        plan = apply_anthropic_cache_breakpoints(
+            body,
+            session_id="session-123",
+            step_type="tool-selection",
+        )
+
+        assert plan.anthropic_ttl == "5m"
+        assert body["tools"][-1]["cache_control"] == {"type": "ephemeral"}
+        assert body["system"][1]["cache_control"] == {"type": "ephemeral"}
+        assert body["system"][2]["cache_control"] == {"type": "ephemeral"}
+        assert body["messages"][0]["content"][1]["cache_control"] == {"type": "ephemeral"}
+
+    def test_existing_one_hour_blocks_preserve_request_wide_one_hour_ttl(self) -> None:
+        body = {
+            "tools": [
+                {
+                    "name": "bash",
+                    "description": "Run shell commands",
+                    "input_schema": {"type": "object"},
+                    "cache_control": {"type": "ephemeral", "ttl": "1h"},
+                },
+            ],
+            "system": [
+                {"type": "text", "text": "Base policy", "cache_control": {"type": "ephemeral", "ttl": "1h"}},
+            ],
+            "messages": [{"role": "user", "content": "Reply with exactly pong"}],
+        }
+
+        plan = apply_anthropic_cache_breakpoints(
+            body,
+            session_id="session-123",
+            step_type="tool-selection",
+        )
+
+        assert plan.anthropic_ttl == "1h"
+        assert body["tools"][-1]["cache_control"] == {"type": "ephemeral", "ttl": "1h"}
+        assert body["system"][-1]["cache_control"] == {"type": "ephemeral", "ttl": "1h"}
+
     def test_optional_params_passthrough(self) -> None:
         body = {
-            "model": "m", "max_tokens": 1,
+            "model": "m",
+            "max_tokens": 1,
             "messages": [{"role": "user", "content": "x"}],
-            "temperature": 0.5, "top_p": 0.9, "stream": True,
+            "temperature": 0.5,
+            "top_p": 0.9,
+            "stream": True,
         }
         out = anthropic_to_openai_request(body)
         assert out["temperature"] == 0.5
@@ -232,7 +313,8 @@ class TestAnthropicToOpenAIRequest:
 
     def test_top_k_dropped(self) -> None:
         body = {
-            "model": "m", "max_tokens": 1,
+            "model": "m",
+            "max_tokens": 1,
             "messages": [{"role": "user", "content": "x"}],
             "top_k": 40,
         }
@@ -244,15 +326,18 @@ class TestAnthropicToOpenAIRequest:
 # Response conversion: OpenAI → Anthropic
 # =========================================================================
 
+
 class TestOpenAIToAnthropicResponse:
     def test_text_response(self) -> None:
         oai = {
             "id": "chatcmpl-123",
-            "choices": [{
-                "index": 0,
-                "message": {"role": "assistant", "content": "Hello!"},
-                "finish_reason": "stop",
-            }],
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {"role": "assistant", "content": "Hello!"},
+                    "finish_reason": "stop",
+                }
+            ],
             "usage": {"prompt_tokens": 10, "completion_tokens": 5, "total_tokens": 15},
         }
         out = openai_to_anthropic_response(oai, "claude-sonnet-4-20250514")
@@ -302,27 +387,34 @@ class TestOpenAIToAnthropicRequest:
             "model": "claude-sonnet",
             "max_tokens": 1024,
             "messages": [
-                {"role": "system", "content": [{"type": "text", "text": "You are stable", "cache_control": {"type": "ephemeral"}}]},
+                {
+                    "role": "system",
+                    "content": [{"type": "text", "text": "You are stable", "cache_control": {"type": "ephemeral"}}],
+                },
                 {"role": "user", "content": "Check weather"},
                 {
                     "role": "assistant",
                     "content": "Calling tool",
-                    "tool_calls": [{
-                        "id": "call_1",
-                        "type": "function",
-                        "function": {"name": "weather", "arguments": "{\"city\":\"SF\"}"},
-                    }],
+                    "tool_calls": [
+                        {
+                            "id": "call_1",
+                            "type": "function",
+                            "function": {"name": "weather", "arguments": '{"city":"SF"}'},
+                        }
+                    ],
                 },
                 {"role": "tool", "tool_call_id": "call_1", "content": "58F"},
             ],
-            "tools": [{
-                "type": "function",
-                "function": {
-                    "name": "weather",
-                    "description": "Get weather",
-                    "parameters": {"type": "object", "properties": {"city": {"type": "string"}}},
-                },
-            }],
+            "tools": [
+                {
+                    "type": "function",
+                    "function": {
+                        "name": "weather",
+                        "description": "Get weather",
+                        "parameters": {"type": "object", "properties": {"city": {"type": "string"}}},
+                    },
+                }
+            ],
             "tool_choice": "required",
         }
 
@@ -334,24 +426,61 @@ class TestOpenAIToAnthropicRequest:
         assert any(block["type"] == "tool_use" for block in out["messages"][1]["content"])
         assert out["messages"][2]["content"][0]["type"] == "tool_result"
 
+    def test_empty_assistant_content_with_tool_calls_omits_empty_text_blocks(self) -> None:
+        body = {
+            "model": "claude-sonnet",
+            "max_tokens": 1024,
+            "messages": [
+                {"role": "user", "content": "Check weather"},
+                {
+                    "role": "assistant",
+                    "content": None,
+                    "tool_calls": [
+                        {
+                            "id": "call_1",
+                            "type": "function",
+                            "function": {"name": "weather", "arguments": '{"city":"SF"}'},
+                        }
+                    ],
+                },
+                {"role": "tool", "tool_call_id": "call_1", "content": "58F"},
+            ],
+        }
+
+        out = openai_to_anthropic_request(body)
+
+        assistant_blocks = out["messages"][1]["content"]
+        assert assistant_blocks == [
+            {
+                "type": "tool_use",
+                "id": "call_1",
+                "name": "weather",
+                "input": {"city": "SF"},
+            }
+        ]
+
     def test_tool_calls_response(self) -> None:
         oai = {
             "id": "chatcmpl-456",
-            "choices": [{
-                "message": {
-                    "role": "assistant",
-                    "content": None,
-                    "tool_calls": [{
-                        "id": "call_abc",
-                        "type": "function",
-                        "function": {
-                            "name": "get_weather",
-                            "arguments": '{"city": "NYC"}',
-                        },
-                    }],
-                },
-                "finish_reason": "tool_calls",
-            }],
+            "choices": [
+                {
+                    "message": {
+                        "role": "assistant",
+                        "content": None,
+                        "tool_calls": [
+                            {
+                                "id": "call_abc",
+                                "type": "function",
+                                "function": {
+                                    "name": "get_weather",
+                                    "arguments": '{"city": "NYC"}',
+                                },
+                            }
+                        ],
+                    },
+                    "finish_reason": "tool_calls",
+                }
+            ],
             "usage": {"prompt_tokens": 20, "completion_tokens": 15, "total_tokens": 35},
         }
         out = openai_to_anthropic_response(oai, "model-x")
@@ -366,18 +495,22 @@ class TestOpenAIToAnthropicRequest:
     def test_mixed_text_and_tools(self) -> None:
         oai = {
             "id": "chatcmpl-789",
-            "choices": [{
-                "message": {
-                    "role": "assistant",
-                    "content": "I'll check that.",
-                    "tool_calls": [{
-                        "id": "call_1",
-                        "type": "function",
-                        "function": {"name": "search", "arguments": '{"q": "test"}'},
-                    }],
-                },
-                "finish_reason": "tool_calls",
-            }],
+            "choices": [
+                {
+                    "message": {
+                        "role": "assistant",
+                        "content": "I'll check that.",
+                        "tool_calls": [
+                            {
+                                "id": "call_1",
+                                "type": "function",
+                                "function": {"name": "search", "arguments": '{"q": "test"}'},
+                            }
+                        ],
+                    },
+                    "finish_reason": "tool_calls",
+                }
+            ],
             "usage": {"prompt_tokens": 5, "completion_tokens": 10, "total_tokens": 15},
         }
         out = openai_to_anthropic_response(oai, "m")
@@ -387,10 +520,12 @@ class TestOpenAIToAnthropicRequest:
 
     def test_length_finish_reason(self) -> None:
         oai = {
-            "choices": [{
-                "message": {"role": "assistant", "content": "truncated..."},
-                "finish_reason": "length",
-            }],
+            "choices": [
+                {
+                    "message": {"role": "assistant", "content": "truncated..."},
+                    "finish_reason": "length",
+                }
+            ],
             "usage": {},
         }
         assert openai_to_anthropic_response(oai, "m")["stop_reason"] == "max_tokens"
@@ -399,6 +534,7 @@ class TestOpenAIToAnthropicRequest:
 # =========================================================================
 # Error conversion
 # =========================================================================
+
 
 class TestErrorConversion:
     def test_rate_limit_error(self) -> None:
@@ -419,6 +555,7 @@ class TestErrorConversion:
 # =========================================================================
 # Streaming conversion: OpenAI SSE → Anthropic SSE
 # =========================================================================
+
 
 def _make_oai_sse(data: dict) -> bytes:
     """Build a single OpenAI SSE line."""
@@ -465,18 +602,27 @@ class TestStreamConverter:
     def test_basic_text_stream(self) -> None:
         converter = OpenAIToAnthropicStreamConverter(model="test-model")
 
-        chunk1 = _make_oai_sse({
-            "choices": [{"delta": {"role": "assistant", "content": ""}, "finish_reason": None}],
-        })
-        chunk2 = _make_oai_sse({
-            "choices": [{"delta": {"content": "Hello"}, "finish_reason": None}],
-        })
-        chunk3 = _make_oai_sse({
-            "choices": [{"delta": {"content": " world"}, "finish_reason": None}],
-        })
-        chunk4 = _make_oai_sse({
-            "choices": [{"delta": {}, "finish_reason": "stop"}],
-        })
+        chunk1 = _make_oai_sse(
+            {
+                "choices": [{"delta": {"role": "assistant", "content": ""}, "finish_reason": None}],
+            }
+        )
+        chunk2 = _make_oai_sse(
+            {
+                "choices": [{"delta": {"content": "Hello"}, "finish_reason": None}],
+            }
+        )
+        chunk3 = _make_oai_sse(
+            {
+                "choices": [{"delta": {"content": " world"}, "finish_reason": None}],
+            }
+        )
+        chunk4 = _make_oai_sse(
+            {
+                "choices": [{"delta": {}, "finish_reason": "stop"}],
+                "usage": {"prompt_tokens": 7, "completion_tokens": 2},
+            }
+        )
 
         all_events: list[bytes] = []
         for c in [chunk1, chunk2, chunk3, chunk4]:
@@ -487,7 +633,6 @@ class TestStreamConverter:
         event_types = [e["_event"] for e in parsed]
 
         assert "message_start" in event_types
-        assert "ping" in event_types
         assert "content_block_start" in event_types
         assert "content_block_delta" in event_types
         assert "content_block_stop" in event_types
@@ -497,6 +642,7 @@ class TestStreamConverter:
         msg_start = next(e for e in parsed if e["_event"] == "message_start")
         assert msg_start["message"]["model"] == "test-model"
         assert msg_start["message"]["role"] == "assistant"
+        assert set(msg_start["message"]["usage"]) == {"input_tokens", "output_tokens"}
 
         deltas = [e for e in parsed if e["_event"] == "content_block_delta"]
         text_parts = [d["delta"]["text"] for d in deltas if d["delta"].get("type") == "text_delta"]
@@ -505,22 +651,67 @@ class TestStreamConverter:
 
         msg_delta = next(e for e in parsed if e["_event"] == "message_delta")
         assert msg_delta["delta"]["stop_reason"] == "end_turn"
+        assert msg_delta["usage"]["input_tokens"] == 7
+        assert msg_delta["usage"]["output_tokens"] == 2
 
     def test_tool_call_stream(self) -> None:
         converter = OpenAIToAnthropicStreamConverter(model="m")
 
         chunks = [
             _make_oai_sse({"choices": [{"delta": {"role": "assistant"}, "finish_reason": None}]}),
-            _make_oai_sse({"choices": [{"delta": {"tool_calls": [{
-                "index": 0, "id": "call_1", "type": "function",
-                "function": {"name": "search", "arguments": ""},
-            }]}, "finish_reason": None}]}),
-            _make_oai_sse({"choices": [{"delta": {"tool_calls": [{
-                "index": 0, "function": {"arguments": '{"q":'},
-            }]}, "finish_reason": None}]}),
-            _make_oai_sse({"choices": [{"delta": {"tool_calls": [{
-                "index": 0, "function": {"arguments": '"test"}'},
-            }]}, "finish_reason": None}]}),
+            _make_oai_sse(
+                {
+                    "choices": [
+                        {
+                            "delta": {
+                                "tool_calls": [
+                                    {
+                                        "index": 0,
+                                        "id": "call_1",
+                                        "type": "function",
+                                        "function": {"name": "search", "arguments": ""},
+                                    }
+                                ]
+                            },
+                            "finish_reason": None,
+                        }
+                    ]
+                }
+            ),
+            _make_oai_sse(
+                {
+                    "choices": [
+                        {
+                            "delta": {
+                                "tool_calls": [
+                                    {
+                                        "index": 0,
+                                        "function": {"arguments": '{"q":'},
+                                    }
+                                ]
+                            },
+                            "finish_reason": None,
+                        }
+                    ]
+                }
+            ),
+            _make_oai_sse(
+                {
+                    "choices": [
+                        {
+                            "delta": {
+                                "tool_calls": [
+                                    {
+                                        "index": 0,
+                                        "function": {"arguments": '"test"}'},
+                                    }
+                                ]
+                            },
+                            "finish_reason": None,
+                        }
+                    ]
+                }
+            ),
             _make_oai_sse({"choices": [{"delta": {}, "finish_reason": "tool_calls"}]}),
         ]
 
@@ -538,8 +729,7 @@ class TestStreamConverter:
         assert block_starts[0]["content_block"]["name"] == "search"
 
         json_deltas = [
-            e for e in parsed
-            if e["_event"] == "content_block_delta" and e["delta"].get("type") == "input_json_delta"
+            e for e in parsed if e["_event"] == "content_block_delta" and e["delta"].get("type") == "input_json_delta"
         ]
         joined = "".join(d["delta"]["partial_json"] for d in json_deltas)
         assert json.loads(joined) == {"q": "test"}
@@ -550,20 +740,43 @@ class TestStreamConverter:
     def test_done_signal(self) -> None:
         converter = OpenAIToAnthropicStreamConverter(model="m")
 
-        events = converter.feed(
-            _make_oai_sse({"choices": [{"delta": {"content": "Hi"}, "finish_reason": None}]})
-        )
+        events = converter.feed(_make_oai_sse({"choices": [{"delta": {"content": "Hi"}, "finish_reason": None}]}))
         events.extend(converter.feed(b"data: [DONE]\n\n"))
         events.extend(converter.finish())
 
         parsed = _parse_anthropic_events(events)
         assert any(e["_event"] == "message_stop" for e in parsed)
 
+    def test_usage_chunk_after_finish_reason_is_preserved(self) -> None:
+        converter = OpenAIToAnthropicStreamConverter(model="m")
+
+        chunks = [
+            _make_oai_sse({"choices": [{"delta": {"content": "Hi"}, "finish_reason": None}]}),
+            _make_oai_sse({"choices": [{"delta": {}, "finish_reason": "stop"}]}),
+            _make_oai_sse({"choices": [], "usage": {"prompt_tokens": 11, "completion_tokens": 2}}),
+            b"data: [DONE]\n\n",
+        ]
+
+        all_events: list[bytes] = []
+        for chunk in chunks:
+            all_events.extend(converter.feed(chunk))
+        all_events.extend(converter.finish())
+
+        parsed = _parse_anthropic_events(all_events)
+        msg_delta = next(e for e in parsed if e["_event"] == "message_delta")
+        assert msg_delta["usage"]["input_tokens"] == 11
+        assert msg_delta["usage"]["output_tokens"] == 2
+        assert msg_delta["delta"]["stop_reason"] == "end_turn"
+
     def test_empty_finish_calls_are_idempotent(self) -> None:
         converter = OpenAIToAnthropicStreamConverter(model="m")
-        converter.feed(_make_oai_sse({
-            "choices": [{"delta": {"content": "x"}, "finish_reason": "stop"}],
-        }))
+        converter.feed(
+            _make_oai_sse(
+                {
+                    "choices": [{"delta": {"content": "x"}, "finish_reason": "stop"}],
+                }
+            )
+        )
         converter.finish()
         second = converter.finish()
         assert second == []
@@ -574,19 +787,19 @@ class TestAnthropicToOpenAIStreamConverter:
         converter = AnthropicToOpenAIStreamConverter(model="anthropic/claude-sonnet-4.6")
         chunks = [
             (
-                b'event: message_start\n'
+                b"event: message_start\n"
                 b'data: {"type":"message_start","message":{"id":"msg_1","type":"message","role":"assistant","content":[],"model":"anthropic/claude-sonnet-4-6","stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":21,"cache_read_input_tokens":100,"cache_creation_input_tokens":20,"output_tokens":0}}}\n\n'
             ),
             (
-                b'event: content_block_start\n'
+                b"event: content_block_start\n"
                 b'data: {"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}}\n\n'
             ),
             (
-                b'event: content_block_delta\n'
+                b"event: content_block_delta\n"
                 b'data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"Hello"}}\n\n'
             ),
             (
-                b'event: message_delta\n'
+                b"event: message_delta\n"
                 b'data: {"type":"message_delta","delta":{"stop_reason":"end_turn","stop_sequence":null},"usage":{"output_tokens":7}}\n\n'
             ),
             b'event: message_stop\ndata: {"type":"message_stop"}\n\n',
@@ -602,7 +815,9 @@ class TestAnthropicToOpenAIStreamConverter:
         assert done is True
         assert parsed[0]["choices"][0]["delta"]["role"] == "assistant"
         assert any(event["choices"][0]["delta"].get("content") == "Hello" for event in parsed if event.get("choices"))
-        finish = next(event for event in parsed if event.get("choices") and event["choices"][0]["finish_reason"] == "stop")
+        finish = next(
+            event for event in parsed if event.get("choices") and event["choices"][0]["finish_reason"] == "stop"
+        )
         assert finish["choices"][0]["finish_reason"] == "stop"
         usage_chunk = next(event for event in parsed if event.get("choices") == [])
         assert usage_chunk["usage"]["prompt_tokens"] == 141
@@ -612,6 +827,7 @@ class TestAnthropicToOpenAIStreamConverter:
 # =========================================================================
 # Integration: /v1/messages endpoint on the proxy
 # =========================================================================
+
 
 @pytest.fixture
 def messages_client() -> TestClient:
@@ -627,34 +843,75 @@ class TestMessagesEndpoint:
     def test_no_upstream_returns_anthropic_error(self) -> None:
         app = create_app(upstream="")
         client = TestClient(app, raise_server_exceptions=False)
-        resp = client.post("/v1/messages", json={
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "hi"}],
-        })
+        resp = client.post(
+            "/v1/messages",
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "hi"}],
+            },
+        )
         assert resp.status_code == 503
         data = resp.json()
         assert data["type"] == "error"
         assert data["error"]["type"] == "overloaded_error"
 
     def test_upstream_unreachable_returns_anthropic_error(self, messages_client: TestClient) -> None:
-        resp = messages_client.post("/v1/messages", json={
-            "model": "some-model",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = messages_client.post(
+            "/v1/messages",
+            json={
+                "model": "some-model",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         assert resp.status_code == 502
         data = resp.json()
         assert data["type"] == "error"
         assert data["error"]["type"] == "api_error"
         assert "unreachable" in data["error"]["message"].lower()
 
+    def test_nested_v1_messages_alias_is_supported(self) -> None:
+        app = create_app(upstream="")
+        client = TestClient(app, raise_server_exceptions=False)
+        resp = client.post(
+            "/v1/v1/messages",
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "hi"}],
+            },
+        )
+        assert resp.status_code == 503
+        data = resp.json()
+        assert data["type"] == "error"
+        assert data["error"]["type"] == "overloaded_error"
+
+    def test_force_messages_default_mode_routes_explicit_models(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        monkeypatch.setenv("UNCOMMON_ROUTE_FORCE_MESSAGES_DEFAULT_MODE", "auto")
+        app = create_app(upstream="http://127.0.0.1:1/fake")
+        client = TestClient(app, raise_server_exceptions=False)
+        resp = client.post(
+            "/v1/messages",
+            json={
+                "model": "anthropic/claude-sonnet-4.6",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
+        assert resp.status_code == 502
+        assert resp.headers["x-uncommon-route-mode"] == "auto"
+        assert resp.headers["x-uncommon-route-model"]
+
     def test_virtual_model_debug_still_works(self, messages_client: TestClient) -> None:
-        resp = messages_client.post("/v1/messages", json={
-            "model": "uncommon-route/auto",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "/debug what is 2+2"}],
-        })
+        resp = messages_client.post(
+            "/v1/messages",
+            json={
+                "model": "uncommon-route/auto",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "/debug what is 2+2"}],
+            },
+        )
         assert resp.status_code == 200
 
     def test_spend_limit_returns_anthropic_error(self) -> None:
@@ -666,23 +923,29 @@ class TestMessagesEndpoint:
             spend_control=sc,
         )
         client = TestClient(app, raise_server_exceptions=False)
-        resp = client.post("/v1/messages", json={
-            "model": "uncommon-route/auto",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = client.post(
+            "/v1/messages",
+            json={
+                "model": "uncommon-route/auto",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         assert resp.status_code == 429
         data = resp.json()
         assert data["type"] == "error"
         assert data["error"]["type"] == "rate_limit_error"
 
     def test_system_prompt_preserved(self, messages_client: TestClient) -> None:
-        resp = messages_client.post("/v1/messages", json={
-            "model": "uncommon-route/auto",
-            "max_tokens": 100,
-            "system": "You are a coding assistant",
-            "messages": [{"role": "user", "content": "/debug explain recursion"}],
-        })
+        resp = messages_client.post(
+            "/v1/messages",
+            json={
+                "model": "uncommon-route/auto",
+                "max_tokens": 100,
+                "system": "You are a coding assistant",
+                "messages": [{"role": "user", "content": "/debug explain recursion"}],
+            },
+        )
         assert resp.status_code == 200
 
     def test_explicit_anthropic_model_uses_native_messages_transport_with_cache_breakpoints(
@@ -729,11 +992,13 @@ class TestMessagesEndpoint:
                     "model": "anthropic/claude-sonnet-4.6",
                     "max_tokens": 16,
                     "system": "You are terse.",
-                    "tools": [{
-                        "name": "bash",
-                        "description": "Run shell commands",
-                        "input_schema": {"type": "object", "properties": {}},
-                    }],
+                    "tools": [
+                        {
+                            "name": "bash",
+                            "description": "Run shell commands",
+                            "input_schema": {"type": "object", "properties": {}},
+                        }
+                    ],
                     "messages": [{"role": "user", "content": "Reply with exactly pong"}],
                 },
                 headers={"anthropic-beta": "prompt-caching-2024-07-31"},
@@ -760,36 +1025,48 @@ class TestAutoRouting:
     """All /v1/messages requests are auto-routed regardless of model name."""
 
     def test_claude_model_gets_routed(self, messages_client: TestClient) -> None:
-        resp = messages_client.post("/v1/messages", json={
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "/debug hello"}],
-        })
+        resp = messages_client.post(
+            "/v1/messages",
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "/debug hello"}],
+            },
+        )
         assert resp.status_code == 200
 
     def test_arbitrary_model_gets_routed(self, messages_client: TestClient) -> None:
-        resp = messages_client.post("/v1/messages", json={
-            "model": "anything-here",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "/debug hello"}],
-        })
+        resp = messages_client.post(
+            "/v1/messages",
+            json={
+                "model": "anything-here",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "/debug hello"}],
+            },
+        )
         assert resp.status_code == 200
 
     def test_routing_headers_present(self, messages_client: TestClient) -> None:
-        resp = messages_client.post("/v1/messages", json={
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = messages_client.post(
+            "/v1/messages",
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         assert "x-uncommon-route-model" in resp.headers
         assert "x-uncommon-route-tier" in resp.headers
 
     def test_debug_returns_anthropic_format(self, messages_client: TestClient) -> None:
-        resp = messages_client.post("/v1/messages", json={
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": 100,
-            "messages": [{"role": "user", "content": "/debug what is 2+2"}],
-        })
+        resp = messages_client.post(
+            "/v1/messages",
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 100,
+                "messages": [{"role": "user", "content": "/debug what is 2+2"}],
+            },
+        )
         assert resp.status_code == 200
         data = resp.json()
         assert data["type"] == "message"
@@ -845,14 +1122,16 @@ class TestNativeAnthropicTransportForChatCompletions:
                         {"role": "system", "content": "You are terse."},
                         {"role": "user", "content": "Reply with exactly pong"},
                     ],
-                    "tools": [{
-                        "type": "function",
-                        "function": {
-                            "name": "bash",
-                            "description": "Run shell commands",
-                            "parameters": {"type": "object", "properties": {}},
-                        },
-                    }],
+                    "tools": [
+                        {
+                            "type": "function",
+                            "function": {
+                                "name": "bash",
+                                "description": "Run shell commands",
+                                "parameters": {"type": "object", "properties": {}},
+                            },
+                        }
+                    ],
                 },
             )
 
@@ -870,6 +1149,162 @@ class TestNativeAnthropicTransportForChatCompletions:
             assert isinstance(headers, dict)
             assert headers["x-api-key"] == "env-key-123"
             assert headers["anthropic-version"] == "2023-06-01"
+        finally:
+            asyncio.run(async_client.aclose())
+
+    def test_tool_followup_omits_empty_assistant_text_blocks(
+        self,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        captured: dict[str, object] = {}
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            captured["url"] = str(request.url)
+            captured["headers"] = dict(request.headers)
+            captured["body"] = json.loads(request.content.decode("utf-8"))
+            return httpx.Response(
+                200,
+                json={
+                    "id": "msg_followup",
+                    "type": "message",
+                    "role": "assistant",
+                    "model": "anthropic/claude-sonnet-4-6",
+                    "content": [{"type": "text", "text": "uncommon_route/uncommon_route/router/config.py"}],
+                    "stop_reason": "end_turn",
+                    "stop_sequence": None,
+                    "usage": {
+                        "input_tokens": 24,
+                        "cache_read_input_tokens": 0,
+                        "cache_creation_input_tokens": 0,
+                        "output_tokens": 8,
+                    },
+                },
+                headers={"content-type": "application/json"},
+            )
+
+        async_client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        monkeypatch.setattr("uncommon_route.proxy._get_client", lambda: async_client)
+        monkeypatch.setenv("UNCOMMON_ROUTE_API_KEY", "env-key-123")
+
+        try:
+            app = create_app(upstream="https://api.commonstack.ai/v1")
+            client = TestClient(app, raise_server_exceptions=False)
+
+            resp = client.post(
+                "/v1/chat/completions",
+                json={
+                    "model": "anthropic/claude-sonnet-4.6",
+                    "max_tokens": 32,
+                    "messages": [
+                        {"role": "system", "content": "You are terse."},
+                        {"role": "user", "content": "Find the file."},
+                        {
+                            "role": "assistant",
+                            "content": None,
+                            "tool_calls": [
+                                {
+                                    "id": "call_1",
+                                    "type": "function",
+                                    "function": {
+                                        "name": "shell",
+                                        "arguments": '{"command":["rg","-l","routing_mode_from_model","."]}',
+                                    },
+                                }
+                            ],
+                        },
+                        {
+                            "role": "tool",
+                            "tool_call_id": "call_1",
+                            "content": "uncommon_route/uncommon_route/router/config.py",
+                        },
+                    ],
+                    "tools": [
+                        {
+                            "type": "function",
+                            "function": {
+                                "name": "shell",
+                                "description": "Run shell commands",
+                                "parameters": {"type": "object", "properties": {}},
+                            },
+                        }
+                    ],
+                },
+            )
+
+            assert resp.status_code == 200
+            assert resp.json()["choices"][0]["message"]["content"] == "uncommon_route/uncommon_route/router/config.py"
+            body = captured["body"]
+            assert isinstance(body, dict)
+            assistant_blocks = body["messages"][1]["content"]
+            assert assistant_blocks == [
+                {
+                    "type": "tool_use",
+                    "id": "call_1",
+                    "name": "shell",
+                    "input": {"command": ["rg", "-l", "routing_mode_from_model", "."]},
+                }
+            ]
+        finally:
+            asyncio.run(async_client.aclose())
+
+    def test_forced_routed_stream_preserves_requested_anthropic_model(
+        self,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        def fake_route(*_args, **_kwargs) -> RoutingDecision:
+            return RoutingDecision(
+                model="openai/gpt-4o-mini",
+                tier=Tier.MEDIUM,
+                mode=RoutingMode.AUTO,
+                confidence=1.0,
+                method="pool",
+                reasoning="test",
+                cost_estimate=0.001,
+                baseline_cost=0.01,
+                savings=0.9,
+            )
+
+        def handler(_request: httpx.Request) -> httpx.Response:
+            return httpx.Response(
+                200,
+                content=(
+                    b'data: {"id":"chatcmpl-stream","object":"chat.completion.chunk","created":1,'
+                    b'"model":"openai/gpt-4o-mini","choices":[{"index":0,"delta":{"role":"assistant"},'
+                    b'"finish_reason":null}]}\n\n'
+                    b'data: {"id":"chatcmpl-stream","object":"chat.completion.chunk","created":1,'
+                    b'"model":"openai/gpt-4o-mini","choices":[{"index":0,"delta":{"content":"pong"},'
+                    b'"finish_reason":null}]}\n\n'
+                    b'data: {"id":"chatcmpl-stream","object":"chat.completion.chunk","created":1,'
+                    b'"model":"openai/gpt-4o-mini","choices":[{"index":0,"delta":{},'
+                    b'"finish_reason":"stop"}],"usage":{"prompt_tokens":7,"completion_tokens":1,"total_tokens":8}}\n\n'
+                    b"data: [DONE]\n\n"
+                ),
+                headers={"content-type": "text/event-stream"},
+            )
+
+        monkeypatch.setenv("UNCOMMON_ROUTE_FORCE_MESSAGES_DEFAULT_MODE", "auto")
+        monkeypatch.setattr("uncommon_route.proxy.route", fake_route)
+        async_client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+        monkeypatch.setattr("uncommon_route.proxy._get_client", lambda: async_client)
+
+        try:
+            app = create_app(upstream="http://127.0.0.1:1/fake")
+            client = TestClient(app, raise_server_exceptions=False)
+            resp = client.post(
+                "/v1/messages",
+                json={
+                    "model": "anthropic/claude-sonnet-4.6",
+                    "max_tokens": 16,
+                    "messages": [{"role": "user", "content": "Reply with exactly pong"}],
+                    "stream": True,
+                },
+            )
+
+            assert resp.status_code == 200
+            compact = resp.text.replace(" ", "")
+            assert '"model":"claude-sonnet-4-6"' in compact
+            assert '"text":"pong"' in compact
+            assert "openai/gpt-4o-mini" not in resp.text
         finally:
             asyncio.run(async_client.aclose())
 

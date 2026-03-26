@@ -11,6 +11,10 @@ import pytest
 from starlette.testclient import TestClient
 
 from uncommon_route.artifacts import ArtifactStore
+from uncommon_route.calibration import (
+    InMemoryRouteCalibrationStorage,
+    RouteConfidenceCalibrator,
+)
 from uncommon_route.proxy import create_app
 from uncommon_route.semantic import SemanticCallResult
 from uncommon_route.spend_control import InMemorySpendControlStorage, SpendControl
@@ -22,18 +26,30 @@ from uncommon_route.stats import (
 
 
 class FakeSemanticCompressor:
-    async def summarize_tool_result(self, content: str, *, tool_name: str, latest_user_prompt: str, request: object) -> SemanticCallResult | None:
+    async def summarize_tool_result(
+        self, content: str, *, tool_name: str, latest_user_prompt: str, request: object
+    ) -> SemanticCallResult | None:
         return SemanticCallResult(text=f"summary for {tool_name}", model="deepseek/deepseek-chat", estimated_cost=0.001)
 
-    async def summarize_history(self, transcript: str, *, latest_user_prompt: str, session_id: str, request: object) -> SemanticCallResult | None:
-        return SemanticCallResult(text=f"checkpoint for {session_id}", model="deepseek/deepseek-chat", estimated_cost=0.002)
+    async def summarize_history(
+        self, transcript: str, *, latest_user_prompt: str, session_id: str, request: object
+    ) -> SemanticCallResult | None:
+        return SemanticCallResult(
+            text=f"checkpoint for {session_id}", model="deepseek/deepseek-chat", estimated_cost=0.002
+        )
 
-    async def rehydrate_artifact(self, query: str, *, artifact_id: str, content: str, summary: str, request: object) -> SemanticCallResult | None:
-        return SemanticCallResult(text=f"rehydrated {artifact_id}", model="deepseek/deepseek-chat", estimated_cost=0.001)
+    async def rehydrate_artifact(
+        self, query: str, *, artifact_id: str, content: str, summary: str, request: object
+    ) -> SemanticCallResult | None:
+        return SemanticCallResult(
+            text=f"rehydrated {artifact_id}", model="deepseek/deepseek-chat", estimated_cost=0.001
+        )
 
 
 class QualityFallbackSemanticCompressor(FakeSemanticCompressor):
-    async def summarize_tool_result(self, content: str, *, tool_name: str, latest_user_prompt: str, request: object) -> SemanticCallResult | None:
+    async def summarize_tool_result(
+        self, content: str, *, tool_name: str, latest_user_prompt: str, request: object
+    ) -> SemanticCallResult | None:
         return SemanticCallResult(
             text=f"summary for {tool_name}",
             model="google/gemini-2.5-flash-lite",
@@ -118,18 +134,22 @@ class TestRouteStats:
 
     def test_summary_tracks_baseline_and_savings_breakdown(self) -> None:
         rs = RouteStats(storage=InMemoryRouteStatsStorage())
-        rs.record(RouteRecord(**{
-            **_make_record(
-                model="anthropic/claude-sonnet-4.6",
-                estimated_cost=0.02,
-                actual_cost=0.01,
-            ).__dict__,
-            "baseline_cost": 0.10,
-            "input_tokens_before": 2000,
-            "input_tokens_after": 1000,
-            "cache_read_input_tokens": 1000,
-            "cache_write_input_tokens": 100,
-        }))
+        rs.record(
+            RouteRecord(
+                **{
+                    **_make_record(
+                        model="anthropic/claude-sonnet-4.6",
+                        estimated_cost=0.02,
+                        actual_cost=0.01,
+                    ).__dict__,
+                    "baseline_cost": 0.10,
+                    "input_tokens_before": 2000,
+                    "input_tokens_after": 1000,
+                    "cache_read_input_tokens": 1000,
+                    "cache_write_input_tokens": 100,
+                }
+            )
+        )
 
         s = rs.summary()
 
@@ -141,15 +161,19 @@ class TestRouteStats:
 
     def test_summary_infers_baseline_for_legacy_records(self) -> None:
         rs = RouteStats(storage=InMemoryRouteStatsStorage())
-        rs.record(RouteRecord(**{
-            **_make_record(
-                model="moonshot/kimi-k2.5",
-                estimated_cost=0.01,
-                actual_cost=0.01,
-                savings=0.8,
-            ).__dict__,
-            "baseline_cost": 0.0,
-        }))
+        rs.record(
+            RouteRecord(
+                **{
+                    **_make_record(
+                        model="moonshot/kimi-k2.5",
+                        estimated_cost=0.01,
+                        actual_cost=0.01,
+                        savings=0.8,
+                    ).__dict__,
+                    "baseline_cost": 0.0,
+                }
+            )
+        )
 
         s = rs.summary()
 
@@ -159,14 +183,16 @@ class TestRouteStats:
     def test_summary_tracks_cache_usage(self) -> None:
         rs = RouteStats(storage=InMemoryRouteStatsStorage())
         rec = _make_record()
-        rec = RouteRecord(**{
-            **rec.__dict__,
-            "usage_input_tokens": 1200,
-            "usage_output_tokens": 300,
-            "cache_read_input_tokens": 900,
-            "cache_write_input_tokens": 100,
-            "cache_hit_ratio": 0.75,
-        })
+        rec = RouteRecord(
+            **{
+                **rec.__dict__,
+                "usage_input_tokens": 1200,
+                "usage_output_tokens": 300,
+                "cache_read_input_tokens": 900,
+                "cache_write_input_tokens": 100,
+                "cache_hit_ratio": 0.75,
+            }
+        )
         rs.record(rec)
 
         s = rs.summary()
@@ -179,13 +205,17 @@ class TestRouteStats:
 
     def test_summary_tracks_transport_and_cache_strategy(self) -> None:
         rs = RouteStats(storage=InMemoryRouteStatsStorage())
-        rs.record(RouteRecord(**{
-            **_make_record(model="anthropic/claude-sonnet-4.6", actual_cost=0.02).__dict__,
-            "transport": "anthropic-messages",
-            "cache_mode": "cache_control",
-            "cache_family": "anthropic",
-            "cache_breakpoints": 2,
-        }))
+        rs.record(
+            RouteRecord(
+                **{
+                    **_make_record(model="anthropic/claude-sonnet-4.6", actual_cost=0.02).__dict__,
+                    "transport": "anthropic-messages",
+                    "cache_mode": "cache_control",
+                    "cache_family": "anthropic",
+                    "cache_breakpoints": 2,
+                }
+            )
+        )
         rs.record(_make_record(actual_cost=0.01))
 
         s = rs.summary()
@@ -223,13 +253,17 @@ class TestRouteStats:
     def test_persistence_roundtrip(self) -> None:
         storage = InMemoryRouteStatsStorage()
         rs1 = RouteStats(storage=storage)
-        rs1.record(RouteRecord(**{
-            **_make_record(model="test/model", confidence=0.77).__dict__,
-            "transport": "anthropic-messages",
-            "cache_mode": "cache_control",
-            "cache_family": "anthropic",
-            "cache_breakpoints": 2,
-        }))
+        rs1.record(
+            RouteRecord(
+                **{
+                    **_make_record(model="test/model", confidence=0.77).__dict__,
+                    "transport": "anthropic-messages",
+                    "cache_mode": "cache_control",
+                    "cache_family": "anthropic",
+                    "cache_breakpoints": 2,
+                }
+            )
+        )
         rs1.record(_make_record(model="test/model2", tier="REASONING"))
 
         rs2 = RouteStats(storage=storage)
@@ -271,6 +305,12 @@ def stats_client() -> TestClient:
         upstream="http://127.0.0.1:1/fake",
         spend_control=SpendControl(storage=InMemorySpendControlStorage()),
         route_stats=RouteStats(storage=InMemoryRouteStatsStorage()),
+        route_confidence_calibrator=RouteConfidenceCalibrator(
+            storage=InMemoryRouteCalibrationStorage(),
+            min_examples=1,
+            min_tag_examples=1,
+            prior_strength=1.0,
+        ),
     )
     return TestClient(app, raise_server_exceptions=False)
 
@@ -287,12 +327,17 @@ class TestStatsEndpoint:
         assert data["by_cache_family"] == {}
         assert data["total_cache_breakpoints"] == 0
         assert data["selector"]["experience"]["records"] == 0
+        assert "route_confidence_calibration" in data
+        assert data["route_confidence_calibration"]["active"] is False
 
     def test_stats_after_routing(self, stats_client: TestClient) -> None:
-        stats_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        stats_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         resp = stats_client.get("/v1/stats")
         data = resp.json()
         # Upstream is fake (502), but for non-streaming the stats still record
@@ -315,10 +360,13 @@ class TestStatsEndpoint:
         assert "recent_feedback_changes" in data["selector"]["experience"]
 
     def test_recent_includes_transport_and_cache_strategy(self, stats_client: TestClient) -> None:
-        resp = stats_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = stats_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         assert resp.status_code == 502
 
         recent = stats_client.get("/v1/stats/recent").json()
@@ -331,10 +379,13 @@ class TestStatsEndpoint:
         assert "feedback_action" in recent[0]
 
     def test_stats_include_selector_feedback_summary(self, stats_client: TestClient) -> None:
-        resp = stats_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        resp = stats_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         request_id = resp.headers["x-uncommon-route-request-id"]
         fb = stats_client.post("/v1/feedback", json={"request_id": request_id, "signal": "weak"})
         assert fb.status_code == 200
@@ -343,6 +394,8 @@ class TestStatsEndpoint:
 
         assert data["selector"]["experience"]["demoted_models"]
         assert data["selector"]["experience"]["recent_feedback_changes"][0]["last_feedback_signal"] == "weak"
+        assert data["route_confidence_calibration"]["active"] is True
+        assert data["route_confidence_calibration"]["labeled_examples"] >= 1
 
     def test_stats_track_artifacts_and_input_reduction(self, tmp_path) -> None:
         app = create_app(
@@ -354,22 +407,27 @@ class TestStatsEndpoint:
         )
         client = TestClient(app, raise_server_exceptions=False)
         large_text = "\n".join(f"payload {i}" for i in range(4000))
-        client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [
-                {"role": "user", "content": "summarize this"},
-                {
-                    "role": "assistant",
-                    "content": "",
-                    "tool_calls": [{
-                        "id": "call_1",
-                        "type": "function",
-                        "function": {"name": "read_file", "arguments": "{}"},
-                    }],
-                },
-                {"role": "tool", "tool_call_id": "call_1", "content": large_text},
-            ],
-        })
+        client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [
+                    {"role": "user", "content": "summarize this"},
+                    {
+                        "role": "assistant",
+                        "content": "",
+                        "tool_calls": [
+                            {
+                                "id": "call_1",
+                                "type": "function",
+                                "function": {"name": "read_file", "arguments": "{}"},
+                            }
+                        ],
+                    },
+                    {"role": "tool", "tool_call_id": "call_1", "content": large_text},
+                ],
+            },
+        )
         data = client.get("/v1/stats").json()
         assert data["total_artifacts_created"] == 1
         assert data["total_input_tokens_after"] < data["total_input_tokens_before"]
@@ -388,22 +446,27 @@ class TestStatsEndpoint:
         client = TestClient(app, raise_server_exceptions=False)
         large_text = "\n".join(f"payload {i}" for i in range(3000))
 
-        client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [
-                {"role": "user", "content": "extract the main failure"},
-                {
-                    "role": "assistant",
-                    "content": "",
-                    "tool_calls": [{
-                        "id": "call_1",
-                        "type": "function",
-                        "function": {"name": "bash", "arguments": "{}"},
-                    }],
-                },
-                {"role": "tool", "tool_call_id": "call_1", "content": large_text},
-            ],
-        })
+        client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [
+                    {"role": "user", "content": "extract the main failure"},
+                    {
+                        "role": "assistant",
+                        "content": "",
+                        "tool_calls": [
+                            {
+                                "id": "call_1",
+                                "type": "function",
+                                "function": {"name": "bash", "arguments": "{}"},
+                            }
+                        ],
+                    },
+                    {"role": "tool", "tool_call_id": "call_1", "content": large_text},
+                ],
+            },
+        )
 
         data = client.get("/v1/stats").json()
         assert data["total_semantic_quality_fallbacks"] == 2
@@ -448,13 +511,16 @@ class TestStatsEndpoint:
             )
             client = TestClient(app, raise_server_exceptions=False)
 
-            resp = client.post("/v1/chat/completions", json={
-                "model": "anthropic/claude-sonnet-4.6",
-                "messages": [
-                    {"role": "system", "content": "You are terse."},
-                    {"role": "user", "content": "Reply with pong"},
-                ],
-            })
+            resp = client.post(
+                "/v1/chat/completions",
+                json={
+                    "model": "anthropic/claude-sonnet-4.6",
+                    "messages": [
+                        {"role": "system", "content": "You are terse."},
+                        {"role": "user", "content": "Reply with pong"},
+                    ],
+                },
+            )
 
             assert resp.status_code == 200
             data = client.get("/v1/stats").json()
@@ -466,16 +532,21 @@ class TestStatsEndpoint:
             asyncio.run(async_client.aclose())
 
     def test_stats_reset(self, stats_client: TestClient) -> None:
-        stats_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        stats_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         resp = stats_client.post("/v1/stats", json={"action": "reset"})
         assert resp.status_code == 200
         assert resp.json()["reset"] is True
+        assert resp.json()["route_confidence_calibration_reset"] is True
 
         data = stats_client.get("/v1/stats").json()
         assert data["total_requests"] == 0
+        assert data["route_confidence_calibration"]["active"] is False
 
     def test_stats_invalid_action(self, stats_client: TestClient) -> None:
         resp = stats_client.post("/v1/stats", json={"action": "explode"})
@@ -485,21 +556,28 @@ class TestStatsEndpoint:
         data = stats_client.get("/health").json()
         assert "stats" in data
         assert data["stats"]["total_requests"] == 0
+        assert "route_confidence_calibration" in data["feedback"]
 
     def test_debug_not_recorded(self, stats_client: TestClient) -> None:
         """Debug requests should not appear in stats."""
-        stats_client.post("/v1/chat/completions", json={
-            "model": "uncommon-route/auto",
-            "messages": [{"role": "user", "content": "/debug hello"}],
-        })
+        stats_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "uncommon-route/auto",
+                "messages": [{"role": "user", "content": "/debug hello"}],
+            },
+        )
         data = stats_client.get("/v1/stats").json()
         assert data["total_requests"] == 0
 
     def test_passthrough_not_recorded(self, stats_client: TestClient) -> None:
         """Non-virtual model requests should not appear in stats."""
-        stats_client.post("/v1/chat/completions", json={
-            "model": "some-other/model",
-            "messages": [{"role": "user", "content": "hello"}],
-        })
+        stats_client.post(
+            "/v1/chat/completions",
+            json={
+                "model": "some-other/model",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
         data = stats_client.get("/v1/stats").json()
         assert data["total_requests"] == 0

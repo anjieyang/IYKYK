@@ -34,7 +34,6 @@ from uncommon_route.paths import data_dir
 from uncommon_route.router.api import route
 from uncommon_route.router.classifier import classify
 from uncommon_route.router.structural import extract_structural_features, extract_unicode_block_features
-from uncommon_route.router.keywords import extract_keyword_features
 
 VERSION = "0.3.0"
 _DATA_DIR = data_dir()
@@ -58,7 +57,7 @@ Commands:
   logs                              Tail background-proxy log
   setup <client>                    Generate config for a client (claude-code)
   debug <prompt>                    Show per-dimension scoring breakdown
-  feedback <sub>                    Online learning (status|rollback)
+  feedback <sub>                    Online learning + confidence calibration (status|rollback|calibrate)
   openclaw <sub>                    OpenClaw integration (install|uninstall|status)
   spend <sub>                       Spending limits (status|set|clear|history)
   provider <sub>                    API key management (list|add|remove|models)
@@ -85,8 +84,9 @@ Logs options:
   --follow                            Stream new lines (like tail -f)
 
 Feedback subcommands:
-  feedback status                     Show online learning status
+  feedback status                     Show online learning and route-confidence calibration status
   feedback rollback                   Discard online weights, revert to base model
+  feedback calibrate                  Fit route-confidence calibration from labeled local traces
 
 OpenClaw subcommands:
   openclaw install [--port <n>]       Register as OpenClaw provider
@@ -187,13 +187,16 @@ def _apply_feedback(features: dict[str, float], current_tier: str, signal: str) 
 
 
 def _cmd_route(args: list[str]) -> None:
-    flags, rest = _parse_flags(args, {
-        "system-prompt": True,
-        "max-tokens": True,
-        "mode": True,
-        "json": False,
-        "no-feedback": False,
-    })
+    flags, rest = _parse_flags(
+        args,
+        {
+            "system-prompt": True,
+            "max-tokens": True,
+            "mode": True,
+            "json": False,
+            "no-feedback": False,
+        },
+    )
 
     prompt = " ".join(rest)
     if not prompt:
@@ -206,11 +209,12 @@ def _cmd_route(args: list[str]) -> None:
         mode_flag = str(flags["mode"]).strip().lower()
     else:
         from uncommon_route.routing_config_store import RoutingConfigStore
+
         mode_flag = RoutingConfigStore().default_mode().value
     output_json = bool(flags.get("json", False))
     no_feedback = bool(flags.get("no-feedback", False))
 
-    from uncommon_route.router.types import RoutingMode
+    from uncommon_route.router.types import RoutingInfeasibleError, RoutingMode
 
     try:
         routing_mode = RoutingMode(mode_flag)
@@ -222,36 +226,73 @@ def _cmd_route(args: list[str]) -> None:
         sys.exit(1)
 
     start = time.perf_counter_ns()
-    decision = route(
-        prompt,
-        system_prompt=system_prompt,
-        max_output_tokens=max_tokens,
-        routing_mode=routing_mode,
-    )
+    try:
+        decision = route(
+            prompt,
+            system_prompt=system_prompt,
+            max_output_tokens=max_tokens,
+            routing_mode=routing_mode,
+        )
+    except RoutingInfeasibleError as exc:
+        detail = exc.infeasibility.as_dict()
+        if output_json:
+            print(json.dumps({"error": detail}, indent=2))
+        else:
+            print(f"  Error:      {detail['message']}", file=sys.stderr)
+            if detail.get("failed_constraints"):
+                print(
+                    "  Constraints: " + ", ".join(str(tag) for tag in detail["failed_constraints"]),
+                    file=sys.stderr,
+                )
+            if detail.get("missing_capabilities"):
+                print(
+                    "  Missing:    " + ", ".join(str(tag) for tag in detail["missing_capabilities"]),
+                    file=sys.stderr,
+                )
+        sys.exit(2)
     elapsed_us = (time.perf_counter_ns() - start) / 1000
 
     if output_json:
-        print(json.dumps({
-            "mode": decision.mode.value,
-            "model": decision.model,
-            "tier": decision.tier.value,
-            "confidence": round(decision.confidence, 3),
-            "cost_estimate": round(decision.cost_estimate, 6),
-            "savings": round(decision.savings, 3),
-            "reasoning": decision.reasoning,
-            "suggested_output_budget": decision.suggested_output_budget,
-            "fallback_chain": [
-                {"model": fb.model, "cost": round(fb.cost_estimate, 6)}
-                for fb in decision.fallback_chain
-            ],
-            "latency_ms": round(elapsed_us / 1000.0, 3),
-        }, indent=2))
+        print(
+            json.dumps(
+                {
+                    "mode": decision.mode.value,
+                    "model": decision.model,
+                    "tier": decision.tier.value,
+                    "confidence": round(decision.confidence, 3),
+                    "raw_confidence": round(decision.raw_confidence, 3),
+                    "confidence_source": decision.confidence_source,
+                    "confidence_calibration": {
+                        "version": decision.calibration_version,
+                        "sample_count": decision.calibration_sample_count,
+                        "temperature": round(decision.calibration_temperature, 3),
+                        "applied_tags": list(decision.calibration_applied_tags),
+                    },
+                    "cost_estimate": round(decision.cost_estimate, 6),
+                    "savings": round(decision.savings, 3),
+                    "reasoning": decision.reasoning,
+                    "suggested_output_budget": decision.suggested_output_budget,
+                    "fallback_chain": [
+                        {"model": fb.model, "cost": round(fb.cost_estimate, 6)} for fb in decision.fallback_chain
+                    ],
+                    "latency_ms": round(elapsed_us / 1000.0, 3),
+                },
+                indent=2,
+            )
+        )
         return
 
     print(f"  Mode:       {decision.mode.value}")
     print(f"  Model:      {decision.model}")
     print(f"  Tier:       {decision.tier.value}")
     print(f"  Confidence: {decision.confidence:.2f}")
+    print(f"  Raw conf:   {decision.raw_confidence:.2f} ({decision.confidence_source})")
+    if decision.calibration_version:
+        print(
+            "  Calib:      "
+            f"{decision.calibration_version} "
+            f"(labels={decision.calibration_sample_count}, T={decision.calibration_temperature:.2f})"
+        )
     print(f"  Cost:       ${decision.cost_estimate:.6f}")
     print(f"  Savings:    {decision.savings:.0%}")
     print(f"  Latency:    {elapsed_us / 1000.0:.3f}ms")
@@ -275,6 +316,7 @@ def _cmd_route(args: list[str]) -> None:
         return
 
     from uncommon_route.router.classifier import extract_features
+
     features = extract_features(prompt, system_prompt)
     target = _apply_feedback(features, decision.tier.value, choice)
     if target:
@@ -297,10 +339,10 @@ def _cmd_debug(args: list[str]) -> None:
 
     struct_dims = extract_structural_features(full_text)
     unicode_blocks = extract_unicode_block_features(full_text)
-    kw_dims = extract_keyword_features(prompt)
 
     tier_str = result.tier.value if result.tier else "AMBIGUOUS"
     print(f"  Tier:       {tier_str}")
+    print(f"  Complexity: {result.complexity:.3f}")
     print(f"  Confidence: {result.confidence:.3f}")
     print(f"  Signals:    {', '.join(result.signals)}")
     print()
@@ -316,22 +358,19 @@ def _cmd_debug(args: list[str]) -> None:
         if prop > 0.001:
             print(f"    {name:<28} {prop:>7.3f}")
 
-    print()
-    print("  Keyword Features:")
-    for d in kw_dims:
-        sig = f"  [{d.signal}]" if d.signal else ""
-        print(f"    {d.name:<28} {d.score:>7.3f}{sig}")
-
 
 def _cmd_serve(args: list[str]) -> None:
-    flags, _ = _parse_flags(args, {
-        "port": True,
-        "host": True,
-        "upstream": True,
-        "composition-config": True,
-        "daemon": False,
-        "background": False,
-    })
+    flags, _ = _parse_flags(
+        args,
+        {
+            "port": True,
+            "host": True,
+            "upstream": True,
+            "composition-config": True,
+            "daemon": False,
+            "background": False,
+        },
+    )
 
     from uncommon_route.proxy import DEFAULT_PORT
 
@@ -352,8 +391,7 @@ def _cmd_serve(args: list[str]) -> None:
             except OSError:
                 _PID_FILE.unlink(missing_ok=True)
 
-        cmd = [sys.executable, "-m", "uncommon_route.cli", "serve",
-               "--port", str(port), "--host", host]
+        cmd = [sys.executable, "-m", "uncommon_route.cli", "serve", "--port", str(port), "--host", host]
         if upstream:
             cmd.extend(["--upstream", upstream])
         if composition_config:
@@ -373,6 +411,7 @@ def _cmd_serve(args: list[str]) -> None:
         return
 
     from uncommon_route.proxy import serve
+
     if composition_config:
         os.environ["UNCOMMON_ROUTE_COMPOSITION_CONFIG"] = composition_config
     serve(port=port, host=host, upstream=upstream)
@@ -428,6 +467,7 @@ def _cmd_doctor(args: list[str]) -> None:
     # Upstream reachable + model discovery
     if upstream and (api_key or local_upstream):
         from uncommon_route.model_map import ModelMapper
+
         mapper = ModelMapper(upstream)
         gw_tag = " (gateway)" if mapper.is_gateway else ""
         count = asyncio.run(mapper.discover(api_key or None))
@@ -450,6 +490,7 @@ def _cmd_doctor(args: list[str]) -> None:
 
     # BYOK providers
     from uncommon_route.providers import load_providers
+
     providers = load_providers()
     if providers.providers:
         for name, entry in providers.providers.items():
@@ -476,11 +517,13 @@ def _cmd_doctor(args: list[str]) -> None:
     else:
         checks.append(("Proxy daemon", True, "not running (foreground or stopped)"))
 
-    checks.append((
-        "Primary connection source",
-        True,
-        f"source={connection.source} upstream={connection.upstream_source} api_key={connection.api_key_source}",
-    ))
+    checks.append(
+        (
+            "Primary connection source",
+            True,
+            f"source={connection.source} upstream={connection.upstream_source} api_key={connection.api_key_source}",
+        )
+    )
 
     # Output
     all_ok = all(ok for _, ok, _ in checks)
@@ -498,6 +541,7 @@ def _cmd_doctor(args: list[str]) -> None:
 async def _check_provider(base_url: str, api_key: str) -> bool:
     """Lightweight connectivity check for a provider endpoint."""
     import httpx
+
     try:
         async with httpx.AsyncClient(timeout=httpx.Timeout(5.0, connect=3.0)) as client:
             resp = await client.get(
@@ -541,6 +585,7 @@ def _cmd_logs(args: list[str]) -> None:
 
 def _cmd_openclaw(args: list[str]) -> None:
     from uncommon_route.openclaw import cmd_openclaw
+
     cmd_openclaw(args)
 
 
@@ -561,13 +606,25 @@ def _cmd_spend(args: list[str]) -> None:
             print(f"    Per-request:  ${s.limits.per_request:.2f}")
         if s.limits.hourly is not None:
             rem = s.remaining.get("hourly")
-            print(f"    Hourly:       ${s.limits.hourly:.2f}  (spent: ${s.spent['hourly']:.4f}, remaining: ${rem:.4f})" if rem is not None else "")
+            print(
+                f"    Hourly:       ${s.limits.hourly:.2f}  (spent: ${s.spent['hourly']:.4f}, remaining: ${rem:.4f})"
+                if rem is not None
+                else ""
+            )
         if s.limits.daily is not None:
             rem = s.remaining.get("daily")
-            print(f"    Daily:        ${s.limits.daily:.2f}  (spent: ${s.spent['daily']:.4f}, remaining: ${rem:.4f})" if rem is not None else "")
+            print(
+                f"    Daily:        ${s.limits.daily:.2f}  (spent: ${s.spent['daily']:.4f}, remaining: ${rem:.4f})"
+                if rem is not None
+                else ""
+            )
         if s.limits.session is not None:
             rem = s.remaining.get("session")
-            print(f"    Session:      ${s.limits.session:.2f}  (spent: ${s.spent['session']:.4f}, remaining: ${rem:.4f})" if rem is not None else "")
+            print(
+                f"    Session:      ${s.limits.session:.2f}  (spent: ${s.spent['session']:.4f}, remaining: ${rem:.4f})"
+                if rem is not None
+                else ""
+            )
         if all(v is None for v in vars(s.limits).values()):
             print("    (no limits set)")
         print(f"\n  Total calls this session: {s.calls}")
@@ -611,6 +668,7 @@ def _cmd_spend(args: list[str]) -> None:
 
 def _cmd_provider(args: list[str]) -> None:
     from uncommon_route.providers import cmd_provider
+
     cmd_provider(args)
 
 
@@ -864,15 +922,18 @@ def _cmd_stats(args: list[str]) -> None:
 
 
 def _cmd_feedback(args: list[str]) -> None:
+    from uncommon_route.calibration import get_active_route_confidence_calibrator
     from uncommon_route.router.classifier import (
         _get_online_model_path,
         rollback_online_model,
     )
+    from uncommon_route.stats import RouteStats
 
     if not args:
         args = ["status"]
 
     sub = args[0]
+    calibrator = get_active_route_confidence_calibrator()
 
     if sub == "status":
         online_path = _get_online_model_path()
@@ -880,6 +941,7 @@ def _cmd_feedback(args: list[str]) -> None:
         print(f"  Online model: {'active' if active else 'inactive (using base model)'}")
         if active:
             import os
+
             size_kb = os.path.getsize(online_path) / 1024
             mtime = os.path.getmtime(online_path)
             ts = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(mtime))
@@ -887,10 +949,31 @@ def _cmd_feedback(args: list[str]) -> None:
             print(f"  Size:         {size_kb:.0f} KB")
             print(f"  Last updated: {ts}")
         print()
+        calibration = calibrator.status()
+        print(f"  Route confidence calibration: {'active' if calibration['active'] else 'inactive'}")
+        print(f"  Labels:       {calibration['labeled_examples']}")
+        if calibration.get("training_examples"):
+            print(
+                f"  Split:        {calibration['training_examples']} train / {calibration['holdout_examples']} holdout"
+            )
+        if calibration.get("selected_strategy"):
+            print(f"  Strategy:     {calibration['selected_strategy']}")
+        print(f"  Temperature:  {calibration['temperature']:.2f}")
+        if calibration["version"]:
+            print(f"  Version:      {calibration['version']}")
+            print(f"  ECE:          {calibration['raw_ece']:.3f} -> {calibration['calibrated_ece']:.3f}")
+        if calibration.get("holdout_examples"):
+            print(
+                f"  Holdout ECE:  {calibration['holdout_raw_ece']:.3f} -> {calibration['holdout_calibrated_ece']:.3f}"
+            )
+        if calibration.get("stale"):
+            print("  Snapshot:     stale (waiting for fresher labeled traces)")
+        print()
         print("  How feedback works:")
         print("    1. Run `uncommon-route route <prompt>` and rate the tier")
         print("    2. Your feedback updates a local model overlay (~/.uncommon-route/model_online.json)")
-        print("    3. The base model is never modified — rollback anytime with `feedback rollback`")
+        print("    3. Labeled route traces also fit calibrated runtime confidence")
+        print("    4. The base model is never modified — rollback anytime with `feedback rollback`")
 
     elif sub == "rollback":
         deleted = rollback_online_model()
@@ -899,9 +982,35 @@ def _cmd_feedback(args: list[str]) -> None:
         else:
             print("  No online weights found (already using base model)")
 
+    elif sub == "calibrate":
+        stats = RouteStats()
+        snapshot = calibrator.fit_from_route_records(stats.history())
+        status = calibrator.status()
+        if not status["active"]:
+            print("  Route-confidence calibration remains inactive.")
+            if snapshot.labeled_examples < snapshot.min_examples:
+                print(f"  Found {snapshot.labeled_examples} labeled traces (need at least {snapshot.min_examples}).")
+            elif status.get("stale"):
+                print("  The saved snapshot is stale; collect fresher feedback and rebuild.")
+            elif snapshot.selected_strategy == "raw" and snapshot.holdout_examples > 0:
+                print("  Holdout gate rejected the fitted calibration; keeping raw runtime confidence.")
+                print(f"  Holdout ECE:  {snapshot.holdout_raw_ece:.3f} -> {snapshot.holdout_calibrated_ece:.3f}")
+            else:
+                print("  No robust calibration model was selected from the available traces.")
+            return
+        print("  ✓ Rebuilt route-confidence calibration from local traces")
+        print(f"  Version:      {snapshot.version}")
+        print(f"  Labels:       {snapshot.labeled_examples}")
+        print(f"  Strategy:     {snapshot.selected_strategy or 'full'}")
+        if snapshot.holdout_examples > 0:
+            print(f"  Split:        {snapshot.training_examples} train / {snapshot.holdout_examples} holdout")
+        print(f"  Temperature:  {snapshot.temperature:.2f}")
+        print(f"  ECE:          {snapshot.raw_ece:.3f} -> {snapshot.calibrated_ece:.3f}")
+        print(f"  Adjustments:  {len(snapshot.adjustments)}")
+
     else:
         print(f"Unknown feedback subcommand: {sub}", file=sys.stderr)
-        print("  Available: status, rollback", file=sys.stderr)
+        print("  Available: status, rollback, calibrate", file=sys.stderr)
         sys.exit(1)
 
 
@@ -960,7 +1069,7 @@ def _setup_claude_code(args: list[str]) -> None:
 
     print(f"""
   UncommonRoute + Claude Code
-  {'=' * 40}
+  {"=" * 40}
 
   Add to {rc}:
 
@@ -1000,7 +1109,7 @@ def _setup_codex(args: list[str]) -> None:
 
     print(f"""
   UncommonRoute + OpenAI Codex
-  {'=' * 40}
+  {"=" * 40}
 
   Add to {rc}:
 
@@ -1040,7 +1149,7 @@ def _setup_openai(args: list[str]) -> None:
 
     print(f"""
   UncommonRoute + OpenAI SDK / Cursor
-  {'=' * 40}
+  {"=" * 40}
 
   Add to {rc}:
 
@@ -1068,7 +1177,6 @@ def _setup_openai(args: list[str]) -> None:
   Cursor: set "OpenAI Base URL" to http://localhost:{port}/v1 in settings.
 """)
     print(f"  Status: {status}")
-
 
 
 def main() -> None:

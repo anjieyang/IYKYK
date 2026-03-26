@@ -129,7 +129,8 @@ class FeedbackCollector:
 
         if ctx is None:
             return FeedbackResult(
-                ok=False, action="expired",
+                ok=False,
+                action="expired",
                 reason="request_id not found or expired",
             )
 
@@ -145,27 +146,34 @@ class FeedbackCollector:
         if signal == "ok":
             self._do_update(ctx.features, ctx.tier)
             return FeedbackResult(
-                ok=True, action="reinforced",
-                from_tier=ctx.tier, to_tier=ctx.tier,
+                ok=True,
+                action="reinforced",
+                from_tier=ctx.tier,
+                to_tier=ctx.tier,
             )
 
         if target == ctx.tier:
             return FeedbackResult(
-                ok=True, action="no_change",
-                from_tier=ctx.tier, to_tier=ctx.tier,
+                ok=True,
+                action="no_change",
+                from_tier=ctx.tier,
+                to_tier=ctx.tier,
                 reason="already at tier boundary",
             )
 
         if not self._rate_ok():
             return FeedbackResult(
-                ok=False, action="rate_limited",
+                ok=False,
+                action="rate_limited",
                 reason=f"max {self._max_hourly} updates/hour",
             )
 
         self._do_update(ctx.features, target)
         return FeedbackResult(
-            ok=True, action="updated",
-            from_tier=ctx.tier, to_tier=target,
+            ok=True,
+            action="updated",
+            from_tier=ctx.tier,
+            to_tier=target,
         )
 
     def has_pending(self, request_id: str) -> bool:

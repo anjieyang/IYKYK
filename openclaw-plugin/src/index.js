@@ -10,33 +10,26 @@
  *     → ensures `uncommon-route` Python package is installed (pipx/uv/pip)
  *     → spawns `uncommon-route serve` as a managed subprocess
  *     → registerProvider pointing at localhost proxy
+ *     → syncs the discovered upstream pool into OpenClaw after startup
  *     → registerCommand for /route, /spend, /feedback
  */
 
 import { spawn, execSync } from "node:child_process";
 import { setTimeout as sleep } from "node:timers/promises";
 
-const VERSION = "0.3.0";
+const VERSION = "0.3.1";
 const DEFAULT_PORT = 8403;
 const DEFAULT_UPSTREAM = "";
 const HEALTH_TIMEOUT_MS = 15_000;
 const HEALTH_POLL_MS = 500;
 const PY_PACKAGE = "uncommon-route";
+const DEFAULT_CONTEXT_WINDOW = 200_000;
+const DEFAULT_MAX_TOKENS = 16_384;
 
-const MODELS = [
-  { id: "uncommon-route/auto", name: "UncommonRoute Auto", reasoning: false, input: 0, output: 0, ctx: 200_000, max: 16_384 },
-  { id: "uncommon-route/fast", name: "UncommonRoute Fast", reasoning: false, input: 0, output: 0, ctx: 200_000, max: 16_384 },
-  { id: "uncommon-route/best", name: "UncommonRoute Best", reasoning: true, input: 0, output: 0, ctx: 200_000, max: 16_384 },
-  { id: "moonshot/kimi-k2.5", name: "Kimi K2.5", reasoning: false, input: 0.60, output: 3.00, ctx: 128_000, max: 8_192 },
-  { id: "google/gemini-3.1-pro", name: "Gemini 3.1 Pro", reasoning: false, input: 2.00, output: 12.00, ctx: 200_000, max: 16_384 },
-  { id: "xai/grok-4-1-fast-reasoning", name: "Grok 4.1 Fast", reasoning: true, input: 0.20, output: 0.50, ctx: 200_000, max: 16_384 },
-  { id: "deepseek/deepseek-chat", name: "DeepSeek Chat", reasoning: false, input: 0.28, output: 0.42, ctx: 128_000, max: 8_192 },
-  { id: "deepseek/deepseek-reasoner", name: "DeepSeek Reasoner", reasoning: true, input: 0.28, output: 0.42, ctx: 128_000, max: 8_192 },
-  { id: "google/gemini-2.5-flash", name: "Gemini 2.5 Flash", reasoning: false, input: 0.30, output: 2.50, ctx: 200_000, max: 16_384 },
-  { id: "google/gemini-2.5-flash-lite", name: "Gemini 2.5 Flash Lite", reasoning: false, input: 0.10, output: 0.40, ctx: 200_000, max: 16_384 },
-  { id: "openai/gpt-5.2", name: "GPT-5.2", reasoning: false, input: 1.75, output: 14.00, ctx: 200_000, max: 16_384 },
-  { id: "openai/o4-mini", name: "o4 Mini", reasoning: true, input: 1.10, output: 4.40, ctx: 200_000, max: 16_384 },
-  { id: "anthropic/claude-sonnet-4.6", name: "Claude Sonnet 4.6", reasoning: false, input: 3.00, output: 15.00, ctx: 200_000, max: 16_384 },
+const VIRTUAL_MODELS = [
+  { id: "uncommon-route/auto", name: "UncommonRoute Auto", reasoning: false },
+  { id: "uncommon-route/fast", name: "UncommonRoute Fast", reasoning: false },
+  { id: "uncommon-route/best", name: "UncommonRoute Best", reasoning: true },
 ];
 
 // ── Python dependency management ─────────────────────────────────────
@@ -134,21 +127,71 @@ function ensurePythonDeps(logger) {
 
 // ── Helpers ──────────────────────────────────────────────────────────
 
-function buildModels(baseUrl) {
+function toFiniteNumber(value) {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : 0;
+}
+
+function modelEntry({
+  id,
+  name = id,
+  reasoning = false,
+  input = 0,
+  output = 0,
+  cacheRead = 0,
+  cacheWrite = 0,
+  ctx = DEFAULT_CONTEXT_WINDOW,
+  max = DEFAULT_MAX_TOKENS,
+}) {
+  return {
+    id,
+    name,
+    api: "openai-completions",
+    reasoning,
+    input: ["text"],
+    cost: { input, output, cacheRead, cacheWrite },
+    contextWindow: ctx,
+    maxTokens: max,
+  };
+}
+
+function discoveredModelEntries(discoveredPool) {
+  if (!Array.isArray(discoveredPool)) return [];
+
+  const seen = new Set(VIRTUAL_MODELS.map((model) => model.id));
+  const models = [];
+
+  for (const row of discoveredPool) {
+    const id = typeof row?.id === "string" ? row.id.trim() : "";
+    if (!id || seen.has(id)) continue;
+
+    seen.add(id);
+    const pricing = row?.pricing ?? {};
+    const capabilities = row?.capabilities ?? {};
+
+    models.push(modelEntry({
+      id,
+      name: id,
+      reasoning: Boolean(capabilities.reasoning),
+      input: toFiniteNumber(pricing.input),
+      output: toFiniteNumber(pricing.output),
+      cacheRead: toFiniteNumber(pricing.cached_input),
+      cacheWrite: toFiniteNumber(pricing.cache_write),
+    }));
+  }
+
+  return models;
+}
+
+function buildModels(baseUrl, discoveredPool = []) {
   return {
     baseUrl,
     api: "openai-completions",
     apiKey: "uncommon-route-local-proxy",
-    models: MODELS.map((m) => ({
-      id: m.id,
-      name: m.name,
-      api: "openai-completions",
-      reasoning: m.reasoning,
-      input: ["text"],
-      cost: { input: m.input, output: m.output, cacheRead: 0, cacheWrite: 0 },
-      contextWindow: m.ctx,
-      maxTokens: m.max,
-    })),
+    models: [
+      ...VIRTUAL_MODELS.map((model) => modelEntry(model)),
+      ...discoveredModelEntries(discoveredPool),
+    ],
   };
 }
 
@@ -190,7 +233,7 @@ async function postJson(url, body) {
 let pyProc = null;
 
 const plugin = {
-  id: "@anjieyang/uncommon-route",
+  id: "uncommon-route",
   name: "UncommonRoute",
   description: "Local LLM router plugin that cuts premium-model spend with smart routing",
   version: VERSION,
@@ -208,6 +251,34 @@ const plugin = {
     const port = cfg.port || Number(process.env.UNCOMMON_ROUTE_PORT) || DEFAULT_PORT;
     const upstream = cfg.upstream || process.env.UNCOMMON_ROUTE_UPSTREAM || DEFAULT_UPSTREAM;
     const baseUrl = `http://127.0.0.1:${port}/v1`;
+    let discoveredPool = [];
+    let providerCatalog = buildModels(baseUrl, discoveredPool);
+
+    function applyProviderCatalog(nextPool = discoveredPool) {
+      discoveredPool = Array.isArray(nextPool) ? nextPool : [];
+      providerCatalog = buildModels(baseUrl, discoveredPool);
+      if (!api.config.models) api.config.models = { providers: {} };
+      if (!api.config.models.providers) api.config.models.providers = {};
+      api.config.models.providers["uncommon-route"] = providerCatalog;
+      return providerCatalog;
+    }
+
+    async function syncDiscoveredPool() {
+      const mapping = await fetchJson(`http://127.0.0.1:${port}/v1/models/mapping`);
+      if (!mapping) {
+        api.logger.warn("Could not read /v1/models/mapping; keeping OpenClaw provider catalog on virtual routes only.");
+        return false;
+      }
+
+      const nextCatalog = applyProviderCatalog(mapping.pool);
+      const discoveredCount = Math.max(nextCatalog.models.length - VIRTUAL_MODELS.length, 0);
+      if (mapping.discovered && discoveredCount > 0) {
+        api.logger.info(`Synced ${discoveredCount} discovered upstream models into OpenClaw provider catalog`);
+      } else {
+        api.logger.info("Upstream discovery unavailable; OpenClaw provider catalog remains virtual-mode only");
+      }
+      return true;
+    }
 
     if (!upstream) {
       api.logger.warn("UncommonRoute: No upstream configured. Set UNCOMMON_ROUTE_UPSTREAM or configure 'upstream' in plugin config.");
@@ -215,21 +286,17 @@ const plugin = {
     }
 
     // 1. Register provider immediately (sync, models available right away)
+    applyProviderCatalog();
     api.registerProvider({
       id: "uncommon-route",
       label: "UncommonRoute",
       docsPath: "https://github.com/CommonstackAI/UncommonRoute",
       aliases: ["ur", "uncommon"],
       envVars: [],
-      get models() { return buildModels(baseUrl); },
+      get models() { return providerCatalog; },
       auth: [],
     });
-
-    if (!api.config.models) api.config.models = { providers: {} };
-    if (!api.config.models.providers) api.config.models.providers = {};
-    api.config.models.providers["uncommon-route"] = buildModels(baseUrl);
-
-    api.logger.info(`UncommonRoute provider registered (${MODELS.length} models)`);
+    api.logger.info(`UncommonRoute provider registered (${providerCatalog.models.length} virtual route models)`);
 
     // 2. Register commands
     api.registerCommand({
@@ -386,23 +453,34 @@ const plugin = {
 
     // 6. Auto-install Python deps + spawn proxy
     const bootstrap = async () => {
-      const pythonPath = cfg.pythonPath || process.env.UNCOMMON_ROUTE_PYTHON || null;
-      let python = pythonPath;
+      let cliBin = which("uncommon-route");
+      let python = cfg.pythonPath || process.env.UNCOMMON_ROUTE_PYTHON || null;
 
-      if (!python || !isPythonPackageInstalled(python)) {
+      if (!cliBin && (!python || !isPythonPackageInstalled(python))) {
         api.logger.info("Checking Python dependencies...");
         python = ensurePythonDeps(api.logger);
         if (!python) {
           api.logger.error("Cannot start — Python setup failed. See errors above.");
           return;
         }
+        cliBin = which("uncommon-route");
       }
 
-      const args = ["-m", "uncommon_route.cli", "serve", "--port", String(port), "--upstream", upstream];
-      pyProc = spawn(python, args, {
-        stdio: ["ignore", "pipe", "pipe"],
-        env: { ...process.env, PYTHONUNBUFFERED: "1" },
-      });
+      const serveArgs = ["serve", "--port", String(port), "--upstream", upstream];
+      if (cliBin) {
+        pyProc = spawn(cliBin, serveArgs, {
+          stdio: ["ignore", "pipe", "pipe"],
+          env: { ...process.env, PYTHONUNBUFFERED: "1" },
+        });
+      } else if (python) {
+        pyProc = spawn(python, ["-m", "uncommon_route.cli", ...serveArgs], {
+          stdio: ["ignore", "pipe", "pipe"],
+          env: { ...process.env, PYTHONUNBUFFERED: "1" },
+        });
+      } else {
+        api.logger.error("Cannot start — neither uncommon-route CLI nor Python module found.");
+        return;
+      }
 
       pyProc.stdout?.on("data", (chunk) => {
         const line = chunk.toString().trim();
@@ -420,6 +498,7 @@ const plugin = {
       api.logger.info(`Starting proxy on port ${port}...`);
       const healthy = await waitForHealth(port);
       if (healthy) {
+        await syncDiscoveredPool();
         api.logger.info(`UncommonRoute ready at http://127.0.0.1:${port}`);
         api.logger.info(`Default model: uncommon-route/auto`);
       } else {

@@ -10,14 +10,30 @@ import random
 from dataclasses import dataclass
 
 from bench.generate.slots import (
-    SIMPLE_CONCEPTS, SIMPLE_PEOPLE, SIMPLE_FACTS, TRANSLATE_PHRASES,
-    MEDIUM_CODE_TASKS, MEDIUM_EXPLAIN_TOPICS, MEDIUM_COMPARE_PAIRS,
-    MEDIUM_REWRITE_TASKS, MEDIUM_EXTRACT_TASKS,
-    COMPLEX_SYSTEMS, COMPLEX_REQUIREMENTS, COMPLEX_CONSTRAINTS,
-    REASONING_THEOREMS, REASONING_METHODS,
-    PROG_LANGS, HUMAN_LANGS,
-    QA_PATTERNS, TRANSLATE_PATTERNS, CODE_PATTERNS, EXPLAIN_PATTERNS,
-    COMPARE_PATTERNS, COMPLEX_PATTERNS, REASONING_PATTERNS, GREETINGS,
+    SIMPLE_CONCEPTS,
+    SIMPLE_PEOPLE,
+    SIMPLE_FACTS,
+    TRANSLATE_PHRASES,
+    MEDIUM_CODE_TASKS,
+    MEDIUM_EXPLAIN_TOPICS,
+    MEDIUM_COMPARE_PAIRS,
+    MEDIUM_REWRITE_TASKS,
+    MEDIUM_EXTRACT_TASKS,
+    COMPLEX_SYSTEMS,
+    COMPLEX_REQUIREMENTS,
+    COMPLEX_CONSTRAINTS,
+    REASONING_THEOREMS,
+    REASONING_METHODS,
+    PROG_LANGS,
+    HUMAN_LANGS,
+    QA_PATTERNS,
+    TRANSLATE_PATTERNS,
+    CODE_PATTERNS,
+    EXPLAIN_PATTERNS,
+    COMPARE_PATTERNS,
+    COMPLEX_PATTERNS,
+    REASONING_PATTERNS,
+    GREETINGS,
 )
 
 
@@ -38,6 +54,7 @@ def _pick_n(lst: list, n: int, rng: random.Random) -> list:
 
 
 # ─── SIMPLE Templates ───
+
 
 def gen_simple_qa(rng: random.Random, lang: str = "en") -> GeneratedCase:
     patterns = QA_PATTERNS.get(lang, QA_PATTERNS["en"])
@@ -74,6 +91,7 @@ SIMPLE_GENERATORS = [gen_simple_qa, gen_simple_translate, gen_simple_greeting, g
 
 
 # ─── MEDIUM Templates ───
+
 
 def gen_medium_code(rng: random.Random, lang: str = "en") -> GeneratedCase:
     patterns = CODE_PATTERNS.get(lang, CODE_PATTERNS["en"])
@@ -116,6 +134,7 @@ MEDIUM_GENERATORS = [gen_medium_code, gen_medium_explain, gen_medium_compare, ge
 
 # ─── COMPLEX Templates ───
 
+
 def gen_complex_system(rng: random.Random, lang: str = "en") -> GeneratedCase:
     patterns = COMPLEX_PATTERNS.get(lang, COMPLEX_PATTERNS["en"])
     pattern = _pick(patterns, rng)
@@ -123,8 +142,13 @@ def gen_complex_system(rng: random.Random, lang: str = "en") -> GeneratedCase:
     reqs = _pick_n(COMPLEX_REQUIREMENTS, 5, rng)
     constraint = _pick(COMPLEX_CONSTRAINTS, rng)
     prompt = pattern.format(
-        system=system, r1=reqs[0], r2=reqs[1], r3=reqs[2], r4=reqs[3],
-        r5=reqs[4] if len(reqs) > 4 else reqs[0], constraint=constraint,
+        system=system,
+        r1=reqs[0],
+        r2=reqs[1],
+        r3=reqs[2],
+        r4=reqs[3],
+        r5=reqs[4] if len(reqs) > 4 else reqs[0],
+        constraint=constraint,
     )
     return GeneratedCase(prompt, "COMPLEX", "system-design", lang)
 
@@ -133,6 +157,7 @@ COMPLEX_GENERATORS = [gen_complex_system]
 
 
 # ─── REASONING Templates ───
+
 
 def gen_reasoning_proof(rng: random.Random, lang: str = "en") -> GeneratedCase:
     patterns = REASONING_PATTERNS.get(lang, REASONING_PATTERNS["en"])

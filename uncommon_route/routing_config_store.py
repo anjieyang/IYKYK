@@ -244,7 +244,9 @@ class RoutingConfigStore:
         return self.export()
 
     def _persist(self) -> None:
-        self._storage.save({
-            "default_mode": self._default_mode.value,
-            "modes": self._overrides,
-        })
+        self._storage.save(
+            {
+                "default_mode": self._default_mode.value,
+                "modes": self._overrides,
+            }
+        )

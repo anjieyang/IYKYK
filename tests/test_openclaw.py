@@ -50,7 +50,7 @@ class TestInstall:
     def test_install_registers_models(self) -> None:
         install()
         s = status()
-        assert s["model_count"] > 1  # auto + all pricing models
+        assert s["model_count"] == 3  # virtual routing modes only
 
 
 class TestUninstall:
@@ -93,7 +93,7 @@ class TestBuildProviderBlock:
         assert block["baseUrl"] == "http://127.0.0.1:8403/v1"
         assert block["api"] == "openai-completions"
         assert isinstance(block["models"], list)
-        assert len(block["models"]) > 0
+        assert len(block["models"]) == 3
 
     def test_auto_model_is_first(self) -> None:
         block = _build_provider_block(8403)

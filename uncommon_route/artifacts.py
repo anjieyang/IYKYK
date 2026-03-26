@@ -105,7 +105,9 @@ class ArtifactStore:
         if artifact is None:
             return None
         artifact["summary"] = summary
-        self._meta_path(artifact_id).write_text(json.dumps({k: v for k, v in artifact.items() if k != "content"}, indent=2))
+        self._meta_path(artifact_id).write_text(
+            json.dumps({k: v for k, v in artifact.items() if k != "content"}, indent=2)
+        )
         return artifact
 
     def get(self, artifact_id: str) -> dict[str, Any] | None:

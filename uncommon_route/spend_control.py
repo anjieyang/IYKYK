@@ -90,6 +90,7 @@ class FileSpendControlStorage(SpendControlStorage):
             self._path.chmod(0o600)
         except Exception as exc:
             import sys
+
             print(f"[UncommonRoute] Failed to save spending data: {exc}", file=sys.stderr)
 
     @staticmethod
@@ -101,13 +102,19 @@ class FileSpendControlStorage(SpendControlStorage):
                 limits[key] = float(val)
         history: list[dict] = []
         for r in raw.get("history", []):
-            if isinstance(r, dict) and isinstance(r.get("timestamp"), (int, float)) and isinstance(r.get("amount"), (int, float)):
-                history.append({
-                    "timestamp": r["timestamp"],
-                    "amount": r["amount"],
-                    "model": r.get("model"),
-                    "action": r.get("action"),
-                })
+            if (
+                isinstance(r, dict)
+                and isinstance(r.get("timestamp"), (int, float))
+                and isinstance(r.get("amount"), (int, float))
+            ):
+                history.append(
+                    {
+                        "timestamp": r["timestamp"],
+                        "amount": r["amount"],
+                        "model": r.get("model"),
+                        "action": r.get("action"),
+                    }
+                )
         return {"limits": limits, "history": history}
 
 
@@ -170,7 +177,9 @@ class SpendControl:
                 oldest = next((r for r in self._history if r.timestamp >= now - HOUR_S), None)
                 reset_in = int(oldest.timestamp + HOUR_S - now) if oldest else 0
                 return CheckResult(
-                    allowed=False, blocked_by="hourly", remaining=remaining,
+                    allowed=False,
+                    blocked_by="hourly",
+                    remaining=remaining,
                     reason=f"Hourly limit: ${hourly_spent + estimated_cost:.2f} > ${self._limits.hourly:.2f}",
                     reset_in_s=max(0, reset_in),
                 )
@@ -182,7 +191,9 @@ class SpendControl:
                 oldest = next((r for r in self._history if r.timestamp >= now - DAY_S), None)
                 reset_in = int(oldest.timestamp + DAY_S - now) if oldest else 0
                 return CheckResult(
-                    allowed=False, blocked_by="daily", remaining=remaining,
+                    allowed=False,
+                    blocked_by="daily",
+                    remaining=remaining,
                     reason=f"Daily limit: ${daily_spent + estimated_cost:.2f} > ${self._limits.daily:.2f}",
                     reset_in_s=max(0, reset_in),
                 )
@@ -191,7 +202,9 @@ class SpendControl:
             remaining = self._limits.session - self._session_spent
             if estimated_cost > remaining:
                 return CheckResult(
-                    allowed=False, blocked_by="session", remaining=remaining,
+                    allowed=False,
+                    blocked_by="session",
+                    remaining=remaining,
                     reason=f"Session limit: ${self._session_spent + estimated_cost:.2f} > ${self._limits.session:.2f}",
                 )
 
@@ -200,9 +213,14 @@ class SpendControl:
     def record(self, amount: float, model: str | None = None, action: str | None = None) -> None:
         if amount < 0:
             raise ValueError("Amount must be non-negative")
-        self._history.append(SpendRecord(
-            timestamp=self._now(), amount=amount, model=model, action=action,
-        ))
+        self._history.append(
+            SpendRecord(
+                timestamp=self._now(),
+                amount=amount,
+                model=model,
+                action=action,
+            )
+        )
         self._session_spent += amount
         self._session_calls += 1
         self._cleanup()
@@ -258,13 +276,15 @@ class SpendControl:
         self._history = [r for r in self._history if r.timestamp >= cutoff]
 
     def _save(self) -> None:
-        self._storage.save({
-            "limits": {k: v for k, v in vars(self._limits).items() if v is not None},
-            "history": [
-                {"timestamp": r.timestamp, "amount": r.amount, "model": r.model, "action": r.action}
-                for r in self._history
-            ],
-        })
+        self._storage.save(
+            {
+                "limits": {k: v for k, v in vars(self._limits).items() if v is not None},
+                "history": [
+                    {"timestamp": r.timestamp, "amount": r.amount, "model": r.model, "action": r.action}
+                    for r in self._history
+                ],
+            }
+        )
 
     def _load(self) -> None:
         data = self._storage.load()
@@ -275,10 +295,14 @@ class SpendControl:
             if val is not None:
                 setattr(self._limits, key, float(val))
         for r in data.get("history", []):
-            self._history.append(SpendRecord(
-                timestamp=r["timestamp"], amount=r["amount"],
-                model=r.get("model"), action=r.get("action"),
-            ))
+            self._history.append(
+                SpendRecord(
+                    timestamp=r["timestamp"],
+                    amount=r["amount"],
+                    model=r.get("model"),
+                    action=r.get("action"),
+                )
+            )
         self._cleanup()
 
 

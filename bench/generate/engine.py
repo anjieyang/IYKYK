@@ -13,10 +13,12 @@ import sys
 from pathlib import Path
 
 from bench.generate.templates import (
-    SIMPLE_GENERATORS, MEDIUM_GENERATORS, COMPLEX_GENERATORS, REASONING_GENERATORS,
+    SIMPLE_GENERATORS,
+    MEDIUM_GENERATORS,
+    COMPLEX_GENERATORS,
+    REASONING_GENERATORS,
     GeneratedCase,
 )
-from bench.generate.slots import HUMAN_LANGS
 
 # Tier distribution targets (approximate real-world distribution)
 TIER_WEIGHTS = {
@@ -35,9 +37,16 @@ TIER_GENERATORS = {
 
 # Language distribution (weighted toward English but covering all)
 LANG_WEIGHTS = {
-    "en": 0.35, "zh": 0.12, "ru": 0.08, "es": 0.08,
-    "de": 0.07, "fr": 0.07, "pt": 0.06, "ja": 0.07,
-    "ko": 0.05, "ar": 0.05,
+    "en": 0.35,
+    "zh": 0.12,
+    "ru": 0.08,
+    "es": 0.08,
+    "de": 0.07,
+    "fr": 0.07,
+    "pt": 0.06,
+    "ja": 0.07,
+    "ko": 0.05,
+    "ar": 0.05,
 }
 
 
@@ -66,6 +75,7 @@ def generate_dataset(count: int, seed: int = 42) -> list[GeneratedCase]:
         try:
             # Some generators accept lang, some don't
             import inspect
+
             sig = inspect.signature(gen_func)
             if "lang" in sig.parameters:
                 case = gen_func(rng, lang=lang)
@@ -87,12 +97,16 @@ def export_jsonl(cases: list[GeneratedCase], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         for c in cases:
-            json.dump({
-                "prompt": c.prompt,
-                "expected_tier": c.expected_tier,
-                "category": c.category,
-                "lang": c.lang,
-            }, f, ensure_ascii=False)
+            json.dump(
+                {
+                    "prompt": c.prompt,
+                    "expected_tier": c.expected_tier,
+                    "category": c.category,
+                    "lang": c.lang,
+                },
+                f,
+                ensure_ascii=False,
+            )
             f.write("\n")
 
 
@@ -131,6 +145,7 @@ def main() -> None:
 
     # Stats
     from collections import Counter
+
     tier_counts = Counter(c.expected_tier for c in cases)
     lang_counts = Counter(c.lang for c in cases)
     cat_counts = Counter(c.category for c in cases)

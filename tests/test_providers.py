@@ -81,13 +81,16 @@ class TestProviderConfig:
 
 class TestSelectPreferred:
     def test_prefer_keyed_model(self) -> None:
-        cfg = ProvidersConfig(providers={
-            "deepseek": ProviderEntry(
-                name="deepseek", api_key="sk-1",
-                base_url="https://api.deepseek.com/v1",
-                models=["deepseek/deepseek-chat"],
-            ),
-        })
+        cfg = ProvidersConfig(
+            providers={
+                "deepseek": ProviderEntry(
+                    name="deepseek",
+                    api_key="sk-1",
+                    base_url="https://api.deepseek.com/v1",
+                    models=["deepseek/deepseek-chat"],
+                ),
+            }
+        )
         candidates = ["moonshot/kimi-k2.5", "deepseek/deepseek-chat", "google/gemini-2.5-flash-lite"]
         model, entry = select_preferred_model(candidates, cfg)
         assert model == "deepseek/deepseek-chat"
@@ -95,22 +98,30 @@ class TestSelectPreferred:
         assert entry.name == "deepseek"
 
     def test_no_match(self) -> None:
-        cfg = ProvidersConfig(providers={
-            "deepseek": ProviderEntry(
-                name="deepseek", api_key="sk-1",
-                base_url="", models=["deepseek/deepseek-chat"],
-            ),
-        })
+        cfg = ProvidersConfig(
+            providers={
+                "deepseek": ProviderEntry(
+                    name="deepseek",
+                    api_key="sk-1",
+                    base_url="",
+                    models=["deepseek/deepseek-chat"],
+                ),
+            }
+        )
         candidates = ["moonshot/kimi-k2.5", "google/gemini-2.5-flash-lite"]
         model, entry = select_preferred_model(candidates, cfg)
         assert model is None
         assert entry is None
 
     def test_first_keyed_wins(self) -> None:
-        cfg = ProvidersConfig(providers={
-            "deepseek": ProviderEntry(name="deepseek", api_key="sk-1", base_url="", models=["deepseek/deepseek-chat"]),
-            "minimax": ProviderEntry(name="minimax", api_key="mm-1", base_url="", models=["minimax/minimax-m2.5"]),
-        })
+        cfg = ProvidersConfig(
+            providers={
+                "deepseek": ProviderEntry(
+                    name="deepseek", api_key="sk-1", base_url="", models=["deepseek/deepseek-chat"]
+                ),
+                "minimax": ProviderEntry(name="minimax", api_key="mm-1", base_url="", models=["minimax/minimax-m2.5"]),
+            }
+        )
         candidates = ["minimax/minimax-m2.5", "deepseek/deepseek-chat"]
         model, _ = select_preferred_model(candidates, cfg)
         assert model == "minimax/minimax-m2.5"
@@ -119,6 +130,7 @@ class TestSelectPreferred:
 class TestRouteWithBYOK:
     def test_route_prefers_keyed_model(self) -> None:
         from uncommon_route import route
+
         keyed = {"deepseek/deepseek-chat"}
         decision = route("what is 2+2", user_keyed_models=keyed)
         # deepseek/deepseek-chat is in SIMPLE/MEDIUM fallback, should be preferred
@@ -127,11 +139,13 @@ class TestRouteWithBYOK:
 
     def test_route_without_byok_uses_default(self) -> None:
         from uncommon_route import route
+
         decision = route("what is 2+2")
         assert "byok-preferred" not in decision.method
 
     def test_route_byok_reasoning_tier(self) -> None:
         from uncommon_route import route
+
         keyed = {"deepseek/deepseek-reasoner"}
         decision = route("prove that sqrt(2) is irrational", user_keyed_models=keyed)
         assert decision.model == "deepseek/deepseek-reasoner"
@@ -142,9 +156,11 @@ class TestCLI:
     def test_provider_list_empty(self) -> None:
         import subprocess
         import sys
+
         r = subprocess.run(
             [sys.executable, "-m", "uncommon_route.cli", "provider", "list"],
-            capture_output=True, text=True,
+            capture_output=True,
+            text=True,
         )
         assert r.returncode == 0
         assert "No providers" in r.stdout
@@ -152,8 +168,10 @@ class TestCLI:
     def test_provider_help(self) -> None:
         import subprocess
         import sys
+
         r = subprocess.run(
             [sys.executable, "-m", "uncommon_route.cli", "--help"],
-            capture_output=True, text=True,
+            capture_output=True,
+            text=True,
         )
         assert "provider" in r.stdout

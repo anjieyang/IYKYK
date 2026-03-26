@@ -42,7 +42,6 @@ DEFAULT_MODEL_PRICING: dict[str, ModelPricing] = {
 }
 
 BASELINE_MODEL = "anthropic/claude-opus-4.6"
-FREE_MODEL = "nvidia/gpt-oss-120b"
 
 VIRTUAL_MODEL_IDS: dict[RoutingMode, str] = {
     RoutingMode.AUTO: "uncommon-route/auto",
@@ -50,9 +49,7 @@ VIRTUAL_MODEL_IDS: dict[RoutingMode, str] = {
     RoutingMode.BEST: "uncommon-route/best",
 }
 
-VIRTUAL_MODEL_ALIASES: dict[str, RoutingMode] = {
-    mode.value: mode for mode in RoutingMode
-}
+VIRTUAL_MODEL_ALIASES: dict[str, RoutingMode] = {mode.value: mode for mode in RoutingMode}
 DEFAULT_MODEL_CAPABILITIES: dict[str, ModelCapabilities] = {
     model_id: infer_capabilities(
         model_id,
@@ -106,14 +103,14 @@ def get_bandit_config(config: RoutingConfig, mode: RoutingMode) -> BanditConfig:
 
 
 DEFAULT_CONFIG = RoutingConfig(
-    version="4.0",
+    version="5.0",
     scoring=ScoringConfig(),
     modes={
         RoutingMode.AUTO: ModeConfig(
             tiers=_discovery_managed_tiers(),
             selection=SelectionWeights(
-                editorial=0.40,
-                cost=0.12,
+                editorial=0.34,
+                cost=0.14,
                 latency=0.08,
                 reliability=0.10,
                 feedback=0.10,
@@ -162,7 +159,7 @@ DEFAULT_CONFIG = RoutingConfig(
         RoutingMode.BEST: ModeConfig(
             tiers=_discovery_managed_tiers(),
             selection=SelectionWeights(
-                editorial=0.52,
+                editorial=0.48,
                 cost=0.04,
                 latency=0.06,
                 reliability=0.12,
@@ -186,5 +183,4 @@ DEFAULT_CONFIG = RoutingConfig(
         ),
     },
     model_capabilities=DEFAULT_MODEL_CAPABILITIES,
-    free_model=FREE_MODEL,
 )

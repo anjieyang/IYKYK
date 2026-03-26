@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from uncommon_route.router.config import DEFAULT_MODEL_PRICING, VIRTUAL_MODEL_IDS
+from uncommon_route.router.config import VIRTUAL_MODEL_IDS
 from uncommon_route.router.types import RoutingMode
 
 _OPENCLAW_DIR = Path.home() / ".openclaw"
@@ -45,7 +45,12 @@ def _save_config(config: dict[str, Any]) -> None:
 
 
 def _build_provider_block(port: int) -> dict[str, Any]:
-    """Build the provider config block pointing at our local proxy."""
+    """Build the provider config block pointing at our local proxy.
+
+    The config-patch fallback is static, so it only registers the stable
+    virtual routing IDs. Dynamic upstream discovery remains a runtime concern
+    of the proxy and the JS bridge plugin.
+    """
     base_url = f"http://127.0.0.1:{port}/v1"
 
     models: list[dict[str, Any]] = [
@@ -80,23 +85,6 @@ def _build_provider_block(port: int) -> dict[str, Any]:
             "maxTokens": 16384,
         },
     ]
-
-    for model_id, pricing in DEFAULT_MODEL_PRICING.items():
-        models.append({
-            "id": model_id,
-            "name": model_id.split("/")[-1],
-            "api": "openai-completions",
-            "reasoning": "reason" in model_id or "o3" in model_id or "o4" in model_id,
-            "input": ["text"],
-            "cost": {
-                "input": pricing.input_price,
-                "output": pricing.output_price,
-                "cacheRead": 0,
-                "cacheWrite": 0,
-            },
-            "contextWindow": 200000,
-            "maxTokens": 16384,
-        })
 
     return {
         "baseUrl": base_url,

@@ -141,10 +141,10 @@ export default function Routing({ onRefresh }: Props) {
     );
     if (next) {
       applyConfig(next);
-      showNotice(`Saved override for ${mode} / ${tier}.`);
+      showNotice(`Saved stored override row for ${mode} / ${tier}.`);
       onRefresh?.();
     } else {
-      showNotice(`Failed to save override for ${mode} / ${tier}.`, "error");
+      showNotice(`Failed to save stored override row for ${mode} / ${tier}.`, "error");
     }
     setBusyKey(null);
   }
@@ -191,7 +191,7 @@ export default function Routing({ onRefresh }: Props) {
         <div>
           <h1 className="text-xl font-semibold tracking-tight text-[#111827]">Routing</h1>
           <p className="mt-1 text-[13px] font-medium text-[#6B7280]">
-            Choose the default mode used when a request does not explicitly set a virtual model.
+            Choose the default mode used when a request does not explicitly set a virtual model. Explicit real model IDs still bypass routing.
           </p>
         </div>
 
@@ -276,10 +276,10 @@ export default function Routing({ onRefresh }: Props) {
             <div>
               <div className="text-[12px] font-medium uppercase tracking-wider text-[#9CA3AF]">Advanced Routing</div>
               <h2 className="mt-2 text-[18px] font-semibold tracking-tight text-[#111827]">
-                Override any mode, tier by tier
+                Stored mode and tier override rows
               </h2>
               <p className="mt-1 text-[13px] font-medium text-[#6B7280]">
-                Defaults are discovery-managed. Add an explicit primary only when you want to pin behavior away from the live pool.
+                Default mode is live. The table below persists per-mode and per-tier rows for inspection and selector preview, but the current pool-based request path still routes from the discovered pool.
               </p>
             </div>
             <div className="rounded-2xl bg-gray-50/80 px-4 py-3 text-right ring-1 ring-black/[0.04]">
@@ -310,7 +310,7 @@ export default function Routing({ onRefresh }: Props) {
               })}
             </div>
             <div className="mt-3 text-[13px] font-medium text-[#6B7280]">
-              Editing `{editorMode}`: {editModeMeta.description}.
+              Editing `{editorMode}`: {editModeMeta.description}. These rows are stored state, not live request-time enforcement.
             </div>
           </div>
 
@@ -346,6 +346,7 @@ export default function Routing({ onRefresh }: Props) {
             <pre className="mt-4 overflow-x-auto rounded-2xl bg-[#F9FAFB] px-4 py-4 text-[12px] leading-relaxed text-[#4B5563] ring-1 ring-black/[0.04]">
 {`uncommon-route config show
 uncommon-route config set-default-mode ${defaultMode}
+# Stores a row for inspection / selector preview:
 uncommon-route config set-tier ${editorMode} SIMPLE openai/gpt-4o-mini --fallback anthropic/claude-haiku-4.5 --strategy hard-pin
 uncommon-route config reset-tier ${editorMode} SIMPLE
 uncommon-route route "hello"
@@ -393,7 +394,7 @@ function EditableTierCard({
         <span className="text-[12px] font-semibold tracking-wide text-[#111827]">{tier}</span>
         {overridden ? (
           <span className="rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-indigo-600">
-            override
+            stored
           </span>
         ) : (
           <span className="rounded-full bg-gray-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#9CA3AF]">
@@ -408,11 +409,11 @@ function EditableTierCard({
       <div className="mt-1 text-[12px] font-medium text-[#6B7280]">
         {discoveryManaged
           ? "Chosen live from the discovered pool using the current mode policy."
-          : `${selectionMode} strategy`}
+          : "Stored override row. Live requests still use discovered-pool scoring."}
       </div>
 
       <div className="mt-4 space-y-2">
-        <Row label="Strategy" value={selectionMode} />
+        <Row label="Stored strategy" value={selectionMode} />
         <Row
           label="Fallback"
           value={fallback.length > 0 ? `${fallback.length} model${fallback.length === 1 ? "" : "s"}` : "none"}
@@ -420,7 +421,7 @@ function EditableTierCard({
       </div>
 
       <div className="mt-5 border-t border-black/[0.04] pt-4">
-        <div className="text-[11px] font-medium uppercase tracking-wider text-[#9CA3AF]">Edit Override</div>
+        <div className="text-[11px] font-medium uppercase tracking-wider text-[#9CA3AF]">Edit Stored Row</div>
 
         <div className="mt-3 space-y-3">
           <div>
@@ -474,14 +475,14 @@ function EditableTierCard({
             onClick={() => void onSave(mode, tier)}
             className="rounded-xl bg-[#111827] px-4 py-2.5 text-[12px] font-medium text-white shadow-sm transition-colors hover:bg-black disabled:opacity-40"
           >
-            {saveBusy ? "Saving..." : "Save override"}
+            {saveBusy ? "Saving..." : "Save row"}
           </button>
           <button
             disabled={!editable || !overridden || saveBusy || resetBusy}
             onClick={() => void onReset(mode, tier)}
             className="rounded-xl border border-black/[0.06] bg-white px-4 py-2.5 text-[12px] font-medium text-[#6B7280] shadow-sm transition-colors hover:bg-gray-50 hover:text-[#111827] disabled:opacity-40"
           >
-            {resetBusy ? "Resetting..." : "Reset to discovery"}
+            {resetBusy ? "Resetting..." : "Reset row"}
           </button>
         </div>
       </div>

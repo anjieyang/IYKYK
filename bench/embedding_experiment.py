@@ -3,15 +3,14 @@
 from __future__ import annotations
 
 import json
-import math
 import time
-from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
 import sys
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from uncommon_route.router.structural import extract_structural_features, extract_unicode_block_features
@@ -99,7 +98,7 @@ class SimpleMLP:
         for epoch in range(epochs):
             idx = rng.permutation(n)
             for start in range(0, n, batch_size):
-                batch_idx = idx[start:start + batch_size]
+                batch_idx = idx[start : start + batch_size]
                 Xb, Yb = X[batch_idx], Y_onehot[batch_idx]
                 bs = len(Xb)
 
@@ -178,11 +177,17 @@ def run_experiment():
     # ─── Run experiments ───
     configs = [
         ("Perceptron + handcrafted (current)", AvgPerceptron, X_train_hc, X_test_hc, {"epochs": 12}),
-        ("Perceptron + embedding only",        AvgPerceptron, X_train_emb, X_test_emb, {"epochs": 12}),
+        ("Perceptron + embedding only", AvgPerceptron, X_train_emb, X_test_emb, {"epochs": 12}),
         ("Perceptron + handcrafted + embedding", AvgPerceptron, X_train_combined, X_test_combined, {"epochs": 12}),
-        ("MLP + handcrafted",                  SimpleMLP, X_train_hc_norm, X_test_hc_norm, {"epochs": 60, "hidden": 64}),
-        ("MLP + embedding only",               SimpleMLP, X_train_emb_norm, X_test_emb_norm, {"epochs": 60, "hidden": 128}),
-        ("MLP + handcrafted + embedding",      SimpleMLP, X_train_comb_norm, X_test_comb_norm, {"epochs": 60, "hidden": 128}),
+        ("MLP + handcrafted", SimpleMLP, X_train_hc_norm, X_test_hc_norm, {"epochs": 60, "hidden": 64}),
+        ("MLP + embedding only", SimpleMLP, X_train_emb_norm, X_test_emb_norm, {"epochs": 60, "hidden": 128}),
+        (
+            "MLP + handcrafted + embedding",
+            SimpleMLP,
+            X_train_comb_norm,
+            X_test_comb_norm,
+            {"epochs": 60, "hidden": 128},
+        ),
     ]
 
     print("\n" + "=" * 80)
@@ -211,7 +216,7 @@ def run_experiment():
 
         # Per-tier breakdown for test set
         if "embedding" in name.lower() and "MLP" in name:
-            print(f"  Per-tier test accuracy:")
+            print("  Per-tier test accuracy:")
             for tier_name, tier_idx in TIER_IDX.items():
                 mask = y_test == tier_idx
                 if mask.sum() == 0:
@@ -230,15 +235,15 @@ def run_experiment():
     for _ in range(100):
         extract_handcrafted_features(test_prompt)
     hc_ns = (time.perf_counter_ns() - t0) / 100
-    print(f"  Handcrafted features:  {hc_ns/1000:.0f} us")
+    print(f"  Handcrafted features:  {hc_ns / 1000:.0f} us")
 
     t0 = time.perf_counter_ns()
     for _ in range(100):
         emb_model.encode([test_prompt], show_progress_bar=False)
     emb_ns = (time.perf_counter_ns() - t0) / 100
-    print(f"  Embedding (MiniLM):    {emb_ns/1000000:.1f} ms")
+    print(f"  Embedding (MiniLM):    {emb_ns / 1000000:.1f} ms")
 
-    print(f"  Total with embedding:  {(hc_ns + emb_ns)/1000000:.1f} ms")
+    print(f"  Total with embedding:  {(hc_ns + emb_ns) / 1000000:.1f} ms")
 
 
 if __name__ == "__main__":

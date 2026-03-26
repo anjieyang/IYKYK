@@ -40,7 +40,7 @@ def _extract_ngram_features(text: str) -> dict[str, float]:
     features: dict[str, float] = defaultdict(float)
     for n in range(NGRAM_RANGE[0], NGRAM_RANGE[1] + 1):
         for i in range(len(text_lower) - n + 1):
-            gram = text_lower[i:i + n]
+            gram = text_lower[i : i + n]
             bucket, sign = _signed_hash(gram)
             features[f"ngram_{bucket}"] += sign
     norm = math.sqrt(sum(v * v for v in features.values())) or 1.0
@@ -80,36 +80,45 @@ class ScriptAgnosticClassifier:
         self,
         structural_scores: dict[str, float],
         unicode_blocks: dict[str, float],
-        keyword_scores: dict[str, float],
+        keyword_scores: dict[str, float] | None = None,
         prompt: str = "",
+        context_features: dict[str, float] | None = None,
     ) -> dict[str, float]:
-        """Build the full feature vector from component parts."""
+        """Build the full feature vector from component parts.
+
+        Keyword scores are accepted for backward compatibility but ignored
+        when the model is trained without them.  N-gram features learn
+        equivalent patterns directly from data.
+        """
         features: dict[str, float] = {}
 
-        # Structural features (12 dims, script-agnostic)
         for name, score in structural_scores.items():
             features[f"s_{name}"] = score
 
-        # Unicode block features (15 dims, script-agnostic)
         for name, proportion in unicode_blocks.items():
             features[f"u_{name}"] = proportion
 
-        # Keyword features (12 dims, multilingual vocabulary)
-        for name, score in keyword_scores.items():
-            features[f"k_{name}"] = score
+        if keyword_scores:
+            for name, score in keyword_scores.items():
+                features[f"k_{name}"] = score
 
-        # N-gram features (optional, same-script boost)
+        if context_features:
+            for name, value in context_features.items():
+                key = name if name.startswith("ctx_") else f"ctx_{name}"
+                features[key] = value
+
         if self._use_ngrams and prompt:
             ngram_feats = _extract_ngram_features(prompt)
-            # Scale down n-grams: they're a bonus, not the backbone
+            ngram_scale = 0.3 if keyword_scores else 0.5
             for k, v in ngram_feats.items():
-                features[k] = v * 0.3
+                features[k] = v * ngram_scale
 
         return features
 
     def train(self, feature_sets: list[tuple[dict[str, float], str]], epochs: int = 10) -> None:
         """Train from pre-extracted features. Each item: (features_dict, tier_label)."""
         import random
+
         rng = random.Random(42)
 
         for _ in range(epochs):
@@ -201,14 +210,8 @@ class ScriptAgnosticClassifier:
 
     def save(self, path: Path) -> None:
         data = {
-            "avg_weights": {
-                t: {k: v for k, v in w.items() if abs(v) > 1e-6}
-                for t, w in self._avg_weights.items()
-            },
-            "weights": {
-                t: {k: v for k, v in w.items() if abs(v) > 1e-6}
-                for t, w in self._weights.items()
-            },
+            "avg_weights": {t: {k: v for k, v in w.items() if abs(v) > 1e-6} for t, w in self._avg_weights.items()},
+            "weights": {t: {k: v for k, v in w.items() if abs(v) > 1e-6} for t, w in self._weights.items()},
             "update_count": self._update_count,
             "use_ngrams": self._use_ngrams,
         }
@@ -243,17 +246,8 @@ class ScriptAgnosticClassifier:
         data = json.loads(path.read_text())
         avg_weights = self._collapse_loaded_weights(data.get("avg_weights", {}))
         weights = self._collapse_loaded_weights(data.get("weights", {}))
-        self._avg_weights = {
-            t: defaultdict(float, avg_weights.get(t, {})) for t in self.TIERS
-        }
-        self._weights = {
-            t: defaultdict(float, weights.get(t, {})) for t in self.TIERS
-        }
+        self._avg_weights = {t: defaultdict(float, avg_weights.get(t, {})) for t in self.TIERS}
+        self._weights = {t: defaultdict(float, weights.get(t, {})) for t in self.TIERS}
         self._update_count = data.get("update_count", 1)
         self._use_ngrams = data.get("use_ngrams", True)
         self._trained = True
-
-
-# Backward compat
-NgramClassifier = ScriptAgnosticClassifier
-PerceptronClassifier = ScriptAgnosticClassifier

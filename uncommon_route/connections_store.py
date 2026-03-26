@@ -147,12 +147,14 @@ class ConnectionsStore:
         return self.export()
 
     def _persist(self) -> None:
-        self._storage.save({
-            "primary": {
-                "upstream": self._primary.upstream,
-                "api_key": self._primary.api_key,
-            },
-        })
+        self._storage.save(
+            {
+                "primary": {
+                    "upstream": self._primary.upstream,
+                    "api_key": self._primary.api_key,
+                },
+            }
+        )
 
 
 def resolve_primary_connection(
@@ -168,8 +170,7 @@ def resolve_primary_connection(
 
     env_upstream = _clean_text(env_map.get("UNCOMMON_ROUTE_UPSTREAM", ""))
     env_api_key = _clean_text(
-        env_map.get("UNCOMMON_ROUTE_API_KEY", "")
-        or env_map.get("COMMONSTACK_API_KEY", ""),
+        env_map.get("UNCOMMON_ROUTE_API_KEY", "") or env_map.get("COMMONSTACK_API_KEY", ""),
     )
 
     upstream, upstream_source = _pick_first(
