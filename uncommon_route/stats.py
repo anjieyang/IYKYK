@@ -15,6 +15,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 
+from uncommon_route.decision_sinks import DecisionSink, sinks_from_env
 from uncommon_route.paths import data_dir
 from uncommon_route.router.config import DEFAULT_MODEL_PRICING
 from uncommon_route.router.types import ModelPricing
@@ -256,11 +257,22 @@ class RouteStats:
         self,
         storage: RouteStatsStorage | None = None,
         now_fn: Any = None,
+        sinks: list[DecisionSink] | None = None,
     ) -> None:
         self._storage = storage or FileRouteStatsStorage()
         self._now = now_fn or time.time
         self._records: list[RouteRecord] = []
+        self._sinks: list[DecisionSink] = list(sinks) if sinks is not None else sinks_from_env()
         self._load()
+
+    def _emit(self, rec: RouteRecord) -> None:
+        for sink in self._sinks:
+            try:
+                sink.emit(rec)
+            except Exception as exc:  # pragma: no cover - defensive
+                import sys
+
+                print(f"[UncommonRoute] decision sink failed: {exc}", file=sys.stderr)
 
     def record(self, rec: RouteRecord) -> None:
         rec.tier = _normalize_tier_label(rec.tier)
@@ -270,6 +282,7 @@ class RouteStats:
         self._records.append(rec)
         self._cleanup()
         self._save()
+        self._emit(rec)
 
     def record_feedback(
         self,
@@ -293,6 +306,7 @@ class RouteStats:
             record.feedback_reason = reason
             record.feedback_submitted_at = self._now()
             self._save()
+            self._emit(record)
             return True
         return False
 
